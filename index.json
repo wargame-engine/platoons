@@ -1,0 +1,18 @@
+{
+    "factions": {
+        "germany": {"name": "Germany", "id": "germany", "url": "germany.json", "color": "#3d3354"}
+    },
+    "categories": {
+        "command": {"name": "Command"},
+        "core": {"name": "Core"},
+        "specialist": {"name": "Specialist"},
+        "strike": {"name": "Strike"},
+        "heavy": {"name": "Heavy"},
+        "transport": {"name": "Transport"}
+    },
+    "relics": [],
+    "powers": {},
+    "strategies": {},
+    "weapons": {},
+    "rules": {}
+}
