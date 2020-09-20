@@ -85,6 +85,35 @@
                     "max": 1
                 }
             ]
+        },
+        "sherman": {
+            "name": "Sherman",
+            "description": "A medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_armor",
+            "keywords": ["Vehicle", "Tank"],
+            "rules": [
+                "tracked", "armored"
+            ],
+            "models": [
+                {
+                    "name": "Sherman 75mm",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["medium_at", "mmg_internal", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [
+                        {"replaceWeapon": "medium_at", "withWeapon": "heavy_at"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {},

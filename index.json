@@ -30,6 +30,13 @@
         "mmg": {"name": "Medium MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1, "rules": ["suppressive"]},
         "hmg": {"name": "Heavy MG", "short": 18, "medium": 36, "attacks": 5, "ap": 2, "damage": 2},
         "mmg_internal": {"name": "Medium MG (Internal)", "short": 18, "medium": 36, "ap": 1, "attacks": 5},
+        "medium_at": {
+            "name": "Medium AT Gun",
+            "profiles": [
+                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 6, "damage": 3}
+            ]
+        },
         "heavy_at": {
             "name": "Heavy AT Gun",
             "profiles": [
