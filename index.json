@@ -1,7 +1,8 @@
 {
     "factions": {
-      "germany": {"name": "Germany", "id": "germany", "url": "germany.json", "color": "#4d5d53", "alliance": "axis"},
-      "united_states": {"name": "United States", "id": "united_states", "url": "united_states.json", "color": "#4b5320", "alliance": "allies"}
+        "germany": {"name": "Germany", "id": "germany", "url": "germany.json", "color": "#4d5d53", "alliance": "axis"},
+        "united_states": {"name": "United States", "id": "united_states", "url": "united_states.json", "color": "#4b5320", "alliance": "allies"},
+        "soviet_union": {"name": "Soviet Union", "id": "soviet_union", "url": "soviet_union.json", "color": "#C13E3E", "alliance": "allies"}
     },
     "categories": {
         "command": {"name": "Command"},
@@ -16,68 +17,155 @@
     "alliances": {"axis": {"name": "Axis Powers"}, "allies": {"name": "Allied Powers"}},
     "relics": [],
     "powers": {},
-    "strategies": {},
+    "strategies": {
+        "divine_intervention": {
+            "name": "Divine Intervention (Core)",
+            "flavor": "It seems luck has gone our way. Or maybe it's something more...",
+            "description": "Re-roll a single skill test die. It may not be re-rolled again.",
+            "cost": 1
+        },
+        "legendary_support": {
+            "name": "Legendary Support (Core)",
+            "flavor": "A battle involving several legends is a story to be told.",
+            "description": "You may include one additional legend in your roster.",
+            "cost": 1
+        },
+        "incredible_courage": {
+            "name": "Incredible Courage (Core)",
+            "flavor": "Even in the darkest of times, moments of great courage can occur.",
+            "description": "Once per battle, choose a unit that is about to take a Courage test. That unit is treated as having Courage 9 until the end of the round.",
+            "cost": 2
+        }
+    },
     "weapons": {
         "unarmed": {"name": "Unarmed (Melee)", "short": "Melee", "attacks": 1},
+        "frag_grenades": {"name": "Frags", "attacks": 1, "short": 6, "ap": 1, "rules": ["grenade", {"id": "blast", "x": 3}]},
+        "at_grenades": {"name": "AT Grenades", "attacks": 1, "short": 6, "ap": 7, "damage": 3, "rules": [{"id": "ammo", "x": 1}]},
+        "smoke_grenades": {"name": "Smokes", "attacks": 1, "short": 6, "rules": ["grenade", "smoke", "indirect"]},
         "rifle": {"name": "Rifle", "short": 12, "medium": 24, "attacks": 1},
         "semi_auto_rifle": {"name": "Semi-Auto Rifle", "short": 12, "medium": 24, "attacks": 1, "rules": ["assault"]},
         "smg": {"name": "SMG", "short": 6, "medium": 12, "attacks": 2, "rules": ["assault"]},
         "assault_rifle": {"name": "Assault Rifle", "short": 12, "medium": 24, "attacks": 2, "rules": ["assault"]},
-        "belt_lmg": {"name": "Belt-fed LMG", "short": 15, "medium": 30, "attacks": 4},
+        "belt_lmg": {"name": "Belt-fed LMG", "short": 15, "medium": 30, "attacks": 4, "rules": [{"id": "team", "x": 2}]},
         "box_lmg": {"name": "Box-fed LMG", "short": 15, "medium": 30, "attacks": 3},
         "mag_lmg": {"name": "Magazine-fed LMG", "short": 15, "medium": 30, "attacks": 2},
         "bar": {"name": "BAR", "short": 15, "medium": 30, "attacks": 2, "rules": ["assault"]},
         "mmg": {"name": "Medium MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1, "rules": ["suppressive"]},
         "hmg": {"name": "Heavy MG", "short": 18, "medium": 36, "attacks": 5, "ap": 2, "damage": 2},
         "mmg_internal": {"name": "Medium MG (Internal)", "short": 18, "medium": 36, "ap": 1, "attacks": 5},
-        "medium_at": {
-            "name": "Medium AT Gun",
+        "flamethrower": {"name": "Flamethrower", "short": 6, "medium": 12, "ap": 3, "attacks": 3, "rules": ["flame"]},
+        "vehicle_flamethrower": {"name": "Flamethrower (Vehicle)", "short": 12, "medium": 24, "ap": 3, "attacks": 6, "rules": ["flame"]},
+        "very_light_at": {
+            "name": "Very Light AT",
+            "profiles": [
+                {"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 2}]},
+                {"name": "AT", "short": 18, "medium": 36, "attacks": 1, "ap": 4, "damage": 3}
+            ]
+        },
+        "very_light_at_mg": {
+            "name": "Very Light AT/Co-ax MG",
+            "profiles": [
+                {"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 2}]},
+                {"name": "AT", "short": 18, "medium": 36, "attacks": 1, "ap": 4, "damage": 3},
+                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
+            ]
+        },
+        "light_at": {
+            "name": "Light AT",
             "profiles": [
                 {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 6, "damage": 3}
+                {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 5, "damage": 3}
+            ]
+        },
+        "light_at_mg": {
+            "name": "Light AT/Co-ax MG",
+            "profiles": [
+                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 5, "damage": 3},
+                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
+            ]
+        },
+        "medium_at": {
+            "name": "Medium AT",
+            "profiles": [
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 5}]},
+                {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6, "damage": 3}
+            ]
+        },
+        "medium_at_light_howitzer": {
+            "name": "Medium AT/Light Howitzer",
+            "profiles": [
+                {"name": "Indirect", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 5}, "indirect"]},
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 5}]},
+                {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6, "damage": 3}
+            ]
+        },
+        "medium_at_mg": {
+            "name": "Medium AT/Co-ax MG",
+            "profiles": [
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 5}]},
+                {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6, "damage": 3},
+                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
         "heavy_at": {
-            "name": "Heavy AT Gun",
+            "name": "Heavy AT",
             "profiles": [
-                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 6}]},
+                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 7}]},
                 {"name": "AT", "short": 36, "medium": 72, "attacks": 1, "ap": 7, "damage": 3}
             ]
         },
-        "impact": {"name": "Impact", "attacks": 1, "short": "Melee"}
+        "heavy_at_mg": {
+            "name": "Heavy AT/Co-ax MG",
+            "profiles": [
+                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 7}]},
+                {"name": "AT", "short": 36, "medium": 72, "attacks": 1, "ap": 7, "damage": 3},
+                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
+            ]
+        },
+        "very_heavy_at": {
+            "name": "Very Heavy AT",
+            "profiles": [
+                {"name": "HE", "short": 42, "medium": 84, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 9}]},
+                {"name": "AT", "short": 42, "medium": 84, "attacks": 1, "ap": 7, "damage": 3}
+            ]
+        },
+        "very_heavy_at_mg": {
+            "name": "Very AT/Co-ax MG",
+            "profiles": [
+                {"name": "HE", "short": 42, "medium": 84, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 9}]},
+                {"name": "AT", "short": 42, "medium": 84, "attacks": 1, "ap": 7, "damage": 3},
+                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
+            ]
+        }
     },
     "rules": {
-        "assault": {"name": "Assault", "description": "Models with this weapon may make a free shoot action after moving at -1 Accuracy. They may not shoot again this round."},
-        "flame": {"name": "Flame", "description": "This weapon ignores cover bonuses.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}]},
-        "indirect": {"name": "Indirect", "description": "This weapon may target units out of line of sight at -1 Accuracy."},
-        "anti_air": {"name": "Anti-air", "description": "This weapon gets +1 to hit units with the Flyer special rule."},
-        "blast": {
-            "name": "Blast",
-            "inputs": ["x"],
-            "description": "Multiply hits from this weapon by X. This weapon hits at Accuracy +1 if the target unit has 6 or more models.",
-            "effects": [{"type": "blast", "value": "x"}, {"type": "alterStatWithWeapon", "statName": "shoot", "value": 1, "frequency": 5}]
+        "gun_shield": {"name": "Gun Shield", "description": "This unit gains +1 to its Save when hit in its front arc.", "points": [2, {"multiply": "model.wounds"}, {"multiply": 0.5}]},
+        "suppressive": {"name": "Suppressive", "description": "This unit may take a suppressive fire action without suffering any to-hit penalties.", "points": 1},
+        "smoke": {
+            "name": "Smoke",
+            "description": "This weapon does not target a specific unit. Instead, choose a location on the battlefield within range of this weapon. If a hit is successful, place a 3\" diameter smoke marker at the target location.",
+            "points": [-1]
         },
-        "suppressive": {
-            "name": "Suppressive",
-            "description": "This unit may take a suppressive fire action without suffering any to-hit penalties.",
-            "effects": [{"type": "alterStatWithWeapon", "statName": "shoot", "value": 1}]
-        },
-        "tracked": {"name": "Tracked", "description": "This unit may ignore difficult terrain and low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 7.5}]},
+        "tracked": {"name": "Tracked", "description": "This unit may ignore difficult terrain and low obstacles when moving.", "points": ["model.wounds", {"multiply": 2}]},
+        "half_tracked": {"name": "Half-Tracked", "description": "This unit may ignore difficult terrain when moving.", "points": ["model.wounds"]},
         "shock": {
             "name": "Shock",
             "inputs": ["x"],
-            "description": "This unit scores X automatic hits on a successful charge.",
-            "effects": [{"type": "freeAttacks", "weapon": "impact", "attacks": "x"}]
+            "description": "When this model successfully charges an enemy unit, make X Strength tests. For each success, the enemy takes 1 hit with no AP.",
+            "points": ["model.movement", {"divide": 12}, {"add": ["model.fight", {"subtract": "constants.baseStats.fight"}]}, {"multiply": "rule.x"}, {"multiply": 0.5}]
         },
-        "armored": {
-            "name": "Vulnerable(Sides, Rear)",
-            "description": "This unit loses 1 Resist when hit in its side arc or 2 Resist when hit in the Rear arc.",
-            "effects": [{"type": "alterStat", "value": -2, "frequency": 2.5, "statName": "defense"}, {"type": "alterStat", "value": -1, "frequency": 5, "statName": "defense"}]
+        "team": {
+            "name": "Team",
+            "inputs": ["x"],
+            "description": "This weapon requires X models to use. It suffers -1 Accuracy for each crew member under this number.",
+            "points": ["rule.x", {"subtract": 1}, {"multiply": 0}]
         },
-        "heavily_armored": {
-            "name": "Vulnerable Rear",
-            "description": "This unit loses 1 Resist when hit in its Rear arc.",
-            "effects": [{"type": "alterStat", "value": -1, "frequency": 2.5, "statName": "defense"}]
+        "field_orders": {
+            "name": "Field Orders",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose X friendly Infantry units within 6\" to receive one of the following bonuses: +1 Accuracy or +3\" Movement or +1 Strength. A unit may only benefit from one Field Order.",
+            "points": [10, {"multiply": "rule.x"}]
         }
     }
 }

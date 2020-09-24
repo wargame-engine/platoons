@@ -41,7 +41,7 @@
             ]
         },
         "mmg_team": {
-            "name": "Medium MG Team",
+            "name": ".30 Cal MG Team",
             "description": "A us MMG.",
             "min": 1,
             "max": 1,
@@ -49,7 +49,7 @@
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Medium MG Team",
+                    "name": ".30 Cal MG Team",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
@@ -64,7 +64,7 @@
             ]
         },
         "hmg_team": {
-            "name": "Heavy MG Team",
+            "name": ".50 Cal MG Team",
             "description": "A us HMG.",
             "min": 1,
             "max": 1,
@@ -72,7 +72,7 @@
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Heavy MG Team",
+                    "name": ".50 Cal MG Team",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
@@ -93,9 +93,6 @@
             "max": 1,
             "category": "heavy_armor",
             "keywords": ["Vehicle", "Tank"],
-            "rules": [
-                "tracked", "armored"
-            ],
             "models": [
                 {
                     "name": "Sherman 75mm",
@@ -106,9 +103,12 @@
                     "defense": 12,
                     "reflexes": 6,
                     "wounds": 6,
-                    "weapons": ["medium_at", "mmg_internal", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "weapons": ["medium_at_mg", "mmg_internal", {"id": "mmg_internal", "mount": ["Front"]}],
                     "options": [
-                        {"replaceWeapon": "medium_at", "withWeapon": "heavy_at"}
+                        {"replaceWeapon": "medium_at_mg", "withWeapon": "heavy_at_mg"}
+                    ],
+                    "rules": [
+                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}
                     ],
                     "min": 1,
                     "max": 1

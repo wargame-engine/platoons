@@ -120,7 +120,7 @@
             ]
         },
         "mmg_team": {
-            "name": "Medium MG Team",
+            "name": "Tripod MG-34/MG42 Team",
             "description": "A group of hardened German Grenadiers.",
             "min": 1,
             "max": 1,
@@ -128,7 +128,7 @@
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Medium MG Team",
+                    "name": "Tripod MG-34/MG42 Team",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
@@ -149,9 +149,6 @@
             "max": 1,
             "category": "heavy_armor",
             "keywords": ["Vehicle", "Tank"],
-            "rules": [
-                "tracked", "armored"
-            ],
             "models": [
                 {
                     "name": "Panzer IV J",
@@ -162,7 +159,10 @@
                     "defense": 12,
                     "reflexes": 6,
                     "wounds": 6,
-                    "weapons": ["heavy_at", "mmg_internal", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": [
+                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}
+                    ],
                     "min": 1,
                     "max": 1
                 }

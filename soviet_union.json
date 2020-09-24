@@ -1,0 +1,409 @@
+{
+    "id": "soviet_union",
+    "name": "Soviet Union",
+    "units": {
+        "field_officer": {
+            "name": "Field Offier",
+            "description": "A Field Commander.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]},
+                {"addWeapon": "at_grenades", "modelLimit": 3}
+            ],
+            "models": [
+                {
+                    "name": "Field Offier",
+                    "courage": 7,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
+                    "rules": [
+                        {"id": "field_orders", "x": 1}, "leader"
+                    ],
+                    "options": [
+                        {"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Assistant",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "min": 0,
+                    "max": 2
+                }
+            ]
+        },
+        "conscript_squad": {
+            "name": "Conscript Squad",
+            "description": "A group of conscripted Soviet riflemen.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Rifle NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Rifleman",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "smg_squad": {
+            "name": "SMG Squad",
+            "description": "A group of Soviet soldiers equipped with SMGs.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "SMG NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["smg", "unarmed"],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "SMG Infantry",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["smg", "unarmed"],
+                    "options": [{"replaceWeapon": "smg", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "rifle_squad": {
+            "name": "Rifle Squad",
+            "description": "A group of Soviet riflemen.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}
+            ],
+            "models": [
+                {
+                    "name": "Rifle NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Rifleman",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "mmg_team": {
+            "name": "Maxim MG Team",
+            "description": "A group of hardened German Grenadiers.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Medium MG Team",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "hmg_team": {
+            "name": "Dshk MG Team",
+            "description": "A us HMG.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Heavy MG Team",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "hmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "45mm_at": {
+            "name": "45mm Light AT Gun",
+            "description": "A wheeled light at gun.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "keywords": ["Infantry"],
+            "rules": [
+                "gun_shield"
+            ],
+            "models": [
+                {
+                    "name": "Medium MG Team",
+                    "courage": 6,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "zis_3": {
+            "name": "Zis-3 Field Gun",
+            "description": "A wheeled field gun with anti-tank and artillery capability.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "keywords": ["Infantry"],
+            "rules": [
+                "gun_shield"
+            ],
+            "models": [
+                {
+                    "name": "Zis-3 Field Gun",
+                    "courage": 6,
+                    "movement": 3,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "medium_at_light_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "bs_3": {
+            "name": "BS-3 AT Gun",
+            "description": "A wheeled heavy at gun.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "keywords": ["Infantry"],
+            "rules": [
+                "gun_shield"
+            ],
+            "models": [
+                {
+                    "name": "BS-3 AT Gun",
+                    "courage": 6,
+                    "movement": 2,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ot_34": {
+            "name": "OT-34",
+            "description": "A medium tank with an adequate gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_armor",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "OT-34",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["medium_at_mg", {"id": "vehicle_flamethrower", "mount": ["Front"]}],
+                    "rules": [
+                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ot_34_85": {
+            "name": "OT-34/85",
+            "description": "A medium tank with a heavy gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_armor",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "OT-34/85",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["heavy_at_mg", {"id": "vehicle_flamethrower", "mount": ["Front"]}],
+                    "rules": [
+                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "t34": {
+            "name": "T34/76",
+            "description": "A medium tank with an adequate gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_armor",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "T34/76",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": [
+                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "t34_85": {
+            "name": "T34/85",
+            "description": "A medium tank with a powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_armor",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "T34/85",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": [
+                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
+    },
+    "strategies": {
+        "urah_assault": {
+            "name": "Urah Assault",
+            "flavor": "A swift and deadly end to a fight can come with a furious charge...",
+            "description": "Use when a Soviet Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
+            "cost": 1
+        }
+    },
+    "weapons": {},
+    "rules": {},
+    "relics": [
+
+    ]
+}
