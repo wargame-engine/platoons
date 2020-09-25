@@ -108,7 +108,7 @@
                         {"replaceWeapon": "medium_at_mg", "withWeapon": "heavy_at_mg"}
                     ],
                     "rules": [
-                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}
+                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}
                     ],
                     "min": 1,
                     "max": 1

@@ -2,6 +2,91 @@
     "id": "germany",
     "name": "Germany",
     "units": {
+        "field_officer": {
+            "name": "Field Offier",
+            "description": "A Field Commander.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]},
+                {"addWeapon": "at_grenades", "modelLimit": 3}
+            ],
+            "models": [
+                {
+                    "name": "Field Offier",
+                    "courage": 7,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
+                    "rules": [
+                        {"id": "field_orders", "x": 1}, "leader"
+                    ],
+                    "options": [
+                        {"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Assistant",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "min": 0,
+                    "max": 2
+                }
+            ]
+        },
+        "field_medic": {
+            "name": "Field Medic",
+            "description": "A field medic.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Field Medic",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades"],
+                    "rules": [
+                        "medic"
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Assistant",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "min": 0,
+                    "max": 2
+                }
+            ]
+        },
         "volksgrenadiers": {
             "name": "Volksgrenadiers",
             "description": "A group of hardened German Grenadiers.",
@@ -119,6 +204,45 @@
                 }
             ]
         },
+        "panzergrenadiers": {
+            "name": "Panzergrenadiers",
+            "description": "A group of mobile Panzergrenadiers.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}],
+            "models": [
+                {
+                    "name": "Panzergrenadier NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Panzergrenadier",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 2}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
         "mmg_team": {
             "name": "Tripod MG-34/MG42 Team",
             "description": "A group of hardened German Grenadiers.",
@@ -137,6 +261,188 @@
                     "reflexes": 6,
                     "wounds": 3,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "leig_18": {
+            "name": "Leig.18 Light Howitzer",
+            "description": "A wheeled light howitzer.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "keywords": ["Artillery"],
+            "rules": [
+                "gun_shield"
+            ],
+            "models": [
+                {
+                    "name": "Leig.18 Light Howitzer",
+                    "courage": 6,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_howitzer_light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "lefh_howitzer": {
+            "name": "LefH Medium Howitzer",
+            "description": "A wheeled medium howitzer.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "keywords": ["Artillery"],
+            "rules": [
+                "gun_shield"
+            ],
+            "models": [
+                {
+                    "name": "LefH Medium Howitzer",
+                    "courage": 6,
+                    "movement": 3,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "sig33_howitzer": {
+            "name": "Sig.33 Howitzer",
+            "description": "A wheeled heavy howitzer.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "keywords": ["Artillery"],
+            "rules": [
+                "gun_shield"
+            ],
+            "models": [
+                {
+                    "name": "Sig.33 Howitzer",
+                    "courage": 6,
+                    "movement": 3,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "pak_36": {
+            "name": "Pak 36 Light AT Gun",
+            "description": "A wheeled light at gun.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "keywords": ["Artillery"],
+            "rules": [
+                "gun_shield"
+            ],
+            "models": [
+                {
+                    "name": "Pak 36 Light AT Gun",
+                    "courage": 6,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "pak_38": {
+            "name": "Pak 38 Medium AT Gun",
+            "description": "A wheeled medium at gun.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "keywords": ["Artillery"],
+            "rules": [
+                "gun_shield"
+            ],
+            "models": [
+                {
+                    "name": "Pak 38 Medium AT Gun",
+                    "courage": 6,
+                    "movement": 3,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "medium_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "pak_40": {
+            "name": "Pak 40 Heavy AT Gun",
+            "description": "A wheeled heavy at gun.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "keywords": ["Artillery"],
+            "rules": [
+                "gun_shield"
+            ],
+            "models": [
+                {
+                    "name": "Pak 40 Heavy AT Gun",
+                    "courage": 6,
+                    "movement": 2,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "pak_43": {
+            "name": "Pak 43 Heavy AT Gun",
+            "description": "A wheeled very heavy at gun.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "keywords": ["Artillery"],
+            "rules": [
+                "gun_shield"
+            ],
+            "models": [
+                {
+                    "name": "Pak 43 Heavy AT Gun",
+                    "courage": 6,
+                    "movement": 2,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "very_heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -161,7 +467,7 @@
                     "wounds": 6,
                     "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": [
-                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}
+                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}
                     ],
                     "min": 1,
                     "max": 1
