@@ -218,7 +218,7 @@
             "category": "artillery",
             "keywords": ["Infantry"],
             "rules": [
-                "gun_shield"
+                "gun_shield", {"id": "team", "x": 2}, "crew"
             ],
             "models": [
                 {
@@ -244,7 +244,7 @@
             "category": "artillery",
             "keywords": ["Infantry"],
             "rules": [
-                "gun_shield"
+                "gun_shield", {"id": "team", "x": 3}, "crew"
             ],
             "models": [
                 {
@@ -270,7 +270,7 @@
             "category": "artillery",
             "keywords": ["Infantry"],
             "rules": [
-                "gun_shield"
+                "gun_shield", {"id": "team", "x": 3}, "crew"
             ],
             "models": [
                 {
@@ -293,7 +293,7 @@
             "description": "A medium tank with an adequate gun.",
             "min": 1,
             "max": 1,
-            "category": "heavy_armor",
+            "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
@@ -319,7 +319,7 @@
             "description": "A medium tank with a heavy gun.",
             "min": 1,
             "max": 1,
-            "category": "heavy_armor",
+            "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
@@ -345,7 +345,7 @@
             "description": "A medium tank with an adequate gun.",
             "min": 1,
             "max": 1,
-            "category": "heavy_armor",
+            "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
@@ -371,7 +371,7 @@
             "description": "A medium tank with a powerful main gun.",
             "min": 1,
             "max": 1,
-            "category": "heavy_armor",
+            "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {

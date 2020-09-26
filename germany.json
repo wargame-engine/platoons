@@ -11,7 +11,8 @@
             "keywords": ["Infantry"],
             "options": [
                 {"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]},
-                {"addWeapon": "at_grenades", "modelLimit": 3}
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2}
             ],
             "models": [
                 {
@@ -58,14 +59,14 @@
             "models": [
                 {
                     "name": "Field Medic",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["rifle", "unarmed", "smoke_grenades"],
+                    "weapons": ["pistol", "unarmed", "smoke_grenades"],
                     "rules": [
                         "medic"
                     ],
@@ -76,8 +77,8 @@
                     "name": "Assistant",
                     "courage": 5,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
@@ -89,7 +90,7 @@
         },
         "volksgrenadiers": {
             "name": "Volksgrenadiers",
-            "description": "A group of hardened German Grenadiers.",
+            "description": "A group of mixed quality infantry.",
             "min": 1,
             "max": 1,
             "category": "core",
@@ -211,7 +212,13 @@
             "max": 1,
             "category": "core",
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}],
+            "rules": [
+                "stubborn"
+            ],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6},
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3}
+            ],
             "models": [
                 {
                     "name": "Panzergrenadier NCO",
@@ -243,6 +250,80 @@
                 }
             ]
         },
+        "at_rifle_team": {
+            "name": "AT Rifle Team",
+            "description": "A team dedicated to hunting lighter tanks.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "models": [
+                {
+                    "name": "AT Rifle Gunner",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["at_rifle", "unarmed"],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Assistant",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "panzershreck_team": {
+            "name": "Panzerschreck Team",
+            "description": "A team dedicated to hunting heavy tanks.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "models": [
+                {
+                    "name": "Panzerschreck Gunner",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["panzerschreck", "unarmed"],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Assistant",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "mmg_team": {
             "name": "Tripod MG-34/MG42 Team",
             "description": "A group of hardened German Grenadiers.",
@@ -250,6 +331,9 @@
             "max": 1,
             "category": "support",
             "keywords": ["Infantry"],
+            "rules": [
+                {"id": "team", "x": 2}, "crew"
+            ],
             "models": [
                 {
                     "name": "Tripod MG-34/MG42 Team",
@@ -266,19 +350,97 @@
                 }
             ]
         },
+        "light_mortar_team": {
+            "name": "Light Mortar Team",
+            "description": "A light mortar carried by a small team.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "keywords": ["Infantry"],
+            "rules": [
+                {"id": "team", "x": 2}, "crew"
+            ],
+            "models": [
+                {
+                    "name": "Light Mortar Team",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 2,
+                    "weapons": [{"id": "light_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "medium_mortar_team": {
+            "name": "Medium Mortar Team",
+            "description": "A medium mortar carried by a small team.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "keywords": ["Infantry"],
+            "rules": [
+                {"id": "team", "x": 2}, "crew"
+            ],
+            "models": [
+                {
+                    "name": "Medium Mortar Team",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "medium_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "heavy_mortar_team": {
+            "name": "Heavy Mortar Team",
+            "description": "A heavy mortar carried by a small team.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "keywords": ["Infantry"],
+            "rules": [
+                {"id": "team", "x": 3}, "crew"
+            ],
+            "models": [
+                {
+                    "name": "Heavy Mortar Team",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "heavy_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "leig_18": {
-            "name": "Leig.18 Light Howitzer",
+            "name": "Leig.18 Howitzer",
             "description": "A wheeled light howitzer.",
             "min": 1,
             "max": 1,
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": [
-                "gun_shield"
+                "gun_shield", {"id": "team", "x": 2}, "crew"
             ],
             "models": [
                 {
-                    "name": "Leig.18 Light Howitzer",
+                    "name": "Leig.18 Howitzer",
                     "courage": 6,
                     "movement": 4,
                     "shoot": 5,
@@ -293,18 +455,18 @@
             ]
         },
         "lefh_howitzer": {
-            "name": "LefH Medium Howitzer",
+            "name": "LefH Howitzer",
             "description": "A wheeled medium howitzer.",
             "min": 1,
             "max": 1,
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": [
-                "gun_shield"
+                "gun_shield", {"id": "team", "x": 3}, "crew"
             ],
             "models": [
                 {
-                    "name": "LefH Medium Howitzer",
+                    "name": "LefH Howitzer",
                     "courage": 6,
                     "movement": 3,
                     "shoot": 5,
@@ -326,7 +488,7 @@
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": [
-                "gun_shield"
+                "gun_shield", {"id": "team", "x": 3}, "crew"
             ],
             "models": [
                 {
@@ -345,18 +507,18 @@
             ]
         },
         "pak_36": {
-            "name": "Pak 36 Light AT Gun",
+            "name": "Pak 36 AT Gun",
             "description": "A wheeled light at gun.",
             "min": 1,
             "max": 1,
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": [
-                "gun_shield"
+                "gun_shield", {"id": "team", "x": 2}, "crew"
             ],
             "models": [
                 {
-                    "name": "Pak 36 Light AT Gun",
+                    "name": "Pak 36 AT Gun",
                     "courage": 6,
                     "movement": 4,
                     "shoot": 5,
@@ -371,18 +533,18 @@
             ]
         },
         "pak_38": {
-            "name": "Pak 38 Medium AT Gun",
+            "name": "Pak 38 AT Gun",
             "description": "A wheeled medium at gun.",
             "min": 1,
             "max": 1,
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": [
-                "gun_shield"
+                "gun_shield", {"id": "team", "x": 3}, "crew"
             ],
             "models": [
                 {
-                    "name": "Pak 38 Medium AT Gun",
+                    "name": "Pak 38 AT Gun",
                     "courage": 6,
                     "movement": 3,
                     "shoot": 5,
@@ -397,18 +559,18 @@
             ]
         },
         "pak_40": {
-            "name": "Pak 40 Heavy AT Gun",
+            "name": "Pak 40 AT Gun",
             "description": "A wheeled heavy at gun.",
             "min": 1,
             "max": 1,
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": [
-                "gun_shield"
+                "gun_shield", {"id": "team", "x": 3}, "crew"
             ],
             "models": [
                 {
-                    "name": "Pak 40 Heavy AT Gun",
+                    "name": "Pak 40 AT Gun",
                     "courage": 6,
                     "movement": 2,
                     "shoot": 5,
@@ -423,18 +585,18 @@
             ]
         },
         "pak_43": {
-            "name": "Pak 43 Heavy AT Gun",
+            "name": "Pak 43 AT Gun",
             "description": "A wheeled very heavy at gun.",
             "min": 1,
             "max": 1,
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": [
-                "gun_shield"
+                "gun_shield", {"id": "team", "x": 3}, "crew"
             ],
             "models": [
                 {
-                    "name": "Pak 43 Heavy AT Gun",
+                    "name": "Pak 43 AT Gun",
                     "courage": 6,
                     "movement": 2,
                     "shoot": 5,
@@ -448,12 +610,93 @@
                 }
             ]
         },
+        "sdkfz_222": {
+            "name": "Sdkfz 222",
+            "description": "An armored car with a powerful autocannon.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "keywords": ["Vehicle", "Armored Car"],
+            "models": [
+                {
+                    "name": "Sdkfz 222",
+                    "courage": 6,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": ["mmg"],
+                    "rules": [
+                        "vulnerable_side_rear", {"id": "critical", "x": 2}
+                    ],
+                    "options": [
+                        {"replaceWeapon": "mmg", "withWeapon": "light_autocannon_mg"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "panzer_38t": {
+            "name": "Panzer 38(t)",
+            "description": "A medium tank with a good main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Panzer 38(t)",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": [
+                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, {"id": "critical", "x": 2}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "panzer_iii": {
+            "name": "Panzer III J",
+            "description": "A medium tank with a good main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Panzer III J",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": [
+                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "panzer_iv": {
             "name": "Panzer IV J",
             "description": "A medium tank with a powerful main gun.",
             "min": 1,
             "max": 1,
-            "category": "heavy_armor",
+            "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
@@ -473,9 +716,40 @@
                     "max": 1
                 }
             ]
+        },
+        "medium_truck": {
+            "name": "Medium Truck",
+            "description": "A medium truck transport.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Medium Truck",
+                    "courage": 6,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 9,
+                    "reflexes": 5,
+                    "wounds": 3,
+                    "rules": [
+                        "tracked", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}, {"id": "transport", "x": 12}
+                    ],
+                    "options": [
+                        {"addWeapon": {"id":"mmg_aa", "mount":["Front"]}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
-    "weapons": {},
+    "weapons": {
+        "panzerfaust": {"name": "Panzerfaust", "attacks": 1, "short": 6, "medium": 12, "ap": 7, "damage": 3, "rules": [{"id": "ammo", "x": 1}]},
+        "panzerschreck": {"name": "Panzerschreck", "short": 12, "medium": 24, "ap": 7, "attacks": 1, "damage": 3, "rules": [{"id": "team", "x": 2}]}
+    },
     "rules": {},
     "relics": []
 }

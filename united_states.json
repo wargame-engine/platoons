@@ -91,7 +91,7 @@
             "description": "A medium tank with a decent all-round AT gun.",
             "min": 1,
             "max": 1,
-            "category": "heavy_armor",
+            "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
