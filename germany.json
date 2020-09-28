@@ -1,52 +1,65 @@
 {
     "id": "germany",
     "name": "Germany",
+    "subfactions": {
+        "infantry_focus": {"name": "Infantry Focus", "id": "infantry_focus", "restricted": true},
+        "airborne_focus": {"name": "Airborne Focus", "id": "airborne_focus", "restricted": true},
+        "armored_focus": {"name": "Armored Focus", "id": "armored_focus", "restricted": true}
+    },
     "units": {
         "field_officer": {
-            "name": "Field Offier",
+            "name": "Field Offier Team",
             "description": "A Field Commander.",
             "min": 1,
             "max": 1,
             "category": "command",
             "keywords": ["Infantry"],
-            "options": [
-                {"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]},
-                {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"addWeapon": "panzerfaust", "modelLimit": 2}
-            ],
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
                 {
                     "name": "Field Offier",
                     "courage": 7,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
-                    "rules": [
-                        {"id": "field_orders", "x": 1}, "leader"
-                    ],
-                    "options": [
-                        {"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}
-                    ],
+                    "rules": [{"id": "field_orders", "x": 1}, "leader"],
+                    "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}],
                     "min": 1,
                     "max": 1
                 },
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+            ]
+        },
+        "forward_artillery_observer": {
+            "name": "Forward Observer (Artillery)",
+            "description": "An artillery forward observer able to call in a fire mission.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}],
+            "models": [
                 {
-                    "name": "Assistant",
+                    "name": "Forward Observer (Artillery)",
                     "courage": 6,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 7,
+                    "movement": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["rifle", "unarmed"],
-                    "min": 0,
-                    "max": 2
-                }
+                    "weapons": ["rifle", "unarmed", "smoke_battery"],
+                    "options": [{"replaceWeapon": "smoke_battery", "withWeapon": ["light_mortar_battery", "medium_mortar_battery", "heavy_mortar_battery"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "field_medic": {
@@ -55,6 +68,7 @@
             "min": 1,
             "max": 1,
             "category": "support",
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -64,27 +78,53 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["pistol", "unarmed", "smoke_grenades"],
-                    "rules": [
-                        "medic"
-                    ],
+                    "rules": ["medic"],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+            ]
+        },
+        "volkssturm": {
+            "name": "Volkssturm",
+            "description": "A group of levied troops.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "subfactions": ["none"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"]}],
+            "models": [
+                {
+                    "name": "Volkssturm NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
                     "max": 1
                 },
                 {
-                    "name": "Assistant",
+                    "name": "Volkssturm",
                     "courage": 5,
                     "movement": 6,
-                    "shoot": 5,
+                    "shoot": 4,
                     "fight": 5,
-                    "defense": 5,
+                    "defense": 4,
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "min": 0,
-                    "max": 2
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 19
                 }
             ]
         },
@@ -93,17 +133,18 @@
             "description": "A group of mixed quality infantry.",
             "min": 1,
             "max": 1,
-            "category": "core",
+            "category": "infantry",
+            "subfactions": ["none"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"]}],
             "models": [
                 {
                     "name": "Volksgrenadier NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
-                    "fight": 5,
-                    "defense": 4,
+                    "fight": 4,
+                    "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
@@ -113,11 +154,11 @@
                 },
                 {
                     "name": "Volksgrenadier",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
-                    "fight": 5,
-                    "defense": 4,
+                    "fight": 4,
+                    "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
@@ -127,18 +168,19 @@
                 }
             ]
         },
-        "grenadiers": {
-            "name": "Grenadiers",
-            "description": "A group of hardened German Grenadiers.",
+        "aufklarungs_squad": {
+            "name": "Aufklarungs Squad",
+            "description": "A group of aggressive recon troops.",
             "min": 1,
             "max": 1,
-            "category": "core",
+            "category": "infantry",
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}],
+            "rules": ["scout"],
             "models": [
                 {
-                    "name": "Grenadier NCO",
-                    "courage": 6,
+                    "name": "Aufklarungs NCO",
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
@@ -151,13 +193,53 @@
                     "max": 1
                 },
                 {
-                    "name": "Grenadier",
-                    "courage": 6,
+                    "name": "Aufklarungs Infantry",
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 4
+                }
+            ]
+        },
+        "grenadiers": {
+            "name": "Grenadiers",
+            "description": "A group of hardened German Grenadiers.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}],
+            "models": [
+                {
+                    "name": "Grenadier NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Grenadier",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1}],
@@ -171,7 +253,8 @@
             "description": "A group of veteran hardened German Grenadiers.",
             "min": 1,
             "max": 1,
-            "category": "core",
+            "category": "infantry",
+            "subfactions": ["infantry_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}],
             "models": [
@@ -182,7 +265,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
@@ -196,6 +279,52 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 2}],
+                    "min": 4,
+                    "max": 8
+                }
+            ]
+        },
+        "fallschirmjager": {
+            "name": "Fallschirmjager",
+            "description": "A group of tough airborne troops.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "subfactions": ["none", "airborne_focus"],
+            "rules": ["stubborn"],
+            "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 5},
+                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle", "assault_rifle"]},
+                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
+            ],
+            "models": [
+                {
+                    "name": "Fallschirmjager NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Fallschirmjager",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
@@ -210,23 +339,18 @@
             "description": "A group of mobile Panzergrenadiers.",
             "min": 1,
             "max": 1,
-            "category": "core",
+            "category": "infantry",
             "keywords": ["Infantry"],
-            "rules": [
-                "stubborn"
-            ],
-            "options": [
-                {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6},
-                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3}
-            ],
+            "subfactions": ["none", "armored_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3}],
             "models": [
                 {
                     "name": "Panzergrenadier NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
@@ -238,9 +362,9 @@
                     "name": "Panzergrenadier",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
@@ -250,40 +374,116 @@
                 }
             ]
         },
+        "veteran_panzergrenadiers": {
+            "name": "Veteran Panzergrenadiers",
+            "description": "A group of veteran Panzergrenadiers.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "subfactions": ["armored_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Veteran Panzergrenadier NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Panzergrenadier",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 2}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "flamethrower_team": {
+            "name": "Flamethrower Team",
+            "description": "A team equipped to clear bunkers and other defensive positions.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "models": [
+                {"name": "Flamethrower Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["flamethrower", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "sniper_team": {
+            "name": "Sniper Team",
+            "description": "A team equipped to take out important targets from a distance.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "rules": ["scout", "stealth"],
+            "models": [
+                {"name": "Sniper", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
         "at_rifle_team": {
             "name": "AT Rifle Team",
             "description": "A team dedicated to hunting lighter tanks.",
             "min": 1,
             "max": 1,
             "category": "support",
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
+                {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "panzerknacker_team": {
+            "name": "Panzerknacker Team",
+            "description": "A team dedicated to hunting tanks with anti-tank grenades.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "models": [
                 {
-                    "name": "AT Rifle Gunner",
-                    "courage": 6,
+                    "name": "Panzerknacker Infantry",
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
+                    "defense": 6,
+                    "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["at_rifle", "unarmed"],
-                    "min": 1,
-                    "max": 1
-                },
-                {
-                    "name": "Assistant",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["rifle", "unarmed"],
-                    "min": 1,
-                    "max": 1
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "at_grenades"],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": "belt_lmg", "modelLimit": 1},
+                        {"addWeapon": "panzerfaust", "modelLimit": 2},
+                        {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
+                        {"addRule": "scout", "modelLimit": "all"}
+                    ],
+                    "min": 3,
+                    "max": 3
                 }
             ]
         },
@@ -293,12 +493,13 @@
             "min": 1,
             "max": 1,
             "category": "support",
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
                 {
                     "name": "Panzerschreck Gunner",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
@@ -309,35 +510,22 @@
                     "min": 1,
                     "max": 1
                 },
-                {
-                    "name": "Assistant",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["rifle", "unarmed"],
-                    "min": 1,
-                    "max": 1
-                }
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "mmg_team": {
             "name": "Tripod MG-34/MG42 Team",
-            "description": "A group of hardened German Grenadiers.",
+            "description": "A medium machinegun on a tripod mount.",
             "min": 1,
             "max": 1,
             "category": "support",
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
-            "rules": [
-                {"id": "team", "x": 2}, "crew"
-            ],
+            "rules": [{"id": "crew", "x": 2}],
             "models": [
                 {
                     "name": "Tripod MG-34/MG42 Team",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
@@ -356,14 +544,13 @@
             "min": 1,
             "max": 1,
             "category": "support",
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
-            "rules": [
-                {"id": "team", "x": 2}, "crew"
-            ],
+            "rules": [{"id": "crew", "x": 1}],
             "models": [
                 {
                     "name": "Light Mortar Team",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
@@ -382,14 +569,13 @@
             "min": 1,
             "max": 1,
             "category": "support",
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
-            "rules": [
-                {"id": "team", "x": 2}, "crew"
-            ],
+            "rules": [{"id": "crew", "x": 2}],
             "models": [
                 {
                     "name": "Medium Mortar Team",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
@@ -408,14 +594,13 @@
             "min": 1,
             "max": 1,
             "category": "support",
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
-            "rules": [
-                {"id": "team", "x": 3}, "crew"
-            ],
+            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Heavy Mortar Team",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
@@ -434,14 +619,13 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": [
-                "gun_shield", {"id": "team", "x": 2}, "crew"
-            ],
+            "rules": ["gun_shield", {"id": "crew", "x": 2}],
             "models": [
                 {
                     "name": "Leig.18 Howitzer",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
@@ -460,21 +644,20 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": [
-                "gun_shield", {"id": "team", "x": 3}, "crew"
-            ],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "LefH Howitzer",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 3,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 4,
-                    "weapons": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "weapons": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
                     "min": 1,
                     "max": 1
                 }
@@ -486,21 +669,70 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": [
-                "gun_shield", {"id": "team", "x": 3}, "crew"
-            ],
+            "rules": ["gun_shield", {"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "Sig.33 Howitzer",
-                    "courage": 6,
-                    "movement": 3,
+                    "courage": 5,
+                    "movement": 2,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 4,
-                    "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 5}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "schweres_wurfgerats": {
+            "name": "Schweres Wurfgerats",
+            "description": "A wheeled light rocket artillery piece.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": [{"id": "crew", "x": 1}],
+            "models": [
+                {
+                    "name": "Schweres Wurfgerats",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_rockets", "mount": ["Front"], "count": 2}, {"id": "unarmed", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "150mm_nebelwerfer": {
+            "name": "150mm Nebelwerfer 41",
+            "description": "A wheeled light rocket artillery piece.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": [{"id": "crew", "x": 2}],
+            "models": [
+                {
+                    "name": "Schweres Wurfgerats",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_rockets", "mount": ["Front"], "count": 3}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -512,14 +744,13 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": [
-                "gun_shield", {"id": "team", "x": 2}, "crew"
-            ],
+            "rules": ["gun_shield", {"id": "crew", "x": 2}],
             "models": [
                 {
                     "name": "Pak 36 AT Gun",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
@@ -538,14 +769,13 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": [
-                "gun_shield", {"id": "team", "x": 3}, "crew"
-            ],
+            "rules": ["gun_shield", {"id": "crew", "x": 2}],
             "models": [
                 {
                     "name": "Pak 38 AT Gun",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 3,
                     "shoot": 5,
                     "fight": 5,
@@ -564,21 +794,20 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": [
-                "gun_shield", {"id": "team", "x": 3}, "crew"
-            ],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Pak 40 AT Gun",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 2,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 4,
-                    "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
                     "min": 1,
                     "max": 1
                 }
@@ -590,21 +819,104 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": [
-                "gun_shield", {"id": "team", "x": 3}, "crew"
-            ],
+            "rules": ["gun_shield", {"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "Pak 43 AT Gun",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 2,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 4,
-                    "weapons": [{"id": "very_heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "weapons": [{"id": "very_heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 5}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "20mm_flak": {
+            "name": "20mm Flak",
+            "description": "A wheeled light anti-aircraft autocannon.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": [{"id": "crew", "x": 2}],
+            "models": [
+                {
+                    "name": "20mm Flak",
+                    "courage": 5,
+                    "movement": 3,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "light_autocannon_aa"}, {"id": "unarmed", "count": 3}],
+                    "options": [
+                        {"addRule": "gun_shield"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "flakvierling": {
+            "name": "Flakvierling 38",
+            "description": "A wheeled quad light anti-aircraft autocannon.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": [{"id": "crew", "x": 2}],
+            "models": [
+                {
+                    "name": "Flakvierling 38",
+                    "courage": 5,
+                    "movement": 2,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "light_autocannon_aa", "count": 4}, {"id": "unarmed", "count": 3}],
+                    "options": [
+                        {"addRule": "gun_shield"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "37mm_flak36": {
+            "name": "37mm Flak 36",
+            "description": "A wheeled heavy anti-aircraft autocannon.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": [{"id": "crew", "x": 2}],
+            "models": [
+                {
+                    "name": "37mm Flak 36",
+                    "courage": 5,
+                    "movement": 2,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "heavy_autocannon_aa"}, {"id": "unarmed", "count": 3}],
+                    "options": [
+                        {"addRule": "gun_shield"}
+                    ],
                     "min": 1,
                     "max": 1
                 }
@@ -612,28 +924,25 @@
         },
         "sdkfz_222": {
             "name": "Sdkfz 222",
-            "description": "An armored car with a powerful autocannon.",
+            "description": "An armored recon car with a powerful autocannon.",
             "min": 1,
             "max": 1,
             "category": "light_vehicles",
+            "subfactions": ["none", "armored_focus"],
             "keywords": ["Vehicle", "Armored Car"],
             "models": [
                 {
                     "name": "Sdkfz 222",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 12,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 10,
-                    "reflexes": 6,
-                    "wounds": 3,
+                    "reflexes": 5,
+                    "wounds": 6,
                     "weapons": ["mmg"],
-                    "rules": [
-                        "vulnerable_side_rear", {"id": "critical", "x": 2}
-                    ],
-                    "options": [
-                        {"replaceWeapon": "mmg", "withWeapon": "light_autocannon_mg"}
-                    ],
+                    "rules": ["vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}],
+                    "options": [{"replaceWeapon": "mmg", "withWeapon": "light_autocannon_mg"}],
                     "min": 1,
                     "max": 1
                 }
@@ -645,21 +954,20 @@
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
                     "name": "Panzer 38(t)",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 10,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 11,
-                    "reflexes": 6,
-                    "wounds": 3,
+                    "reflexes": 5,
+                    "wounds": 6,
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": [
-                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, {"id": "critical", "x": 2}
-                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, {"id": "damage_table_vehicle", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -671,20 +979,47 @@
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
                     "name": "Panzer III J",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 10,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 12,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": [
-                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "stug_III_g": {
+            "name": "Stug III G",
+            "description": "A medium tank with a fixed powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Stug III G",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "medium_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "options": [
+                        {"addRule": "side_skirts"}
                     ],
                     "min": 1,
                     "max": 1
@@ -697,7 +1032,39 @@
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
             "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Panzer IV J",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "options": [
+                        {"addRule": "side_skirts"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "panzer_iv_command": {
+            "name": "Panzer IV J (Command)",
+            "description": "A medium tank with a powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "subfactions": ["armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "rules": [
+                {"id": "field_orders_armored", "x": 1}
+            ],
             "models": [
                 {
                     "name": "Panzer IV J",
@@ -709,9 +1076,205 @@
                     "reflexes": 6,
                     "wounds": 6,
                     "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": [
-                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "options": [
+                        {"addRule": "side_skirts"}
                     ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "panther": {
+            "name": "Panther G",
+            "description": "A medium tank with a very powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Panther G",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "armored_front", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "tiger_i": {
+            "name": "Tiger I",
+            "description": "A heavy tank with a very powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Tiger I",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 13,
+                    "reflexes": 5,
+                    "wounds": 9,
+                    "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 9}, {"id": "damage_table_vehicle", "x": 6}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "tiger_ii": {
+            "name": "Tiger II",
+            "description": "A heavy tank with a super powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Tiger II",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 14,
+                    "reflexes": 5,
+                    "wounds": 12,
+                    "weapons": ["super_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 12}, {"id": "damage_table_vehicle", "x": 6}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "horse_tow": {
+            "name": "Horse Tow",
+            "description": "A horse wagon.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Horse Tow",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": [{"id": "transport", "x": 7}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "kettenkrad": {
+            "name": "Kettenkrad",
+            "description": "A light towing vehicle.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Kettenkrad",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": [{"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 3}, "half_tracked"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "kubelwagen": {
+            "name": "Kubelwagen/Schimmwagen",
+            "description": "A light transport car.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Kubelwagen",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": [{"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 5}],
+                    "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}, {"addRule": "amphibious"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "rso_tractor": {
+            "name": "RSO Tractor",
+            "description": "A light towing tractor.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "RSO Tractor",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": [{"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 7}, "tracked"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "sdkfz_4_7_10": {
+            "name": "Sdkfz 4/7/10",
+            "description": "A light half-tracked towing vehicle.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Sdkfz 4/7/10",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": [{"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 10}, "half_tracked"],
                     "min": 1,
                     "max": 1
                 }
@@ -723,23 +1286,72 @@
             "min": 1,
             "max": 1,
             "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Vehicle"],
             "models": [
                 {
                     "name": "Medium Truck",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 12,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 9,
+                    "defense": 8,
                     "reflexes": 5,
-                    "wounds": 3,
-                    "rules": [
-                        "tracked", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}, {"id": "transport", "x": 12}
-                    ],
-                    "options": [
-                        {"addWeapon": {"id":"mmg_aa", "mount":["Front"]}}
-                    ],
+                    "wounds": 6,
+                    "rules": [{"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 12}],
+                    "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "sdkfz_250": {
+            "name": "Sdfkz 250",
+            "description": "A lightly armored mechanized transport.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Half-Track"],
+            "models": [
+                {
+                    "name": "Sdfkz 250",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["half_tracked", "vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 6}, "exposed"],
+                    "options": [{"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": {"id": "light_at", "mount": ["Front"]}}, {"addWeapon": {"id": "mmg", "mount": ["Rear"]}}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "sdkfz_251": {
+            "name": "Sdfkz 251",
+            "description": "A lightly armored mechanized transport.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Half-Track"],
+            "models": [
+                {
+                    "name": "Sdfkz 251",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["half_tracked", "vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 12}, "exposed"],
+                    "options": [{"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": {"id": "light_at", "mount": ["Front"]}}, {"addWeapon": {"id": "mmg", "mount": ["Rear"]}}],
                     "min": 1,
                     "max": 1
                 }
@@ -747,8 +1359,28 @@
         }
     },
     "weapons": {
-        "panzerfaust": {"name": "Panzerfaust", "attacks": 1, "short": 6, "medium": 12, "ap": 7, "damage": 3, "rules": [{"id": "ammo", "x": 1}]},
-        "panzerschreck": {"name": "Panzerschreck", "short": 12, "medium": 24, "ap": 7, "attacks": 1, "damage": 3, "rules": [{"id": "team", "x": 2}]}
+        "panzerfaust": {"name": "Panzerfaust", "attacks": 1, "short": 6, "medium": 12, "ap": 7, "damage": 6, "rules": [{"id": "ammo", "x": 1}]},
+        "panzerschreck": {"name": "Panzerschreck", "short": 12, "medium": 24, "ap": 7, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}]}
+    },
+    "strategies": {
+        "sturm_assault": {
+            "name": "Sturm Assault",
+            "flavor": "A swift and deadly end to a fight can come with a furious charge...",
+            "description": "Use when a German Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
+            "cost": 1
+        },
+        "suppressive_fire": {
+            "name": "Suppressive Fire",
+            "flavor": "With high rate of fire and a terrifying noise, machineguns can be used to pin down enemy troops with ease.",
+            "description": "Use when a German Infantry unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 1 additional strain.",
+            "cost": 1
+        },
+        "panzer_blitz": {
+            "name": "Panzer Blitz",
+            "flavor": "A swift and deadly Panzer assault can sometimes route the enemy.",
+            "description": "Use when a German Tank unit is activated. It may make a free 6\" Move action.",
+            "cost": 1
+        }
     },
     "rules": {},
     "relics": []
