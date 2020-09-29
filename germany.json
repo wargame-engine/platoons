@@ -214,7 +214,7 @@
             "min": 1,
             "max": 1,
             "category": "infantry",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}],
             "models": [
@@ -922,6 +922,56 @@
                 }
             ]
         },
+        "kfz13_adler": {
+            "name": "Kfz 13 \"Adler\"",
+            "description": "A light armored car.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Half-Track"],
+            "models": [
+                {
+                    "name": "Kfz 13 \"Adler\"",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "mmg_aa", "mount": ["Front"]}],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "sdkfz_250_9": {
+            "name": "Sdfkz 250/9",
+            "description": "A converted lightly armored transport.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Half-Track"],
+            "models": [
+                {
+                    "name": "Sdfkz 250/9",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "light_autocannon_mg"}],
+                    "rules": ["half_tracked", "vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, "exposed"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "sdkfz_222": {
             "name": "Sdkfz 222",
             "description": "An armored recon car with a powerful autocannon.",
@@ -943,6 +993,107 @@
                     "weapons": ["mmg"],
                     "rules": ["vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}],
                     "options": [{"replaceWeapon": "mmg", "withWeapon": "light_autocannon_mg"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "sdkfz_231": {
+            "name": "Sdkfz 231",
+            "description": "An armored recon car with a powerful autocannon.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Armored Car"],
+            "models": [
+                {
+                    "name": "Sdkfz 222",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_autocannon_mg"],
+                    "rules": ["vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, "exposed"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "sdkfz_234_1": {
+            "name": "Sdkfz 234/1",
+            "description": "A heavier armored recon car.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Armored Car"],
+            "models": [
+                {
+                    "name": "Sdkfz 234/1",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_autocannon_mg"],
+                    "rules": ["vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, "exposed"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "sdkfz_234_3": {
+            "name": "Sdkfz 234/3",
+            "description": "A heavier armored recon car.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Armored Car"],
+            "models": [
+                {
+                    "name": "Sdkfz 234/3",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "light_howitzer_vehicle", "mount": ["Front"]}],
+                    "rules": ["vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, "exposed"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "sdkfz_234_2": {
+            "name": "Sdkfz 234 \"Puma\"",
+            "description": "A heavier armored recon car.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Armored Car"],
+            "models": [
+                {
+                    "name": "Sdkfz 234 \"Puma\"",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "medium_at_mg"}],
+                    "rules": ["vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, "exposed"],
+                    "options": [{"replaceWeapon":{"id": "medium_at_mg"}, "withWeapon": [{"id": "heavy_at_mg", "mount": ["Front"]}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -1005,7 +1156,7 @@
             "max": 1,
             "category": "heavy_vehicles",
             "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
-            "keywords": ["Vehicle", "Tank"],
+            "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
             "models": [
                 {
                     "name": "Stug III G",
@@ -1026,8 +1177,64 @@
                 }
             ]
         },
-        "panzer_iv": {
-            "name": "Panzer IV J",
+        "panzer_iv_a": {
+            "name": "Panzer IV A",
+            "description": "A medium tank with an infantry support howitzer.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Panzer IV J",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_howitzer_vehicle", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "options": [
+                        {"addRule": "side_skirts"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "panzer_iv_b_f": {
+            "name": "Panzer IV B-F",
+            "description": "A medium tank with a powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Panzer IV J",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_howitzer_vehicle_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "options": [
+                        {"addRule": "side_skirts"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "panzer_iv_j": {
+            "name": "Panzer IV G-J",
             "description": "A medium tank with a powerful main gun.",
             "min": 1,
             "max": 1,
@@ -1055,7 +1262,7 @@
             ]
         },
         "panzer_iv_command": {
-            "name": "Panzer IV J (Command)",
+            "name": "Panzer IV G-J (Command)",
             "description": "A medium tank with a powerful main gun.",
             "min": 1,
             "max": 1,
@@ -1070,8 +1277,8 @@
                     "name": "Panzer IV J",
                     "courage": 6,
                     "movement": 10,
-                    "shoot": 5,
-                    "fight": 5,
+                    "shoot": 6,
+                    "fight": 6,
                     "defense": 12,
                     "reflexes": 6,
                     "wounds": 6,
@@ -1100,6 +1307,34 @@
                     "movement": 10,
                     "shoot": 5,
                     "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "armored_front", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "panther_command": {
+            "name": "Panther G (Command)",
+            "description": "A medium tank with a very powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "subfactions": ["armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "rules": [
+                {"id": "field_orders_armored", "x": 1}
+            ],
+            "models": [
+                {
+                    "name": "Panther G (Command)",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
                     "defense": 12,
                     "reflexes": 5,
                     "wounds": 6,

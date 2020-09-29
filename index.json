@@ -170,7 +170,7 @@
         "hidden_deployment": {
             "name": "Hidden Deployment (Core)",
             "flavor": "Staying hidden and waiting for the right moment to strike can have a devastating effect.",
-            "description": "Up to 6 Infantry or Artillery units, one point per pair may be placed in hidden deployment instead of deployed on the field. See the section for hidden units in the core rules for details on how hidden units work.",
+            "description": "Any number of Infantry or Artillery units, one point per pair may be placed in hidden deployment instead of deployed on the field. See the section for hidden units in the core rules for details on how hidden units work.",
             "cost": "1/pair"
         }
     },
@@ -242,6 +242,11 @@
         "very_light_howitzer": {"name": "Very Light Howitzer", "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]}]},
         "light_rockets": {"name": "Light Rockets", "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", "salvo", {"id": "blast", "x": 4}]}]},
         "heavy_rockets": {"name": "Light Rockets", "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 4, "rules": ["indirect", "salvo", {"id": "blast", "x": 6}]}]},
+        "light_howitzer_vehicle": {"name": "Light Howitzer (Vehicle)", "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]}]},
+        "light_howitzer_vehicle_mg": {"name": "Light Howitzer (Vehicle)/Co-ax MG", "profiles": [
+            {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]},
+            {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
+        ]},
         "light_howitzer": {"name": "Light Howitzer", "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]}]},
         "light_howitzer_light_at": {
             "name": "Light Howitzer/Light AT",
