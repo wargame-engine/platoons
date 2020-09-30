@@ -20,7 +20,20 @@
         "activation": {"name": "Activation"}
     },
     "alliances": {"axis": {"name": "Axis Powers"}, "allies": {"name": "Allied Powers"}},
-    "relics": [],
+    "relics": {
+        "tank_ace": {
+            "name": "Tank Ace (Core)",
+            "rule": "tank_ace",
+            "flavor": "A tank ace is a fearsome foe to encounter on the battlefield.",
+            "description": "Upgrade one Tank unit with Tank Ace."
+        },
+        "inspiring_leader": {
+            "name": "Inspiring Leader (Core)",
+            "rule": "inspiring_leader",
+            "flavor": "A leader who can motivate his/her men to keep fighting is a key asset.",
+            "description": "Upgrade one Field Officer model with Inspiring Leader."
+        }
+    },
     "powers": {},
     "organizations": {
         "infantry_platoon": {
@@ -321,6 +334,16 @@
         }
     },
     "rules": {
+        "tank_ace": {
+            "name": "Tank Ace",
+            "description": "This unit gets +1 Accuracy.",
+            "points": 25
+        },
+        "inspiring_leader": {
+            "name": "Inspiring Leader",
+            "description": "This unit and friendly Infantry units within 6\" get +1 Courage.",
+            "points": 10
+        },
         "airdrop": {
             "name": "Airdrop",
             "description": "This unit may be set aside in reserves before the match begins if all models have airdrop. At the beginning of any round after the first you may attempt to place the unit anywhere on the table over 9” away from enemy units.\n\nTake a Courage test. If failed, use D10 scattering to determine the unit's new landing location. If the new location is off the table, place the unit at table edge as close as possible. If both players have units with Airdrop they must roll-off to see who deploys first, and then alternate in placing them.",
