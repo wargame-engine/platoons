@@ -23,29 +23,13 @@
             "cost": 2,
             "description": "A well-rounded force for taking on any mission.",
             "categories": {
-                "command": {
-                    "min": 1,
-                    "max": 2
-                },
-                "infantry": {
-                    "min": 2,
-                    "max": 5
-                },
-                "support": {
-                    "max": 2
-                },
-                "artillery": {
-                    "max": 1
-                },
-                "light_vehicles": {
-                    "max": 1
-                },
-                "heavy_vehicles": {
-                    "max": 1
-                },
-                "transport": {
-                    "max": 2
-                }
+                "command": {"min": 1, "max": 2},
+                "infantry": {"min": 2, "max": 5},
+                "support": {"max": 2},
+                "artillery": {"max": 1},
+                "light_vehicles": {"max": 1},
+                "heavy_vehicles": {"max": 1},
+                "transport": {"max": 2}
             }
         },
         "support_platoon": {
@@ -53,30 +37,13 @@
             "cost": 3,
             "description": "A platoon focused on support units and heavy guns.",
             "categories": {
-                "command": {
-                    "min": 1,
-                    "max": 2
-                },
-                "infantry": {
-                    "min": 2,
-                    "max": 3
-                },
-                "support": {
-                    "max": 3
-                },
-                "artillery": {
-                    "min": 1,
-                    "max": 3
-                },
-                "light_vehicles": {
-                    "max": 1
-                },
-                "heavy_vehicles": {
-                    "max": 0
-                },
-                "transport": {
-                    "max": 4
-                }
+                "command": {"min": 1, "max": 2},
+                "infantry": {"min": 2, "max": 3},
+                "support": {"max": 3},
+                "artillery": {"min": 1, "max": 3},
+                "light_vehicles": {"max": 1},
+                "heavy_vehicles": {"max": 0},
+                "transport": {"max": 4}
             }
         },
         "mechanized_platoon": {
@@ -84,30 +51,13 @@
             "cost": 3,
             "description": "An infantry force with additional transports.",
             "categories": {
-                "command": {
-                    "min": 1,
-                    "max": 2
-                },
-                "infantry": {
-                    "min": 2,
-                    "max": 5
-                },
-                "support": {
-                    "max": 2
-                },
-                "artillery": {
-                    "max": 1
-                },
-                "light_vehicles": {
-                    "max": 2
-                },
-                "heavy_vehicles": {
-                    "max": 1
-                },
-                "transport": {
-                    "min": 2,
-                    "max": 5
-                }
+                "command": {"min": 1, "max": 2},
+                "infantry": {"min": 2, "max": 5},
+                "support": {"max": 2},
+                "artillery": {"max": 1},
+                "light_vehicles": {"max": 2},
+                "heavy_vehicles": {"max": 1},
+                "transport": {"min": 2, "max": 5}
             }
         },
         "armored_platoon": {
@@ -115,30 +65,13 @@
             "cost": 4,
             "description": "An armored force with additional armored support.",
             "categories": {
-                "command": {
-                    "min": 1,
-                    "max": 2
-                },
-                "infantry": {
-                    "min": 2,
-                    "max": 5
-                },
-                "support": {
-                    "max": 2
-                },
-                "artillery": {
-                    "max": 1
-                },
-                "light_vehicles": {
-                    "max": 2
-                },
-                "heavy_vehicles": {
-                    "max": 3
-                },
-                "transport": {
-                    "min": 2,
-                    "max": 5
-                }
+                "command": {"min": 1, "max": 2},
+                "infantry": {"min": 2, "max": 5},
+                "support": {"max": 2},
+                "artillery": {"max": 1},
+                "light_vehicles": {"max": 2},
+                "heavy_vehicles": {"max": 3},
+                "transport": {"min": 2, "max": 5}
             }
         }
     },
@@ -183,6 +116,7 @@
         "rifle": {"name": "Rifle", "short": 12, "medium": 24, "attacks": 1},
         "sniper_rifle": {"name": "Sniper Rifle", "short": 18, "medium": 36, "attacks": 1, "ap": 2, "rules": ["sniper", {"id": "team", "x": 2}]},
         "semi_auto_rifle": {"name": "Semi-Auto Rifle", "short": 12, "medium": 24, "attacks": 1, "rules": ["assault"]},
+        "carbine_rifle": {"name": "Carbine Rifle", "short": 9, "medium": 18, "attacks": 1, "rules": ["assault"]},
         "smg": {"name": "SMG", "short": 6, "medium": 12, "attacks": 2, "rules": ["assault"]},
         "assault_rifle": {"name": "Assault Rifle", "short": 12, "medium": 24, "attacks": 2, "rules": ["assault"]},
         "belt_lmg": {"name": "Belt-fed LMG", "short": 15, "medium": 30, "attacks": 4, "rules": [{"id": "team", "x": 2}]},
@@ -192,22 +126,20 @@
         "mmg": {"name": "Medium MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1},
         "mmg_aa": {"name": "Medium MG (AA)", "short": 18, "medium": 36, "attacks": 5, "ap": 1, "rules": ["anti_air"]},
         "hmg": {"name": "Heavy MG", "short": 18, "medium": 36, "attacks": 5, "ap": 2},
+        "hmg_aa": {"name": "Heavy MG", "short": 18, "medium": 36, "attacks": 5, "ap": 2, "rules": ["anti_air"]},
         "mmg_internal": {"name": "Medium MG (Internal)", "short": 18, "medium": 36, "ap": 1, "attacks": 5},
         "flamethrower": {"name": "Flamethrower", "short": 6, "medium": 12, "ap": 3, "attacks": 3, "rules": ["flame"]},
         "vehicle_flamethrower": {"name": "Flamethrower (Vehicle)", "short": 12, "medium": 24, "ap": 3, "attacks": 6, "rules": ["flame"]},
         "at_rifle": {"name": "AT Rifle", "short": 18, "medium": 36, "ap": 3, "attacks": 1, "rules": [{"id": "team", "x": 2}]},
         "light_autocannon": {
             "name": "Light Autocannon",
-            "profiles": [
-                {"name": "AT", "short": 24, "medium": 48, "ap": 3, "attacks": 2},
-                {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id":"blast", "x": 2}]}
-            ]
+            "profiles": [{"name": "AT", "short": 24, "medium": 48, "ap": 3, "attacks": 2}, {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id": "blast", "x": 2}]}]
         },
         "light_autocannon_mg": {
             "name": "Light Autocannon/Co-ax MG",
             "profiles": [
                 {"name": "AT", "short": 24, "medium": 48, "ap": 3, "attacks": 2},
-                {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id":"blast", "x": 2}]},
+                {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id": "blast", "x": 2}]},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
@@ -215,27 +147,33 @@
             "name": "Light Autocannon",
             "profiles": [
                 {"name": "AT", "short": 24, "medium": 48, "ap": 3, "attacks": 2, "rules": ["anti_air"]},
-                {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": ["anti_air", {"id":"blast", "x": 2}]}
+                {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": ["anti_air", {"id": "blast", "x": 2}]}
             ]
         },
         "heavy_autocannon": {
             "name": "Heavy Autocannon",
-            "profiles": [
-                {"name": "AT", "short": 24, "medium": 48, "ap": 4, "attacks": 2},
-                {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id":"blast", "x": 3}]}
-            ]
+            "profiles": [{"name": "AT", "short": 24, "medium": 48, "ap": 4, "attacks": 2}, {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id": "blast", "x": 3}]}]
         },
         "heavy_autocannon_aa": {
             "name": "Heavy Autocannon (AA)",
             "profiles": [
                 {"name": "AT", "short": 24, "medium": 48, "ap": 4, "attacks": 2, "rules": ["anti_air"]},
-                {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id":"blast", "x": 3}, "anti_air"]}
+                {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id": "blast", "x": 3}, "anti_air"]}
             ]
         },
         "smoke_battery": {"name": "Smoke Barrage (Off-table Battery)", "profiles": [{"name": "Smoke", "short": 18, "medium": 36, "attacks": 3, "rules": ["indirect", "smoke"]}]},
-        "light_mortar_battery": {"name": "Light Mortar (Off-table Battery)", "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]}]},
-        "medium_mortar_battery": {"name": "Medium Mortar (Off-table Battery)", "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]}]},
-        "heavy_mortar_battery": {"name": "Heavy Mortar (Off-table Battery)", "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]}]},
+        "light_mortar_battery": {
+            "name": "Light Mortar (Off-table Battery)",
+            "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]}]
+        },
+        "medium_mortar_battery": {
+            "name": "Medium Mortar (Off-table Battery)",
+            "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]}]
+        },
+        "heavy_mortar_battery": {
+            "name": "Heavy Mortar (Off-table Battery)",
+            "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]}]
+        },
         "light_mortar": {"name": "Light Mortar", "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]}]},
         "medium_mortar": {"name": "Medium Mortar", "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]}]},
         "heavy_mortar": {"name": "Heavy Mortar", "profiles": [{"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]}]},
@@ -243,10 +181,13 @@
         "light_rockets": {"name": "Light Rockets", "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", "salvo", {"id": "blast", "x": 4}]}]},
         "heavy_rockets": {"name": "Light Rockets", "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 4, "rules": ["indirect", "salvo", {"id": "blast", "x": 6}]}]},
         "light_howitzer_vehicle": {"name": "Light Howitzer (Vehicle)", "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]}]},
-        "light_howitzer_vehicle_mg": {"name": "Light Howitzer (Vehicle)/Co-ax MG", "profiles": [
-            {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]},
-            {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
-        ]},
+        "light_howitzer_vehicle_mg": {
+            "name": "Light Howitzer (Vehicle)/Co-ax MG",
+            "profiles": [
+                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]},
+                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
+            ]
+        },
         "light_howitzer": {"name": "Light Howitzer", "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]}]},
         "light_howitzer_light_at": {
             "name": "Light Howitzer/Light AT",
@@ -259,10 +200,7 @@
         "heavy_howitzer": {"name": "Heavy Howitzer", "profiles": [{"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 9}]}]},
         "very_light_at": {
             "name": "Very Light AT",
-            "profiles": [
-                {"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 2}]},
-                {"name": "AT", "short": 18, "medium": 36, "attacks": 1, "ap": 4}
-            ]
+            "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 2}]}, {"name": "AT", "short": 18, "medium": 36, "attacks": 1, "ap": 4}]
         },
         "very_light_at_mg": {
             "name": "Very Light AT/Co-ax MG",
@@ -274,10 +212,7 @@
         },
         "light_at": {
             "name": "Light AT",
-            "profiles": [
-                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 5}
-            ]
+            "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 5}]
         },
         "light_at_mg": {
             "name": "Light AT/Co-ax MG",
@@ -287,12 +222,17 @@
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
+        "light_at_stabilized_mg": {
+            "name": "Light AT(Stabilized)/Co-ax MG",
+            "profiles": [
+                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 1, "rules": ["assault", {"id": "blast", "x": 3}]},
+                {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 5, "rules": ["assault"]},
+                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
+            ]
+        },
         "medium_at": {
             "name": "Medium AT",
-            "profiles": [
-                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 5}]},
-                {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6}
-            ]
+            "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 5}]}, {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6}]
         },
         "medium_at_stabilized": {
             "name": "Medium AT (Stabilized)",
@@ -327,10 +267,7 @@
         },
         "heavy_at": {
             "name": "Heavy AT",
-            "profiles": [
-                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 7}]},
-                {"name": "AT", "short": 36, "medium": 72, "attacks": 1, "ap": 7}
-            ]
+            "profiles": [{"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 7}]}, {"name": "AT", "short": 36, "medium": 72, "attacks": 1, "ap": 7}]
         },
         "heavy_at_mg": {
             "name": "Heavy AT/Co-ax MG",
@@ -350,10 +287,7 @@
         },
         "very_heavy_at": {
             "name": "Very Heavy AT",
-            "profiles": [
-                {"name": "HE", "short": 42, "medium": 84, "attacks": 1, "ap": 4, "rules": [{"id": "blast", "x": 9}]},
-                {"name": "AT", "short": 42, "medium": 84, "attacks": 1, "ap": 8}
-            ]
+            "profiles": [{"name": "HE", "short": 42, "medium": 84, "attacks": 1, "ap": 4, "rules": [{"id": "blast", "x": 9}]}, {"name": "AT", "short": 42, "medium": 84, "attacks": 1, "ap": 8}]
         },
         "very_heavy_at_mg": {
             "name": "Very Heavy AT/Co-ax MG",
@@ -365,10 +299,7 @@
         },
         "super_heavy_at": {
             "name": "Super Heavy AT",
-            "profiles": [
-                {"name": "HE", "short": 48, "medium": 96, "attacks": 1, "ap": 5, "rules": [{"id": "blast", "x": 11}]},
-                {"name": "AT", "short": 42, "medium": 96, "attacks": 1, "ap": 9}
-            ]
+            "profiles": [{"name": "HE", "short": 48, "medium": 96, "attacks": 1, "ap": 5, "rules": [{"id": "blast", "x": 11}]}, {"name": "AT", "short": 42, "medium": 96, "attacks": 1, "ap": 9}]
         },
         "super_heavy_at_mg": {
             "name": "Super Heavy AT/Co-ax MG",
@@ -403,17 +334,8 @@
         "amphibious": {"name": "Amphibious", "description": "This unit may treat impassable water terrain as difficult terrain.", "points": 5},
         "salvo": {"name": "Salvo", "description": "This weapon always hits at -1 Accuracy. When scattering results from this weapon, it hits the closest unit within 3\" instead of just 1\"."},
         "half_tracked": {"name": "Half-Tracked", "description": "This unit may ignore difficult terrain when moving.", "points": 5},
-        "shock": {
-            "name": "Shock",
-            "inputs": ["x"],
-            "description": "This model causes X hits with no AP when it successfully charges an enemy unit.",
-            "points": [2, {"multiply": "rule.x"}]
-        },
-        "team": {
-            "name": "Team",
-            "inputs": ["x"],
-            "description": "This weapon requires X models to operate effectively. It suffers -1 Accuracy for each model under this number."
-        },
+        "shock": {"name": "Shock", "inputs": ["x"], "description": "This model causes X hits with no AP when it successfully charges an enemy unit.", "points": [2, {"multiply": "rule.x"}]},
+        "team": {"name": "Team", "inputs": ["x"], "description": "This weapon requires X models to operate effectively. It suffers -1 Accuracy for each model under this number."},
         "field_orders": {
             "name": "Field Orders",
             "inputs": ["x"],

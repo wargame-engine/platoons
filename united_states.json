@@ -2,6 +2,87 @@
     "id": "united_states",
     "name": "United States",
     "units": {
+        "field_officer": {
+            "name": "Field Offier Team",
+            "description": "A Field Commander.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Field Offier",
+                    "courage": 7,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
+                    "rules": [{"id": "field_orders", "x": 1}, "leader"],
+                    "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+            ]
+        },
+        "forward_artillery_observer": {
+            "name": "Forward Observer (Artillery)",
+            "description": "An artillery forward observer able to call in a fire mission.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}],
+            "models": [
+                {
+                    "name": "Forward Observer (Artillery)",
+                    "courage": 6,
+                    "movement": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed", "smoke_battery"],
+                    "options": [{"replaceWeapon": "smoke_battery", "withWeapon": ["light_mortar_battery", "medium_mortar_battery", "heavy_mortar_battery"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+            ]
+        },
+        "field_medic": {
+            "name": "Field Medic",
+            "description": "A field medic.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Field Medic",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["pistol", "unarmed", "smoke_grenades"],
+                    "rules": ["medic"],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+            ]
+        },
         "riflemen": {
             "name": "Rifle Squad",
             "description": "A group of trained US Riflemen.",
@@ -12,6 +93,44 @@
             "models": [
                 {
                     "name": "Rifle NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Rifleman",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 2}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "rangers": {
+            "name": "Rangers",
+            "description": "A group of trained US Rangers.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Ranger NCO",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
@@ -25,7 +144,7 @@
                     "max": 1
                 },
                 {
-                    "name": "Rifleman",
+                    "name": "Ranger",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
@@ -34,10 +153,74 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["semi_auto_rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 1}, {"replaceWeapon": "semi_auto_rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1}],
                     "min": 5,
                     "max": 11
                 }
+            ]
+        },
+        "airborne_squad": {
+            "name": "Airborne Squad",
+            "description": "A group of trained US Airborne.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Airborne NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Airborne",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 2}, {"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"], "modelLimit": 5}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "bazooka_team": {
+            "name": "Bazooka Team",
+            "description": "A team dedicated to hunting heavy tanks.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "models": [
+                {
+                    "name": "Bazooka Gunner",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["bazooka", "unarmed"],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "mmg_team": {
@@ -50,12 +233,12 @@
             "models": [
                 {
                     "name": ".30 Cal MG Team",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "rules": [{"id": "crew", "x": 2}],
@@ -74,12 +257,12 @@
             "models": [
                 {
                     "name": ".50 Cal MG Team",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "hmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "rules": [{"id": "crew", "x": 2}],
@@ -99,12 +282,12 @@
             "models": [
                 {
                     "name": "Light Mortar Team",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "weapons": [{"id": "light_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 2}],
                     "min": 1,
@@ -123,12 +306,12 @@
             "models": [
                 {
                     "name": "Medium Mortar Team",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "medium_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
@@ -147,12 +330,12 @@
             "models": [
                 {
                     "name": "Heavy Mortar Team",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 4,
                     "weapons": [{"id": "heavy_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
                     "min": 1,
@@ -171,12 +354,12 @@
             "models": [
                 {
                     "name": "75mm Pack Howitzer",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "light_howitzer_light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
@@ -195,12 +378,12 @@
             "models": [
                 {
                     "name": "M2A1 Howitzer",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 3,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 4,
                     "weapons": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
                     "min": 1,
@@ -219,12 +402,12 @@
             "models": [
                 {
                     "name": "M1 155mm \"Long Tom\"",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 2,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 4,
                     "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 5}],
                     "min": 1,
@@ -243,12 +426,12 @@
             "models": [
                 {
                     "name": "37mm M3",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
@@ -267,12 +450,12 @@
             "models": [
                 {
                     "name": "57mm M1",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 3,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 4,
                     "weapons": [{"id": "medium_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
@@ -291,12 +474,12 @@
             "models": [
                 {
                     "name": "3-inch M5",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 2,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 4,
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
                     "min": 1,
@@ -304,37 +487,172 @@
                 }
             ]
         },
-        "sherman": {
-            "name": "Sherman",
+        "m8_greyhound": {
+            "name": "M8 Greyhound",
+            "description": "An armored recon car with a powerful autocannon.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Armored Car"],
+            "models": [
+                {
+                    "name": "M8 Greyhound",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_at_mg"],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed"],
+                    "options": [{"addWeapon": "hmg_aa"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m3_stuart": {
+            "name": "M3 Stuart",
             "description": "A medium tank with a decent all-round AT gun.",
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
+            "rules": ["catches_fire"],
             "models": [
                 {
-                    "name": "Sherman 75mm",
-                    "courage": 6,
+                    "name": "M3 Stuart",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m4_sherman": {
+            "name": "M4 Sherman",
+            "description": "A medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "rules": ["catches_fire"],
+            "models": [
+                {
+                    "name": "M4 Sherman",
+                    "courage": 5,
                     "movement": 10,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 12,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "options": [
-                        {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": "heavy_at_stabilized_mg"}
-                    ],
-                    "rules": [
-                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}
-                    ],
+                    "options": [{"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": "heavy_at_stabilized_mg"}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m2_halftrack": {
+            "name": "M2 Halftrack",
+            "description": "A lightly armored mechanized transport.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Half-Track"],
+            "models": [
+                {
+                    "name": "M2 Halftrack",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "hmg_aa", "mount": ["Front"]}],
+                    "rules": ["half_tracked", "vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 12}, "exposed"],
+                    "options": [{"addweapon": "mmg"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "jeep": {
+            "name": "Jeep",
+            "description": "A light transport car.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Jeep",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": [{"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 5}],
+                    "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}, {"addRule": "amphibious"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m2a1_m3_halftrack": {
+            "name": "M2A1/M3 Halftrack",
+            "description": "A lightly armored mechanized transport.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Half-Track"],
+            "models": [
+                {
+                    "name": "M2A1 Halftrack",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "hmg_aa"}],
+                    "rules": ["half_tracked", "vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 12}, "exposed"],
+                    "options": [{"addweapon": "mmg", "mount": ["Left"]}, {"addweapon": "mmg", "mount": ["Right"]}, {"addweapon": "mmg", "mount": ["Rear"]}],
                     "min": 1,
                     "max": 1
                 }
             ]
         }
     },
-    "weapons": {},
+    "weapons": {
+        "bazooka": {"name": "Bazooka", "short": 12, "medium": 24, "ap": 6, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}]}
+    },
+    "strategies": {
+        "fire_and_move": {
+            "name": "Fire and Move",
+            "flavor": "With a doctrine of mobile warfare, US Infantry advance and fire with great effect.",
+            "description": "Use when an Infantry unit with any Assault weapons is firing. That unit does not suffer -1 to hit when using the Assault rule.",
+            "cost": 1
+        }
+    },
     "rules": {},
     "relics": []
 }
