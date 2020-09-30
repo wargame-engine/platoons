@@ -174,6 +174,9 @@
             "subfactions": ["none", "airborne_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
+            "options": [
+                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
+            ],
             "models": [
                 {
                     "name": "Airborne NCO",
@@ -217,6 +220,9 @@
             "subfactions": ["airborne_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
+            "options": [
+                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
+            ],
             "models": [
                 {
                     "name": "Veteran Airborne NCO",
@@ -674,7 +680,7 @@
         },
         "m18_hellcat": {
             "name": "M18 Hellcat",
-            "description": "A medium tank with a decent all-round AT gun.",
+            "description": "A lightly armored but fast tank destroyer.",
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
@@ -690,7 +696,33 @@
                     "defense": 10,
                     "reflexes": 5,
                     "wounds": 6,
-                    "weapons": ["heavy_at", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "weapons": ["heavy_at"],
+                    "options": [{"addWeapon": "hmg_aa"}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}, "exposed"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m10_tank_destroyer": {
+            "name": "M10 Tank Destroyer",
+            "description": "A medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
+            "models": [
+                {
+                    "name": "M10 Tank Destroyer",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["heavy_at"],
                     "options": [{"addWeapon": "hmg_aa"}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}, "exposed"],
                     "min": 1,
@@ -829,22 +861,38 @@
     },
     "rules": {
         "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly Infantry units within 6\" get +1 Courage.", "points": 10},
-        "defensive_fire": {"name": "Defensive Fire", "description": "This unit and friendly Infantry units within 6\" get +1 Accuracy when using an Ambush reaction.", "points": 10}
+        "defensive_fire": {"name": "Defensive Fire", "description": "This unit and friendly Infantry units within 6\" get +1 Accuracy when using an Ambush reaction.", "points": 10},
+        "move_it": {"name": "Move It", "description": "When this unit is activated, this unit and friendly Infantry units within 6\" may immediately remove one strain.", "points": 10},
+        "mobile_expert": {"name": "Mobile Expert", "description": "This unit may move and fire assault weapons without suffering the -1 to hit penalty.", "points": 20} 
     },
     "relics": {
         "richard_winters": {
-            "subfactions": ["airborne_focus"],
-            "name": "Richard Winters",
+            "subfactions": ["none", "airborne_focus"],
+            "name": "Richard Davis Winters",
             "rule": "natural_leader",
             "flavor": "A natural leader and an excellent officer, Richard Winters lead his Parachute unit through D-Day and beyond.",
             "description": "Upgrade one Field Officer model with Natural Leader."
         },
         "turner_turnbull": {
             "subfactions": ["none", "infantry_focus"],
-            "name": "Turner Turnbull",
+            "name": "Turner 'Brashears' Turnbull III",
             "rule": "defensive_fire",
             "flavor": "Turner Turnbull organized his men and against all odds held out a German counter-attack at Neuville-au-Plein.",
             "description": "Upgrade one Field Officer model with Defensive Fire."
+        },
+        "dutch_cota": {
+            "subfactions": ["none", "infantry_focus"],
+            "name": "Norman 'Dutch' Cota",
+            "rule": "move_it",
+            "flavor": "Cota lead American forces on the beaches of Normandy and inspired his men under severe enemy fire.",
+            "description": "Upgrade one Field Officer model with Move It."
+        },
+        "lafayette_pool": {
+            "subfactions": ["none", "armored_focus"],
+            "name": "Lafayette G. Pool",
+            "rule": "mobile_expert",
+            "flavor": "Lafayette Pool used a mix of suprise and mobile tactics to outwit his armored opponents.",
+            "description": "Upgrade one M4 Sherman or M4A1 Sherman with Mobile Expert."
         }
     }
 }

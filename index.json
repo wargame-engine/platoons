@@ -323,7 +323,7 @@
     "rules": {
         "airdrop": {
             "name": "Airdrop",
-            "description": "This unit may be set aside in reserves before the match begins if all models have ambush. At the beginning of any round after the first you may place the unit anywhere on the table over 9” away from enemy units. If both players have units with Ambush they must roll-off to see who deploys first, and then alternate in placing them.",
+            "description": "This unit may be set aside in reserves before the match begins if all models have airdrop. At the beginning of any round after the first you may attempt to place the unit anywhere on the table over 9” away from enemy units.\n\nTake a Courage test. If failed, use D10 scattering to determine the unit's new landing location. If the new location is off the table, place the unit at table edge as close as possible. If both players have units with Airdrop they must roll-off to see who deploys first, and then alternate in placing them.",
             "points": 3
         },
         "medic": {
