@@ -8,7 +8,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "keywords": ["Infantry"],
+            "keywords": ["Infantry", "Officer"],
             "options": [
                 {"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]},
                 {"addWeapon": "at_grenades", "modelLimit": 3}
@@ -588,6 +588,7 @@
     },
     "strategies": {
         "urah_assault": {
+            "phase": "activation",
             "name": "Urah Assault",
             "flavor": "A swift and deadly end to a fight can come with a furious charge...",
             "description": "Use when a Soviet Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",

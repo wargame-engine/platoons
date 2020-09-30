@@ -1,7 +1,7 @@
 {
     "factions": {
-        "germany": {"name": "Germany", "id": "germany", "url": "germany.json", "color": "#4d5d53", "alliance": "axis"},
-        "united_states": {"name": "United States", "id": "united_states", "url": "united_states.json", "color": "#4b5320", "alliance": "allies"},
+        "germany": {"name": "Germany", "id": "germany", "url": "germany.json", "color": "#585C75", "alliance": "axis"},
+        "united_states": {"name": "United States", "id": "united_states", "url": "united_states.json", "color": "#4A7643", "alliance": "allies"},
         "soviet_union": {"name": "Soviet Union", "id": "soviet_union", "url": "soviet_union.json", "color": "#C13E3E", "alliance": "allies"}
     },
     "categories": {
@@ -13,6 +13,11 @@
         "heavy_vehicles": {"name": "Heavy Vehicles"},
         "transport": {"name": "Transport"},
         "aircraft": {"name": "Aircraft"}
+    },
+    "phases": {
+        "pre_game": {"name": "Pre-Game"},
+        "bidding": {"name": "Bidding"},
+        "activation": {"name": "Activation"}
     },
     "alliances": {"axis": {"name": "Axis Powers"}, "allies": {"name": "Allied Powers"}},
     "relics": [],
@@ -77,30 +82,35 @@
     },
     "strategies": {
         "divine_intervention": {
+            "phase": "activation",
             "name": "Divine Intervention (Core)",
             "flavor": "It seems luck has gone our way. Or maybe it's something more...",
             "description": "Re-roll a single skill test die. It may not be re-rolled again.",
             "cost": 1
         },
         "legendary_support": {
+            "phase": "pre_game",
             "name": "Legendary Support (Core)",
             "flavor": "A battle involving several legends is a story to be told.",
             "description": "You may include one additional legend in your roster.",
             "cost": 1
         },
         "incredible_courage": {
+            "phase": "activation",
             "name": "Incredible Courage (Core)",
             "flavor": "Even in the darkest of times, moments of great courage can occur.",
             "description": "Once per battle, choose a unit that is about to take a Courage test. That unit is treated as having Courage 9 until the end of the round.",
             "cost": 2
         },
         "battlefield_reserves": {
+            "phase": "pre_game",
             "name": "Outflanking Reserves (Core)",
             "flavor": "Sometimes assets are most useful finding an alternate route around the enemy.",
             "description": "Up to half of any force's units, one point for each may be placed in outflanking reserves instead of deployed on the field. At the beginning of any round after the first, units may be set up within 6\" of a table edge that is not in the enemy deployment zone, and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
             "cost": "1/per"
         },
         "hidden_deployment": {
+            "phase": "pre_game",
             "name": "Hidden Deployment (Core)",
             "flavor": "Staying hidden and waiting for the right moment to strike can have a devastating effect.",
             "description": "Any number of Infantry or Artillery units, one point per pair may be placed in hidden deployment instead of deployed on the field. See the section for hidden units in the core rules for details on how hidden units work.",

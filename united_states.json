@@ -1,6 +1,11 @@
 {
     "id": "united_states",
     "name": "United States",
+    "subfactions": {
+        "infantry_focus": {"name": "Infantry Focus", "id": "infantry_focus", "restricted": true},
+        "airborne_focus": {"name": "Airborne Focus", "id": "airborne_focus", "restricted": true},
+        "armored_focus": {"name": "Armored Focus", "id": "armored_focus", "restricted": true}
+    },
     "units": {
         "field_officer": {
             "name": "Field Offier Team",
@@ -8,7 +13,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "keywords": ["Infantry"],
+            "keywords": ["Infantry", "Officer"],
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
@@ -37,7 +42,7 @@
             "max": 1,
             "category": "support",
             "keywords": ["Infantry"],
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}],
             "models": [
                 {
@@ -63,7 +68,7 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus", "airborne_focus"],
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -88,6 +93,7 @@
             "description": "A group of trained US Riflemen.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
             "models": [
@@ -126,6 +132,7 @@
             "description": "A group of trained US Rangers.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
             "models": [
@@ -164,6 +171,7 @@
             "description": "A group of trained US Airborne.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "airborne_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
             "models": [
@@ -191,7 +199,54 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["semi_auto_rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 2}, {"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"], "modelLimit": 5}],
+                    "options": [
+                        {"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 1},
+                        {"replaceWeapon": "semi_auto_rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1},
+                        {"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"], "modelLimit": 5}
+                    ],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "veteran_airborne_squad": {
+            "name": "Veteran Airborne Squad",
+            "description": "A group of trained US Airborne.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["airborne_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Veteran Airborne NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Airborne",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [
+                        {"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 1},
+                        {"replaceWeapon": "semi_auto_rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1},
+                        {"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"], "modelLimit": 5}
+                    ],
                     "min": 5,
                     "max": 11
                 }
@@ -203,24 +258,38 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "models": [
+                {"name": "Bazooka Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["bazooka", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "veteran_bazooka_team": {
+            "name": "Veteran Bazooka Team",
+            "description": "A team dedicated to hunting heavy tanks.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
                 {
-                    "name": "Bazooka Gunner",
-                    "courage": 5,
+                    "name": "Veteran Bazooka Gunner",
+                    "courage": 6,
                     "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["bazooka", "unarmed"],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "mmg_team": {
@@ -228,6 +297,7 @@
             "description": "A us MMG.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
             "category": "support",
             "keywords": ["Infantry"],
             "models": [
@@ -252,6 +322,7 @@
             "description": "A us HMG.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
             "category": "support",
             "keywords": ["Infantry"],
             "models": [
@@ -276,6 +347,7 @@
             "description": "A light mortar carried by a small team.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "category": "support",
             "keywords": ["Infantry"],
             "rules": [{"id": "crew", "x": 1}],
@@ -300,6 +372,7 @@
             "description": "A medium mortar carried by a small team.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "category": "support",
             "keywords": ["Infantry"],
             "rules": [{"id": "crew", "x": 2}],
@@ -324,6 +397,7 @@
             "description": "A heavy mortar carried by a small team.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus"],
             "category": "support",
             "keywords": ["Infantry"],
             "rules": [{"id": "crew", "x": 3}],
@@ -348,6 +422,7 @@
             "description": "A wheeled light howitzer.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 2}],
@@ -372,6 +447,7 @@
             "description": "A wheeled medium howitzer.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
@@ -396,6 +472,7 @@
             "description": "A wheeled heavy howitzer.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 4}],
@@ -420,6 +497,7 @@
             "description": "A wheeled light at gun.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 2}],
@@ -444,6 +522,7 @@
             "description": "A wheeled medium at gun.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 2}],
@@ -468,6 +547,7 @@
             "description": "A wheeled heavy at gun.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
@@ -493,7 +573,7 @@
             "min": 1,
             "max": 1,
             "category": "light_vehicles",
-            "subfactions": ["none", "armored_focus"],
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "keywords": ["Vehicle", "Armored Car"],
             "models": [
                 {
@@ -518,6 +598,7 @@
             "description": "A medium tank with a decent all-round AT gun.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
             "rules": ["catches_fire"],
@@ -544,6 +625,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "keywords": ["Vehicle", "Tank"],
             "rules": ["catches_fire"],
             "models": [
@@ -559,6 +641,58 @@
                     "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "options": [{"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": "heavy_at_stabilized_mg"}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m4a1_sherman": {
+            "name": "M4A1 Sherman",
+            "description": "A medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "M4A1 Sherman",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [{"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": "heavy_at_stabilized_mg"}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m18_hellcat": {
+            "name": "M18 Hellcat",
+            "description": "A medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
+            "models": [
+                {
+                    "name": "M4A1 Sherman",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["heavy_at", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [{"addWeapon": "hmg_aa"}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}, "exposed"],
                     "min": 1,
                     "max": 1
                 }
@@ -642,17 +776,75 @@
             ]
         }
     },
-    "weapons": {
-        "bazooka": {"name": "Bazooka", "short": 12, "medium": 24, "ap": 6, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}]}
-    },
+    "weapons": {"bazooka": {"name": "Bazooka", "short": 12, "medium": 24, "ap": 6, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}]}},
     "strategies": {
         "fire_and_move": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Fire and Move",
             "flavor": "With a doctrine of mobile warfare, US Infantry advance and fire with great effect.",
             "description": "Use when an Infantry unit with any Assault weapons is firing. That unit does not suffer -1 to hit when using the Assault rule.",
             "cost": 1
+        },
+        "scouting_team": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "name": "Scouting Team",
+            "flavor": "US Infantry units would often form small scouting teams to scout out the route ahead.",
+            "description": "Use instead of your activation. Choose 3 models from an Infantry unit to become a new scouting team unit. That unit immediately activates and is treated as a separate unit for the remainder of the game. This strategy may only be used once per Infantry unit.",
+            "cost": 1
+        },
+        "look_alive": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "name": "Look Alive",
+            "flavor": "Situational awareness can be key in combat.",
+            "description": "Use when an Infantry unit attemps a reaction test. That unit is treated as having an Initiative of 9.",
+            "cost": 2
+        },
+        "precision_drop": {
+            "phase": "activation",
+            "subfactions": ["airborne_focus"],
+            "name": "(Airborne) Precision Drop",
+            "flavor": "A well-trained paratroop unit can drop as close as posssible to their intended target.",
+            "description": "Use when an Infantry unit is arriving using its Airdrop rule. It does not roll for missing its target and instead automatically lands where intended.",
+            "cost": 1
+        },
+        "tough_fighters": {
+            "phase": "activation",
+            "subfactions": ["airborne_focus"],
+            "name": "(Airborne) Tough Fighters",
+            "flavor": "Some of the toughest units to fight in a close combat brawl are trained Airborne units.",
+            "description": "Use before an Infantry unit uses a fight action. Its attacks gain AP1.",
+            "cost": 2
+        },
+        "stealth_tactics": {
+            "phase": "activation",
+            "subfactions": ["airborne_focus"],
+            "name": "(Airborne) Stealth Tactics",
+            "flavor": "Moving quickly and quietly is a key part of Airborne training.",
+            "description": "Use when activating an Infantry unit. It may make a free 6\" move action and may not be targetted by reaction fire when doing so.",
+            "cost": 2
         }
     },
-    "rules": {},
-    "relics": []
+    "rules": {
+        "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly Infantry units within 6\" get +1 Courage.", "points": 10},
+        "defensive_fire": {"name": "Defensive Fire", "description": "This unit and friendly Infantry units within 6\" get +1 Accuracy when using an Ambush reaction.", "points": 10}
+    },
+    "relics": {
+        "richard_winters": {
+            "subfactions": ["airborne_focus"],
+            "name": "Richard Winters",
+            "rule": "natural_leader",
+            "flavor": "A natural leader and an excellent officer, Richard Winters lead his Parachute unit through D-Day and beyond.",
+            "description": "Upgrade one Field Officer model with Natural Leader."
+        },
+        "turner_turnbull": {
+            "subfactions": ["none", "infantry_focus"],
+            "name": "Turner Turnbull",
+            "rule": "defensive_fire",
+            "flavor": "Turner Turnbull organized his men and against all odds held out a German counter-attack at Neuville-au-Plein.",
+            "description": "Upgrade one Field Officer model with Defensive Fire."
+        }
+    }
 }

@@ -13,7 +13,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "keywords": ["Infantry"],
+            "keywords": ["Infantry", "Officer"],
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
@@ -929,7 +929,7 @@
             "max": 1,
             "category": "light_vehicles",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
-            "keywords": ["Vehicle", "Half-Track"],
+            "keywords": ["Vehicle", "Armored Car"],
             "models": [
                 {
                     "name": "Kfz 13 \"Adler\"",
@@ -954,7 +954,7 @@
             "max": 1,
             "category": "light_vehicles",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
-            "keywords": ["Vehicle", "Half-Track"],
+            "keywords": ["Vehicle", "Armored Car"],
             "models": [
                 {
                     "name": "Sdfkz 250/9",
@@ -1268,7 +1268,7 @@
             "max": 1,
             "category": "command",
             "subfactions": ["armored_focus"],
-            "keywords": ["Vehicle", "Tank"],
+            "keywords": ["Vehicle", "Tank", "Officer"],
             "rules": [
                 {"id": "field_orders_armored", "x": 1}
             ],
@@ -1324,7 +1324,7 @@
             "max": 1,
             "category": "command",
             "subfactions": ["armored_focus"],
-            "keywords": ["Vehicle", "Tank"],
+            "keywords": ["Vehicle", "Tank", "Officer"],
             "rules": [
                 {"id": "field_orders_armored", "x": 1}
             ],
@@ -1599,22 +1599,52 @@
     },
     "strategies": {
         "sturm_assault": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Sturm Assault",
             "flavor": "A swift and deadly end to a fight can come with a furious charge...",
             "description": "Use when a German Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
         },
         "suppressive_fire": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Suppressive Fire",
             "flavor": "With high rate of fire and a terrifying noise, machineguns can be used to pin down enemy troops with ease.",
             "description": "Use when a German Infantry unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 1 additional strain.",
             "cost": 1
         },
         "panzer_blitz": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Panzer Blitz",
             "flavor": "A swift and deadly Panzer assault can sometimes route the enemy.",
             "description": "Use when a German Tank unit is activated. It may make a free 6\" Move action.",
             "cost": 1
+        },
+        "precision_drop": {
+            "phase": "activation",
+            "subfactions": ["airborne_focus"],
+            "name": "(Airborne) Precision Drop",
+            "flavor": "A well-trained paratroop unit can drop as close as posssible to their intended target.",
+            "description": "Use when an Infantry unit is arriving using its Airdrop rule. It does not roll for missing its target and instead automatically lands where intended.",
+            "cost": 1
+        },
+        "tough_fighters": {
+            "phase": "activation",
+            "subfactions": ["airborne_focus"],
+            "name": "(Airborne) Tough Fighters",
+            "flavor": "Some of the toughest units to fight in a close combat brawl are trained Airborne units.",
+            "description": "Use before an Infantry unit uses a fight action. Its attacks gain AP1.",
+            "cost": 2
+        },
+        "stealth_tactics": {
+            "phase": "activation",
+            "subfactions": ["airborne_focus"],
+            "name": "(Airborne) Stealth Tactics",
+            "flavor": "Moving quickly and quietly is a key part of Airborne training.",
+            "description": "Use when activating an Infantry unit. It may make a free 6\" move action and may not be targetted by reaction fire when doing so.",
+            "cost": 2
         }
     },
     "rules": {},
