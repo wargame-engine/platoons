@@ -49,10 +49,10 @@
                 "command": {"min": 1, "max": 2},
                 "infantry": {"min": 2, "max": 3},
                 "support": {"max": 3},
-                "artillery": {"min": 1, "max": 3},
+                "artillery": {"max": 3},
                 "light_vehicles": {"max": 1},
                 "heavy_vehicles": {"max": 0},
-                "transport": {"max": 4}
+                "transport": {"max": 3}
             }
         },
         "mechanized_platoon": {
@@ -75,12 +75,12 @@
             "description": "An armored force with additional armored support.",
             "categories": {
                 "command": {"min": 1, "max": 2},
-                "infantry": {"min": 2, "max": 5},
+                "infantry": {"min": 2, "max": 3},
                 "support": {"max": 2},
                 "artillery": {"max": 1},
                 "light_vehicles": {"max": 2},
                 "heavy_vehicles": {"max": 3},
-                "transport": {"min": 2, "max": 5}
+                "transport": {"min": 2, "max": 3}
             }
         }
     },
