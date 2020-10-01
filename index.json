@@ -14,19 +14,10 @@
         "transport": {"name": "Transport"},
         "aircraft": {"name": "Aircraft"}
     },
-    "phases": {
-        "pre_game": {"name": "Pre-Game"},
-        "bidding": {"name": "Bidding"},
-        "activation": {"name": "Activation"}
-    },
+    "phases": {"pre_game": {"name": "Pre-Game"}, "bidding": {"name": "Bidding"}, "activation": {"name": "Activation"}},
     "alliances": {"axis": {"name": "Axis Powers"}, "allies": {"name": "Allied Powers"}},
     "relics": {
-        "tank_ace": {
-            "name": "Tank Ace (Core)",
-            "rule": "tank_ace",
-            "flavor": "A tank ace is a fearsome foe to encounter on the battlefield.",
-            "description": "Upgrade one Tank unit with Tank Ace."
-        },
+        "tank_ace": {"name": "Tank Ace (Core)", "rule": "tank_ace", "flavor": "A tank ace is a fearsome foe to encounter on the battlefield.", "description": "Upgrade one Tank unit with Tank Ace."},
         "inspiring_leader": {
             "name": "Inspiring Leader (Core)",
             "rule": "inspiring_leader",
@@ -147,12 +138,17 @@
         "mag_lmg": {"name": "Magazine-fed LMG", "short": 15, "medium": 30, "attacks": 2},
         "bar": {"name": "BAR", "short": 15, "medium": 30, "attacks": 2, "rules": ["assault"]},
         "mmg": {"name": "Medium MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1},
+        "dual_mmg": {"name": "Dual Medium MG", "short": 18, "medium": 36, "attacks": 8, "ap": 1},
         "mmg_aa": {"name": "Medium MG (AA)", "short": 18, "medium": 36, "attacks": 5, "ap": 1, "rules": ["anti_air"]},
         "hmg": {"name": "Heavy MG", "short": 18, "medium": 36, "attacks": 5, "ap": 2},
         "hmg_aa": {"name": "Heavy MG (AA)", "short": 18, "medium": 36, "attacks": 5, "ap": 2, "rules": ["anti_air"]},
         "mmg_internal": {"name": "Medium MG (Internal)", "short": 18, "medium": 36, "ap": 1, "attacks": 5},
         "flamethrower": {"name": "Flamethrower", "short": 6, "medium": 12, "ap": 3, "attacks": 3, "rules": ["flame"]},
-        "vehicle_flamethrower": {"name": "Flamethrower (Vehicle)", "short": 12, "medium": 24, "ap": 3, "attacks": 6, "rules": ["flame"]},
+        "vehicle_flamethrower": {"name": "Flamethrower (Vehicle)", "short": 12, "medium": 24, "ap": 3, "attacks": 5, "rules": ["flame"]},
+        "vehicle_flamethrower_mg": {
+            "name": "Flamethrower (Vehicle)",
+            "profiles": [{"name": "Flame", "short": 12, "medium": 24, "ap": 3, "attacks": 5, "rules": ["flame"]}, {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}]
+        },
         "at_rifle": {"name": "AT Rifle", "short": 18, "medium": 36, "ap": 3, "attacks": 1, "rules": [{"id": "team", "x": 2}]},
         "light_autocannon": {
             "name": "Light Autocannon",
@@ -167,7 +163,7 @@
             ]
         },
         "light_autocannon_aa": {
-            "name": "Light Autocannon",
+            "name": "Light Autocannon (AA)",
             "profiles": [
                 {"name": "AT", "short": 24, "medium": 48, "ap": 3, "attacks": 2, "rules": ["anti_air"]},
                 {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": ["anti_air", {"id": "blast", "x": 2}]}
@@ -220,6 +216,14 @@
             ]
         },
         "medium_howitzer": {"name": "Medium Howitzer", "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]}]},
+        "medium_howitzer_vehicle": {
+            "name": "Medium Howitzer (Vehicle)",
+            "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]}]
+        },
+        "medium_howitzer_vehicle_stabilized": {
+            "name": "Medium Howitzer (Vehicle, Stabilized)",
+            "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", "assault", {"id": "blast", "x": 7}]}]
+        },
         "heavy_howitzer": {"name": "Heavy Howitzer", "profiles": [{"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 9}]}]},
         "very_light_at": {
             "name": "Very Light AT",
@@ -334,16 +338,8 @@
         }
     },
     "rules": {
-        "tank_ace": {
-            "name": "Tank Ace",
-            "description": "This unit gets +1 Accuracy.",
-            "points": 25
-        },
-        "inspiring_leader": {
-            "name": "Inspiring Leader",
-            "description": "This unit and friendly Infantry units within 6\" get +1 Courage.",
-            "points": 10
-        },
+        "tank_ace": {"name": "Tank Ace", "description": "This unit gets +1 Accuracy.", "points": 25},
+        "inspiring_leader": {"name": "Inspiring Leader", "description": "This unit and friendly Infantry units within 6\" get +1 Courage.", "points": 10},
         "airdrop": {
             "name": "Airdrop",
             "description": "This unit may be set aside in reserves before the match begins if all models have airdrop. At the beginning of any round after the first you may attempt to place the unit anywhere on the table over 9” away from enemy units.\n\nTake a Courage test. If failed, use D10 scattering to determine the unit's new landing location. If the new location is off the table, place the unit at table edge as close as possible. If both players have units with Airdrop they must roll-off to see who deploys first, and then alternate in placing them.",
@@ -378,7 +374,7 @@
         "field_orders_armored": {
             "name": "Field Orders (Armored)",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose X other friendly Vehicle units within 6\" to receive one of the following bonuses: +1 Accuracy or +3\" Movement or +1 Strength. A unit may only benefit from one Field Order.",
+            "description": "When this unit is activated, choose X other friendly Tank or Armored Car units within 6\" to receive one of the following bonuses: +1 Accuracy or +3\" Movement or +1 Strength. A unit may only benefit from one Field Order.",
             "points": [15, {"multiply": "rule.x"}]
         }
     }

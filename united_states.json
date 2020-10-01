@@ -2,9 +2,9 @@
     "id": "united_states",
     "name": "United States",
     "subfactions": {
-        "infantry_focus": {"name": "Infantry Focus", "id": "infantry_focus", "restricted": true},
-        "airborne_focus": {"name": "Airborne Focus", "id": "airborne_focus", "restricted": true},
-        "armored_focus": {"name": "Armored Focus", "id": "armored_focus", "restricted": true}
+        "infantry_focus": {"name": "Infantry Focus", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
+        "airborne_focus": {"name": "Airborne Focus", "id": "airborne_focus", "background": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
+        "armored_focus": {"name": "Armored Focus", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
     },
     "units": {
         "field_officer": {
@@ -28,7 +28,7 @@
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
                     "rules": [{"id": "field_orders", "x": 1}, "leader"],
-                    "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}],
+                    "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}, {"addWeapon": "at_grenades", "modelLimit": 3}],
                     "min": 1,
                     "max": 1
                 },
@@ -96,6 +96,9 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
+            "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3}
+            ],
             "models": [
                 {
                     "name": "Rifle NCO",
@@ -127,6 +130,86 @@
                 }
             ]
         },
+        "armored_riflemen": {
+            "name": "Armored Rifle Squad",
+            "description": "A group of trained US Riflemen.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "armored_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Armored Rifle NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Armored Rifleman",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 1}, {"addWeapon": "bazooka"}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "veteran_armored_riflemen": {
+            "name": "Veteran Armored Rifle Squad",
+            "description": "A group of trained US Riflemen.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "armored_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Veteran Armored Rifle NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Armored Rifleman",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 1}, {"addWeapon": "bazooka"}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
         "rangers": {
             "name": "Rangers",
             "description": "A group of trained US Rangers.",
@@ -135,6 +218,7 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Ranger NCO",
@@ -175,6 +259,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
             ],
             "models": [
@@ -221,6 +306,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
             ],
             "models": [
@@ -256,6 +342,47 @@
                     "min": 5,
                     "max": 11
                 }
+            ]
+        },
+        "flamethrower_team": {
+            "name": "Flamethrower Team",
+            "description": "A team equipped to clear bunkers and other defensive positions.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "models": [
+                {
+                    "name": "Flamethrower Gunner",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["flamethrower", "unarmed"],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "sniper_team": {
+            "name": "Sniper Team",
+            "description": "A team equipped to take out important targets from a distance.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "rules": ["scout", "stealth"],
+            "models": [
+                {"name": "Sniper", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "bazooka_team": {
@@ -573,6 +700,31 @@
                 }
             ]
         },
+        "m16_rocket_launcher": {
+            "name": "M16 Rocket Launcher",
+            "description": "A wheeled light rocket artillery piece.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": [{"id": "crew", "x": 2}],
+            "models": [
+                {
+                    "name": "M16 Rocket Launcher",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_rockets", "mount": ["Front"], "count": 3}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "m8_greyhound": {
             "name": "M8 Greyhound",
             "description": "An armored recon car with a powerful autocannon.",
@@ -599,6 +751,31 @@
                 }
             ]
         },
+        "m4_m21_mortar_carrier": {
+            "name": "M4/M21 Mortar Carrier",
+            "description": "A lightly armored mortar half-track.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Half-Track"],
+            "models": [
+                {
+                    "name": "M4/M21 Mortar Carrier",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "hmg_aa"}, {"id": "medium_mortar", "mount": ["Rear"]}],
+                    "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", "exposed"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "m3_stuart": {
             "name": "M3 Stuart",
             "description": "A medium tank with a decent all-round AT gun.",
@@ -619,7 +796,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["light_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -633,7 +810,6 @@
             "category": "heavy_vehicles",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "keywords": ["Vehicle", "Tank"],
-            "rules": ["catches_fire"],
             "models": [
                 {
                     "name": "M4 Sherman",
@@ -647,9 +823,38 @@
                     "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "options": [
                         {"addWeapon": ["mmg_aa", "hmg_aa"]},
+                        {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": ["heavy_at_stabilized_mg", "medium_howitzer_vehicle_stabilized"]}
+                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "catches_fire"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m4_sherman_command": {
+            "name": "M4 Sherman (Command)",
+            "description": "A medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "M4 Sherman (Command)",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [
+                        {"addWeapon": ["mmg_aa", "hmg_aa"]},
                         {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": "heavy_at_stabilized_mg"}
                     ],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "catches_fire", {"id": "field_orders_armored", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -661,7 +866,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
-            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "subfactions": ["armored_focus"],
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
@@ -676,9 +881,67 @@
                     "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "options": [
                         {"addWeapon": ["mmg_aa", "hmg_aa"]},
+                        {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": ["heavy_at_stabilized_mg", "medium_howitzer_vehicle_stabilized"]}
+                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m4a1_sherman_command": {
+            "name": "M4A1 Sherman (Command)",
+            "description": "A medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "subfactions": ["armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "M4A1 Sherman (Command)",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [
+                        {"addWeapon": ["mmg_aa", "hmg_aa"]},
                         {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": "heavy_at_stabilized_mg"}
                     ],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m4a3e2_sherman_jumbo": {
+            "name": "M4A3E2 Sherman Jumbo",
+            "description": "A heavy assault tank with optional heavy gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "M4A3E2 Sherman Jumbo",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 13,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [
+                        {"addWeapon": ["mmg_aa", "hmg_aa"]},
+                        {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": "heavy_at_stabilized_mg"}
+                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -704,7 +967,7 @@
                     "wounds": 6,
                     "weapons": ["heavy_at"],
                     "options": [{"addWeapon": "hmg_aa"}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}, "exposed"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "exposed"],
                     "min": 1,
                     "max": 1
                 }
@@ -730,7 +993,59 @@
                     "wounds": 6,
                     "weapons": ["heavy_at"],
                     "options": [{"addWeapon": "hmg_aa"}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}, "exposed"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "exposed"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m36_jackson": {
+            "name": "M36 Jackson",
+            "description": "A medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
+            "models": [
+                {
+                    "name": "M36 Jackson",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["very_heavy_at"],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "exposed"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m36b_jackson": {
+            "name": "M36B1 Jackson",
+            "description": "A medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
+            "models": [
+                {
+                    "name": "M36B1 Jackson",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["very_heavy_at", {"id": "mmg", "mount": ["Front"]}],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "exposed"],
                     "min": 1,
                     "max": 1
                 }
@@ -755,7 +1070,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "hmg_aa", "mount": ["Front"]}],
-                    "rules": ["half_tracked", "vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 12}, "exposed"],
+                    "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 12}, "exposed"],
                     "options": [{"addweapon": "mmg"}],
                     "min": 1,
                     "max": 1
@@ -780,8 +1095,83 @@
                     "defense": 7,
                     "reflexes": 5,
                     "wounds": 6,
-                    "rules": [{"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 5}],
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 5}],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}, {"addRule": "amphibious"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "3_4_ton_truck": {
+            "name": "3/4 Ton Truck",
+            "description": "A light truck transport.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "3/4 Ton Truck",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 8}],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "1_1_2_ton_truck": {
+            "name": "1.5 Ton Truck",
+            "description": "A light truck transport.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "3/4 Ton Truck",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 12}],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "2_1_2_ton_truck": {
+            "name": "2.5 Ton Truck",
+            "description": "A light truck transport.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "3/4 Ton Truck",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 18}],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -806,7 +1196,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "hmg_aa"}],
-                    "rules": ["half_tracked", "vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 12}, "exposed"],
+                    "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 12}, "exposed"],
                     "options": [{"addweapon": "mmg", "mount": ["Left"]}, {"addweapon": "mmg", "mount": ["Right"]}, {"addweapon": "mmg", "mount": ["Rear"]}],
                     "min": 1,
                     "max": 1
@@ -838,6 +1228,30 @@
             "name": "Look Alive",
             "flavor": "Situational awareness can be key in combat.",
             "description": "Use when an Infantry unit attemps a reaction test. That unit is treated as having an Initiative of 9.",
+            "cost": 2
+        },
+        "armored_assault": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "(Armored) Armored Assault",
+            "flavor": "Occasionally armored units are used to push infantry and other units off a dug in position.",
+            "description": "Use when a Vehicle unit declares a Charge action. It is treated as having Shock(+3) for that action.",
+            "cost": 1
+        },
+        "improvised_tactics": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "(Armored) Improvised Tactics",
+            "flavor": "Sometimes it is necessary to improvise in an armored engagement in order to gain the edge.",
+            "description": "Use when a Vehicle unit is attempting a reaction test. It is treated as having Initiative 9 for this test.",
+            "cost": 2
+        },
+        "crew_repairs": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "(Armored) Emergency Repairs",
+            "flavor": "In moments of dire circumstance crews may need to repair their vehicle in combat.",
+            "description": "Use when a Vehicle unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
             "cost": 2
         },
         "precision_drop": {

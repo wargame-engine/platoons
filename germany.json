@@ -2,9 +2,9 @@
     "id": "germany",
     "name": "Germany",
     "subfactions": {
-        "infantry_focus": {"name": "Infantry Focus", "id": "infantry_focus", "restricted": true},
-        "airborne_focus": {"name": "Airborne Focus", "id": "airborne_focus", "restricted": true},
-        "armored_focus": {"name": "Armored Focus", "id": "armored_focus", "restricted": true}
+        "infantry_focus": {"name": "Infantry Focus", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
+        "airborne_focus": {"name": "Airborne Focus", "id": "airborne_focus", "background": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
+        "armored_focus": {"name": "Armored Focus", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
     },
     "units": {
         "field_officer": {
@@ -136,7 +136,7 @@
             "category": "infantry",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"]}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
                 {
                     "name": "Volksgrenadier NCO",
@@ -208,6 +208,46 @@
                 }
             ]
         },
+        "osttruppen": {
+            "name": "Osttruppen",
+            "description": "A group of reserve infantry.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 1}],
+            "models": [
+                {
+                    "name": "Osttruppen NCO",
+                    "courage": 4,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Osttruppen",
+                    "courage": 4,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 8
+                }
+            ]
+        },
         "grenadiers": {
             "name": "Grenadiers",
             "description": "A group of hardened German Grenadiers.",
@@ -216,7 +256,7 @@
             "category": "infantry",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
                 {
                     "name": "Grenadier NCO",
@@ -256,7 +296,7 @@
             "category": "infantry",
             "subfactions": ["infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
                 {
                     "name": "Veteran Grenadier NCO",
@@ -298,9 +338,12 @@
             "subfactions": ["none", "airborne_focus"],
             "rules": ["stubborn"],
             "options": [
-                {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
                 {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 5},
                 {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle", "assault_rifle"]},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
                 {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
             ],
             "models": [
@@ -342,7 +385,12 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "armored_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3}],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6},
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2}
+            ],
             "models": [
                 {
                     "name": "Panzergrenadier NCO",
@@ -382,7 +430,12 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["armored_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3}],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6},
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2}
+            ],
             "models": [
                 {
                     "name": "Veteran Panzergrenadier NCO",
@@ -414,6 +467,46 @@
                 }
             ]
         },
+        "pioniers": {
+            "name": "Pioniers",
+            "description": "A squad of german pioniers.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
+            "models": [
+                {
+                    "name": "Pionier NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Pionier",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 10
+                }
+            ]
+        },
         "flamethrower_team": {
             "name": "Flamethrower Team",
             "description": "A team equipped to clear bunkers and other defensive positions.",
@@ -424,7 +517,19 @@
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
-                {"name": "Flamethrower Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["flamethrower", "unarmed"], "min": 1, "max": 1},
+                {
+                    "name": "Flamethrower Gunner",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["flamethrower", "unarmed"],
+                    "min": 1,
+                    "max": 1
+                },
                 {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
@@ -608,6 +713,31 @@
                     "reflexes": 6,
                     "wounds": 4,
                     "weapons": [{"id": "heavy_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "75mm_lg40": {
+            "name": "75mm LG/40",
+            "description": "A wheeled light howitzer.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
+            "keywords": ["Artillery"],
+            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "models": [
+                {
+                    "name": "75mm LG/40",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -858,9 +988,7 @@
                     "reflexes": 6,
                     "wounds": 4,
                     "weapons": [{"id": "light_autocannon_aa"}, {"id": "unarmed", "count": 3}],
-                    "options": [
-                        {"addRule": "gun_shield"}
-                    ],
+                    "options": [{"addRule": "gun_shield"}],
                     "min": 1,
                     "max": 1
                 }
@@ -886,9 +1014,7 @@
                     "reflexes": 6,
                     "wounds": 4,
                     "weapons": [{"id": "light_autocannon_aa", "count": 4}, {"id": "unarmed", "count": 3}],
-                    "options": [
-                        {"addRule": "gun_shield"}
-                    ],
+                    "options": [{"addRule": "gun_shield"}],
                     "min": 1,
                     "max": 1
                 }
@@ -914,9 +1040,7 @@
                     "reflexes": 6,
                     "wounds": 4,
                     "weapons": [{"id": "heavy_autocannon_aa"}, {"id": "unarmed", "count": 3}],
-                    "options": [
-                        {"addRule": "gun_shield"}
-                    ],
+                    "options": [{"addRule": "gun_shield"}],
                     "min": 1,
                     "max": 1
                 }
@@ -966,7 +1090,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "light_autocannon_mg"}],
-                    "rules": ["half_tracked", "vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, "exposed"],
+                    "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "min": 1,
                     "max": 1
                 }
@@ -991,7 +1115,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["mmg"],
-                    "rules": ["vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
                     "options": [{"replaceWeapon": "mmg", "withWeapon": "light_autocannon_mg"}],
                     "min": 1,
                     "max": 1
@@ -1017,7 +1141,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["light_autocannon_mg"],
-                    "rules": ["vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, "exposed"],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "min": 1,
                     "max": 1
                 }
@@ -1042,7 +1166,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["light_autocannon_mg"],
-                    "rules": ["vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, "exposed"],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "min": 1,
                     "max": 1
                 }
@@ -1067,7 +1191,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "light_howitzer_vehicle", "mount": ["Front"]}],
-                    "rules": ["vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, "exposed"],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "min": 1,
                     "max": 1
                 }
@@ -1092,15 +1216,68 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "medium_at_mg"}],
-                    "rules": ["vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, "exposed"],
-                    "options": [{"replaceWeapon":{"id": "medium_at_mg"}, "withWeapon": [{"id": "heavy_at_mg", "mount": ["Front"]}]}],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed"],
+                    "options": [{"replaceWeapon": {"id": "medium_at_mg"}, "withWeapon": [{"id": "heavy_at_mg", "mount": ["Front"]}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "panzer_i": {
+            "name": "Panzer I",
+            "description": "A very early german tank.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Panzer I",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["dual_mmg"],
+                    "options": [
+                        {"replaceWeapon": "dual_mmg", "withWeapon": "light_autocannon_aa"}
+                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 2}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "panzer_35r": {
+            "name": "Panzer 35R",
+            "description": "An early german tank.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Panzer 35R",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_at_mg"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
         "panzer_38t": {
-            "name": "Panzer 38(t)",
+            "name": "Panzer 35(t)/38(t)",
             "description": "A medium tank with a good main gun.",
             "min": 1,
             "max": 1,
@@ -1118,13 +1295,63 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, {"id": "damage_table_vehicle", "x": 2}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "panzer_iii": {
+        "panzer_ii_a_f": {
+            "name": "Panzer II A-F/\"Luchs\"",
+            "description": "A light tank with a decent anti-infantry weapon.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Panzer 38(t)",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_autocannon_mg"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "panzer_iii_c_f": {
+            "name": "Panzer III C-F",
+            "description": "A medium tank with a good main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Panzer III J",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "panzer_iii_j": {
             "name": "Panzer III J",
             "description": "A medium tank with a good main gun.",
             "min": 1,
@@ -1143,14 +1370,92 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "stug_III_g": {
-            "name": "Stug III G",
+        "flammpanzer_iii": {
+            "name": "Flammpanzer III",
+            "description": "A medium tank fitted with a turret flamethrower.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Flammpanzer III",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["vehicle_flamethrower_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "panzerjager_i_marder_i": {
+            "name": "Panzerjager I/Mader I",
+            "description": "An early open-topped tank destroyer.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
+            "models": [
+                {
+                    "name": "Panzerjager I/Mader I",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "medium_at", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle", "exposed"],
+                    "options": [
+                        {"replaceWeapon": {"id": "medium_at", "mount": ["Front"]}, "withWeapon": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "heavy_at", "mount": ["Front"]}, {"id": "heavy_howitzer", "mount": ["Front"]}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "stug_III_a_e": {
+            "name": "Stug III A-E",
+            "description": "An early infantry support medium tank with a fixed howitzer.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
+            "models": [
+                {
+                    "name": "Stug III A-E",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "light_howitzer", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "stug_III_f_h": {
+            "name": "Stug III F-H/Stug IV",
             "description": "A medium tank with a fixed powerful main gun.",
             "min": 1,
             "max": 1,
@@ -1167,11 +1472,88 @@
                     "defense": 12,
                     "reflexes": 5,
                     "wounds": 6,
-                    "weapons": [{"id": "medium_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "options": [{"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": "mmg"}, {"addRule": "side_skirts"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "stug_33b": {
+            "name": "Stug 33b",
+            "description": "An early infantry support medium tank with a fixed howitzer.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
+            "models": [
+                {
+                    "name": "Stug 33b",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "options": [{"addRule": "side_skirts"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "jagdpanzer_iv": {
+            "name": "Jagdpanzer IV L48/L70",
+            "description": "A later model tank destroyer.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
+            "models": [
+                {
+                    "name": "Jagdpanzer IV L48/L70",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", "armored_front", {"id": "shock", "x": 6}, "damage_table_vehicle"],
                     "options": [
-                        {"addRule": "side_skirts"}
+                        {"replaceWeapon": {"id": "heavy_at", "mount": ["Front"]}, "withWeapon": {"id": "very_heavy_at", "mount": ["Front"]}}, {"addRule": "side_skirts"}
                     ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "jagdpanther": {
+            "name": "Jagdpanther",
+            "description": "A heavily armored tank destroyer.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
+            "models": [
+                {
+                    "name": "Jagdpanther",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 13,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "very_heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1197,9 +1579,7 @@
                     "wounds": 6,
                     "weapons": ["light_howitzer_vehicle", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
-                    "options": [
-                        {"addRule": "side_skirts"}
-                    ],
+                    "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
                 }
@@ -1225,9 +1605,7 @@
                     "wounds": 6,
                     "weapons": ["light_howitzer_vehicle_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
-                    "options": [
-                        {"addRule": "side_skirts"}
-                    ],
+                    "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
                 }
@@ -1252,10 +1630,8 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
-                    "options": [
-                        {"addRule": "side_skirts"}
-                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
                 }
@@ -1269,9 +1645,7 @@
             "category": "command",
             "subfactions": ["armored_focus"],
             "keywords": ["Vehicle", "Tank", "Officer"],
-            "rules": [
-                {"id": "field_orders_armored", "x": 1}
-            ],
+            "rules": [{"id": "field_orders_armored", "x": 1}],
             "models": [
                 {
                     "name": "Panzer IV J",
@@ -1283,10 +1657,8 @@
                     "reflexes": 6,
                     "wounds": 6,
                     "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
-                    "options": [
-                        {"addRule": "side_skirts"}
-                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
                 }
@@ -1311,7 +1683,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "armored_front", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "rules": ["tracked", "armored_front", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1325,21 +1697,19 @@
             "category": "command",
             "subfactions": ["armored_focus"],
             "keywords": ["Vehicle", "Tank", "Officer"],
-            "rules": [
-                {"id": "field_orders_armored", "x": 1}
-            ],
+            "rules": [{"id": "field_orders_armored", "x": 1}],
             "models": [
                 {
                     "name": "Panther G (Command)",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 10,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 12,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 6,
                     "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "armored_front", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "damage_table_vehicle", "x": 3}],
+                    "rules": ["tracked", "armored_front", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1364,14 +1734,40 @@
                     "reflexes": 5,
                     "wounds": 9,
                     "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 9}, {"id": "damage_table_vehicle", "x": 6}],
+                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "tiger_i_command": {
+            "name": "Tiger I (Command)",
+            "description": "A heavy tank with a very powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "subfactions": ["armored_focus"],
+            "keywords": ["Vehicle", "Tank", "Officer"],
+            "rules": [{"id": "field_orders_armored", "x": 1}],
+            "models": [
+                {
+                    "name": "Tiger I (Command)",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 6,
+                    "wounds": 9,
+                    "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
         "tiger_ii": {
-            "name": "Tiger II",
+            "name": "Tiger II \"King Tiger\"",
             "description": "A heavy tank with a super powerful main gun.",
             "min": 1,
             "max": 1,
@@ -1389,7 +1785,7 @@
                     "reflexes": 5,
                     "wounds": 12,
                     "weapons": ["super_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 12}, {"id": "damage_table_vehicle", "x": 6}],
+                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 12}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1403,20 +1799,7 @@
             "category": "transport",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Horse Tow",
-                    "courage": 5,
-                    "movement": 8,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 5,
-                    "rules": [{"id": "transport", "x": 7}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+            "models": [{"name": "Horse Tow", "courage": 5, "movement": 8, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "rules": [{"id": "transport", "x": 7}], "min": 1, "max": 1}]
         },
         "kettenkrad": {
             "name": "Kettenkrad",
@@ -1436,7 +1819,7 @@
                     "defense": 6,
                     "reflexes": 5,
                     "wounds": 6,
-                    "rules": [{"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 3}, "half_tracked"],
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 3}, "half_tracked"],
                     "min": 1,
                     "max": 1
                 }
@@ -1460,7 +1843,7 @@
                     "defense": 7,
                     "reflexes": 5,
                     "wounds": 6,
-                    "rules": [{"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 5}],
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 5}],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}, {"addRule": "amphibious"}],
                     "min": 1,
                     "max": 1
@@ -1485,7 +1868,7 @@
                     "defense": 7,
                     "reflexes": 5,
                     "wounds": 6,
-                    "rules": [{"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 7}, "tracked"],
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 7}, "tracked"],
                     "min": 1,
                     "max": 1
                 }
@@ -1509,7 +1892,7 @@
                     "defense": 8,
                     "reflexes": 5,
                     "wounds": 6,
-                    "rules": [{"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 10}, "half_tracked"],
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 10}, "half_tracked"],
                     "min": 1,
                     "max": 1
                 }
@@ -1533,7 +1916,7 @@
                     "defense": 8,
                     "reflexes": 5,
                     "wounds": 6,
-                    "rules": [{"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 12}],
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 12}],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}],
                     "min": 1,
                     "max": 1
@@ -1559,7 +1942,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}],
-                    "rules": ["half_tracked", "vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 6}, "exposed"],
+                    "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 6}, "exposed"],
                     "options": [{"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": {"id": "light_at", "mount": ["Front"]}}, {"addWeapon": {"id": "mmg", "mount": ["Rear"]}}],
                     "min": 1,
                     "max": 1
@@ -1585,7 +1968,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}],
-                    "rules": ["half_tracked", "vulnerable_side_rear", {"id": "damage_table_vehicle", "x": 2}, {"id": "transport", "x": 12}, "exposed"],
+                    "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 12}, "exposed"],
                     "options": [{"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": {"id": "light_at", "mount": ["Front"]}}, {"addWeapon": {"id": "mmg", "mount": ["Rear"]}}],
                     "min": 1,
                     "max": 1
