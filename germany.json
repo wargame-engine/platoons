@@ -1994,7 +1994,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Suppressive Fire",
             "flavor": "With high rate of fire and a terrifying noise, machineguns can be used to pin down enemy troops with ease.",
-            "description": "Use when a German Infantry unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 1 additional strain.",
+            "description": "Use when a German Infantry unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 1 additional strain to all affected targets.",
             "cost": 1
         },
         "panzer_blitz": {
@@ -2030,6 +2030,32 @@
             "cost": 2
         }
     },
-    "rules": {},
-    "relics": []
+    "rules": {
+        "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 20},
+        "ambush_master": {"name": "Ambush Master", "description": "This unit get +1 Accuracy when using an Ambush reaction.", "points": 20},
+        "move_move_move_infantry": {"name": "Move Move Move", "description": "This unit and friendly Infantry units within 6\" add 2\" to their Movement characteristic.", "points": 10}
+    },
+    "relics": {
+        "hans_von_luck_infantry": {
+            "subfactions": ["none", "infantry_focus"],
+            "name": "Hans von Luck (Infantry)",
+            "rule": "move_move_move_infantry",
+            "flavor": "Hans von Luck specialized in mobile recon and aggressive tactics.",
+            "description": "Upgrade one Field Officer model with Move Move Move."
+        },
+        "ernst_barkmann": {
+            "subfactions": ["none", "armored_focus"],
+            "name": "Ernst Barkmann",
+            "rule": "crack_shot",
+            "flavor": "Ernst Barkmann was an ace tank commander who served throughout the war.",
+            "description": "Upgrade one Panther (Command) with Crack Shot."
+        },
+        "michael_wittman": {
+            "subfactions": ["none", "armored_focus"],
+            "name": "Michael Wittmann",
+            "rule": "ambush_master",
+            "flavor": "Michael Wittman as an expert in Ambush and surprise often attacking his enemies when they least expect it.",
+            "description": "Upgrade one Tiger (Command) or Panzer IV (Command) with Ambush Master."
+        }
+    }
 }
