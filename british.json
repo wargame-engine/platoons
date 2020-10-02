@@ -1,0 +1,388 @@
+{
+    "id": "british",
+    "name": "British",
+    "subfactions": {
+        "infantry_focus": {"name": "Infantry Focus", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
+        "airborne_focus": {"name": "Airborne Focus", "id": "airborne_focus", "background": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
+        "armored_focus": {"name": "Armored Focus", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+    },
+    "units": {
+        "field_officer": {
+            "name": "Field Offier Team",
+            "description": "A Field Commander.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry", "Officer"],
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Field Offier",
+                    "courage": 7,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
+                    "rules": [{"id": "field_orders", "x": 1}, "leader"],
+                    "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+            ]
+        },
+        "forward_artillery_observer": {
+            "name": "Forward Observer (Artillery)",
+            "description": "An artillery forward observer able to call in a fire mission.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "keywords": ["Infantry", "Observer"],
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "rifle"]}],
+            "models": [
+                {
+                    "name": "Forward Observer (Artillery)",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed", "smoke_battery"],
+                    "options": [{"replaceWeapon": "smoke_battery", "withWeapon": ["light_mortar_battery", "medium_mortar_battery", "heavy_mortar_battery"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+            ]
+        },
+        "field_medic": {
+            "name": "Field Medic",
+            "description": "A field medic.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Field Medic",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["pistol", "unarmed", "smoke_grenades"],
+                    "rules": ["medic"],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+            ]
+        },
+        "riflemen": {
+            "name": "Infantry Section",
+            "description": "A group of british infantry.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "infantry_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3}
+            ],
+            "models": [
+                {
+                    "name": "Rifle NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Rifleman",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["bar"], "modelLimit": 2}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "motor_riflemen": {
+            "name": "Motor Infantry Section",
+            "description": "A group of trained US Riflemen.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "armored_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Motor Rifle NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Motor Rifleman",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["mag_lmg"], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 7
+                }
+            ]
+        },
+        "flamethrower_team": {
+            "name": "Flamethrower Team",
+            "description": "A team equipped to clear bunkers and other defensive positions.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "models": [
+                {
+                    "name": "Flamethrower Gunner",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["flamethrower", "unarmed"],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "sniper_team": {
+            "name": "Sniper Team",
+            "description": "A team equipped to take out important targets from a distance.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "rules": ["scout", "stealth"],
+            "models": [
+                {"name": "Sniper", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "piat_team": {
+            "name": "Piat Team",
+            "description": "A team dedicated to hunting heavy tanks.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "models": [
+                {"name": "Piat Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["piat", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "mmg_team": {
+            "name": ".30 Cal MG Team",
+            "description": "A us MMG.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
+            "category": "support",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": ".30 Cal MG Team",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 3,
+                    "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "rules": [{"id": "crew", "x": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "jeep": {
+            "name": "Jeep",
+            "description": "A light transport car.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Jeep",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 5}],
+                    "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}, {"addRule": "amphibious"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m5_halftrack": {
+            "name": "M5 Halftrack",
+            "description": "A lightly armored mechanized transport.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Half-Track"],
+            "models": [
+                {
+                    "name": "M5 Halftrack",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "hmg_aa"}],
+                    "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 12}, "exposed"],
+                    "options": [{"addweapon": "mmg", "mount": ["Left"]}, {"addweapon": "mmg", "mount": ["Right"]}, {"addweapon": "mmg", "mount": ["Rear"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
+    },
+    "weapons": {"bazooka": {"name": "Piat", "short": 6, "medium": 12, "ap": 6, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}, "indirect"]}},
+    "strategies": {
+        "fire_and_move": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "name": "Fire and Move",
+            "flavor": "With a doctrine of mobile warfare, US Infantry advance and fire with great effect.",
+            "description": "Use when an Infantry unit with any Assault weapons is firing. That unit does not suffer -1 to hit when using the Assault rule.",
+            "cost": 1
+        },
+        "scouting_team": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "name": "Scouting Team",
+            "flavor": "US Infantry units would often form small scouting teams to scout out the route ahead.",
+            "description": "Use instead of your activation. Choose 3 models from an Infantry unit to become a new scouting team unit. That unit immediately activates and is treated as a separate unit for the remainder of the game. This strategy may only be used once per Infantry unit.",
+            "cost": 1
+        },
+        "look_alive": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "name": "Look Alive",
+            "flavor": "Situational awareness can be key in combat.",
+            "description": "Use when an Infantry unit attemps a reaction test. That unit is treated as having an Initiative of 9.",
+            "cost": 2
+        },
+        "armored_assault": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "(Armored) Armored Assault",
+            "flavor": "Occasionally armored units are used to push infantry and other units off a dug in position.",
+            "description": "Use when a Vehicle unit declares a Charge action. It is treated as having Shock(+3) for that action.",
+            "cost": 1
+        },
+        "improvised_tactics": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "(Armored) Improvised Tactics",
+            "flavor": "Sometimes it is necessary to improvise in an armored engagement in order to gain the edge.",
+            "description": "Use when a Vehicle unit is attempting a reaction test. It is treated as having Initiative 9 for this test.",
+            "cost": 2
+        },
+        "crew_repairs": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "(Armored) Emergency Repairs",
+            "flavor": "In moments of dire circumstance crews may need to repair their vehicle in combat.",
+            "description": "Use when a Vehicle unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
+            "cost": 2
+        },
+        "precision_drop": {
+            "phase": "activation",
+            "subfactions": ["airborne_focus"],
+            "name": "(Airborne) Precision Drop",
+            "flavor": "A well-trained paratroop unit can drop as close as posssible to their intended target.",
+            "description": "Use when an Infantry unit is arriving using its Airdrop rule. It does not roll for missing its target and instead automatically lands where intended.",
+            "cost": 1
+        },
+        "tough_fighters": {
+            "phase": "activation",
+            "subfactions": ["airborne_focus"],
+            "name": "(Airborne) Tough Fighters",
+            "flavor": "Some of the toughest units to fight in a close combat brawl are trained Airborne units.",
+            "description": "Use before an Infantry unit uses a fight action. Its attacks gain AP1.",
+            "cost": 2
+        },
+        "stealth_tactics": {
+            "phase": "activation",
+            "subfactions": ["airborne_focus"],
+            "name": "(Airborne) Stealth Tactics",
+            "flavor": "Moving quickly and quietly is a key part of Airborne training.",
+            "description": "Use when activating an Infantry unit. It may make a free 6\" move action and may not be targetted by reaction fire when doing so.",
+            "cost": 2
+        }
+    },
+    "rules": {
+        "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly Infantry units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
+        "defensive_fire": {"name": "Defensive Fire", "description": "This unit and friendly Infantry units within 6\" get +1 Accuracy when using an Ambush reaction.", "points": 10},
+        "move_it": {"name": "Move It", "description": "When this unit is activated, this unit and friendly Infantry units within 6\" may immediately remove one strain.", "points": 10},
+        "mobile_expert": {"name": "Mobile Expert", "description": "This unit may move and fire assault weapons without suffering the -1 to hit penalty.", "points": 20} 
+    },
+    "relics": {
+    }
+}

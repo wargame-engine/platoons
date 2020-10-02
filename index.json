@@ -2,7 +2,8 @@
     "factions": {
         "germany": {"name": "Germany", "id": "germany", "url": "germany.json", "color": "#585C75", "alliance": "axis"},
         "united_states": {"name": "United States", "id": "united_states", "url": "united_states.json", "color": "#4A7643", "alliance": "allies"},
-        "soviet_union": {"name": "Soviet Union", "id": "soviet_union", "url": "soviet_union.json", "color": "#C13E3E", "alliance": "allies"}
+        "soviet_union": {"name": "Soviet Union", "id": "soviet_union", "url": "soviet_union.json", "color": "#C13E3E", "alliance": "allies"},
+        "british": {"name": "British", "id": "british", "url": "british.json", "color": "#927331", "alliance": "allies"}
     },
     "categories": {
         "command": {"name": "Command"},
