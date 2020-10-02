@@ -368,14 +368,14 @@
         "field_orders": {
             "name": "Field Orders",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose X other friendly Infantry units within 6\" to receive one of the following bonuses: +1 Accuracy or +3\" Movement or +1 Strength. A unit may only benefit from one Field Order.",
+            "description": "When this unit is activated, choose X friendly Infantry units within 6\" to receive one of the following bonuses: Re-roll hit rolls of 8+ or +3\" Movement or +1 Strength. A unit may only benefit from one Field Order.",
             "points": [15, {"multiply": "rule.x"}]
         },
         "field_orders_armored": {
             "name": "Field Orders (Armored)",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose X other friendly Tank or Armored Car units within 6\" to receive one of the following bonuses: +1 Accuracy or +3\" Movement or +1 Strength. A unit may only benefit from one Field Order.",
-            "points": [15, {"multiply": "rule.x"}]
+            "description": "When this unit is activated, choose X friendly Tank or Armored Car units within 6\" to receive one of the following bonuses: Re-roll hit rolls of 8+ or +3\" Movement. A unit may only benefit from one Field Order.",
+            "points": [20, {"multiply": "rule.x"}]
         }
     }
 }
