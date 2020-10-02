@@ -10,7 +10,7 @@
             "category": "command",
             "keywords": ["Infantry", "Officer"],
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Field Offier",
