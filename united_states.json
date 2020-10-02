@@ -175,7 +175,7 @@
             "description": "A group of trained US Riflemen.",
             "min": 1,
             "max": 1,
-            "subfactions": ["none", "armored_focus"],
+            "subfactions": ["armored_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
@@ -405,7 +405,7 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus", "airborne_focus"],
+            "subfactions": ["infantry_focus", "airborne_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
