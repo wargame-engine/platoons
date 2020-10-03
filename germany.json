@@ -1172,6 +1172,31 @@
                 }
             ]
         },
+        "sdkfz_234_2": {
+            "name": "Sdkfz 234/2 \"Puma\"",
+            "description": "A heavier armored recon car.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Armored Car"],
+            "models": [
+                {
+                    "name": "Sdkfz 234 \"Puma\"",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "medium_at_mg"}],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "sdkfz_234_3": {
             "name": "Sdkfz 234/3",
             "description": "A heavier armored recon car.",
@@ -1197,8 +1222,8 @@
                 }
             ]
         },
-        "sdkfz_234_2": {
-            "name": "Sdkfz 234 \"Puma\"",
+        "sdkfz_234_4": {
+            "name": "Sdkfz 234/4",
             "description": "A heavier armored recon car.",
             "min": 1,
             "max": 1,
@@ -1207,7 +1232,7 @@
             "keywords": ["Vehicle", "Armored Car"],
             "models": [
                 {
-                    "name": "Sdkfz 234 \"Puma\"",
+                    "name": "Sdkfz 234/4",
                     "courage": 5,
                     "movement": 12,
                     "shoot": 5,
@@ -1215,7 +1240,7 @@
                     "defense": 11,
                     "reflexes": 5,
                     "wounds": 6,
-                    "weapons": [{"id": "medium_at_mg"}],
+                    "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "options": [{"replaceWeapon": {"id": "medium_at_mg"}, "withWeapon": [{"id": "heavy_at_mg", "mount": ["Front"]}]}],
                     "min": 1,
@@ -1295,6 +1320,31 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "flammpanzer_ii": {
+            "name": "Flammpanzer II",
+            "description": "A light tank with a several flame weapons.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Flammpanzer II",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["mmg", {"id": "vehicle_flamethrower", "mount": ["Front", "Right"]},{"id": "vehicle_flamethrower", "mount": ["Front", "Left"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
@@ -1480,6 +1530,56 @@
                 }
             ]
         },
+        "hetzer": {
+            "name": "Jagdpanzer 38(t) Hetzer",
+            "description": "A medium tank with a fixed powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
+            "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
+            "models": [
+                {
+                    "name": "Jagdpanzer 38(t) Hetzer",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg"}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "flammpanzer_38t": {
+            "name": "Flammpanzer 38(t)",
+            "description": "A medium tank with a fixed powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
+            "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
+            "models": [
+                {
+                    "name": "Flammpanzer 38(t)",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "vehicle_flamethrower", "mount": ["Front"]}, {"id": "mmg"}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "stug_33b": {
             "name": "Stug 33b",
             "description": "An early infantry support medium tank with a fixed howitzer.",
@@ -1501,6 +1601,31 @@
                     "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "nashorn": {
+            "name": "Nashorn",
+            "description": "A later model tank destroyer.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
+            "models": [
+                {
+                    "name": "Nashorn",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "very_heavy_at_mg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", "armored_front", {"id": "shock", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1554,6 +1679,31 @@
                     "wounds": 6,
                     "weapons": [{"id": "very_heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "jagdtiger": {
+            "name": "Jagdtiger",
+            "description": "A heavy tank with a super powerful fixed main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Jagdtiger",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 14,
+                    "reflexes": 5,
+                    "wounds": 12,
+                    "weapons": [{"id": "super_heavy_at_mg", "mount": ["Front"]}, {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 12}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
