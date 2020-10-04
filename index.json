@@ -31,15 +31,16 @@
         "infantry_platoon": {
             "name": "Infantry Platoon (Core)",
             "cost": 2,
-            "description": "A well-rounded force for taking on any mission.",
+            "description": "A well-rounded force for taking on any opponent.",
             "categories": {
                 "command": {"min": 1, "max": 2},
                 "infantry": {"min": 2, "max": 5},
                 "support": {"max": 4},
-                "artillery": {"max": 1},
+                "artillery": {"max": 2},
                 "light_vehicles": {"max": 1},
                 "heavy_vehicles": {"max": 1},
-                "transport": {"max": 2}
+                "transport": {"max": 2},
+                "aircraft": {"max": 2}
             }
         },
         "support_platoon": {
@@ -50,38 +51,41 @@
                 "command": {"min": 1, "max": 2},
                 "infantry": {"min": 2, "max": 3},
                 "support": {"max": 6},
-                "artillery": {"max": 3},
+                "artillery": {"max": 4},
                 "light_vehicles": {"max": 1},
                 "heavy_vehicles": {"max": 0},
-                "transport": {"max": 3}
+                "transport": {"max": 3},
+                "aircraft": {"max": 2}
             }
         },
         "mechanized_platoon": {
             "name": "Mechanized/Motorized Platoon (Core)",
             "cost": 3,
-            "description": "An infantry force with additional transports.",
+            "description": "A mobile force equipped with mechanized or motorized transports.",
             "categories": {
                 "command": {"min": 1, "max": 2},
                 "infantry": {"min": 2, "max": 5},
                 "support": {"max": 4},
-                "artillery": {"max": 1},
+                "artillery": {"max": 2},
                 "light_vehicles": {"max": 2},
                 "heavy_vehicles": {"max": 1},
-                "transport": {"min": 2, "max": 5}
+                "transport": {"min": 2, "max": 5},
+                "aircraft": {"max": 2}
             }
         },
         "armored_platoon": {
             "name": "Armored Platoon (Core)",
             "cost": 4,
-            "description": "An armored force with additional armored support.",
+            "description": "An armored force with supporting motorized or mechanized Infantry.",
             "categories": {
                 "command": {"min": 1, "max": 2},
                 "infantry": {"min": 2, "max": 3},
-                "support": {"max": 4},
-                "artillery": {"max": 1},
+                "support": {"max": 2},
+                "artillery": {"max": 0},
                 "light_vehicles": {"max": 2},
                 "heavy_vehicles": {"max": 3},
-                "transport": {"min": 2, "max": 3}
+                "transport": {"min": 2, "max": 3},
+                "aircraft": {"max": 2}
             }
         }
     },
