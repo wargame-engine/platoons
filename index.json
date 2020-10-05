@@ -1,9 +1,18 @@
 {
     "factions": {
         "germany": {"name": "Germany", "id": "germany", "url": "germany.json", "color": "#585C75", "alliance": "axis"},
+        "finland": {"name": "Finland", "id": "finland", "url": "finland.json", "color": "#5D8CAA", "alliance": "axis"},
+        "hungary": {"name": "Hungary", "id": "hungary", "url": "hungary.json", "color": "#006354", "alliance": "axis"},
+        "italy": {"name": "Italy", "id": "italy", "url": "italy.json", "color": "#BD9326", "alliance": "axis"},
+        "japan": {"name": "Japan", "id": "japan", "url": "japan.json", "color": "#BE8200", "alliance": "axis"},
         "united_states": {"name": "United States", "id": "united_states", "url": "united_states.json", "color": "#4A7643", "alliance": "allies"},
+        "australia": {"name": "Australia", "id": "australia", "url": "australia.json", "color": "#008373", "alliance": "allies"},
+        "brazil": {"name": "Brazil", "id": "brazil", "url": "brazil.json", "color": "#008A4D", "alliance": "allies"},
         "soviet_union": {"name": "Soviet Union", "id": "soviet_union", "url": "soviet_union.json", "color": "#C13E3E", "alliance": "allies"},
-        "british": {"name": "British", "id": "british", "url": "british.json", "color": "#927331", "alliance": "allies"}
+        "british": {"name": "British", "id": "british", "url": "british.json", "color": "#927331", "alliance": "allies"},
+        "canada": {"name": "Canada", "id": "canada", "url": "canada.json", "color": "#47576F", "alliance": "allies"},
+        "france": {"name": "France", "id": "france", "url": "france.json", "color": "#395A94", "alliance": "allies"},
+        "poland": {"name": "Poland", "id": "poland", "url": "poland.json", "color": "#D83658", "alliance": "allies"}
     },
     "categories": {
         "command": {"name": "Command"},
@@ -145,6 +154,7 @@
         "mmg": {"name": "Medium MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1},
         "dual_mmg": {"name": "Dual Medium MG", "short": 18, "medium": 36, "attacks": 8, "ap": 1},
         "mmg_aa": {"name": "Medium MG (AA)", "short": 18, "medium": 36, "attacks": 5, "ap": 1, "rules": ["anti_air"]},
+        "mmg_aircraft": {"name": "Aircraft MG", "short": 18, "medium": 36, "attacks": 3, "ap": 1, "rules": ["anti_air"]},
         "hmg": {"name": "Heavy MG", "short": 18, "medium": 36, "attacks": 5, "ap": 2},
         "hmg_aa": {"name": "Heavy MG (AA)", "short": 18, "medium": 36, "attacks": 5, "ap": 2, "rules": ["anti_air"]},
         "mmg_internal": {"name": "Medium MG (Internal)", "short": 18, "medium": 36, "ap": 1, "attacks": 5},
@@ -185,18 +195,42 @@
                 {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id": "blast", "x": 3}, "anti_air"]}
             ]
         },
+        "20mm_cannon": {
+            "name": "20mm Cannon (AA)",
+            "profiles": [{"name": "AT", "short": 18, "medium": 36, "ap": 4, "attacks": 2, "rules": ["anti_air"]}, {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": ["anti_air", {"id": "blast", "x": 2}]}]
+        },
+        "37mm_cannon": {
+            "name": "37mm Cannon (AA)",
+            "profiles": [{"name": "AT", "short": 24, "medium": 48, "ap": 6, "attacks": 2}, {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id": "blast", "x": 2}]}]
+        },
         "smoke_battery": {"name": "Smoke Barrage (Off-table Battery)", "profiles": [{"name": "Smoke", "short": 18, "medium": 36, "attacks": 3, "rules": ["indirect", "smoke"]}]},
         "light_mortar_battery": {
             "name": "Light Mortar (Off-table Battery)",
-            "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]}]
+            "profiles": [
+                {"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
+                {"name": "Smoke", "short": 18, "medium": 36, "attacks": 3, "rules": ["indirect", "smoke"]}
+            ]
         },
         "medium_mortar_battery": {
             "name": "Medium Mortar (Off-table Battery)",
-            "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]}]
+            "profiles": [
+                {"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]},
+                {"name": "Smoke", "short": 18, "medium": 36, "attacks": 3, "rules": ["indirect", "smoke"]}
+            ]
         },
         "heavy_mortar_battery": {
             "name": "Heavy Mortar (Off-table Battery)",
-            "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]}]
+            "profiles": [
+                {"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]},
+                {"name": "Smoke", "short": 18, "medium": 36, "attacks": 3, "rules": ["indirect", "smoke"]}
+            ]
+        },
+        "nebelwerfer_battery": {
+            "name": "Nebelwerfer (Off-table Battery)",
+            "profiles": [
+                {"name": "HE", "short": 18, "medium": 36, "attacks": 4, "ap": 3, "rules": ["indirect", "salvo", {"id": "blast", "x": 4}]},
+                {"name": "Smoke", "short": 18, "medium": 36, "attacks": 4, "rules": ["indirect", "smoke"]}
+            ]
         },
         "light_mortar": {"name": "Light Mortar", "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]}]},
         "medium_mortar": {"name": "Medium Mortar", "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]}]},
@@ -225,11 +259,27 @@
             "name": "Medium Howitzer (Vehicle)",
             "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]}]
         },
+        "medium_howitzer_vehicle_mg": {
+            "name": "Medium Howitzer (Vehicle)/Co-ax MG",
+            "profiles": [
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]},
+                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
+            ]
+        },
         "medium_howitzer_vehicle_stabilized": {
             "name": "Medium Howitzer (Vehicle, Stabilized)",
             "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", "assault", {"id": "blast", "x": 7}]}]
         },
         "heavy_howitzer": {"name": "Heavy Howitzer", "profiles": [{"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 9}]}]},
+        "heavy_howitzer_vehicle": {"name": "Heavy Howitzer (Vehicle)", "profiles": [{"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 9}]}]},
+        "heavy_howitzer_vehicle_mg": {
+            "name": "Heavy Howitzer (Vehicle)/Co-ax MG",
+            "profiles": [
+                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 9}]},
+                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
+            ]
+        },
+        "rocket_mortar": {"name": "Rocket Mortar", "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 5, "rules": ["indirect", {"id": "blast", "x": 11}]}]},
         "very_light_at": {
             "name": "Very Light AT",
             "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 2}]}, {"name": "AT", "short": 18, "medium": 36, "attacks": 1, "ap": 4}]
@@ -340,7 +390,10 @@
                 {"name": "AT", "short": 48, "medium": 96, "attacks": 1, "ap": 9},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
-        }
+        },
+        "light_bomb": {"name": "Light Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 2, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 4}]}]},
+        "medium_bomb": {"name": "Medium Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 3, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 5}]}]},
+        "heavy_bomb": {"name": "Heavy Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 4, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 6}]}]}
     },
     "rules": {
         "tank_ace": {"name": "Tank Ace", "description": "This unit gets +1 Accuracy.", "points": 25},
@@ -354,6 +407,11 @@
             "name": "Medic",
             "description": "Whenever this model, or a friendly Infantry model within 6\" fails a save, roll a D10. On a 3 or less that save is not failed. This model may never control or contest objectives.",
             "points": 15
+        },
+        "fanatical": {
+            "name": "Fanatical",
+            "description": "This unit is treated as having Courage 9 for all break tests and does not gain strain from close combat.",
+            "points": 3
         },
         "side_skirts": {"name": "Side Skirts", "description": "This model gains +1 to its Save when hit in its side arcs from weapons with AP 4 or less.", "points": 5},
         "gun_shield": {"name": "Gun Shield", "description": "This model gains +1 to its Save when hit in its front arc.", "points": 5},

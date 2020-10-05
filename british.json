@@ -304,29 +304,29 @@
     },
     "weapons": {"bazooka": {"name": "Piat", "short": 6, "medium": 12, "ap": 6, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}, "indirect"]}},
     "strategies": {
-        "fire_and_move": {
+        "rapid_fire": {
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
-            "name": "Fire and Move",
-            "flavor": "With a doctrine of mobile warfare, US Infantry advance and fire with great effect.",
-            "description": "Use when an Infantry unit with any Assault weapons is firing. That unit does not suffer -1 to hit when using the Assault rule.",
+            "name": "Rapid Fire",
+            "flavor": "British infantry were trained to fire their rifles at an incredibly high rate.",
+            "description": "Use when an Infantry unit with Rifles is firing. Hits rolls of 1 or 2 generate an additional shot.",
             "cost": 1
         },
-        "scouting_team": {
+        "stiff_upper_lip": {
+            "phase": "activation",
+            "subfactions": ["none"],
+            "name": "Stiff Upper Lip",
+            "flavor": "British soldiers put up tough resistance in hand-to-hand fighting.",
+            "description": "Use before an Infantry unit uses a fight action. Its attacks gain AP1.",
+            "cost": 2
+        },
+        "focus_fire": {
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
-            "name": "Scouting Team",
-            "flavor": "US Infantry units would often form small scouting teams to scout out the route ahead.",
+            "name": "Focus Fire",
+            "flavor": "Bren guns.",
             "description": "Use instead of your activation. Choose 3 models from an Infantry unit to become a new scouting team unit. That unit immediately activates and is treated as a separate unit for the remainder of the game. This strategy may only be used once per Infantry unit.",
             "cost": 1
-        },
-        "look_alive": {
-            "phase": "activation",
-            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
-            "name": "Look Alive",
-            "flavor": "Situational awareness can be key in combat.",
-            "description": "Use when an Infantry unit attemps a reaction test. That unit is treated as having an Initiative of 9.",
-            "cost": 2
         },
         "armored_assault": {
             "phase": "activation",
@@ -350,30 +350,6 @@
             "name": "(Armored) Emergency Repairs",
             "flavor": "In moments of dire circumstance crews may need to repair their vehicle in combat.",
             "description": "Use when a Vehicle unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
-            "cost": 2
-        },
-        "precision_drop": {
-            "phase": "activation",
-            "subfactions": ["airborne_focus"],
-            "name": "(Airborne) Precision Drop",
-            "flavor": "A well-trained paratroop unit can drop as close as posssible to their intended target.",
-            "description": "Use when an Infantry unit is arriving using its Airdrop rule. It does not roll for missing its target and instead automatically lands where intended.",
-            "cost": 1
-        },
-        "tough_fighters": {
-            "phase": "activation",
-            "subfactions": ["airborne_focus"],
-            "name": "(Airborne) Tough Fighters",
-            "flavor": "Some of the toughest units to fight in a close combat brawl are trained Airborne units.",
-            "description": "Use before an Infantry unit uses a fight action. Its attacks gain AP1.",
-            "cost": 2
-        },
-        "stealth_tactics": {
-            "phase": "activation",
-            "subfactions": ["airborne_focus"],
-            "name": "(Airborne) Stealth Tactics",
-            "flavor": "Moving quickly and quietly is a key part of Airborne training.",
-            "description": "Use when activating an Infantry unit. It may make a free 6\" move action and may not be targetted by reaction fire when doing so.",
             "cost": 2
         }
     },

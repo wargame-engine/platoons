@@ -14,7 +14,7 @@
             "max": 1,
             "category": "command",
             "keywords": ["Infantry", "Officer"],
-            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
@@ -33,6 +33,34 @@
                     "max": 1
                 },
                 {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+            ]
+        },
+        "airborne_field_officer": {
+            "name": "Field Offier Team (Airborne)",
+            "description": "A Field Commander.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry", "Officer"],
+            "subfactions": ["airborne_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": {"id": "airdrop"}, "modelLimit": "all"}],
+            "models": [
+                {
+                    "name": "Field Offier Team (Airborne)",
+                    "courage": 7,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
+                    "rules": [{"id": "field_orders", "x": 1}, "leader"],
+                    "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
             ]
         },
         "forward_artillery_observer": {
@@ -250,6 +278,48 @@
                 }
             ]
         },
+        "glider_rifle_squad": {
+            "name": "Glider Rifle Squad",
+            "description": "A group of trained US Riflemen dropped in gliders.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["airborne_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3}
+            ],
+            "models": [
+                {
+                    "name": "Glider Rifle NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Glider Rifleman",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 2}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
         "airborne_squad": {
             "name": "Airborne Squad",
             "description": "A group of trained US Airborne.",
@@ -393,7 +463,7 @@
             "category": "support",
             "subfactions": ["airborne_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addRule": {"id": "airdrop"}, "modelLimit": "all"}],
             "rules": ["scout", "stealth"],
             "models": [
                 {"name": "Sniper", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
@@ -406,7 +476,7 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
@@ -420,12 +490,38 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["infantry_focus", "airborne_focus"],
+            "subfactions": ["infantry_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
                 {
                     "name": "Veteran Bazooka Gunner",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["bazooka", "unarmed"],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "airborne_bazooka_team": {
+            "name": "Bazooka Team (Airborne)",
+            "description": "A team dedicated to hunting heavy tanks.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["airborne_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addRule": {"id": "airdrop"}, "modelLimit": "all"}],
+            "models": [
+                {
+                    "name": "Bazooka Gunner (Airborne)",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 6,
@@ -570,13 +666,41 @@
             "description": "A wheeled light howitzer.",
             "min": 1,
             "max": 1,
-            "subfactions": ["none", "infantry_focus", "airborne_focus"],
+            "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 2}],
             "models": [
                 {
                     "name": "75mm Pack Howitzer",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_howitzer_light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "airborne_75mm_pack": {
+            "name": "75mm Pack Howitzer (Airborne)",
+            "description": "A wheeled light howitzer.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
+            "category": "artillery",
+            "keywords": ["Artillery"],
+            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "options": [
+                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
+            ],
+            "models": [
+                {
+                    "name": "75mm Pack Howitzer (Airborne)",
                     "courage": 5,
                     "movement": 4,
                     "shoot": 5,
@@ -670,13 +794,41 @@
             "description": "A wheeled medium at gun.",
             "min": 1,
             "max": 1,
-            "subfactions": ["none", "infantry_focus", "airborne_focus"],
+            "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 2}],
             "models": [
                 {
                     "name": "57mm M1",
+                    "courage": 5,
+                    "movement": 3,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 4,
+                    "weapons": [{"id": "medium_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "airborne_57mm_m1": {
+            "name": "57mm M1 (Airborne)",
+            "description": "A wheeled medium at gun.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
+            "category": "artillery",
+            "keywords": ["Artillery"],
+            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "options": [
+                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
+            ],
+            "models": [
+                {
+                    "name": "57mm M1 (Airborne)",
                     "courage": 5,
                     "movement": 3,
                     "shoot": 5,
@@ -740,6 +892,82 @@
                 }
             ]
         },
+        "m45_quadmount": {
+            "name": "M45 Quadmount",
+            "description": "A wheeled aa piece.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery", "Anti-Air"],
+            "rules": [{"id": "crew", "x": 2}, "gun_shield"],
+            "models": [
+                {
+                    "name": "M45 Quadmount",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_autocannon_aa", "count": 4, "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "37mm_aa": {
+            "name": "37mm M1A2 AA",
+            "description": "A wheeled heavy anti-aircraft autocannon.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery", "Anti-Air"],
+            "rules": [{"id": "crew", "x": 2}],
+            "models": [
+                {
+                    "name": "37mm M1A2 AA",
+                    "courage": 5,
+                    "movement": 2,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "heavy_autocannon_aa"}, {"id": "unarmed", "count": 3}],
+                    "options": [{"addRule": "gun_shield"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m20_scout_car": {
+            "name": "M20 Scout Car",
+            "description": "An armored recon car with a powerful autocannon.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Armored Car"],
+            "models": [
+                {
+                    "name": "M20 Scout Car",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["hmg_aa"],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed", "scout"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "m8_greyhound": {
             "name": "M8 Greyhound",
             "description": "An armored recon car with a powerful autocannon.",
@@ -759,7 +987,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["light_at_mg"],
-                    "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed"],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed", "scout"],
                     "options": [{"addWeapon": "hmg_aa"}],
                     "min": 1,
                     "max": 1
@@ -852,7 +1080,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "subfactions": ["armored_focus"],
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
@@ -928,6 +1156,34 @@
                         {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": "heavy_at_stabilized_mg"}
                     ],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m4a3e8_easy_eight": {
+            "name": "M4A3E8 \"Easy Eight\"",
+            "description": "A medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "M4A3E8 \"Easy Eight\"",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["heavy_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [
+                        {"addWeapon": ["mmg_aa", "hmg_aa"]}
+                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1092,6 +1348,32 @@
                 }
             ]
         },
+        "m3_white_scout": {
+            "name": "M3 White Scout Car",
+            "description": "A lightly armored scout transport car.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Half-Track"],
+            "models": [
+                {
+                    "name": "M3 White Scout Car",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "hmg_aa", "mount": ["Front"]}],
+                    "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 8}, "exposed", "scout"],
+                    "options": [{"addweapon": "mmg", "mount": ["Left", "Rear"]}, {"addweapon": "mmg", "mount": ["Right", "Rear"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "jeep": {
             "name": "Jeep",
             "description": "A light transport car.",
@@ -1103,6 +1385,34 @@
             "models": [
                 {
                     "name": "Jeep",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 5}],
+                    "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}, {"addRule": "amphibious"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "airborne_jeep": {
+            "name": "Jeep (Airborne)",
+            "description": "A light transport car.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["airborne_focus"],
+            "keywords": ["Vehicle"],
+            "options": [
+                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
+            ],
+            "models": [
+                {
+                    "name": "Jeep (Airborne)",
                     "courage": 5,
                     "movement": 12,
                     "shoot": 5,
