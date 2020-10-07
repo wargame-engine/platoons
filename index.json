@@ -16,7 +16,8 @@
         "canada": {"name": "Canada", "id": "canada", "url": "canada.json", "color": "#47576F", "alliance": "allies"},
         "france": {"name": "France", "id": "france", "url": "france.json", "color": "#395A94", "alliance": "allies"},
         "belgium": {"name": "Belgium", "id": "france", "url": "belgium.json", "color": "#968164", "alliance": "allies"},
-        "poland": {"name": "Poland", "id": "poland", "url": "poland.json", "color": "#D83658", "alliance": "allies"}
+        "poland": {"name": "Poland", "id": "poland", "url": "poland.json", "color": "#D83658", "alliance": "allies"},
+        "china": {"name": "China", "id": "china", "url": "china.json", "color": "#000095", "alliance": "allies"}
     },
     "categories": {
         "command": {"name": "Command"},
