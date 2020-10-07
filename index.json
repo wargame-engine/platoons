@@ -1,10 +1,13 @@
 {
     "factions": {
+        "vichy_france": {"name": "Vichy France", "id": "vichy_france", "url": "vichy_france.json", "color": "#203850", "alliance": "axis"},
         "germany": {"name": "Germany", "id": "germany", "url": "germany.json", "color": "#585C75", "alliance": "axis"},
         "finland": {"name": "Finland", "id": "finland", "url": "finland.json", "color": "#5D8CAA", "alliance": "axis"},
         "hungary": {"name": "Hungary", "id": "hungary", "url": "hungary.json", "color": "#006354", "alliance": "axis"},
+        "romania": {"name": "Romania", "id": "romania", "url": "romania.json", "color": "#4f2c26", "alliance": "axis"},
         "italy": {"name": "Italy", "id": "italy", "url": "italy.json", "color": "#BD9326", "alliance": "axis"},
         "japan": {"name": "Japan", "id": "japan", "url": "japan.json", "color": "#BE8200", "alliance": "axis"},
+        "greece": {"name": "Greece", "id": "greece", "url": "greece.json", "color": "#729263", "alliance": "allies"},
         "united_states": {"name": "United States", "id": "united_states", "url": "united_states.json", "color": "#4A7643", "alliance": "allies"},
         "australia": {"name": "Australia", "id": "australia", "url": "australia.json", "color": "#008373", "alliance": "allies"},
         "brazil": {"name": "Brazil", "id": "brazil", "url": "brazil.json", "color": "#008A4D", "alliance": "allies"},
@@ -12,6 +15,7 @@
         "british": {"name": "British", "id": "british", "url": "british.json", "color": "#927331", "alliance": "allies"},
         "canada": {"name": "Canada", "id": "canada", "url": "canada.json", "color": "#47576F", "alliance": "allies"},
         "france": {"name": "France", "id": "france", "url": "france.json", "color": "#395A94", "alliance": "allies"},
+        "belgium": {"name": "Belgium", "id": "france", "url": "belgium.json", "color": "#968164", "alliance": "allies"},
         "poland": {"name": "Poland", "id": "poland", "url": "poland.json", "color": "#D83658", "alliance": "allies"}
     },
     "categories": {
@@ -142,6 +146,13 @@
         "pistol": {"name": "Pistol", "short": 6, "attacks": 1},
         "smoke_grenades": {"name": "Smokes", "attacks": 1, "short": 6, "rules": ["grenade", "smoke", "indirect"]},
         "rifle": {"name": "Rifle", "short": 12, "medium": 24, "attacks": 1},
+        "rifle_grenade": {
+            "name": "Rifle Grenade",
+            "profiles": [
+                {"name": "Rifle", "short": 12, "medium": 24, "attacks": 1},
+                {"name": "Grenade", "short": 6, "medium": 12, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 2}]}
+            ]
+        },
         "sniper_rifle": {"name": "Sniper Rifle", "short": 18, "medium": 36, "attacks": 1, "ap": 2, "rules": ["sniper", {"id": "team", "x": 2}]},
         "semi_auto_rifle": {"name": "Semi-Auto Rifle", "short": 12, "medium": 24, "attacks": 1, "rules": ["assault"]},
         "carbine_rifle": {"name": "Carbine Rifle", "short": 9, "medium": 18, "attacks": 1, "rules": ["assault"]},
@@ -197,7 +208,10 @@
         },
         "20mm_cannon": {
             "name": "20mm Cannon (AA)",
-            "profiles": [{"name": "AT", "short": 18, "medium": 36, "ap": 4, "attacks": 2, "rules": ["anti_air"]}, {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": ["anti_air", {"id": "blast", "x": 2}]}]
+            "profiles": [
+                {"name": "AT", "short": 18, "medium": 36, "ap": 4, "attacks": 2, "rules": ["anti_air"]},
+                {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": ["anti_air", {"id": "blast", "x": 2}]}
+            ]
         },
         "37mm_cannon": {
             "name": "37mm Cannon (AA)",
@@ -408,11 +422,7 @@
             "description": "Whenever this model, or a friendly Infantry model within 6\" fails a save, roll a D10. On a 3 or less that save is not failed. This model may never control or contest objectives.",
             "points": 15
         },
-        "fanatical": {
-            "name": "Fanatical",
-            "description": "This unit is treated as having Courage 9 for all break tests and does not gain strain from close combat.",
-            "points": 3
-        },
+        "fanatical": {"name": "Fanatical", "description": "This unit is treated as having Courage 9 for all break tests and does not gain strain from close combat.", "points": 3},
         "side_skirts": {"name": "Side Skirts", "description": "This model gains +1 to its Save when hit in its side arcs from weapons with AP 4 or less.", "points": 5},
         "gun_shield": {"name": "Gun Shield", "description": "This model gains +1 to its Save when hit in its front arc.", "points": 5},
         "suppressive": {"name": "Suppressive", "description": "This model may take a suppressive fire action without suffering any to-hit penalties.", "points": 1},
