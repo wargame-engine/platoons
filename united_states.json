@@ -555,7 +555,7 @@
                     "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
-                    "rules": [{"id": "crew", "x": 2}],
+                    "rules": [{"id": "crew", "x": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -580,7 +580,7 @@
                     "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "hmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
-                    "rules": [{"id": "crew", "x": 2}],
+                    "rules": [{"id": "crew", "x": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -594,7 +594,7 @@
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "category": "support",
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 1}],
+            "rules": [{"id": "crew", "x": 2}],
             "models": [
                 {
                     "name": "Light Mortar Team",
@@ -619,7 +619,7 @@
             "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "category": "support",
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 2}],
+            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Medium Mortar Team",
@@ -644,7 +644,7 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "support",
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 3}],
+            "rules": [{"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "Heavy Mortar Team",
@@ -669,7 +669,7 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "75mm Pack Howitzer",
@@ -694,7 +694,7 @@
             "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "options": [
                 {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
             ],
@@ -722,7 +722,7 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "rules": ["gun_shield", {"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "M2A1 Howitzer",
@@ -747,7 +747,7 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 4}],
+            "rules": ["gun_shield", {"id": "crew", "x": 5}],
             "models": [
                 {
                     "name": "M1 155mm \"Long Tom\"",
@@ -772,7 +772,7 @@
             "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "37mm M3",
@@ -797,7 +797,7 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "57mm M1",
@@ -822,7 +822,7 @@
             "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "options": [
                 {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
             ],
@@ -850,7 +850,7 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "rules": ["gun_shield", {"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "3-inch M5",
@@ -875,7 +875,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": [{"id": "crew", "x": 2}],
+            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "M16 Rocket Launcher",
@@ -900,7 +900,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery", "Anti-Air"],
-            "rules": [{"id": "crew", "x": 2}, "gun_shield"],
+            "rules": [{"id": "crew", "x": 3}, "gun_shield"],
             "models": [
                 {
                     "name": "M45 Quadmount",
@@ -925,7 +925,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery", "Anti-Air"],
-            "rules": [{"id": "crew", "x": 2}],
+            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "37mm M1A2 AA",

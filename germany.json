@@ -631,7 +631,7 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 2}],
+            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Tripod MG-34/MG42 Team",
@@ -656,7 +656,7 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 1}],
+            "rules": [{"id": "crew", "x": 2}],
             "models": [
                 {
                     "name": "Light Mortar Team",
@@ -681,7 +681,7 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus", "armored_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 2}],
+            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Medium Mortar Team",
@@ -706,7 +706,7 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 3}],
+            "rules": [{"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "Heavy Mortar Team",
@@ -731,7 +731,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "75mm LG/40",
@@ -756,7 +756,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Leig.18 Howitzer",
@@ -781,7 +781,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "rules": ["gun_shield", {"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "LefH Howitzer",
@@ -806,7 +806,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 4}],
+            "rules": ["gun_shield", {"id": "crew", "x": 5}],
             "models": [
                 {
                     "name": "Sig.33 Howitzer",
@@ -831,7 +831,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": [{"id": "crew", "x": 1}],
+            "rules": [{"id": "crew", "x": 2}],
             "models": [
                 {
                     "name": "Schweres Wurfgerats",
@@ -856,7 +856,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": [{"id": "crew", "x": 2}],
+            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Schweres Wurfgerats",
@@ -881,7 +881,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Pak 36 AT Gun",
@@ -906,7 +906,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Pak 38 AT Gun",
@@ -931,7 +931,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "rules": ["gun_shield", {"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "Pak 40 AT Gun",
@@ -956,7 +956,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 4}],
+            "rules": ["gun_shield", {"id": "crew", "x": 5}],
             "models": [
                 {
                     "name": "Pak 43 AT Gun",
@@ -981,7 +981,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery", "Anti-Air"],
-            "rules": ["gun_shield", {"id": "crew", "x": 6}],
+            "rules": ["gun_shield", {"id": "crew", "x": 7}],
             "models": [
                 {
                     "name": "88mm Flak",
@@ -1006,7 +1006,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery", "Anti-Air"],
-            "rules": [{"id": "crew", "x": 2}],
+            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "20mm Flak",
@@ -1032,7 +1032,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery", "Anti-Air"],
-            "rules": [{"id": "crew", "x": 2}],
+            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Flakvierling 38",
@@ -1058,7 +1058,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery", "Anti-Air"],
-            "rules": [{"id": "crew", "x": 2}],
+            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "37mm Flak 36",

@@ -106,7 +106,7 @@
                     "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
-                    "rules": [{"id": "crew", "x": 2}],
+                    "rules": [{"id": "crew", "x": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -493,7 +493,7 @@
             "subfactions": ["none", "infantry_focus", "armored_focus"],
             "category": "support",
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 1}],
+            "rules": [{"id": "crew", "x": 2}],
             "models": [
                 {
                     "name": "Light Mortar Team",
@@ -518,7 +518,7 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "support",
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 2}],
+            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Medium Mortar Team",
@@ -543,7 +543,7 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "support",
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 3}],
+            "rules": [{"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "Heavy Mortar Team",
@@ -568,7 +568,7 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "75mm Mle 1897",
@@ -593,7 +593,7 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "rules": ["gun_shield", {"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "105mm L Mle 1936 Schneider",
@@ -618,7 +618,7 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 4}],
+            "rules": ["gun_shield", {"id": "crew", "x": 5}],
             "models": [
                 {
                     "name": "155mm Mle 1917 Schneider",
@@ -643,7 +643,7 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "25mm Hotchkiss AT",
@@ -668,7 +668,7 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "47mm Mle 1937 AT",
@@ -693,7 +693,7 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery", "Anti-Air"],
-            "rules": [{"id": "crew", "x": 2}, "gun_shield"],
+            "rules": [{"id": "crew", "x": 3}, "gun_shield"],
             "models": [
                 {
                     "name": "25mm Hotchkiss AA",
@@ -888,7 +888,56 @@
         }
     },
     "weapons": {},
-    "strategies": {},
+    "strategies": {
+        "trench_raiders": {
+            "phase": "activation",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "name": "Trench Raiders",
+            "flavor": "Well-trained in first world war tactics, French infantry can carry out deadly assaults.",
+            "description": "Use when an Infantry fights. It gets +1 AP for that attack.",
+            "cost": 1
+        },
+        "heavy_barrage": {
+            "phase": "activation",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "name": "Heavy Barrage",
+            "flavor": "With enough shells, the enemy's morale will surely waver.",
+            "description": "Use when an Artillery unit with the Indirect rule fires. That weapon gains +2 Blast and if the weapon scatters, it hits the closest enemy unit within 3\" instead of 1\".",
+            "cost": 1
+        },
+        "defensive_tactics": {
+            "phase": "activation",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "name": "Defensive Tactics",
+            "flavor": "The French focused on defensive and well-prepared defenses.",
+            "description": "Use when an Infantry is targetted by an attack. That unit is treated as being in Light Cover, or Hard Cover if already in Light Cover.",
+            "cost": 1
+        },
+        "armored_assault": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "(Armored) Armored Assault",
+            "flavor": "Occasionally armored units are used to push infantry and other units off a dug in position.",
+            "description": "Use when a Vehicle unit declares a Charge action. It is treated as having Shock(+3) for that action.",
+            "cost": 1
+        },
+        "improvised_tactics": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "(Armored) Improvised Tactics",
+            "flavor": "Sometimes it is necessary to improvise in an armored engagement in order to gain the edge.",
+            "description": "Use when a Vehicle unit is attempting a reaction test. It is treated as having Initiative 9 for this test.",
+            "cost": 2
+        },
+        "crew_repairs": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "(Armored) Emergency Repairs",
+            "flavor": "In moments of dire circumstance crews may need to repair their vehicle in combat.",
+            "description": "Use when a Vehicle unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
+            "cost": 2
+        }
+    },
     "rules": {},
     "relics": {}
 }

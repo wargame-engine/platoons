@@ -247,7 +247,7 @@
                     "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
-                    "rules": [{"id": "crew", "x": 2}, "gun_shield"],
+                    "rules": [{"id": "crew", "x": 3}, "gun_shield"],
                     "min": 1,
                     "max": 1
                 }
@@ -271,7 +271,7 @@
                     "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "hmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
-                    "rules": [{"id": "crew", "x": 2}, "gun_shield"],
+                    "rules": [{"id": "crew", "x": 3}, "gun_shield"],
                     "min": 1,
                     "max": 1
                 }
@@ -284,7 +284,7 @@
             "max": 1,
             "category": "support",
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 1}],
+            "rules": [{"id": "crew", "x": 2}],
             "models": [
                 {
                     "name": "Light Mortar Team",
@@ -308,7 +308,7 @@
             "max": 1,
             "category": "support",
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 2}],
+            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Medium Mortar Team",
@@ -332,7 +332,7 @@
             "max": 1,
             "category": "support",
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 3}],
+            "rules": [{"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "Heavy Mortar Team",
@@ -356,7 +356,7 @@
             "max": 1,
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "76mm Field Gun",
@@ -380,7 +380,7 @@
             "max": 1,
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "rules": ["gun_shield", {"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "M-30 Howitzer",
@@ -404,7 +404,7 @@
             "max": 1,
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 4}],
+            "rules": ["gun_shield", {"id": "crew", "x": 5}],
             "models": [
                 {
                     "name": "ML-20 Howitzer",
@@ -428,7 +428,7 @@
             "max": 1,
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "45mm AT Gun",
@@ -452,7 +452,7 @@
             "max": 1,
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "ZiS-2 AT Gun",
@@ -476,7 +476,7 @@
             "max": 1,
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 2}],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "ZiS-2 AT Gun",
@@ -500,7 +500,7 @@
             "max": 1,
             "category": "artillery",
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "rules": ["gun_shield", {"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "BS-3 AT Gun",
