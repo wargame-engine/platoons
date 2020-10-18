@@ -1,5 +1,6 @@
 {
     "factions": {
+        "partisans": {"name": "Partisans", "id": "partisans", "url": "partisans.json", "color": "#014140"},
         "vichy_france": {"name": "Vichy France", "id": "vichy_france", "url": "vichy_france.json", "color": "#203850", "alliance": "axis"},
         "germany": {"name": "Germany", "id": "germany", "url": "germany.json", "color": "#585C75", "alliance": "axis"},
         "finland": {"name": "Finland", "id": "finland", "url": "finland.json", "color": "#5D8CAA", "alliance": "axis"},
