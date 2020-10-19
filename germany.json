@@ -355,7 +355,7 @@
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
@@ -369,7 +369,7 @@
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
@@ -614,13 +614,13 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["panzerschreck", "unarmed"],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "mmg_team": {
@@ -2547,8 +2547,6 @@
         }
     },
     "weapons": {
-        "panzerfaust": {"name": "Panzerfaust", "attacks": 1, "short": 6, "medium": 12, "ap": 7, "damage": 6, "rules": [{"id": "ammo", "x": 1}]},
-        "panzerschreck": {"name": "Panzerschreck", "short": 12, "medium": 24, "ap": 7, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}]},
         "88mm_flak": {
             "name": "88mm (AA)/Medium Howitzer",
             "profiles": [
@@ -2572,7 +2570,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Suppressive Fire",
             "flavor": "With high rate of fire and a terrifying noise, machineguns can be used to pin down enemy troops with ease.",
-            "description": "Use when a German Infantry unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 1 additional strain to all affected targets.",
+            "description": "Use when a German Infantry unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 2 additional strain to all affected targets.",
             "cost": 1
         },
         "panzer_blitz": {
@@ -2607,12 +2605,12 @@
             "description": "Use when a Vehicle unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
             "cost": 2
         },
-        "precision_drop": {
-            "phase": "activation",
+        "combat_drop": {
+            "phase": "pre_game",
             "subfactions": ["airborne_focus"],
-            "name": "(Airborne) Precision Drop",
+            "name": "(Airborne) Combat Drop",
             "flavor": "A well-trained paratroop unit can drop as close as posssible to their intended target.",
-            "description": "Use when an Infantry unit is arriving using its Airdrop rule. It does not roll for missing its target and instead automatically lands where intended.",
+            "description": "Set one Infantry, Artillery or Airborne Vehicle unit aside in reserves before the match begins. At the beginning of any round after the first you may attempt to place the unit anywhere on the table over 12\" away from enemy units.\n\nTake a Courage test. If failed, use D10 scattering to determine the unit's new landing location. If the new location is off the table, place the unit at table edge as close as possible. If both players have units with Airdrop they must roll-off to see who deploys first, and then alternate in placing them.",
             "cost": 1
         },
         "tough_fighters": {

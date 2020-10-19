@@ -1,6 +1,6 @@
 {
-    "id": "soviet_union",
-    "name": "Soviet Union",
+    "id": "china_warlord",
+    "name": "China (Warlord)",
     "subfactions": {
         "infantry_focus": {"name": "Infantry Focus", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
         "armored_focus": {"name": "Armored Focus", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true},
@@ -33,32 +33,6 @@
                     "max": 1
                 },
                 {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
-            ]
-        },
-        "comissar": {
-            "name": "Comissar",
-            "description": "An officer dedicated to keeping officers and higher soldiers in line.",
-            "min": 1,
-            "max": 1,
-            "category": "command",
-            "keywords": ["Infantry", "Commissar"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
-            "models": [
-                {
-                    "name": "Commissar",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 4,
-                    "wounds": 1,
-                    "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
-                    "rules": ["leader", "no_reatreat"],
-                    "min": 1,
-                    "max": 1
-                },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 4, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "forward_artillery_observer": {
@@ -299,7 +273,7 @@
             ]
         },
         "mmg_team": {
-            "name": "Maxim MG Team",
+            "name": "Tripod MG Team",
             "description": "A tripod mounted MMG.",
             "min": 1,
             "max": 1,
@@ -307,7 +281,7 @@
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Medium MG Team",
+                    "name": "Tripod MG Team",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
@@ -316,30 +290,6 @@
                     "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
-                    "rules": [{"id": "crew", "x": 3}, "gun_shield"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "hmg_team": {
-            "name": "Dshk MG Team",
-            "description": "A tripod mounted HMG.",
-            "min": 1,
-            "max": 1,
-            "category": "support",
-            "keywords": ["Infantry"],
-            "models": [
-                {
-                    "name": "Heavy MG Team",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 3,
-                    "weapons": [{"id": "hmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "rules": [{"id": "crew", "x": 3}, "gun_shield"],
                     "min": 1,
                     "max": 1
@@ -418,270 +368,6 @@
                 }
             ]
         },
-        "76mm_howitzer": {
-            "name": "76mm Field Gun",
-            "description": "A wheeled light howitzer.",
-            "min": 1,
-            "max": 1,
-            "category": "artillery",
-            "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
-            "models": [
-                {
-                    "name": "76mm Field Gun",
-                    "courage": 5,
-                    "movement": 4,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 3,
-                    "weapons": [{"id": "light_howitzer_light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "m_30_howitzer": {
-            "name": "M-30 Howitzer",
-            "description": "A wheeled medium howitzer.",
-            "min": 1,
-            "max": 1,
-            "category": "artillery",
-            "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 4}],
-            "models": [
-                {
-                    "name": "M-30 Howitzer",
-                    "courage": 5,
-                    "movement": 3,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ml_20_howitzer": {
-            "name": "ML-20 Howitzer",
-            "description": "A wheeled heavy howitzer.",
-            "min": 1,
-            "max": 1,
-            "category": "artillery",
-            "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 5}],
-            "models": [
-                {
-                    "name": "ML-20 Howitzer",
-                    "courage": 5,
-                    "movement": 2,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 5}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "45mm_at": {
-            "name": "45mm AT Gun",
-            "description": "A wheeled light at gun.",
-            "min": 1,
-            "max": 1,
-            "category": "artillery",
-            "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
-            "models": [
-                {
-                    "name": "45mm AT Gun",
-                    "courage": 5,
-                    "movement": 4,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 3,
-                    "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "zis_2_atgun": {
-            "name": "ZiS-2 AT Gun",
-            "description": "A wheeled medium at gun.",
-            "min": 1,
-            "max": 1,
-            "category": "artillery",
-            "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
-            "models": [
-                {
-                    "name": "ZiS-2 AT Gun",
-                    "courage": 5,
-                    "movement": 3,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "medium_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "zis_3_atgun": {
-            "name": "ZiS-3 AT Gun",
-            "description": "A wheeled medium at gun.",
-            "min": 1,
-            "max": 1,
-            "category": "artillery",
-            "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
-            "models": [
-                {
-                    "name": "ZiS-3 AT Gun",
-                    "courage": 5,
-                    "movement": 3,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "medium_at_light_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "bs_3_atgun": {
-            "name": "BS-3 AT Gun",
-            "description": "A wheeled heavy at gun.",
-            "min": 1,
-            "max": 1,
-            "category": "artillery",
-            "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 4}],
-            "models": [
-                {
-                    "name": "BS-3 AT Gun",
-                    "courage": 5,
-                    "movement": 2,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ot_34": {
-            "name": "OT-34",
-            "description": "A medium tank with an adequate gun.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy_vehicles",
-            "keywords": ["Vehicle", "Tank"],
-            "models": [
-                {
-                    "name": "OT-34",
-                    "courage": 5,
-                    "movement": 10,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 12,
-                    "reflexes": 5,
-                    "wounds": 6,
-                    "weapons": ["medium_at_mg", {"id": "vehicle_flamethrower", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ot_34_85": {
-            "name": "OT-34/85",
-            "description": "A medium tank with a heavy gun.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy_vehicles",
-            "keywords": ["Vehicle", "Tank"],
-            "models": [
-                {
-                    "name": "OT-34/85",
-                    "courage": 5,
-                    "movement": 10,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 12,
-                    "reflexes": 5,
-                    "wounds": 6,
-                    "weapons": ["heavy_at_mg", {"id": "vehicle_flamethrower", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "t34": {
-            "name": "T34/76",
-            "description": "A medium tank with an adequate gun.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy_vehicles",
-            "keywords": ["Vehicle", "Tank"],
-            "models": [
-                {
-                    "name": "T34/76",
-                    "courage": 5,
-                    "movement": 10,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 12,
-                    "reflexes": 5,
-                    "wounds": 6,
-                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "t34_85": {
-            "name": "T34/85",
-            "description": "A medium tank with a powerful main gun.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy_vehicles",
-            "keywords": ["Vehicle", "Tank"],
-            "models": [
-                {
-                    "name": "T34/85",
-                    "courage": 5,
-                    "movement": 10,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 12,
-                    "reflexes": 5,
-                    "wounds": 6,
-                    "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
         "medium_truck": {
             "name": "Medium Truck",
             "description": "A medium truck transport.",
@@ -732,56 +418,7 @@
     },
     "weapons": {},
     "rules": {
-        "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
-        "no_reatreat": {
-            "name": "No Retreat",
-            "description": "When a friendly Infantry unit within 6\" fails a Courage test, that unit may remove one model to re-roll the test. This effect may be used once per Infantry unit.",
-            "points": 5
-        },
-        "inspiring_tank_commander": {
-            "name": "Inspiring Tank Commander",
-            "description": "This unit and friendly Tank or Armored Car units within 6\" get +1 Courage and +1 Initiative.",
-            "points": 15
-        },
-        "battle_hardened": {
-            "name": "Battle Hardened",
-            "description": "This model may subtract one from any rolls on Damage Tables.",
-            "points": 10
-        },
-        "medical_assistant": {
-            "name": "Medical Assistant",
-            "description": "Whenever this model, or a friendly Infantry model within 6\" fails a save, roll a D10. On a 4 or less that save is not failed.",
-            "points": 10
-        }
     },
     "relics": {
-        "dmitry_lavrinenko": {
-            "subfactions": ["none", "armored_focus"],
-            "name": "Dmitry Lavrinenko",
-            "rule": "crack_shot",
-            "flavor": "Dmitry Lavrinenko had one of the highest axis tank kill counts of the allies despite his early death in 1941.",
-            "description": "Upgrade one T-34 with Crack Shot."
-        },
-        "viktor_ivanovitch_nevsky": {
-            "subfactions": ["none", "armored_focus"],
-            "name": "Viktor Ivanovitch Nevsky",
-            "rule": "battle_hardened",
-            "flavor": "Viktor Nevsky was well-respected and battle-hardened after fighting throughout the war for the red army.",
-            "description": "Upgrade one Sherman Emcha (Command) with Battle-hardened."
-        },
-        "mikhail_dedov": {
-            "subfactions": ["none", "armored_focus"],
-            "name": "Mikhail Andrevitch Dedov (Tank)",
-            "rule": "inspiring_tank_commander",
-            "flavor": "Mikhail was recognized for his leadership and motivation in many tank battles.",
-            "description": "Upgrade one T34 (Command) or T34/85 (Command) with Inspiring Tank Commander."
-        },
-        "alexander_pylcyn": {
-            "subfactions": ["none", "infantry_focus"],
-            "name": "Alexander Pyl'cyn",
-            "rule": "medical_assistant",
-            "flavor": "Alexander was well known to travel with his expert medic Rita Makarievskaya.",
-            "description": "Upgrade one Field Officer unit with Medical Assistant."
-        }
     }
 }

@@ -18,7 +18,9 @@
         "france": {"name": "France", "id": "france", "url": "france.json", "color": "#395A94", "alliance": "allies"},
         "belgium": {"name": "Belgium", "id": "france", "url": "belgium.json", "color": "#968164", "alliance": "allies"},
         "poland": {"name": "Poland", "id": "poland", "url": "poland.json", "color": "#D83658", "alliance": "allies"},
-        "china": {"name": "China", "id": "china", "url": "china.json", "color": "#0e3391", "alliance": "allies"}
+        "china_nationalist": {"name": "China (Nationalist)", "id": "china_nationalist", "url": "china_nationalist.json", "color": "#0e3391"},
+        "china_communist": {"name": "China (Communist)", "id": "china_communist", "url": "china_communist.json", "color": "#C13E3E"},
+        "china_warlord": {"name": "China (Warlord)", "id": "china_warlord", "url": "china_warlord.json", "color": "#a38b5c"}
     },
     "categories": {
         "command": {"name": "Command"},
@@ -105,9 +107,9 @@
         }
     },
     "strategies": {
-        "divine_intervention": {
+        "lucky": {
             "phase": "activation",
-            "name": "Divine Intervention (Core)",
+            "name": "Lucky (Core)",
             "flavor": "It seems luck has gone our way. Or maybe it's something more...",
             "description": "Re-roll a single skill test die. It may not be re-rolled again.",
             "cost": 1
@@ -155,6 +157,7 @@
                 {"name": "Grenade", "short": 6, "medium": 12, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 2}]}
             ]
         },
+        "bamboo_spear": {"name": "Bamboo Spear", "short": "Melee", "attacks": 1, "ap": 1},
         "sniper_rifle": {"name": "Sniper Rifle", "short": 18, "medium": 36, "attacks": 1, "ap": 2, "rules": ["sniper", {"id": "team", "x": 2}]},
         "semi_auto_rifle": {"name": "Semi-Auto Rifle", "short": 12, "medium": 24, "attacks": 1, "rules": ["assault"]},
         "carbine_rifle": {"name": "Carbine Rifle", "short": 9, "medium": 18, "attacks": 1, "rules": ["assault"]},
@@ -409,7 +412,9 @@
         },
         "light_bomb": {"name": "Light Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 2, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 4}]}]},
         "medium_bomb": {"name": "Medium Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 3, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 5}]}]},
-        "heavy_bomb": {"name": "Heavy Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 4, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 6}]}]}
+        "heavy_bomb": {"name": "Heavy Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 4, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 6}]}]},
+        "panzerfaust": {"name": "Panzerfaust", "attacks": 1, "short": 6, "medium": 12, "ap": 7, "damage": 6, "rules": [{"id": "ammo", "x": 1}]},
+        "panzerschreck": {"name": "Panzerschreck", "short": 12, "medium": 24, "ap": 7, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}]}
     },
     "rules": {
         "tank_ace": {"name": "Tank Ace", "description": "This unit gets +1 Accuracy.", "points": 25},

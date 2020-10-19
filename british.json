@@ -14,7 +14,7 @@
             "max": 1,
             "category": "command",
             "keywords": ["Infantry", "Officer"],
-            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
@@ -33,6 +33,34 @@
                     "max": 1
                 },
                 {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+            ]
+        },
+        "field_officer_veteran": {
+            "name": "Veteran Field Offier Team",
+            "description": "A Field Commander.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry", "Officer"],
+            "subfactions": ["infantry_focus", "airborne_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Field Offier (Veteran)",
+                    "courage": 7,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
+                    "rules": [{"id": "field_orders", "x": 1}, "leader"],
+                    "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant (Veteran)", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
             ]
         },
         "forward_artillery_observer": {
@@ -93,7 +121,7 @@
             "description": "A group of british infantry.",
             "min": 1,
             "max": 1,
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [
@@ -124,9 +152,9 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["bar"], "modelLimit": 2}],
-                    "min": 5,
-                    "max": 11
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 9
                 }
             ]
         },
@@ -164,7 +192,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["mag_lmg"], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 7
                 }
@@ -175,7 +203,7 @@
             "description": "A group of veteran motorized british infantry.",
             "min": 1,
             "max": 1,
-            "subfactions": ["none", "armored_focus"],
+            "subfactions": ["armored_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
@@ -204,14 +232,14 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["mag_lmg"], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 7
                 }
             ]
         },
-        "airborne_squad": {
-            "name": "Airborne Squad",
+        "airborne_section": {
+            "name": "Airborne Section",
             "description": "A group of trained british Airborne.",
             "min": 1,
             "max": 1,
@@ -228,7 +256,7 @@
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
@@ -242,17 +270,62 @@
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [
-                        {"replaceWeapon": "rifle", "withWeapon": ["bar"], "modelLimit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 2},
                         {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 4}
                     ],
-                    "min": 5,
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "veteran_airborne_section": {
+            "name": "Veteran Airborne Section",
+            "description": "A group of veteran british Airborne.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["airborne_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
+            ],
+            "models": [
+                {
+                    "name": "Veteran Airborne NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Airborne",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 2},
+                        {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 4}
+                    ],
+                    "min": 4,
                     "max": 9
                 }
             ]
@@ -304,12 +377,28 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
-                {"name": "Piat Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["piat", "unarmed"], "min": 1, "max": 1},
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "Piat Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["piat", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "piat_team_veteran": {
+            "name": "Veteran Piat Team",
+            "description": "A team dedicated to hunting heavy tanks.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["infantry_focus", "airborne_focus"],
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"]}
+            ],
+            "models": [
+                {"name": "Piat Gunner (Veteran)", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["piat", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant (Veteran)", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "mmg_team": {
@@ -337,6 +426,31 @@
                 }
             ]
         },
+        "cromwell": {
+            "name": "Cromwell",
+            "description": "A fast medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Cromwell",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "sherman_v": {
             "name": "Sherman V",
             "description": "A medium tank with a decent all-round AT gun.",
@@ -355,10 +469,38 @@
                     "defense": 12,
                     "reflexes": 5,
                     "wounds": 6,
-                    "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "options": [
                         {"addWeapon": ["mmg_aa", "hmg_aa"]},
-                        {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": ["heavy_at_stabilized_mg", "medium_howitzer_vehicle_stabilized"]}
+                        {"replaceWeapon": "medium_at_mg", "withWeapon": ["heavy_at_mg", "medium_howitzer_vehicle"]}
+                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "sherman_firefly": {
+            "name": "Sherman Firefly",
+            "description": "A medium tank with a very heavy tank-killing gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Sherman Firefly",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["very_heavy_at_mg"],
+                    "options": [
+                        {"addWeapon": ["mmg_aa"]}
                     ],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -384,7 +526,7 @@
                     "defense": 12,
                     "reflexes": 6,
                     "wounds": 6,
-                    "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "options": [
                         {"addWeapon": ["mmg_aa", "hmg_aa"]},
                         {"replaceWeapon": "medium_at_mg", "withWeapon": "heavy_at_mg"}
@@ -447,7 +589,7 @@
             ]
         }
     },
-    "weapons": {"bazooka": {"name": "Piat", "short": 6, "medium": 12, "ap": 6, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}, "indirect"]}},
+    "weapons": {"piat": {"name": "Piat", "short": 6, "medium": 12, "ap": 6, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}, "indirect"]}},
     "strategies": {
         "rapid_fire": {
             "phase": "activation",
@@ -469,9 +611,33 @@
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Focus Fire",
-            "flavor": "Bren guns.",
-            "description": "Use instead of your activation. Choose 3 models from an Infantry unit to become a new scouting team unit. That unit immediately activates and is treated as a separate unit for the remainder of the game. This strategy may only be used once per Infantry unit.",
+            "flavor": "With deadly accuracy, bren guns can be used to pin down key units.",
+            "description": "Use when a British Infantry unit that contains a Bren Gun (Mag-LMG) fires. If the attack hits, it assigns 2 additional strain to all affected targets.",
             "cost": 1
+        },
+        "combat_drop": {
+            "phase": "pre_game",
+            "subfactions": ["airborne_focus"],
+            "name": "(Airborne) Combat Drop",
+            "flavor": "A well-trained paratroop unit can drop as close as posssible to their intended target.",
+            "description": "Set one Infantry, Artillery or Airborne Vehicle unit aside in reserves before the match begins. At the beginning of any round after the first you may attempt to place the unit anywhere on the table over 12\" away from enemy units.\n\nTake a Courage test. If failed, use D10 scattering to determine the unit's new landing location. If the new location is off the table, place the unit at table edge as close as possible. If both players have units with Airdrop they must roll-off to see who deploys first, and then alternate in placing them.",
+            "cost": 1
+        },
+        "tough_fighters": {
+            "phase": "activation",
+            "subfactions": ["airborne_focus"],
+            "name": "(Airborne) Tough Fighters",
+            "flavor": "Some of the toughest units to fight in a close combat brawl are trained Airborne units.",
+            "description": "Use before an Infantry unit uses a fight action. Its attacks gain AP1.",
+            "cost": 2
+        },
+        "stealth_tactics": {
+            "phase": "activation",
+            "subfactions": ["airborne_focus"],
+            "name": "(Airborne) Stealth Tactics",
+            "flavor": "Moving quickly and quietly is a key part of Airborne training.",
+            "description": "Use when activating an Infantry unit. It may make a free 6\" move action and may not be targetted by reaction fire when doing so.",
+            "cost": 2
         },
         "armored_assault": {
             "phase": "activation",
