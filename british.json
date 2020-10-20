@@ -367,8 +367,23 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "rules": ["scout", "stealth"],
             "models": [
-                {"name": "Sniper", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Sniper", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
                 {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "sniper_team_veteran": {
+            "name": "Veteran Sniper Team",
+            "description": "A team equipped to take out important targets from a distance.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["infantry_focus", "airborne_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "rules": ["scout", "stealth"],
+            "models": [
+                {"name": "Veteran Sniper", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Veteran Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "piat_team": {
@@ -426,6 +441,333 @@
                 }
             ]
         },
+        "light_mortar_team": {
+            "name": "Light Mortar Team",
+            "description": "A light mortar carried by a small team.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "keywords": ["Infantry"],
+            "rules": [{"id": "crew", "x": 2}],
+            "models": [
+                {
+                    "name": "Light Mortar Team",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 2,
+                    "weapons": [{"id": "light_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "medium_mortar_team": {
+            "name": "Medium Mortar Team",
+            "description": "A medium mortar carried by a small team.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus", "armored_focus", "armored_focus", "airborne_focus"],
+            "keywords": ["Infantry"],
+            "rules": [{"id": "crew", "x": 3}],
+            "models": [
+                {
+                    "name": "Medium Mortar Team",
+                    "courage": 5,
+                    "movement": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "medium_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "heavy_mortar_team": {
+            "name": "Heavy Mortar Team",
+            "description": "A heavy mortar carried by a small team.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "rules": [{"id": "crew", "x": 4}],
+            "models": [
+                {
+                    "name": "Heavy Mortar Team",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "heavy_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "25pdr": {
+            "name": "25-pdr Howitzer",
+            "description": "A wheeled light howitzer.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "models": [
+                {
+                    "name": "25-pdr Howitzer",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_howitzer_light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "55_inch_howitzer": {
+            "name": "5.5\" Howitzer",
+            "description": "A wheeled medium howitzer.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": ["gun_shield", {"id": "crew", "x": 4}],
+            "models": [
+                {
+                    "name": "5.5\" Howitzer",
+                    "courage": 5,
+                    "movement": 3,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "72_inch_howitzer": {
+            "name": "7.2\" Howitzer",
+            "description": "A wheeled heavy howitzer.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": ["gun_shield", {"id": "crew", "x": 5}],
+            "models": [
+                {
+                    "name": "7.2\" Howitzer",
+                    "courage": 5,
+                    "movement": 2,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 5}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "land_mattress": {
+            "name": "Land Mattress",
+            "description": "A wheeled light rocket artillery piece.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": [{"id": "crew", "x": 3}],
+            "models": [
+                {
+                    "name": "Land Mattress",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_rockets", "mount": ["Front"], "count": 4}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "2_pdr": {
+            "name": "2-pdr AT Gun",
+            "description": "A wheeled light at gun.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "models": [
+                {
+                    "name": "2-pdr AT Gun",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "6_pdr": {
+            "name": "6-pdr AT Gun",
+            "description": "A wheeled medium at gun.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "models": [
+                {
+                    "name": "6-pdr AT Gun",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "medium_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "17_pdr": {
+            "name": "17-pdr AT Gun",
+            "description": "A wheeled very heavy at gun.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": ["gun_shield", {"id": "crew", "x": 5}],
+            "models": [
+                {
+                    "name": "17-pdr AT Gun",
+                    "courage": 5,
+                    "movement": 2,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "very_heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 5}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "37_inch_qf": {
+            "name": "3.7\" QF AA Gun",
+            "description": "A wheeled heavy anti-air.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery", "Anti-Air"],
+            "rules": ["gun_shield", {"id": "crew", "x": 7}],
+            "models": [
+                {
+                    "name": "3.7\" QF AA Gun",
+                    "courage": 5,
+                    "movement": 2,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "qf_aa"}, {"id": "unarmed", "count": 7}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "20mm_polsten": {
+            "name": "20mm Polsten",
+            "description": "A wheeled light anti-aircraft autocannon.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery", "Anti-Air"],
+            "rules": [{"id": "crew", "x": 3}],
+            "models": [
+                {
+                    "name": "20mm Polsten",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "light_autocannon_aa"}, {"id": "unarmed", "count": 3}],
+                    "options": [{"addRule": "gun_shield"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "37mm_bofors": {
+            "name": "40mm Bofors",
+            "description": "A wheeled heavy anti-aircraft autocannon.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery", "Anti-Air"],
+            "rules": [{"id": "crew", "x": 3}],
+            "models": [
+                {
+                    "name": "40mm Bofors",
+                    "courage": 5,
+                    "movement": 2,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": [{"id": "heavy_autocannon_aa"}, {"id": "unarmed", "count": 3}],
+                    "options": [{"addRule": "gun_shield"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "cromwell": {
             "name": "Cromwell",
             "description": "A fast medium tank with a decent all-round AT gun.",
@@ -445,6 +787,31 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "centaur_cs": {
+            "name": "Centaur CS",
+            "description": "A fast medium tank with an infantry-support howitzer.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Centaur CS",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["medium_howitzer_vehicle_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
@@ -543,8 +910,8 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "subfactions": ["none", "armored_focus", "infantry_focus"],
-            "keywords": ["Vehicle"],
+            "subfactions": ["none", "armored_focus", "infantry_focus", "airborne_focus"],
+            "keywords": ["Vehicle", "Airborne Vehicle"],
             "models": [
                 {
                     "name": "Jeep",
@@ -557,6 +924,81 @@
                     "wounds": 6,
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 5}],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}, {"addRule": "amphibious"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "3_ton_truck": {
+            "name": "3 Ton Truck",
+            "description": "A medium truck transport.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "3 Ton Truck",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 12}],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "15_cwt_truck": {
+            "name": "15 CWT Truck",
+            "description": "A medium truck transport.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "15 CWT Truck",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 8}],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "30_cwt_truck": {
+            "name": "30 CWT Truck",
+            "description": "A medium truck transport.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "30 CWT Truck",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 10}],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -589,7 +1031,17 @@
             ]
         }
     },
-    "weapons": {"piat": {"name": "Piat", "short": 6, "medium": 12, "ap": 6, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}, "indirect"]}},
+    "weapons": {
+        "piat": {"name": "Piat", "short": 6, "medium": 12, "ap": 6, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}, "indirect"]},
+        "qf_aa": {
+            "name": "3.7\" QF AA Gun",
+            "profiles": [
+                {"name": "AT", "short": 42, "medium": 96, "attacks": 1, "ap": 9},
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]},
+                {"name": "AA", "short": 48, "medium": 96, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 5}]}
+            ]
+        }
+    },
     "strategies": {
         "rapid_fire": {
             "phase": "activation",
