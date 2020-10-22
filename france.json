@@ -894,8 +894,8 @@
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "name": "Trench Raiders",
             "flavor": "Well-trained in first world war tactics, French infantry can carry out deadly assaults.",
-            "description": "Use when an Infantry fights. It gets +1 AP for that attack.",
-            "cost": 1
+            "description": "Use when an Infantry fights. It gets +1 Strength for that attack.",
+            "cost": 2
         },
         "heavy_barrage": {
             "phase": "activation",

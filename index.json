@@ -103,7 +103,7 @@
                 "artillery": {"max": 0},
                 "light_vehicles": {"max": 2},
                 "heavy_vehicles": {"max": 3},
-                "transport": {"min": 2, "max": 3},
+                "transport": {"max": 3},
                 "aircraft": {"max": 2}
             }
         }
@@ -154,10 +154,7 @@
         "rifle": {"name": "Rifle", "short": 12, "medium": 24, "attacks": 1},
         "rifle_grenade": {
             "name": "Rifle Grenade",
-            "profiles": [
-                {"name": "Rifle", "short": 12, "medium": 24, "attacks": 1},
-                {"name": "Grenade", "short": 6, "medium": 12, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 2}]}
-            ]
+            "profiles": [{"name": "Rifle", "short": 12, "medium": 24, "attacks": 1}, {"name": "Grenade", "short": 6, "medium": 12, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 2}]}]
         },
         "bamboo_spear": {"name": "Bamboo Spear", "short": "Melee", "attacks": 1, "ap": 1},
         "sniper_rifle": {"name": "Sniper Rifle", "short": 18, "medium": 36, "attacks": 1, "ap": 2, "rules": ["sniper", {"id": "team", "x": 2}]},
@@ -432,6 +429,8 @@
             "points": 15
         },
         "fanatical": {"name": "Fanatical", "description": "This unit is treated as having Courage 9 for all break tests and does not gain strain from close combat.", "points": 3},
+        "body_armor": {"name": "Body Armor", "description": "This model gains +1 Save.", "points": 2},
+        "tank_rider": {"name": "Tank Rider", "description": "This model and its unit may be embarked on Vehicle unit with a save of 11+ as if it had Transport.", "points": 1},
         "side_skirts": {"name": "Side Skirts", "description": "This model gains +1 to its Save when hit in its side arcs from weapons with AP 4 or less.", "points": 5},
         "gun_shield": {"name": "Gun Shield", "description": "This model gains +1 to its Save when hit in its front arc.", "points": 5},
         "suppressive": {"name": "Suppressive", "description": "This model may take a suppressive fire action without suffering any to-hit penalties.", "points": 1},

@@ -124,9 +124,7 @@
             "subfactions": ["none", "infantry_focus", "armored_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [
-                {"addWeapon": "at_grenades", "modelLimit": 3}
-            ],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Rifle NCO",
@@ -246,10 +244,7 @@
             "subfactions": ["none", "airborne_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [
-                {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
-            ],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": {"id": "airdrop"}, "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Airborne NCO",
@@ -275,10 +270,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [
-                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 2},
-                        {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 4}
-                    ],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 2}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 4}],
                     "min": 4,
                     "max": 9
                 }
@@ -292,10 +284,7 @@
             "subfactions": ["airborne_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [
-                {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
-            ],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": {"id": "airdrop"}, "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Veteran Airborne NCO",
@@ -321,10 +310,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [
-                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 2},
-                        {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 4}
-                    ],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 2}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 4}],
                     "min": 4,
                     "max": 9
                 }
@@ -362,7 +348,7 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "rules": ["scout", "stealth"],
@@ -386,13 +372,27 @@
                 {"name": "Veteran Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
+        "at_rifle_team": {
+            "name": "AT Rifle Team",
+            "description": "A team dedicated to hunting lighter tanks.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "models": [
+                {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
         "piat_team": {
             "name": "Piat Team",
             "description": "A team dedicated to hunting heavy tanks.",
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
@@ -408,9 +408,7 @@
             "category": "support",
             "subfactions": ["infantry_focus", "airborne_focus"],
             "keywords": ["Infantry"],
-            "options": [
-                {"replaceWeapon": "rifle", "withWeapon": ["smg"]}
-            ],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
                 {"name": "Piat Gunner (Veteran)", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["piat", "unarmed"], "min": 1, "max": 1},
                 {"name": "Assistant (Veteran)", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
@@ -647,7 +645,7 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
@@ -722,7 +720,7 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery", "Anti-Air"],
             "rules": [{"id": "crew", "x": 3}],
             "models": [
@@ -763,6 +761,56 @@
                     "wounds": 4,
                     "weapons": [{"id": "heavy_autocannon_aa"}, {"id": "unarmed", "count": 3}],
                     "options": [{"addRule": "gun_shield"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "aec_i": {
+            "name": "AEC MK I",
+            "description": "A well-armed and fast armored car.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "AEC MK I",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_at_mg"],
+                    "rules": ["vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "aec_ii_iii": {
+            "name": "AEC MK II/III",
+            "description": "A well-armed and fast armored car.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "AEC MK II/III",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["medium_at_mg"],
+                    "rules": ["vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -837,10 +885,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "options": [
-                        {"addWeapon": ["mmg_aa", "hmg_aa"]},
-                        {"replaceWeapon": "medium_at_mg", "withWeapon": ["heavy_at_mg", "medium_howitzer_vehicle"]}
-                    ],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}, {"replaceWeapon": "medium_at_mg", "withWeapon": ["heavy_at_mg", "medium_howitzer_vehicle"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
@@ -866,9 +911,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["very_heavy_at_mg"],
-                    "options": [
-                        {"addWeapon": ["mmg_aa"]}
-                    ],
+                    "options": [{"addWeapon": ["mmg_aa"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
@@ -894,10 +937,7 @@
                     "reflexes": 6,
                     "wounds": 6,
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "options": [
-                        {"addWeapon": ["mmg_aa", "hmg_aa"]},
-                        {"replaceWeapon": "medium_at_mg", "withWeapon": "heavy_at_mg"}
-                    ],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}, {"replaceWeapon": "medium_at_mg", "withWeapon": "heavy_at_mg"}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
                     "min": 1,
                     "max": 1
@@ -924,6 +964,32 @@
                     "wounds": 6,
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 5}],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}, {"addRule": "amphibious"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "bren_carrier": {
+            "name": "Bren Carrier",
+            "description": "A lightly armored light transport.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Half-Track"],
+            "models": [
+                {
+                    "name": "M5 Halftrack",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "mag_lmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 5}, "exposed"],
+                    "options": [{"addweapon": "mag_lmg"}, {"replaceWeapon": {"id": "mag_lmg", "mount": ["Front"]}, "withWeapon": {"id": "at_rifle", "mount": ["Front"]}}],
                     "min": 1,
                     "max": 1
                 }
@@ -1053,10 +1119,10 @@
         },
         "stiff_upper_lip": {
             "phase": "activation",
-            "subfactions": ["none"],
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Stiff Upper Lip",
             "flavor": "British soldiers put up tough resistance in hand-to-hand fighting.",
-            "description": "Use before an Infantry unit uses a fight action. Its attacks gain AP1.",
+            "description": "Use before an Infantry unit uses a fight action. It gains +1 Strength.",
             "cost": 2
         },
         "focus_fire": {
@@ -1121,7 +1187,11 @@
         "defensive_fire": {"name": "Defensive Fire", "description": "This unit and friendly Infantry units within 6\" get +1 Accuracy when using an Ambush reaction.", "points": 10},
         "move_it": {"name": "Move It", "description": "When this unit is activated, this unit and friendly Infantry units within 6\" may immediately remove one strain.", "points": 10},
         "mobile_expert": {"name": "Mobile Expert", "description": "This unit may move and fire assault weapons without suffering the -1 to hit penalty.", "points": 20},
-        "ambush_tactics": {"name": "Ambush Tactics", "description": "This unit and one other friendly Infantry unit may be placed in hidden deployment instead of deployed on the field. See the section for hidden units in the core rules for details on how hidden units work.", "points": 20} 
+        "ambush_tactics": {
+            "name": "Ambush Tactics",
+            "description": "This unit and one other friendly Infantry unit may be placed in hidden deployment instead of deployed on the field. See the section for hidden units in the core rules for details on how hidden units work.",
+            "points": 20
+        }
     },
     "relics": {
         "rg_pine_coffin": {
