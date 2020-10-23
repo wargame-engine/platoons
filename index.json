@@ -255,7 +255,7 @@
         "heavy_mortar": {"name": "Heavy Mortar", "profiles": [{"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]}]},
         "very_light_howitzer": {"name": "Very Light Howitzer", "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]}]},
         "light_rockets": {"name": "Light Rockets", "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", "salvo", {"id": "blast", "x": 4}]}]},
-        "heavy_rockets": {"name": "Light Rockets", "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 4, "rules": ["indirect", "salvo", {"id": "blast", "x": 6}]}]},
+        "heavy_rockets": {"name": "Heavy Rockets", "profiles": [{"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["indirect", "salvo", {"id": "blast", "x": 6}]}]},
         "light_howitzer_vehicle": {"name": "Light Howitzer (Vehicle)", "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]}]},
         "light_howitzer_vehicle_mg": {
             "name": "Light Howitzer (Vehicle)/Co-ax MG",
@@ -313,6 +313,14 @@
         "light_at": {
             "name": "Light AT",
             "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 5}]
+        },
+        "light_at_lmg": {
+            "name": "Light AT/Co-ax LMG",
+            "profiles": [
+                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 5},
+                {"name": "MG", "short": 18, "medium": 36, "attacks": 3}
+            ]
         },
         "light_at_mg": {
             "name": "Light AT/Co-ax MG",

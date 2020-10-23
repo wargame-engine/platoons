@@ -136,13 +136,13 @@
             "keywords": ["Infantry"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
-                {"name": "SMG NCO", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
+                {"name": "SMG NCO", "courage": 5, "movement": 6, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
                 {
                     "name": "SMG Infantry",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
@@ -163,15 +163,15 @@
             "rules": ["tank_rider"],
             "options": [{"addRule": "body_armor"}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
-                {"name": "Tank Rider NCO", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
+                {"name": "Tank Rider NCO", "courage": 6, "movement": 6, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
                 {
                     "name": "Tank Rider",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 6,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["smg", "unarmed"],
                     "options": [{"replaceWeapon": "smg", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
@@ -621,6 +621,62 @@
                 }
             ]
         },
+        "sherman_emcha": {
+            "name": "Sherman \"Emcha\"",
+            "description": "A lend-lease M4 Sherman medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Sherman \"Emcha\"",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [
+                        {"addWeapon": ["mmg_aa", "hmg_aa"]}
+                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "catches_fire"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m4a1_sherman": {
+            "name": "M4A4 Sherman 76mm",
+            "description": "A medium tank with a good all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "M4A4 Sherman 76mm",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [
+                        {"addWeapon": ["mmg_aa", "hmg_aa"]}
+                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "bs_3_atgun": {
             "name": "BS-3 AT Gun",
             "description": "A wheeled heavy at gun.",
@@ -640,6 +696,109 @@
                     "reflexes": 5,
                     "wounds": 4,
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ba_10": {
+            "name": "BA-10",
+            "description": "A recon armored car with light anti-tank support.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "BA-10",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_at_lmg", {"id": "box_lmg", "mount": ["Front"]}],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ba_20": {
+            "name": "BA-20",
+            "description": "A recon armored car.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "BA-20",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["box_lmg"],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
+                    "options": [
+                        {"replaceWeapon": "box_lmg", "withWeapon": "vehicle_flamethrower"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ba_64": {
+            "name": "BA-64",
+            "description": "A recon armored car.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "BA-64",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["box_lmg"],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
+                    "options": [
+                        {"replaceWeapon": "box_lmg", "withWeapon": "hmg"},
+                        {"addRule": "scout"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ba_3_6": {
+            "name": "BA-3/6",
+            "description": "An armored recon car with light anti-tank support.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "BA-3/6",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_at_lmg", {"id": "box_lmg", "mount": ["Front"]}],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -832,6 +991,54 @@
                     "wounds": 6,
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 12}],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "katyusha": {
+            "name": "Katyusha",
+            "description": "A medium truck transport.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Artillery"],
+            "models": [
+                {
+                    "name": "Katyusha",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": ["damage_table_vehicle"],
+                    "weapons": [{"id": "light_rockets", "mount": ["Front"], "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "heavy_katyusha": {
+            "name": "BM-31-12 Heavy Katyusha",
+            "description": "A medium truck transport.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Artillery"],
+            "models": [
+                {
+                    "name": "BM-31-12 Heavy Katyusha",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": ["damage_table_vehicle"],
+                    "weapons": [{"id": "heavy_rockets", "mount": ["Front"], "count": 2}],
                     "min": 1,
                     "max": 1
                 }
