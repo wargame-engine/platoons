@@ -100,9 +100,9 @@
                 }
             ]
         },
-        "border_guard": {
-            "name": "Border Guard Squad",
-            "description": "A group of finnish soldiers.",
+        "border_jager": {
+            "name": "Border Jäger Squad",
+            "description": "A group of home defense finnish soldiers.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -110,7 +110,7 @@
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
-                    "name": "Rifle NCO",
+                    "name": "Border Jäger NCO",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
@@ -124,7 +124,7 @@
                     "max": 1
                 },
                 {
-                    "name": "Rifleman",
+                    "name": "Border Jäger",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
@@ -687,6 +687,56 @@
                 }
             ]
         },
+        "t26a": {
+            "name": "T-26A",
+            "description": "A medium tank with an adequate gun.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "T-26A",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["mmg", "mmg"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "t26b": {
+            "name": "T-26B",
+            "description": "An early-war light tank with a few variants with different capabilities.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "T-26B",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "ot_34": {
             "name": "OT-34",
             "description": "A medium tank with an adequate gun.",
@@ -735,11 +785,64 @@
                 }
             ]
         },
+        "bt_42": {
+            "name": "BT-42",
+            "description": "A light tank with exceptionally high speed for breakthroughs and encirclement.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "models": [
+                {
+                    "name": "BT-42",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["medium_howitzer_vehicle_mg"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "options": [{"replaceWeapon": "light_at_mg", "withWeapon": "light_howitzer_vehicle_mg"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "bt_5_bt_7": {
+            "name": "BT-5, BT-7",
+            "description": "A light tank with exceptionally high speed for breakthroughs and encirclement.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "armored_focus"],
+            "models": [
+                {
+                    "name": "BT-5, BT-7",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_at_mg"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "options": [{"replaceWeapon": "light_at_mg", "withWeapon": "light_howitzer_vehicle_mg"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "t34": {
             "name": "T-34 \"Sotka\"",
             "description": "A medium tank with an adequate gun.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "armored_focus"],
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
             "models": [
@@ -764,6 +867,7 @@
             "description": "A medium tank with a powerful main gun.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "armored_focus"],
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
             "models": [
@@ -789,7 +893,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
-            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
             "models": [
                 {
@@ -804,6 +908,31 @@
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
                     "options": [{"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": "mmg"}, {"addRule": "side_skirts"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "kv1": {
+            "name": "KV-1 \"Klimi\"",
+            "description": "A heavy tank that is well-armored with an adequate main gun.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "armored_focus"],
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "KV-1 \"Klimi\"",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 13,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["medium_at_mg", {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -859,7 +988,8 @@
     },
     "weapons": {},
     "rules": {
-        "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
+        "crack_shot": {"name": "Crack Shot", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
+        "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly Infantry units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
         "no_reatreat": {
             "name": "No Retreat",
             "description": "When a friendly Infantry unit within 6\" fails a Courage test, that unit may remove one model to re-roll the test. This effect may be used once per Infantry unit.",
@@ -874,5 +1004,19 @@
         }
     },
     "relics": {
+        "toivo_ilomaki": {
+            "subfactions": ["none", "infantry_focus"],
+            "name": "Toivo Ilomäki",
+            "rule": "crack_shot",
+            "flavor": "Toivo Ilomäki was a practiced and skilled anti-tank gunner who was responsible for killing many Soviet vehicles throughout the war.",
+            "description": "Upgrade one Anti-Tank Artillery model with Crack Shot."
+        },
+        "lauri_torni": {
+            "subfactions": ["none", "infantry_focus"],
+            "name": "Lauri Törni",
+            "rule": "natural_leader",
+            "flavor": "Lauri Törni was an excellent leader during the Continuation War who draw the attention of many Soviet units in the war.",
+            "description": "Upgrade one Anti-Tank Artillery model with Crack Shot."
+        }
     }
 }
