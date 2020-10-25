@@ -61,6 +61,32 @@
                 {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 4, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
+        "field_medic": {
+            "name": "Field Medic",
+            "description": "A field medic.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Field Medic",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["pistol", "unarmed", "smoke_grenades"],
+                    "rules": ["medic"],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+            ]
+        },
         "forward_artillery_observer": {
             "name": "Forward Observer (Artillery)",
             "description": "An artillery forward observer able to call in a fire mission.",
@@ -86,6 +112,45 @@
                     "max": 1
                 },
                 {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+            ]
+        },
+        "shtrafbat_squad": {
+            "name": "Shtrafbat Squad",
+            "description": "A group of redeeming Soviet riflemen.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Shtrafbat NCO",
+                    "courage": 4,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Shtrafbat Rifleman",
+                    "courage": 4,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
+                }
             ]
         },
         "conscript_squad": {
@@ -219,6 +284,45 @@
                 }
             ]
         },
+        "naval_infantry": {
+            "name": "Naval Infantry Squad",
+            "description": "A squad of elite Soviet riflemen.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Naval Rifle NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Naval Rifleman",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
         "guards_rifle_squad": {
             "name": "Guards Rifle Squad",
             "description": "A squad of elite Soviet riflemen.",
@@ -264,7 +368,7 @@
             "min": 1,
             "max": 1,
             "category": "infantry",
-            "subfactions": ["none", "armored_focus","infantry_focus"],
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
             "rules": ["scout"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
@@ -293,7 +397,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"] }, {"replaceWeapon": "rifle", "withWeapon": ["sniper_rifle"], "modelLimit": 1 }],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "rifle", "withWeapon": ["sniper_rifle"], "modelLimit": 1}],
                     "min": 4,
                     "max": 5
                 }
@@ -318,14 +422,49 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "at_grenades"],
-                    "options": [
-                        {"addWeapon": "panzerfaust", "modelLimit": 2},
-                        {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
-                        {"addRule": "scout", "modelLimit": "all"}
-                    ],
+                    "options": [{"addWeapon": "panzerfaust", "modelLimit": 2}, {"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addRule": "scout", "modelLimit": "all"}],
                     "min": 3,
                     "max": 3
                 }
+            ]
+        },
+        "flamethrower_team": {
+            "name": "Flamethrower Team",
+            "description": "A team equipped to clear bunkers and other defensive positions.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "models": [
+                {
+                    "name": "Flamethrower Gunner",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["flamethrower", "unarmed"],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "dog_mine_team": {
+            "name": "Dog Mine Team",
+            "description": "A team of handlers to guide mine-dogs into combat.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addWeapon": "dog_mine", "modelLimit": 2}],
+            "models": [
+                {"name": "Handler", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": [{"id": "dog_mine", "count": 2}], "min": 2, "max": 3}
             ]
         },
         "sniper_team": {
@@ -549,6 +688,30 @@
                 }
             ]
         },
+        "ampulomet_team": {
+            "name": "Ampulomet Team",
+            "description": "A wheeled molotov thrower.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "keywords": ["Artillery"],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "models": [
+                {
+                    "name": "Ampulomet Team",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "45mm_at": {
             "name": "45mm AT Gun",
             "description": "A wheeled light at gun.",
@@ -640,9 +803,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "options": [
-                        {"addWeapon": ["mmg_aa", "hmg_aa"]}
-                    ],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "catches_fire"],
                     "min": 1,
                     "max": 1
@@ -668,9 +829,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "options": [
-                        {"addWeapon": ["mmg_aa", "hmg_aa"]}
-                    ],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
@@ -744,9 +903,7 @@
                     "wounds": 6,
                     "weapons": ["box_lmg"],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
-                    "options": [
-                        {"replaceWeapon": "box_lmg", "withWeapon": "vehicle_flamethrower"}
-                    ],
+                    "options": [{"replaceWeapon": "box_lmg", "withWeapon": "vehicle_flamethrower"}],
                     "min": 1,
                     "max": 1
                 }
@@ -771,10 +928,7 @@
                     "wounds": 6,
                     "weapons": ["box_lmg"],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
-                    "options": [
-                        {"replaceWeapon": "box_lmg", "withWeapon": "hmg"},
-                        {"addRule": "scout"}
-                    ],
+                    "options": [{"replaceWeapon": "box_lmg", "withWeapon": "hmg"}, {"addRule": "scout"}],
                     "min": 1,
                     "max": 1
                 }
@@ -847,6 +1001,79 @@
                     "wounds": 6,
                     "weapons": ["heavy_at_mg", {"id": "vehicle_flamethrower", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "t26a": {
+            "name": "T-26A",
+            "description": "A medium tank with an adequate gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "T-26A",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["mmg", "mmg"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "t26b": {
+            "name": "T-26B",
+            "description": "An early-war light tank with a few variants with different capabilities.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "T-26B",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "bt_5_bt_7": {
+            "name": "BT-5, BT-7",
+            "description": "A light tank with exceptionally high speed for breakthroughs and encirclement.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "BT-5, BT-7",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_at_mg"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "options": [{"replaceWeapon": "light_at_mg", "withWeapon": "light_howitzer_vehicle_mg"}],
                     "min": 1,
                     "max": 1
                 }
@@ -972,6 +1199,41 @@
                 }
             ]
         },
+        "horse_tow": {
+            "name": "Horse Tow",
+            "description": "A horse wagon.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [{"name": "Horse Tow", "courage": 5, "movement": 8, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "rules": [{"id": "transport", "x": 7}], "min": 1, "max": 1}]
+        },
+        "t_20_komsomolets": {
+            "name": "T-20 Komsomolets",
+            "description": "A light tankette with transport capacity on top for moving small units of infantry.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "T-20 Komsomolets",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "box_lmg", "mount": ["Front"]}],
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 6}, "vulnerable_side_rear", "tracked", "exposed"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "medium_truck": {
             "name": "Medium Truck",
             "description": "A medium truck transport.",
@@ -1068,7 +1330,11 @@
             "cost": 1
         }
     },
-    "weapons": {},
+    "weapons": {
+        "dog_mine": {"name": "Dog-Mine", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["indirect", {"id": "ammo", "x": 1}]},
+        "ampulomet": {"name": "Ampulomet", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["indirect", "suppressive"]},
+        "molotov": {"name": "Molotov Cocktail", "attacks": 1, "short": 6, "ap": 5, "rules": ["suppressive", {"id": "ammo", "x": 1}, {"id": "blast", "x": 3}]}
+    },
     "rules": {
         "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
         "no_reatreat": {
@@ -1076,16 +1342,8 @@
             "description": "When a friendly Infantry unit within 6\" fails a Courage test, that unit must remove one model to re-roll the test. This effect may be used once per Infantry unit.",
             "points": 5
         },
-        "inspiring_tank_commander": {
-            "name": "Inspiring Tank Commander",
-            "description": "This unit and friendly Tank or Armored Car units within 6\" get +1 Courage and +1 Initiative.",
-            "points": 15
-        },
-        "battle_hardened": {
-            "name": "Battle Hardened",
-            "description": "This model may subtract one from any rolls on Damage Tables.",
-            "points": 10
-        },
+        "inspiring_tank_commander": {"name": "Inspiring Tank Commander", "description": "This unit and friendly Tank or Armored Car units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
+        "battle_hardened": {"name": "Battle Hardened", "description": "This model may subtract one from any rolls on Damage Tables.", "points": 10},
         "medical_assistant": {
             "name": "Medical Assistant",
             "description": "Whenever this model, or a friendly Infantry model within 6\" fails a save, roll a D10. On a 4 or less that save is not failed.",

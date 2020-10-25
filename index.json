@@ -441,7 +441,7 @@
         "tank_rider": {"name": "Tank Rider", "description": "This model and its unit may be embarked on Vehicle unit with a save of 11+ as if it had Transport.", "points": 1},
         "side_skirts": {"name": "Side Skirts", "description": "This model gains +1 to its Save when hit in its side arcs from weapons with AP 4 or less.", "points": 5},
         "gun_shield": {"name": "Gun Shield", "description": "This model gains +1 to its Save when hit in its front arc.", "points": 5},
-        "suppressive": {"name": "Suppressive", "description": "This model may take a suppressive fire action without suffering any to-hit penalties.", "points": 1},
+        "suppressive": {"name": "Suppressive", "description": "This weapon deals 1 additional strain.", "points": 1},
         "stubborn": {"name": "Stubborn", "description": "This model requires 1 additional suppression to become broken.", "points": ["model.wounds"]},
         "smoke": {
             "name": "Smoke",
