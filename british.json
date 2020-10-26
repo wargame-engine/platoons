@@ -15,7 +15,7 @@
             "category": "command",
             "keywords": ["Infantry", "Officer"],
             "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Field Offier",
@@ -43,7 +43,7 @@
             "category": "command",
             "keywords": ["Infantry", "Officer"],
             "subfactions": ["infantry_focus", "airborne_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Field Offier (Veteran)",
@@ -71,7 +71,7 @@
             "category": "support",
             "keywords": ["Infantry", "Observer"],
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "rifle"]}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
                 {
                     "name": "Forward Observer (Artillery)",
@@ -148,6 +148,46 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "veteran_riflemen": {
+            "name": "Veteran Infantry Section",
+            "description": "A group of british infantry.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["infantry_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Veteran Rifle NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Rifleman",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 1}],
@@ -244,7 +284,7 @@
             "subfactions": ["none", "airborne_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": {"id": "airdrop"}, "modelLimit": "all"}],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Airborne NCO",
@@ -284,7 +324,7 @@
             "subfactions": ["airborne_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": {"id": "airdrop"}, "modelLimit": "all"}],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Veteran Airborne NCO",
@@ -313,6 +353,86 @@
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 2}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 4}],
                     "min": 4,
                     "max": 9
+                }
+            ]
+        },
+        "commando_section": {
+            "name": "Commando Section",
+            "description": "A group of trained british Commandos.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "airborne_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Commando NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Commando",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}, {"id": "box_lmg", "name": "Vickers K"}], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "sas_section": {
+            "name": "SAS Section",
+            "description": "A group of trained british Special Air Service.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "airborne_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "SAS NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "SAS Infantry",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}, {"id": "box_lmg", "name": "Vickers K"}], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 4,
+                    "max": 7
                 }
             ]
         },
@@ -456,7 +576,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "weapons": [{"id": "light_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 2}],
                     "min": 1,
@@ -481,7 +601,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "medium_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
@@ -506,7 +626,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 4,
                     "weapons": [{"id": "heavy_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
                     "min": 1,
@@ -531,7 +651,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "light_howitzer_light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
@@ -556,7 +676,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 4,
                     "weapons": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
                     "min": 1,
@@ -581,7 +701,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 4,
                     "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 5}],
                     "min": 1,
@@ -606,7 +726,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "light_rockets", "mount": ["Front"], "count": 4}, {"id": "unarmed", "count": 3}],
                     "min": 1,
@@ -631,7 +751,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
@@ -656,7 +776,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 4,
                     "weapons": [{"id": "medium_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
@@ -681,7 +801,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 4,
                     "weapons": [{"id": "very_heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 5}],
                     "min": 1,
@@ -706,7 +826,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 4,
                     "weapons": [{"id": "qf_aa"}, {"id": "unarmed", "count": 7}],
                     "min": 1,
@@ -731,7 +851,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 4,
                     "weapons": [{"id": "light_autocannon_aa"}, {"id": "unarmed", "count": 3}],
                     "options": [{"addRule": "gun_shield"}],
@@ -757,7 +877,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 4,
                     "weapons": [{"id": "heavy_autocannon_aa"}, {"id": "unarmed", "count": 3}],
                     "options": [{"addRule": "gun_shield"}],
@@ -772,7 +892,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
-            "subfactions": ["none", "armored_focus"],
+            "subfactions": ["none", "armored_focus", "airborne_focus", "infantry_focus"],
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
@@ -797,7 +917,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
-            "subfactions": ["none", "armored_focus"],
+            "subfactions": ["none", "armored_focus", "airborne_focus", "infantry_focus"],
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
@@ -822,7 +942,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
-            "subfactions": ["none", "armored_focus"],
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {

@@ -43,7 +43,7 @@
             "category": "command",
             "keywords": ["Infantry", "Officer"],
             "subfactions": ["airborne_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": {"id": "airdrop"}, "modelLimit": "all"}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Field Offier Team (Airborne)",
@@ -329,8 +329,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [
-                {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
+                {"addWeapon": "at_grenades", "modelLimit": 3}
             ],
             "models": [
                 {
@@ -376,8 +375,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [
-                {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
+                {"addWeapon": "at_grenades", "modelLimit": 3}
             ],
             "models": [
                 {
@@ -463,7 +461,7 @@
             "category": "support",
             "subfactions": ["airborne_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addRule": {"id": "airdrop"}, "modelLimit": "all"}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "rules": ["scout", "stealth"],
             "models": [
                 {"name": "Sniper", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
@@ -518,7 +516,7 @@
             "category": "support",
             "subfactions": ["airborne_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addRule": {"id": "airdrop"}, "modelLimit": "all"}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
                 {
                     "name": "Bazooka Gunner (Airborne)",
@@ -666,41 +664,13 @@
             "description": "A wheeled light howitzer.",
             "min": 1,
             "max": 1,
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "75mm Pack Howitzer",
-                    "courage": 5,
-                    "movement": 4,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 3,
-                    "weapons": [{"id": "light_howitzer_light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "airborne_75mm_pack": {
-            "name": "75mm Pack Howitzer (Airborne)",
-            "description": "A wheeled light howitzer.",
-            "min": 1,
-            "max": 1,
-            "subfactions": ["none", "infantry_focus", "airborne_focus"],
-            "category": "artillery",
-            "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
-            "options": [
-                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
-            ],
-            "models": [
-                {
-                    "name": "75mm Pack Howitzer (Airborne)",
                     "courage": 5,
                     "movement": 4,
                     "shoot": 5,
@@ -794,41 +764,13 @@
             "description": "A wheeled medium at gun.",
             "min": 1,
             "max": 1,
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "57mm M1",
-                    "courage": 5,
-                    "movement": 3,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "medium_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "airborne_57mm_m1": {
-            "name": "57mm M1 (Airborne)",
-            "description": "A wheeled medium at gun.",
-            "min": 1,
-            "max": 1,
-            "subfactions": ["none", "infantry_focus", "airborne_focus"],
-            "category": "artillery",
-            "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
-            "options": [
-                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
-            ],
-            "models": [
-                {
-                    "name": "57mm M1 (Airborne)",
                     "courage": 5,
                     "movement": 3,
                     "shoot": 5,
@@ -1406,10 +1348,7 @@
             "max": 1,
             "category": "transport",
             "subfactions": ["airborne_focus"],
-            "keywords": ["Vehicle"],
-            "options": [
-                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
-            ],
+            "keywords": ["Vehicle", "Airborne Vehicle"],
             "models": [
                 {
                     "name": "Jeep (Airborne)",
