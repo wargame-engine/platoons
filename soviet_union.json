@@ -7,6 +7,34 @@
         "reserves_focus": {"name": "Reserves Focus", "id": "reserves_focus", "background": "Low-quality reserve troops and equipment.", "restricted": true}
     },
     "units": {
+        "inexperienced_field_officer": {
+            "name": "Inexperienced Field Offier Team",
+            "description": "A Field Commander.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry", "Officer"],
+            "subfactions": ["reserves_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Field Offier",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
+                    "rules": [{"id": "field_orders", "x": 1}, "leader"],
+                    "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 4, "fight": 4, "defense": 4, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+            ]
+        },
         "field_officer": {
             "name": "Field Offier Team",
             "description": "A Field Commander.",
@@ -14,7 +42,7 @@
             "max": 1,
             "category": "command",
             "keywords": ["Infantry", "Officer"],
-            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "subfactions": ["none", "infantry_focus", "armored_focus", "reserves_focus"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
@@ -42,6 +70,7 @@
             "max": 1,
             "category": "command",
             "keywords": ["Infantry", "Commissar"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
@@ -121,6 +150,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "reserves_focus"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
@@ -160,16 +190,17 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "reserves_focus"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Rifle NCO",
                     "courage": 5,
                     "movement": 6,
-                    "shoot": 4,
-                    "fight": 4,
-                    "defense": 5,
-                    "reflexes": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 4,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
@@ -180,10 +211,10 @@
                     "name": "Rifleman",
                     "courage": 5,
                     "movement": 6,
-                    "shoot": 4,
-                    "fight": 4,
-                    "defense": 5,
-                    "reflexes": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 4,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
@@ -199,6 +230,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {"name": "SMG NCO", "courage": 5, "movement": 6, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
@@ -226,6 +258,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "rules": ["tank_rider"],
+            "subfactions": ["none", "armored_focus"],
             "options": [{"addRule": "body_armor"}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {"name": "Tank Rider NCO", "courage": 6, "movement": 6, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
@@ -252,6 +285,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
@@ -276,6 +310,46 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "veteran_rifle_squad": {
+            "name": "Veteran Rifle Squad",
+            "description": "A group of Soviet riflemen.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Veteran Rifle NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Rifleman",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
@@ -323,17 +397,18 @@
                 }
             ]
         },
-        "guards_rifle_squad": {
-            "name": "Guards Rifle Squad",
+        "motor_rifle_squad": {
+            "name": "Motor Rifle Squad",
             "description": "A squad of elite Soviet riflemen.",
             "min": 1,
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "armored_focus"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
-                    "name": "Guards Rifle NCO",
+                    "name": "Motor Rifle NCO",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
@@ -347,12 +422,52 @@
                     "max": 1
                 },
                 {
-                    "name": "Guards Rifleman",
+                    "name": "Motor Rifleman",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 2}, {"addWeapon": "at_rifle", "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "veteran_motor_rifle_squad": {
+            "name": "Veteran Motor Rifle Squad",
+            "description": "A squad of elite Soviet riflemen.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "subfactions": ["armored_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Veteran Motor Rifle NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Motor Rifleman",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
@@ -409,7 +524,7 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "reserves_focus"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -460,7 +575,7 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "reserves_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addWeapon": "dog_mine", "modelLimit": 2}],
             "models": [
@@ -488,7 +603,7 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "reserves_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
@@ -503,6 +618,7 @@
             "max": 1,
             "category": "support",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus", "reserves_focus", "armored_focus"],
             "models": [
                 {
                     "name": "Medium MG Team",
@@ -527,6 +643,7 @@
             "max": 1,
             "category": "support",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus", "reserves_focus", "armored_focus"],
             "models": [
                 {
                     "name": "Heavy MG Team",
@@ -552,6 +669,7 @@
             "category": "support",
             "keywords": ["Infantry"],
             "rules": [{"id": "crew", "x": 2}],
+            "subfactions": ["none", "infantry_focus", "reserves_focus", "armored_focus"],
             "models": [
                 {
                     "name": "Light Mortar Team",
@@ -576,6 +694,7 @@
             "category": "support",
             "keywords": ["Infantry"],
             "rules": [{"id": "crew", "x": 3}],
+            "subfactions": ["none", "infantry_focus", "reserves_focus", "armored_focus"],
             "models": [
                 {
                     "name": "Medium Mortar Team",
@@ -600,6 +719,7 @@
             "category": "support",
             "keywords": ["Infantry"],
             "rules": [{"id": "crew", "x": 4}],
+            "subfactions": ["none", "infantry_focus", "reserves_focus"],
             "models": [
                 {
                     "name": "Heavy Mortar Team",
@@ -624,6 +744,7 @@
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "subfactions": ["none", "infantry_focus", "reserves_focus"],
             "models": [
                 {
                     "name": "76mm Field Gun",
@@ -648,6 +769,7 @@
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 4}],
+            "subfactions": ["none", "infantry_focus", "reserves_focus"],
             "models": [
                 {
                     "name": "M-30 Howitzer",
@@ -672,6 +794,7 @@
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 5}],
+            "subfactions": ["none", "infantry_focus", "reserves_focus"],
             "models": [
                 {
                     "name": "ML-20 Howitzer",
@@ -696,6 +819,7 @@
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "subfactions": ["none", "infantry_focus", "reserves_focus"],
             "models": [
                 {
                     "name": "Ampulomet Team",
@@ -720,6 +844,7 @@
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "subfactions": ["none", "infantry_focus", "reserves_focus"],
             "models": [
                 {
                     "name": "45mm AT Gun",
@@ -744,6 +869,7 @@
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "subfactions": ["none", "infantry_focus", "reserves_focus"],
             "models": [
                 {
                     "name": "ZiS-2 AT Gun",
@@ -768,6 +894,7 @@
             "category": "artillery",
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "subfactions": ["none", "infantry_focus", "reserves_focus"],
             "models": [
                 {
                     "name": "ZiS-3 AT Gun",
@@ -965,6 +1092,7 @@
             "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
             "models": [
                 {
                     "name": "OT-34",
@@ -989,6 +1117,7 @@
             "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
             "models": [
                 {
                     "name": "OT-34/85",
@@ -1013,6 +1142,7 @@
             "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
             "models": [
                 {
                     "name": "T-26A",
@@ -1037,6 +1167,7 @@
             "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
             "models": [
                 {
                     "name": "T-26B",
@@ -1061,6 +1192,7 @@
             "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
             "models": [
                 {
                     "name": "BT-5, BT-7",
@@ -1079,6 +1211,31 @@
                 }
             ]
         },
+        "t_28": {
+            "name": "T-28",
+            "description": "An early large tank with with many armaments.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
+            "models": [
+                {
+                    "name": "T-28",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_howitzer_vehicle_mg", {"id": "mmg", "mount": ["Front", "Left"]}, {"id": "mmg", "mount": ["Front", "Right"]}, {"id": "mmg_aa"}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "t34": {
             "name": "T34/76",
             "description": "A medium tank with an adequate gun.",
@@ -1086,6 +1243,7 @@
             "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
             "models": [
                 {
                     "name": "T34/76",
@@ -1103,6 +1261,31 @@
                 }
             ]
         },
+        "t34_command": {
+            "name": "T34/76 (Command)",
+            "description": "A medium tank with an adequate gun.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["armored_focus"],
+            "models": [
+                {
+                    "name": "T34/76 (Command)",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "t34_85": {
             "name": "T34/85",
             "description": "A medium tank with a powerful main gun.",
@@ -1110,6 +1293,7 @@
             "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
             "models": [
                 {
                     "name": "T34/85",
@@ -1127,6 +1311,31 @@
                 }
             ]
         },
+        "t34_85_command": {
+            "name": "T34/85 (Command)",
+            "description": "A medium tank with a powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["armored_focus"],
+            "models": [
+                {
+                    "name": "T34/85 (Command)",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "kv1": {
             "name": "KV-1",
             "description": "A heavy tank that is well-armored with an adequate main gun.",
@@ -1134,6 +1343,7 @@
             "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
             "models": [
                 {
                     "name": "KV-1",
@@ -1158,6 +1368,7 @@
             "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
             "models": [
                 {
                     "name": "KV-1S",
@@ -1182,6 +1393,7 @@
             "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "models": [
                 {
                     "name": "KV-2",
@@ -1205,7 +1417,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus"],
             "keywords": ["Vehicle"],
             "models": [{"name": "Horse Tow", "courage": 5, "movement": 8, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "rules": [{"id": "transport", "x": 7}], "min": 1, "max": 1}]
         },
@@ -1215,7 +1427,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "subfactions": ["none", "armored_focus", "infantry_focus", "reserves_focus"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -1224,7 +1436,7 @@
                     "movement": 10,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 10,
+                    "defense": 9,
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "box_lmg", "mount": ["Front"]}],
@@ -1241,6 +1453,7 @@
             "max": 1,
             "category": "transport",
             "keywords": ["Vehicle"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus", "reserves_focus"],
             "models": [
                 {
                     "name": "Medium Truck",
@@ -1309,6 +1522,7 @@
     },
     "strategies": {
         "urah_assault": {
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
             "phase": "activation",
             "name": "Urah Assault",
             "flavor": "A swift and deadly end to a fight can come with a furious charge...",
@@ -1316,6 +1530,7 @@
             "cost": 1
         },
         "heavy_barrage": {
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
             "phase": "activation",
             "name": "Heavy Barrage",
             "flavor": "With enough shells, the enemy's morale will surely waver.",
@@ -1323,11 +1538,60 @@
             "cost": 1
         },
         "forward_recon": {
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
             "phase": "activation",
             "name": "Forward Recon",
             "flavor": "Forward recon elements, when used effectively can provide a huge amount of information on enemy forces.",
             "description": "Use when an Infantry unit enters the field. It may make a free 6\" move action.",
             "cost": 1
+        },
+        "regroup": {
+            "subfactions": ["reserves_focus"],
+            "phase": "activation",
+            "name": "(Reserves) Regroup",
+            "flavor": "Sometimes it is best to regroup remaining soldiers before making another push.",
+            "description": "Use before activating an Infantry unit within 2\" of another of the same unit. The two units merge and, for the rest of the battle, they are counted as a single unit for all rules purposes. This may not bring a unit above its maximum size.",
+            "cost": 1
+        },
+        "reinforcments": {
+            "subfactions": ["reserves_focus"],
+            "phase": "activation",
+            "name": "(Reserves) Reinforcements",
+            "flavor": "With such a quantity of manpower, many fighting soldiers are  available.",
+            "description": "At the beginning of any round after the first, you may set up a unit of 12 Conscripts with any equipment within 6\" of a table edge that is not in the enemy deployment zone, and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
+            "cost": 3
+        },
+        "for_the_motherland": {
+            "subfactions": ["reserves_focus"],
+            "phase": "activation",
+            "name": "(Reserves) For the Motherland",
+            "flavor": "Dying for such an important cause is sometimes necessary to win a battle.",
+            "description": "Use when an Infantry or Artilelry unit within 2\" of a Conscript unit is targetted by a Shooting attack. Half the hits (rounded down) from that weapon (after adding any additional hits from effects) are moved to the Conscript squad and half hit the original target.",
+            "cost": 1
+        },
+        "armored_assault": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "(Armored) Armored Assault",
+            "flavor": "Occasionally armored units are used to push infantry and other units off a dug in position.",
+            "description": "Use when a Vehicle unit declares a Charge action. It is treated as having Shock(+3) for that action.",
+            "cost": 1
+        },
+        "improvised_tactics": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "(Armored) Improvised Tactics",
+            "flavor": "Sometimes it is necessary to improvise in an armored engagement in order to gain the edge.",
+            "description": "Use when a Vehicle unit is attempting a reaction test. It is treated as having Initiative 9 for this test.",
+            "cost": 2
+        },
+        "crew_repairs": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "(Armored) Emergency Repairs",
+            "flavor": "In moments of dire circumstance crews may need to repair their vehicle in combat.",
+            "description": "Use when a Vehicle unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
+            "cost": 2
         }
     },
     "weapons": {

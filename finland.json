@@ -542,7 +542,7 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
-            "keywords": ["Artillery"],
+            "keywords": ["Artillery", "Anti-Tank"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
@@ -567,7 +567,7 @@
             "max": 1,
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
-            "keywords": ["Artillery"],
+            "keywords": ["Artillery", "Anti-Tank"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
@@ -592,7 +592,7 @@
             "max": 1,
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
-            "keywords": ["Artillery"],
+            "keywords": ["Artillery", "Anti-Tank"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
@@ -617,7 +617,7 @@
             "max": 1,
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
-            "keywords": ["Artillery"],
+            "keywords": ["Artillery", "Anti-Tank"],
             "rules": ["gun_shield", {"id": "crew", "x": 4}],
             "models": [
                 {
@@ -630,6 +630,31 @@
                     "reflexes": 6,
                     "wounds": 4,
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "150mm_nebelwerfer": {
+            "name": "150mm Nebelwerfer 41",
+            "description": "A wheeled light rocket artillery piece.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": [{"id": "crew", "x": 3}],
+            "models": [
+                {
+                    "name": "150mm Nebelwerfer 41",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_rockets", "mount": ["Front"], "count": 3}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -732,6 +757,30 @@
                     "wounds": 6,
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "t_28": {
+            "name": "T-28 \"Postivaunu / Postijuna\"",
+            "description": "An early large tank with with many armaments.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "T-28 \"Postivaunu / Postijuna\"",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_howitzer_vehicle_mg", {"id": "mmg", "mount": ["Front", "Left"]}, {"id": "mmg", "mount": ["Front", "Right"]}, {"id": "mmg_aa"}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -938,6 +987,31 @@
                 }
             ]
         },
+        "t_20_komsomolets": {
+            "name": "T-20 Komsomolets",
+            "description": "A light tankette with transport capacity on top for moving small units of infantry.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "T-20 Komsomolets",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 9,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "box_lmg", "mount": ["Front"]}],
+                    "rules": ["damage_table_vehicle", {"id": "transport", "x": 6}, "vulnerable_side_rear", "tracked", "exposed"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "medium_truck": {
             "name": "Medium Truck",
             "description": "A medium truck transport.",
@@ -966,14 +1040,14 @@
     "strategies": {
         "assault!": {
             "phase": "activation",
-            "name": "Rynnäkkön!",
+            "name": "Charge! - Rynnäkkön!",
             "flavor": "A swift and deadly end to a fight can come with a furious charge.",
             "description": "Use when a Finnish Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
         },
         "forward_rush": {
             "phase": "activation",
-            "name": "Syöksyen Eteenpäin",
+            "name": "Closing Fire - Syöksyen Eteenpäin",
             "flavor": "With a quick dash and an alert overwatch, Infantry can cover a lot of ground carefully.",
             "description": "Use after a Finnish Infantry moves. It may take a free Standby action.",
             "cost": 1
