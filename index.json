@@ -1,6 +1,7 @@
 {
     "factions": {
         "germany": {"name": "Germany", "id": "germany", "url": "germany.json", "color": "#585C75", "alliance": "axis"},
+        "japan": {"name": "Japan", "id": "japan", "url": "japan.json", "color": "#BE8200", "alliance": "axis"},
         "finland": {"name": "Finland", "id": "finland", "url": "finland.json", "color": "#5D8CAA", "alliance": "axis"},
         "united_states": {"name": "United States", "id": "united_states", "url": "united_states.json", "color": "#4A7643", "alliance": "allies"},
         "soviet_union": {"name": "Soviet Union", "id": "soviet_union", "url": "soviet_union.json", "color": "#C13E3E", "alliance": "allies"},
@@ -13,7 +14,6 @@
         "hungary": {"name": "Hungary", "id": "hungary", "url": "hungary.json", "color": "#006354", "alliance": "axis"},
         "romania": {"name": "Romania", "id": "romania", "url": "romania.json", "color": "#4f2c26", "alliance": "axis"},
         "italy": {"name": "Italy", "id": "italy", "url": "italy.json", "color": "#BD9326", "alliance": "axis"},
-        "japan": {"name": "Japan", "id": "japan", "url": "japan.json", "color": "#BE8200", "alliance": "axis"},
         "greece": {"name": "Greece", "id": "greece", "url": "greece.json", "color": "#729263", "alliance": "allies"},
         "brazil": {"name": "Brazil", "id": "brazil", "url": "brazil.json", "color": "#008A4D", "alliance": "allies"},
         "australia": {"name": "Australia", "id": "australia", "url": "australia.json", "color": "#008373", "alliance": "allies"},
@@ -166,6 +166,7 @@
         "box_lmg": {"name": "Box-fed LMG", "short": 15, "medium": 30, "attacks": 3},
         "mag_lmg": {"name": "Magazine-fed LMG", "short": 15, "medium": 30, "attacks": 2},
         "bar": {"name": "BAR", "short": 15, "medium": 30, "attacks": 2, "rules": ["assault"]},
+        "assault_lmg": {"name": "Assault LMG", "short": 15, "medium": 30, "attacks": 2, "rules": ["assault"]},
         "mmg": {"name": "Medium MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1},
         "dual_mmg": {"name": "Dual Medium MG", "short": 18, "medium": 36, "attacks": 8, "ap": 1},
         "mmg_aa": {"name": "Medium MG (AA)", "short": 18, "medium": 36, "attacks": 5, "ap": 1, "rules": ["anti_air"]},
