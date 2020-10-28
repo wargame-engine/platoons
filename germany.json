@@ -1852,7 +1852,7 @@
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
-                    "name": "Panzer IV J",
+                    "name": "Panzer IV G-J",
                     "courage": 5,
                     "movement": 10,
                     "shoot": 5,
@@ -1879,7 +1879,7 @@
             "rules": [{"id": "field_orders_armored", "x": 1}],
             "models": [
                 {
-                    "name": "Panzer IV J",
+                    "name": "Panzer IV G-J (Command)",
                     "courage": 6,
                     "movement": 10,
                     "shoot": 6,

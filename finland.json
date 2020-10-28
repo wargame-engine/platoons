@@ -68,7 +68,8 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "subfactions": ["none", "infantry_focus"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "tank_rider", "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Rifle NCO",
@@ -107,6 +108,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
@@ -149,7 +151,8 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
+            "subfactions": ["none", "infantry_focus"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": "tank_rider", "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Rifle NCO",
@@ -191,6 +194,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
                 {
@@ -226,6 +230,49 @@
                 }
             ]
         },
+        "veteran_jääkäri_squad": {
+            "name": "Veteran Jääkäri Light Infantry",
+            "description": "A group of finnish soldiers.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
+            "models": [
+                {
+                    "name": "Veteran Jääkäri NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Jääkäri Rifle",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Lahti-M/26"}, {"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": "smg"}
+                    ],
+                    "min": 4,
+                    "max": 8
+                }
+            ]
+        },
         "kaukopartio_squad": {
             "name": "Kaukopartio Squad",
             "description": "A group of finnish soldiers.",
@@ -233,6 +280,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
                 {
@@ -273,7 +321,7 @@
             "min": 1,
             "max": 1,
             "category": "infantry",
-            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
             "rules": ["scout"],
             "models": [
@@ -317,6 +365,7 @@
             "max": 1,
             "category": "support",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "models": [
                 {
                     "name": "Tripod MMG Team",
@@ -342,6 +391,7 @@
             "max": 1,
             "category": "support",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "models": [
                 {
                     "name": "Tripod HMG Team",
@@ -421,6 +471,7 @@
             "max": 1,
             "category": "support",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "rules": [{"id": "crew", "x": 2}],
             "models": [
                 {
@@ -445,6 +496,7 @@
             "max": 1,
             "category": "support",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
@@ -469,6 +521,7 @@
             "max": 1,
             "category": "support",
             "keywords": ["Infantry"],
+            "subfactions": ["none", "infantry_focus"],
             "rules": [{"id": "crew", "x": 4}],
             "models": [
                 {
@@ -762,6 +815,31 @@
                 }
             ]
         },
+        "t26b_command": {
+            "name": "T-26B (Command)",
+            "description": "An early-war light tank with a few variants with different capabilities.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["armored_focus"],
+            "category": "command",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "T-26B (Command)",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "t_28": {
             "name": "T-28 \"Postivaunu / Postijuna\"",
             "description": "An early large tank with with many armaments.",
@@ -769,6 +847,7 @@
             "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
             "models": [
                 {
                     "name": "T-28 \"Postivaunu / Postijuna\"",
@@ -793,6 +872,7 @@
             "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
             "models": [
                 {
                     "name": "OT-34",
@@ -817,6 +897,7 @@
             "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
             "models": [
                 {
                     "name": "OT-34/85",
@@ -911,6 +992,31 @@
                 }
             ]
         },
+        "t34_command": {
+            "name": "T-34 \"Sotka\" (Command)",
+            "description": "A medium tank with an adequate gun.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["armored_focus"],
+            "category": "command",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "T-34 \"Sotka\" (Command)",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "t34_85": {
             "name": "T-34/85 \"Pitkäputkinen Sotka\"",
             "description": "A medium tank with a powerful main gun.",
@@ -982,6 +1088,57 @@
                     "wounds": 6,
                     "weapons": ["medium_at_mg", {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "kv1_command": {
+            "name": "KV-1 \"Klimi\" (Command)",
+            "description": "A heavy tank that is well-armored with an adequate main gun.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["armored_focus"],
+            "category": "command",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "KV-1 \"Klimi\" (Command)",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["medium_at_mg", {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 9}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "panzer_iv_j": {
+            "name": "Panzer IV J",
+            "description": "A medium tank with a powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Panzer IV J",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
                 }
