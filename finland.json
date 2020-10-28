@@ -101,49 +101,6 @@
                 }
             ]
         },
-        "border_jager": {
-            "name": "Border Jäger Squad",
-            "description": "A group of home defense finnish soldiers.",
-            "min": 1,
-            "max": 1,
-            "category": "infantry",
-            "keywords": ["Infantry"],
-            "subfactions": ["none", "infantry_focus"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
-            "models": [
-                {
-                    "name": "Border Jäger NCO",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 4,
-                    "reflexes": 5,
-                    "wounds": 1,
-                    "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
-                    "min": 1,
-                    "max": 1
-                },
-                {
-                    "name": "Border Jäger",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 4,
-                    "reflexes": 5,
-                    "wounds": 1,
-                    "weapons": ["rifle", "unarmed"],
-                    "options": [
-                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Lahti-M/26"}, {"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1},
-                        {"replaceWeapon": "rifle", "withWeapon": "smg", "modelLimit": 1}
-                    ],
-                    "min": 4,
-                    "max": 8
-                }
-            ]
-        },
         "continuation_squad": {
             "name": "Continuation War Rifle Squad",
             "description": "A group of finnish soldiers.",
@@ -187,6 +144,49 @@
                 }
             ]
         },
+        "veteran_continuation_squad": {
+            "name": "Veteran Continuation War Rifle Squad",
+            "description": "A group of finnish soldiers.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "subfactions": ["infantry_focus"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": "tank_rider", "modelLimit": "all"}],
+            "models": [
+                {
+                    "name": "Veteran Rifle NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Rifleman",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Lahti-M/26"}, {"id": "box_lmg", "name": "DP-28"}], "modelLimit": 2},
+                        {"replaceWeapon": "rifle", "withWeapon": "smg", "modelLimit": 1}
+                    ],
+                    "min": 4,
+                    "max": 8
+                }
+            ]
+        },
         "jääkäri_squad": {
             "name": "Jääkäri Light Infantry",
             "description": "A group of finnish soldiers.",
@@ -195,7 +195,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "infantry_focus", "armored_focus"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": "mounted_bicycle", "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Jääkäri NCO",
@@ -237,7 +237,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "subfactions": ["armored_focus"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
                 {
@@ -1196,6 +1196,7 @@
     },
     "strategies": {
         "assault!": {
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "phase": "activation",
             "name": "Charge! - Rynnäkkön!",
             "flavor": "A swift and deadly end to a fight can come with a furious charge.",
@@ -1203,6 +1204,7 @@
             "cost": 1
         },
         "forward_rush": {
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "phase": "activation",
             "name": "Closing Fire - Syöksyen Eteenpäin",
             "flavor": "With a quick dash and an alert overwatch, Infantry can cover a lot of ground carefully.",
@@ -1210,10 +1212,59 @@
             "cost": 1
         },
         "motti_tactics": {
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "phase": "pre_game",
             "name": "Motti Tactics",
             "flavor": "Encirclement tactics, can be highly effective in surprising and destroying enemies.",
             "description": "Select an Infantry unit to be placed in encirclement reserves instead of deployed on the field. At the beginning of any round after the first, that unit may be set up within 6\" of any table edge and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
+            "cost": 1
+        },
+        "recrew": {
+            "phase": "activation",
+            "subfactions": ["infantry_focus"],
+            "name": "Recrew (Infantry)",
+            "flavor": "It's highly important to keep artillery pieces manned and fighting.",
+            "description": "Use at the beginning of a round where an Infantry unit is within 2\" of an Artillery unit. Remove X models from the Infantry unit and add restore X crew to the Artillery unit.",
+            "cost": 1
+        },
+        "target_weak_point": {
+            "phase": "activation",
+            "subfactions": ["infantry_focus"],
+            "name": "Target Weak Point (Infantry)",
+            "flavor": "Exploiting weak points an an enemy's armor is key to taking out hard targets.",
+            "description": "Use before shooting with an Infantry or Artillery unit's weapon with AP 3 or higher. That attack is treated as hitting the target's side.",
+            "cost": 1
+        },
+        "frag_out": {
+            "phase": "activation",
+            "subfactions": ["infantry_focus"],
+            "name": "Frag Out (Infantry)",
+            "flavor": "A volley of hand grenades can be quite effective at dealing with enemies in cover.",
+            "description": "Use before shooting with an Infantry unit that has Grenades (any type). That unit may throw 2 additional grenades.",
+            "cost": 1
+        },
+        "armored_assault": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "Armored Assault (Armored)",
+            "flavor": "Occasionally armored units are used to push infantry and other units off a dug in position.",
+            "description": "Use when a Vehicle unit declares a Charge action. It is treated as having Shock(+3) for that action.",
+            "cost": 1
+        },
+        "improvised_tactics": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "Improvised Tactics (Armored)",
+            "flavor": "Sometimes it is necessary to improvise in an armored engagement in order to gain the edge.",
+            "description": "Use when a Vehicle unit is attempting a reaction test. It is treated as having Initiative 9 for this test.",
+            "cost": 2
+        },
+        "crew_repairs": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "Emergency Repairs (Armored)",
+            "flavor": "In moments of dire circumstance crews may need to repair their vehicle in combat.",
+            "description": "Use when a Vehicle unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
             "cost": 1
         }
     },

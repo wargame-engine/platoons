@@ -127,7 +127,7 @@
             "phase": "activation",
             "name": "Incredible Courage (Core)",
             "flavor": "Even in the darkest of times, moments of great courage can occur.",
-            "description": "Once per battle, choose a unit that is about to take a Courage test. That unit is treated as having Courage 9 until the end of the round.",
+            "description": "Once per battle, choose a unit that is about to take a Courage test. That unit gains +2 Courage until the end of its activation.",
             "cost": 2
         },
         "battlefield_reserves": {
@@ -440,6 +440,7 @@
         "fanatical": {"name": "Fanatical", "description": "This unit is treated as having Courage 9 for all break tests and does not gain strain from close combat.", "points": 3},
         "body_armor": {"name": "Body Armor", "description": "This model gains +1 Save.", "points": 2},
         "tank_rider": {"name": "Tank Rider", "description": "This model and its unit may be embarked on Vehicle unit with a save of 11+ as if it had Transport.", "points": 1},
+        "mounted_bicycle": {"name": "Mounted(Bicycles)", "description": "Increase this model's Movement by 2\", but it may not use any weapons while mounted. This unit may spend 1 action to dismount from its Mount. A unit that has dismounted may no longer remount.", "points": 2},
         "side_skirts": {"name": "Side Skirts", "description": "This model gains +1 to its Save when hit in its side arcs from weapons with AP 4 or less.", "points": 5},
         "gun_shield": {"name": "Gun Shield", "description": "This model gains +1 to its Save when hit in its front arc.", "points": 5},
         "suppressive": {"name": "Suppressive", "description": "This weapon deals 1 additional strain.", "points": 1},
