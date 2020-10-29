@@ -24,14 +24,13 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
                     "rules": [{"id": "field_orders", "x": 1}, "leader"],
                     "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}, {"addWeapon": "at_grenades", "modelLimit": 3}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
             ]
         },
         "field_officer_veteran": {
@@ -52,14 +51,13 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
                     "rules": [{"id": "field_orders", "x": 1}, "leader"],
                     "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}, {"addWeapon": "at_grenades", "modelLimit": 3}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant (Veteran)", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+                {"name": "Assistant (Veteran)", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
             ]
         },
         "forward_artillery_observer": {
@@ -80,13 +78,12 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed", "smoke_battery"],
                     "options": [{"replaceWeapon": "smoke_battery", "withWeapon": ["light_mortar_battery", "medium_mortar_battery", "heavy_mortar_battery"]}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "field_medic": {
@@ -106,13 +103,38 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["pistol", "unarmed", "smoke_grenades"],
                     "rules": ["medic"],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+            ]
+        },
+        "militia_squad": {
+            "name": "Militia Squad",
+            "description": "A group of conscripted militia.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "infantry_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": ["rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "lunge_mine", "modelLimit": 2}],
+            "models": [
+                {"name": "Militia Leader", "courage": 5, "movement": 6, "shoot": 4, "fight": 5, "defense": 4, "reflexes": 5, "weapons": ["bamboo_spear"], "min": 1, "max": 1},
+                {
+                    "name": "Militia",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "weapons": ["bamboo_spear"],
+                    "options": [{"addWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 14
+                }
             ]
         },
         "island_defense_squad": {
@@ -120,10 +142,10 @@
             "description": "A group of japanese infantry.",
             "min": 1,
             "max": 1,
-            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "subfactions": ["none", "infantry_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "lunge_mine", "modelLimit": 2}],
             "models": [
                 {
                     "name": "Island Defense NCO",
@@ -133,9 +155,8 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -147,11 +168,48 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 7
+                }
+            ]
+        },
+        "grenadier_squad": {
+            "name": "Grenadier Squad",
+            "description": "A group of japanese infantry.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "infantry_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Grenadier NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Grenadier",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 89"}], "modelLimit": 3}],
+                    "min": 4,
+                    "max": 17
                 }
             ]
         },
@@ -163,7 +221,7 @@
             "subfactions": ["none", "infantry_focus", "armored_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "lunge_mine", "modelLimit": 2}, {"addRule": "tank_rider", "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Rifle NCO",
@@ -173,9 +231,8 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -187,23 +244,25 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1}],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1},
+                        {"addWeapon": [{"id": "very_light_mortar", "name": "Type 89"}], "modelLimit": 1}
+                    ],
                     "min": 4,
                     "max": 14
                 }
             ]
         },
         "veteran_riflemen": {
-            "name": "Veteran Infantry Section",
+            "name": "Veteran Rifle Squad",
             "description": "A group of japanese infantry.",
             "min": 1,
             "max": 1,
-            "subfactions": ["infantry_focus"],
+            "subfactions": ["infantry_focus", "armored_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "lunge_mine", "modelLimit": 2}, {"addRule": "tank_rider", "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Veteran Rifle NCO",
@@ -213,9 +272,8 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -227,9 +285,11 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1}],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1},
+                        {"addWeapon": [{"id": "very_light_mortar", "name": "Type 89"}], "modelLimit": 1}
+                    ],
                     "min": 4,
                     "max": 14
                 }
@@ -240,7 +300,7 @@
             "description": "A group of trained japanese special forces.",
             "min": 1,
             "max": 1,
-            "subfactions": ["none", "airborne_focus"],
+            "subfactions": ["none", "infantry_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
@@ -253,9 +313,8 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -267,9 +326,11 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 2}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2}],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 2},
+                        {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2}
+                    ],
                     "min": 4,
                     "max": 9
                 }
@@ -280,7 +341,7 @@
             "description": "A group of veteran japanese Airborne.",
             "min": 1,
             "max": 1,
-            "subfactions": ["airborne_focus"],
+            "subfactions": ["infantry_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
@@ -293,9 +354,8 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -307,9 +367,11 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 2}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2}],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 2},
+                        {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2}
+                    ],
                     "min": 4,
                     "max": 9
                 }
@@ -320,7 +382,7 @@
             "description": "A group of trained japanese special forces.",
             "min": 1,
             "max": 1,
-            "subfactions": ["none", "airborne_focus"],
+            "subfactions": ["none", "infantry_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
@@ -333,9 +395,8 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -347,11 +408,52 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 1}],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 1},
+                        {"addWeapon": [{"id": "very_light_mortar", "name": "Type 89"}], "modelLimit": 1}
+                    ],
                     "min": 4,
                     "max": 11
+                }
+            ]
+        },
+        "snlf_grenadiers": {
+            "name": "SNLF Grenadier Squad",
+            "description": "A group of trained japanese special forces.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "infantry_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "SNLF Grenadier NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "SNLF Grenadier",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 1}, {"addWeapon": [{"id": "very_light_mortar", "name": "Type 89"}], "modelLimit": 3}],
+                    "min": 4,
+                    "max": 12
                 }
             ]
         },
@@ -365,24 +467,12 @@
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
-                {
-                    "name": "Flamethrower Gunner",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 1,
-                    "weapons": ["flamethrower", "unarmed"],
-                    "min": 1,
-                    "max": 1
-                },
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "Flamethrower Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["flamethrower", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
-        "sniper_team": {
-            "name": "Sniper Team",
+        "marksman_team": {
+            "name": "Marksman Team",
             "description": "A team equipped to take out important targets from a distance.",
             "min": 1,
             "max": 1,
@@ -392,23 +482,56 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "rules": ["scout", "stealth"],
             "models": [
-                {"name": "Sniper", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "Sniper", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
-        "sniper_team_veteran": {
-            "name": "Veteran Sniper Team",
-            "description": "A team equipped to take out important targets from a distance.",
+        "suicide_anti_tank_team": {
+            "name": "Suicide Anti-Tank Team",
+            "description": "A team dedicated to hunting tanks with hand-held anti-tank weapons.",
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["infantry_focus", "airborne_focus"],
+            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
-            "rules": ["scout", "stealth"],
             "models": [
-                {"name": "Veteran Sniper", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
-                {"name": "Veteran Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {
+                    "name": "Tank Hunters",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "lunge_mine"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addRule": "scout", "modelLimit": "all"}],
+                    "min": 2,
+                    "max": 2
+                }
+            ]
+        },
+        "tank_hunters": {
+            "name": "Tank Hunters",
+            "description": "A team dedicated to hunting tanks with hand-held anti-tank weapons.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Tank Hunters",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "at_grenades"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addRule": "scout", "modelLimit": "all"}],
+                    "min": 3,
+                    "max": 3
+                }
             ]
         },
         "at_rifle_team": {
@@ -421,8 +544,8 @@
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
-                {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "type_4": {
@@ -435,8 +558,8 @@
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
-                {"name": "Type 4 Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["type_4", "unarmed"], "min": 1, "max": 1},
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "Type 4 Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["type_4", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "mmg_team": {
@@ -456,9 +579,33 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "rules": [{"id": "crew", "x": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_93_hmg": {
+            "name": "Type 93 AA MG Team",
+            "description": "A japanese tripod HMG.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
+            "category": "support",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Type 93 AA MG Team",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "hmg_aa", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "rules": [{"id": "crew", "x": 3}],
+                    "options": [{"replaceWeapon": "hmg_aa", "withWeapon": "twin_hmg_aa"}],
                     "min": 1,
                     "max": 1
                 }
@@ -482,7 +629,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 2,
                     "weapons": [{"id": "light_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 2}],
                     "min": 1,
                     "max": 1
@@ -507,7 +653,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": [{"id": "medium_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -532,7 +677,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 4,
                     "weapons": [{"id": "heavy_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
                     "min": 1,
                     "max": 1
@@ -557,7 +701,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": [{"id": "very_light_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -582,7 +725,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": [{"id": "light_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -607,7 +749,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 4,
                     "weapons": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
                     "min": 1,
                     "max": 1
@@ -632,8 +773,31 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 4,
                     "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 5}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_4_rocket": {
+            "name": "Type 4 20 cm Rocket",
+            "description": "A wheeled rocket launcher.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Artillery"],
+            "rules": [{"id": "crew", "x": 3}],
+            "models": [
+                {
+                    "name": "Type 4 20 cm Rocket",
+                    "courage": 5,
+                    "movement": 3,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_rockets", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -657,7 +821,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -682,8 +845,367 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 4,
                     "weapons": [{"id": "medium_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_92_tankette": {
+            "name": "Type 92 Tankette",
+            "description": "A very light tank with some infantry support weaponry.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Type 92 Tankette",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": ["mmg", {"id": "hmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_94_tankette": {
+            "name": "Type 94 Tankette",
+            "description": "A very light infantry support tank.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Type 94 Tankette",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": ["mmg"],
+                    "rules": ["tracked", "vulnerable_side_rear", "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_97_te_ke": {
+            "name": "Type 97 Te-Ke",
+            "description": "A very light infantry support tank.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Type 97 Te-Ke",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": ["very_light_at"],
+                    "rules": ["tracked", "vulnerable_side_rear", "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_95_ha_go": {
+            "name": "Type 95 Ha-Go",
+            "description": "A very light tank for infantry support.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Type 95 Ha-Go",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": ["very_light_at", {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_98_ke_ni": {
+            "name": "Type 98 Ke-Ni",
+            "description": "A light tank with decent anti-tank ability.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Type 98 Ke-Ni",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": ["very_light_at_mg"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_2_ke_to": {
+            "name": "Type 2 Ke-To",
+            "description": "A light tank with decent anti-tank ability.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Type 2 Ke-To",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": ["light_at_mg"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_4_ke_nu_type_89": {
+            "name": "Type 4 Ke-Nu, Type 89 Yi-Go, Type 97 Chi-Ha",
+            "description": "A light tank with an infantry support howitzer.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Type 4 Ke-Nu, Type 89 Yi-Go, Type 97 Chi-Ha",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": ["light_howitzer_vehicle", {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_97_shi_ki": {
+            "name": "Type 97 Shi-Ki (Command)",
+            "description": "A light command tank.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Type 97 Shi-Ki (Command)",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Turret-Rear"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_97_kai_shinhoto": {
+            "name": "Type 97-Kai Shinhoto",
+            "description": "A lighter tank with an adequate anti-tank gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Type 97-Kai Shinhoto",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": [{"id": "medium_at"}, {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_1_chi_he": {
+            "name": "Type 1 Chi-He",
+            "description": "An all-rounder medium tank.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Type 1 Chi-He",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "weapons": [{"id": "medium_at"}, {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_2_ho_i": {
+            "name": "Type 2 Ho-I",
+            "description": "A medium tank for infantry support.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Type 2 Ho-I",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "weapons": [{"id": "light_howitzer_vehicle"}, {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_3_chi_nu": {
+            "name": "Type 3 Chi-Nu",
+            "description": "A solid all-rounder medium tank.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Type 3 Chi-Nu",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "weapons": [{"id": "medium_at"}, {"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_2_ka_mi": {
+            "name": "Type 2 Ka-Mi",
+            "description": "An amphibious light tank for naval assaults.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Type 2 Ka-Mi",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "very_light_at_mg"}, {"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "amphibious"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_3_ka_chi": {
+            "name": "Type 3 Ka-Chi",
+            "description": "An amphibious medium tank for naval assaults.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Type 3 Ka-Chi",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "weapons": [{"id": "medium_at_mg"}, {"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "amphibious"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "type_4_ho_ro": {
+            "name": "Type 4 Ho-Ro",
+            "description": "An amphibious medium tank for naval assaults.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Artillery"],
+            "models": [
+                {
+                    "name": "Type 4 Ho-Ro",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_howitzer_vehicle", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "min": 1,
                     "max": 1
                 }
@@ -785,6 +1307,5 @@
             "points": 20
         }
     },
-    "relics": {
-    }
+    "relics": {}
 }
