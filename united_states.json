@@ -1160,6 +1160,34 @@
                 }
             ]
         },
+        "m26_pershing": {
+            "name": "M26 Pershing",
+            "description": "A heavy assault tank with optional heavy gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "M26 Pershing",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 13,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["very_heavy_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [
+                        {"addWeapon": ["hmg_aa"]}
+                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "m18_hellcat": {
             "name": "M18 Hellcat",
             "description": "A lightly armored but fast tank destroyer.",

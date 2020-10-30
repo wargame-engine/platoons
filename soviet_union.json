@@ -1185,6 +1185,31 @@
                 }
             ]
         },
+        "t_70": {
+            "name": "T-70",
+            "description": "A later war light tank with a few variants.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
+            "models": [
+                {
+                    "name": "T-70",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_at_mg"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "bt_5_bt_7": {
             "name": "BT-5, BT-7",
             "description": "A light tank with exceptionally high speed for breakthroughs and encirclement.",
@@ -1306,6 +1331,57 @@
                     "wounds": 6,
                     "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "kv_85_is_1": {
+            "name": "KV-85, IS-1",
+            "description": "A medium tank with a powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
+            "models": [
+                {
+                    "name": "KV-85, IS-1",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 13,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["heavy_at_mg", {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "is_2": {
+            "name": "IS-2",
+            "description": "A medium tank with a powerful main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
+            "models": [
+                {
+                    "name": "IS-2",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 13,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["very_heavy_at_mg", {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
+                    "options": [{"addWeapon": "hmg_aa"}],
                     "min": 1,
                     "max": 1
                 }
@@ -1624,6 +1700,7 @@
         "molotov": {"name": "Molotov Cocktail", "attacks": 1, "short": 6, "ap": 5, "rules": ["suppressive", {"id": "ammo", "x": 1}, {"id": "blast", "x": 3}]}
     },
     "rules": {
+        "hero_sniper": {"name": "Hero Sniper", "description": "This model gets +1 Accuracy and all shooting attacks gain +1 AP.", "points": 20},
         "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
         "no_reatreat": {
             "name": "No Retreat",
@@ -1639,6 +1716,13 @@
         }
     },
     "relics": {
+        "vasily_zaitsev": {
+            "subfactions": ["none", "infantry_focus"],
+            "name": "Vasily Zaitsev",
+            "rule": "hero_sniper",
+            "flavor": "Vasily Zaitsev was famous for his exceptionally high kill count during the battle of Stalingrad in which he killed at least 255 enemy soliders.",
+            "description": "Upgrade one Sniper model with Hero Sniper."
+        },
         "dmitry_lavrinenko": {
             "subfactions": ["none", "armored_focus"],
             "name": "Dmitry Lavrinenko",

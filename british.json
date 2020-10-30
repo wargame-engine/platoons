@@ -634,6 +634,31 @@
                 }
             ]
         },
+        "75mm_pack": {
+            "name": "75mm Pack Howitzer",
+            "description": "A wheeled light howitzer.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["airborne_focus"],
+            "category": "artillery",
+            "keywords": ["Artillery"],
+            "rules": ["gun_shield", {"id": "crew", "x": 3}],
+            "models": [
+                {
+                    "name": "75mm Pack Howitzer",
+                    "courage": 5,
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 3,
+                    "weapons": [{"id": "light_howitzer_light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "25pdr": {
             "name": "25-pdr Howitzer",
             "description": "A wheeled light howitzer.",
@@ -1064,6 +1089,131 @@
                 }
             ]
         },
+        "churchill_avre": {
+            "name": "Churchill AVRE",
+            "description": "A heavy tank that is well-armored with an adequate main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "models": [
+                {
+                    "name": "Churchill AVRE",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 13,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["avre_mortar_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "churchill_crocodile": {
+            "name": "Churchill Crocodile",
+            "description": "A heavy tank that is well-armored with an adequate main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "models": [
+                {
+                    "name": "Churchill Crocodile",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 14,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["medium_at_mg", {"id": "vehicle_flamethrower", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "churchill_iii": {
+            "name": "Churchill III, IV, IV",
+            "description": "A heavy tank that is well-armored with an adequate main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "models": [
+                {
+                    "name": "Churchill III, IV, IV",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 13,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "churchill_vii": {
+            "name": "Churchill VII",
+            "description": "A heavy tank that is well-armored with an adequate main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "models": [
+                {
+                    "name": "Churchill VII",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 14,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "churchill_viii": {
+            "name": "Churchill VIII",
+            "description": "A heavy tank that is well-armored with an adequate main gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "models": [
+                {
+                    "name": "Churchill VIII",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 14,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_howitzer_vehicle_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "jeep": {
             "name": "Jeep",
             "description": "A light transport car.",
@@ -1218,6 +1368,13 @@
         }
     },
     "weapons": {
+        "avre_mortar_mg": {
+            "name": "AVRE Mortar/Co-ax MG",
+            "profiles": [
+                {"name": "HE", "short": 36, "attacks": 1, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 9}]},
+                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
+            ]
+        },
         "piat": {"name": "Piat", "short": 6, "medium": 12, "ap": 6, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}, "indirect"]},
         "qf_aa": {
             "name": "3.7\" QF AA Gun",

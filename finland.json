@@ -409,6 +409,32 @@
                 }
             ]
         },
+        "field_medic": {
+            "name": "Field Medic",
+            "description": "A field medic.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Field Medic",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["pistol", "unarmed", "smoke_grenades"],
+                    "rules": ["medic"],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+            ]
+        },
         "sniper_team": {
             "name": "Sniper Team",
             "description": "A team equipped to take out important targets from a distance.",
@@ -1270,6 +1296,8 @@
     },
     "weapons": {},
     "rules": {
+        "white_death": {"name": "White Death", "description": "This model gets +1 Accuracy and all shooting attacks gain +1 AP.", "points": 20},
+        "tank_jager": {"name": "Tank Jager", "description": "This model gains +7 AP when attacking a tank with melee attacks.", "points": 30},
         "crack_shot": {"name": "Crack Shot", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
         "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly Infantry units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
         "no_reatreat": {
@@ -1286,6 +1314,20 @@
         }
     },
     "relics": {
+        "einar_schadewitz": {
+            "subfactions": ["none", "infantry_focus"],
+            "name": "Einar Schadewitz",
+            "rule": "tank_jager",
+            "flavor": "Einar Schadewitz was known for his bravery when he jumped on top of an enemy tank and disabled it with a hand grenade.",
+            "description": "Upgrade one Tank Hunter model with Tank Jager."
+        },
+        "simo_hayha": {
+            "subfactions": ["none", "infantry_focus"],
+            "name": "Simo Häyhä",
+            "rule": "white_death",
+            "flavor": "Simo Häyhä was a feared finnish sniper during the winter war.",
+            "description": "Upgrade one Sniper model with White Death."
+        },
         "toivo_ilomaki": {
             "subfactions": ["none", "infantry_focus"],
             "name": "Toivo Ilomäki",

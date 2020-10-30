@@ -425,6 +425,14 @@
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
+        "very_heavy_at_stabilized_mg": {
+            "name": "Very Heavy AT(Stabilized)/Co-ax MG",
+            "profiles": [
+                {"name": "HE", "short": 42, "medium": 84, "attacks": 1, "ap": 4, "rules": ["assault", {"id": "blast", "x": 9}]},
+                {"name": "AT", "short": 42, "medium": 84, "attacks": 1, "ap": 8},
+                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
+            ]
+        },
         "super_heavy_at": {
             "name": "Super Heavy AT",
             "profiles": [{"name": "HE", "short": 48, "medium": 96, "attacks": 1, "ap": 5, "rules": [{"id": "blast", "x": 11}]}, {"name": "AT", "short": 42, "medium": 96, "attacks": 1, "ap": 9}]
@@ -587,8 +595,8 @@
                 }
             ]
         },
-        "bunker_4": {
-            "name": "Bunker (Small)",
+        "wooden_bunker_4": {
+            "name": "Wooden Bunker (Small)",
             "description": "A group of fighting positions, each with a capacity of 4 models.",
             "min": 1,
             "max": 1,
@@ -597,7 +605,76 @@
             "keywords": ["Fortification"],
             "models": [
                 {
-                    "name": "Bunker (Small)",
+                    "name": "Wooden Bunker (Small)",
+                    "courage": "-",
+                    "movement": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["terrain", {"id": "garrison", "x": 4}, {"id": "soft_cover_x", "x": 4}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "woooden_bunker_8": {
+            "name": "Wooden Bunker (Medium)",
+            "description": "A group of fighting positions, each with a capacity of 8 models.",
+            "min": 1,
+            "max": 1,
+            "category": "fortifications",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Fortification"],
+            "models": [
+                {
+                    "name": "Wooden Bunker (Medium)",
+                    "courage": "-",
+                    "movement": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["terrain", {"id": "garrison", "x": 8}, {"id": "soft_cover_x", "x": 8}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "wooden_bunker_12": {
+            "name": "Wooden Bunker (Large)",
+            "description": "A group of fighting positions, each with a capacity of 12 models.",
+            "min": 1,
+            "max": 1,
+            "category": "fortifications",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Fortification"],
+            "models": [
+                {
+                    "name": "Wooden Bunker (Large)",
+                    "courage": "-",
+                    "movement": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["terrain", {"id": "garrison", "x": 12}, {"id": "soft_cover_x", "x": 12}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "concrete_bunker_4": {
+            "name": "Concrete Bunker (Small)",
+            "description": "A group of fighting positions, each with a capacity of 4 models.",
+            "min": 1,
+            "max": 1,
+            "category": "fortifications",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Fortification"],
+            "models": [
+                {
+                    "name": "Concrete Bunker (Small)",
                     "courage": "-",
                     "movement": "-",
                     "shoot": "-",
@@ -610,8 +687,8 @@
                 }
             ]
         },
-        "bunker_8": {
-            "name": "Bunker (Medium)",
+        "concrete_bunker_8": {
+            "name": "Concrete Bunker (Medium)",
             "description": "A group of fighting positions, each with a capacity of 8 models.",
             "min": 1,
             "max": 1,
@@ -620,7 +697,7 @@
             "keywords": ["Fortification"],
             "models": [
                 {
-                    "name": "Bunker (Small)",
+                    "name": "Concrete Bunker (Medium)",
                     "courage": "-",
                     "movement": "-",
                     "shoot": "-",
@@ -633,8 +710,8 @@
                 }
             ]
         },
-        "bunker_12": {
-            "name": "Bunker (Large)",
+        "concrete_bunker_12": {
+            "name": "Concrete Bunker (Large)",
             "description": "A group of fighting positions, each with a capacity of 12 models.",
             "min": 1,
             "max": 1,
@@ -643,7 +720,7 @@
             "keywords": ["Fortification"],
             "models": [
                 {
-                    "name": "Bunker (Small)",
+                    "name": "Concrete Bunker (Large)",
                     "courage": "-",
                     "movement": "-",
                     "shoot": "-",
@@ -679,6 +756,52 @@
                 }
             ]
         },
+        "anti_tank_ditch": {
+            "name": "Anti-Tank Ditch (8\"x1\" Sections)",
+            "description": "Anti-tank ditch.",
+            "min": 1,
+            "max": 1,
+            "category": "fortifications",
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "keywords": ["Fortification"],
+            "models": [
+                {
+                    "name": "Anti-Tank Ditch (8\"x1\" Section)",
+                    "courage": "-",
+                    "movement": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["terrain", "clearable", {"id": "impassable", "x": "Vehicle, Artillery"}],
+                    "min": 1,
+                    "max": 3
+                }
+            ]
+        },
+        "trench_section": {
+            "name": "Trench Section (8\"x1\" Sections)",
+            "description": "A prepared trench section.",
+            "min": 1,
+            "max": 1,
+            "category": "fortifications",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Fortification"],
+            "models": [
+                {
+                    "name": "Trench Section (8\"x1\" Section)",
+                    "courage": "-",
+                    "movement": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["terrain", "hard_cover"],
+                    "min": 1,
+                    "max": 2
+                }
+            ]
+        },
         "sandbag_wall": {
             "name": "Sandbag Walls (8\"x1\" Sections)",
             "description": "A prepared sandbag wall.",
@@ -696,7 +819,7 @@
                     "fight": "-",
                     "defense": "-",
                     "reflexes": "-",
-                    "rules": ["terrain", "hard_cover"],
+                    "rules": ["terrain", "soft_cover"],
                     "min": 1,
                     "max": 2
                 }
