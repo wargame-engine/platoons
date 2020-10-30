@@ -15,7 +15,7 @@
             "category": "command",
             "keywords": ["Infantry", "Officer"],
             "subfactions": ["reserves_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
                 {
                     "name": "Field Offier",
@@ -43,7 +43,7 @@
             "category": "command",
             "keywords": ["Infantry", "Officer"],
             "subfactions": ["none", "infantry_focus", "armored_focus", "reserves_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
                 {
                     "name": "Field Offier",
@@ -71,7 +71,7 @@
             "category": "command",
             "keywords": ["Infantry", "Commissar"],
             "subfactions": ["none", "reserves_focus", "infantry_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}],
             "models": [
                 {
                     "name": "Commissar",
@@ -151,7 +151,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "reserves_focus"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
                 {
                     "name": "Shtrafbat NCO",
@@ -191,7 +191,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "reserves_focus"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
                 {
                     "name": "Rifle NCO",
@@ -231,7 +231,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "infantry_focus"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
+            "options": [{"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
             "models": [
                 {"name": "SMG NCO", "courage": 5, "movement": 6, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
                 {
@@ -259,7 +259,7 @@
             "keywords": ["Infantry"],
             "rules": ["tank_rider"],
             "subfactions": ["none", "armored_focus"],
-            "options": [{"addRule": "body_armor"}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"addRule": "body_armor"}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
                 {"name": "Tank Rider NCO", "courage": 6, "movement": 6, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
                 {
@@ -286,7 +286,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "infantry_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
             "models": [
                 {
                     "name": "Rifle NCO",
@@ -326,7 +326,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "infantry_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
             "models": [
                 {
                     "name": "Veteran Rifle NCO",
@@ -365,7 +365,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
             "models": [
                 {
                     "name": "Naval Rifle NCO",
@@ -405,7 +405,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "armored_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
             "models": [
                 {
                     "name": "Motor Rifle NCO",
@@ -445,7 +445,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["armored_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
             "models": [
                 {
                     "name": "Veteran Motor Rifle NCO",
@@ -486,7 +486,7 @@
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
             "rules": ["scout"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
                 {
                     "name": "Scout NCO",
@@ -536,8 +536,8 @@
                     "defense": 6,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["rifle", "unarmed", "smoke_grenades", "at_grenades"],
-                    "options": [{"addWeapon": "panzerfaust", "modelLimit": 2}, {"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addRule": "scout", "modelLimit": "all"}],
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "molotov_cocktails"],
+                    "options": [{"addWeapon": "panzerfaust", "modelLimit": 2}, {"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "molotov_cocktails", "withWeapon": ["at_grenades"]}, {"addRule": "scout", "modelLimit": "all"}],
                     "min": 3,
                     "max": 3
                 }

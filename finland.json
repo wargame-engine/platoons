@@ -14,7 +14,7 @@
             "category": "command",
             "keywords": ["Infantry", "Officer"],
             "subfactions": ["none", "infantry_focus", "armored_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
                 {
                     "name": "Field Offier",
@@ -69,7 +69,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "infantry_focus"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "tank_rider", "modelLimit": "all"}],
+            "options": [{"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addRule": "tank_rider", "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Rifle NCO",
@@ -109,7 +109,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "infantry_focus"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": "tank_rider", "modelLimit": "all"}],
+            "options": [{"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": "tank_rider", "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Rifle NCO",
@@ -152,7 +152,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["infantry_focus"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": "tank_rider", "modelLimit": "all"}],
+            "options": [{"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": "tank_rider", "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Veteran Rifle NCO",
@@ -195,7 +195,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "infantry_focus", "armored_focus"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": "mounted_bicycle", "modelLimit": "all"}],
+            "options": [{"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": "mounted_bicycle", "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Jääkäri NCO",
@@ -238,7 +238,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["armored_focus"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
+            "options": [{"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
                 {
                     "name": "Veteran Jääkäri NCO",
@@ -281,7 +281,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "infantry_focus"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
+            "options": [{"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
                 {
                     "name": "Kaukopartio NCO",
@@ -462,6 +462,31 @@
             "models": [
                 {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
                 {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "tank_hunters": {
+            "name": "Tank Hunters",
+            "description": "A team dedicated to hunting tanks with anti-tank grenades.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Tank Hunters",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "molotov_cocktails"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "molotov_cocktails", "withWeapon": ["at_grenades"]}, {"addRule": "scout", "modelLimit": "all"}],
+                    "min": 3,
+                    "max": 3
+                }
             ]
         },
         "panzershreck_team": {

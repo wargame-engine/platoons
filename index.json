@@ -155,6 +155,10 @@
         "flag": {"name": "Flag (Melee)", "short": "Melee", "attacks": 1, "ap": 1, "rules": ["flag_bearer"]},
         "frag_grenades": {"name": "Frags", "attacks": 1, "short": 6, "ap": 1, "rules": ["grenade", {"id": "blast", "x": 3}]},
         "at_grenades": {"name": "AT Grenade", "attacks": 1, "short": 6, "ap": 8, "rules": [{"id": "ammo", "x": 1}]},
+        "molotov_cocktails": {
+            "name": "Molotov Cocktail",
+            "profiles": [{"name": "AT", "attacks": 1, "short": 6, "ap": 5, "rules": [{"id": "ammo", "x": 1}]}, {"name": "Flame", "attacks": 1, "short": 6, "ap": 1, "rules": ["flame", {"id": "blast", "x": 2}, {"id": "ammo", "x": 1}]}]
+        },
         "pistol": {"name": "Pistol", "short": 6, "attacks": 1},
         "smoke_grenades": {"name": "Smokes", "attacks": 1, "short": 6, "rules": ["grenade", "smoke", "indirect"]},
         "rifle": {"name": "Rifle", "short": 12, "medium": 24, "attacks": 1},
@@ -162,10 +166,13 @@
             "name": "Rifle Grenade",
             "profiles": [{"name": "Rifle", "short": 12, "medium": 24, "attacks": 1}, {"name": "Grenade", "short": 6, "medium": 12, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 2}]}]
         },
-        "very_light_mortar": {"name": "Very Light Mortar", "profiles": [
-            {"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 2}]},
-            {"name": "Smoke", "short": 18, "medium": 36, "attacks": 1, "rules": ["smoke"]}
-        ]},
+        "very_light_mortar": {
+            "name": "Very Light Mortar",
+            "profiles": [
+                {"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 2}]},
+                {"name": "Smoke", "short": 18, "medium": 36, "attacks": 1, "rules": ["smoke"]}
+            ]
+        },
         "bamboo_spear": {"name": "Bamboo Spear", "short": "Melee", "attacks": 1, "ap": 1},
         "sniper_rifle": {"name": "Sniper Rifle", "short": 18, "medium": 36, "attacks": 1, "ap": 2, "rules": ["sniper", {"id": "team", "x": 2}]},
         "semi_auto_rifle": {"name": "Semi-Auto Rifle", "short": 12, "medium": 24, "attacks": 1, "rules": ["assault"]},
@@ -262,18 +269,27 @@
                 {"name": "Smoke", "short": 18, "medium": 36, "attacks": 4, "rules": ["indirect", "smoke"]}
             ]
         },
-        "light_mortar": {"name": "Light Mortar", "profiles": [
-            {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
-            {"name": "Smoke", "short": 24, "medium": 48, "attacks": 1, "rules": ["smoke"]}
-        ]},
-        "medium_mortar": {"name": "Medium Mortar", "profiles": [
-            {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]},
-            {"name": "Smoke", "short": 30, "medium": 60, "attacks": 1, "rules": ["smoke"]}
-        ]},
-        "heavy_mortar": {"name": "Heavy Mortar", "profiles": [
-            {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]},
-            {"name": "Smoke", "short": 36, "medium": 72, "attacks": 1, "rules": ["smoke"]}
-        ]},
+        "light_mortar": {
+            "name": "Light Mortar",
+            "profiles": [
+                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
+                {"name": "Smoke", "short": 24, "medium": 48, "attacks": 1, "rules": ["smoke"]}
+            ]
+        },
+        "medium_mortar": {
+            "name": "Medium Mortar",
+            "profiles": [
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 5}]},
+                {"name": "Smoke", "short": 30, "medium": 60, "attacks": 1, "rules": ["smoke"]}
+            ]
+        },
+        "heavy_mortar": {
+            "name": "Heavy Mortar",
+            "profiles": [
+                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]},
+                {"name": "Smoke", "short": 36, "medium": 72, "attacks": 1, "rules": ["smoke"]}
+            ]
+        },
         "very_light_howitzer": {"name": "Very Light Howitzer", "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]}]},
         "light_rockets": {"name": "Light Rockets", "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", "salvo", {"id": "blast", "x": 4}]}]},
         "heavy_rockets": {"name": "Heavy Rockets", "profiles": [{"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["indirect", "salvo", {"id": "blast", "x": 6}]}]},
@@ -455,14 +471,13 @@
         "sword": {"name": "Sword", "attacks": 1, "short": "Melee", "ap": 1, "damage": 6}
     },
     "rules": {
-        "terrain": {"name": "Terrain", "description": "This unit may be placed anywhere on the field during deployment, more than 24\" from any enemies units or deployment zones. Once placed, this unit is treated as terrain and may not be controlled or activated by the owning player."},
+        "terrain": {
+            "name": "Terrain",
+            "description": "This unit may be placed anywhere on the field during deployment, more than 24\" from any enemies units or deployment zones. Once placed, this unit is treated as terrain and may not be controlled or activated by the owning player."
+        },
         "impassable": {"name": "Impassable", "inputs": ["x"], "description": "This model may not be crossed by X unit types.", "points": 10},
         "clearable": {"name": "Clearable", "description": "This model may be removed by a unit with a corresponding keyword that allows it to clear models."},
-        "garrison": {
-            "name": "Garrison",
-            "description": "Up to X models or a gun with X or less Crew may occupy this model in the same way models occupy a building.",
-            "inputs": ["x"]
-        },
+        "garrison": {"name": "Garrison", "description": "Up to X models or a gun with X or less Crew may occupy this model in the same way models occupy a building.", "inputs": ["x"]},
         "soft_cover_x": {"name": "Soft-Cover", "inputs": ["x"], "description": "This model provides soft cover to X models in it.", "points": ["rule.x", {"multiply": 2}]},
         "soft_cover": {"name": "Soft-Cover", "description": "This model provides soft cover to models behind it.", "points": 10},
         "hard_cover_x": {"name": "Hard-Cover", "inputs": ["x"], "description": "This model provides soft cover to X models in it.", "points": ["rule.x", {"multiply": 4}]},
@@ -482,7 +497,11 @@
         "fanatical": {"name": "Fanatical", "description": "This unit is treated as having +2 Courage for all break tests and does not gain strain from close combat.", "points": 3},
         "body_armor": {"name": "Body Armor", "description": "This model gains +1 Save.", "points": 2},
         "tank_rider": {"name": "Tank Rider", "description": "This model and its unit may be embarked on Vehicle unit with a save of 11+ as if it had Transport.", "points": 1},
-        "mounted_bicycle": {"name": "Mounted(Bicycles)", "description": "Increase this model's Movement by 2\", but it may not use any weapons while mounted. This unit may spend 1 action to dismount from its Mount. A unit that has dismounted may no longer remount.", "points": 2},
+        "mounted_bicycle": {
+            "name": "Mounted(Bicycles)",
+            "description": "Increase this model's Movement by 2\", but it may not use any weapons while mounted. This unit may spend 1 action to dismount from its Mount. A unit that has dismounted may no longer remount.",
+            "points": 2
+        },
         "side_skirts": {"name": "Side Skirts", "description": "This model gains +1 to its Save when hit in its side arcs from weapons with AP 4 or less.", "points": 5},
         "gun_shield": {"name": "Gun Shield", "description": "This model gains +1 to its Save when hit in its front arc.", "points": 5},
         "suppressive": {"name": "Suppressive", "description": "This weapon deals 1 additional strain.", "points": 1},
