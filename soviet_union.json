@@ -231,7 +231,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "infantry_focus"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
             "models": [
                 {"name": "SMG NCO", "courage": 5, "movement": 6, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
                 {
@@ -286,7 +286,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "infantry_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
             "models": [
                 {
                     "name": "Rifle NCO",
@@ -326,7 +326,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "infantry_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
             "models": [
                 {
                     "name": "Veteran Rifle NCO",
@@ -365,7 +365,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
             "models": [
                 {
                     "name": "Naval Rifle NCO",
@@ -405,7 +405,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "armored_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
             "models": [
                 {
                     "name": "Motor Rifle NCO",
@@ -445,7 +445,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["armored_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
             "models": [
                 {
                     "name": "Veteran Motor Rifle NCO",
@@ -1700,6 +1700,11 @@
         "molotov": {"name": "Molotov Cocktail", "attacks": 1, "short": 6, "ap": 5, "rules": ["suppressive", {"id": "ammo", "x": 1}, {"id": "blast", "x": 3}]}
     },
     "rules": {
+        "soviet_flag": {
+            "name": "Soviet Flag",
+            "description": "This unit gets +1 Courage when clearing suppression. A model may not use its shooting weapons while carrying a Soviet Flag.",
+            "points": 10
+        },
         "hero_sniper": {"name": "Hero Sniper", "description": "This model gets +1 Accuracy and all shooting attacks gain +1 AP.", "points": 20},
         "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
         "no_reatreat": {

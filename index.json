@@ -152,6 +152,7 @@
     },
     "weapons": {
         "unarmed": {"name": "Unarmed (Melee)", "short": "Melee", "attacks": 1},
+        "flag": {"name": "Flag (Melee)", "short": "Melee", "attacks": 1, "ap": 1, "rules": ["flag_bearer"]},
         "frag_grenades": {"name": "Frags", "attacks": 1, "short": 6, "ap": 1, "rules": ["grenade", {"id": "blast", "x": 3}]},
         "at_grenades": {"name": "AT Grenade", "attacks": 1, "short": 6, "ap": 8, "rules": [{"id": "ammo", "x": 1}]},
         "pistol": {"name": "Pistol", "short": 6, "attacks": 1},
