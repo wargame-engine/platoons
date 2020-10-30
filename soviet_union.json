@@ -1706,6 +1706,7 @@
             "points": 10
         },
         "hero_sniper": {"name": "Hero Sniper", "description": "This model gets +1 Accuracy and all shooting attacks gain +1 AP.", "points": 20},
+        "lady_death": {"name": "Lady Death", "description": "This model gets +1 Accuracy and +1 Save.", "points": 15},
         "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
         "no_reatreat": {
             "name": "No Retreat",
@@ -1727,6 +1728,13 @@
             "rule": "hero_sniper",
             "flavor": "Vasily Zaitsev was famous for his exceptionally high kill count during the battle of Stalingrad in which he killed at least 255 enemy soliders.",
             "description": "Upgrade one Sniper model with Hero Sniper."
+        },
+        "lyudmila_pavlichenko": {
+            "subfactions": ["none", "infantry_focus"],
+            "name": "Lyudmila Pavlichenko",
+            "rule": "lady_death",
+            "flavor": "AKA Lady Death, Pavlichenko wracked up over 300 kills, making her the most deadly female sniper in history.",
+            "description": "Upgrade one Sniper model with Lady Death."
         },
         "dmitry_lavrinenko": {
             "subfactions": ["none", "armored_focus"],
