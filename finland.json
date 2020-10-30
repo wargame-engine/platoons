@@ -326,7 +326,7 @@
             "rules": ["scout"],
             "models": [
                 {
-                    "name": "Rcon NCO",
+                    "name": "Recon NCO",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
