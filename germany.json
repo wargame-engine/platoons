@@ -2655,6 +2655,7 @@
         }
     },
     "rules": {
+        "desert_fox": {"name": "Desert Fox", "description": "This unit and one other friendly unit may be set up in Outflanking Reserves. At the beginning of any round after the first, units may be set up within 6\" of a table edge that is not in the enemy deployment zone, and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.", "points": 20},
         "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
         "ambush_master": {"name": "Ambush Master", "description": "This unit get +1 Accuracy when using an Ambush reaction.", "points": 20},
         "move_move_move_infantry": {"name": "Move Move Move", "description": "This unit and friendly Infantry units within 6\" add 2\" to their Movement characteristic.", "points": 10}
@@ -2673,6 +2674,13 @@
             "rule": "crack_shot",
             "flavor": "Ernst Barkmann was an ace tank commander who served throughout the war.",
             "description": "Upgrade one Panther (Command) with Crack Shot."
+        },
+        "erwin_rommel": {
+            "subfactions": ["none", "armored_focus"],
+            "name": "Erwin Rommel",
+            "rule": "desert_fox",
+            "flavor": "Erwin Rommel, was known to expertly outflank and surprise his enemies.",
+            "description": "Upgrade one Tank (Command) with Desert Fox."
         },
         "michael_wittman": {
             "subfactions": ["none", "armored_focus"],
