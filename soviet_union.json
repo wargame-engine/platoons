@@ -631,6 +631,7 @@
                     "wounds": 3,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "rules": [{"id": "crew", "x": 3}, "gun_shield"],
+                    "options": [{"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": "mmg_aa"}],
                     "min": 1,
                     "max": 1
                 }
@@ -656,6 +657,7 @@
                     "wounds": 3,
                     "weapons": [{"id": "hmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "rules": [{"id": "crew", "x": 3}, "gun_shield"],
+                    "options": [{"replaceWeapon": {"id": "hmg", "mount": ["Front"]}, "withWeapon": "hmg_aa"}],
                     "min": 1,
                     "max": 1
                 }
