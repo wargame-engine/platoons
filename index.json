@@ -192,8 +192,20 @@
         "hmg_aa": {"name": "Heavy MG (AA)", "short": 18, "medium": 36, "attacks": 5, "ap": 2, "rules": ["anti_air"]},
         "twin_hmg_aa": {"name": "Twin Heavy MG (AA)", "short": 18, "medium": 36, "attacks": 8, "ap": 2, "rules": ["anti_air"]},
         "mmg_internal": {"name": "Medium MG (Internal)", "short": 18, "medium": 36, "ap": 1, "attacks": 5},
-        "flamethrower": {"name": "Flamethrower", "short": 6, "medium": 12, "ap": 3, "attacks": 3, "rules": ["flame"]},
-        "vehicle_flamethrower": {"name": "Flamethrower (Vehicle)", "short": 12, "medium": 24, "ap": 3, "attacks": 5, "rules": ["flame"]},
+        "flamethrower": {
+            "name": "Flamethrower",
+            "profiles": [
+                {"name": "Stream", "short": 6, "medium": 12, "ap": 5, "attacks": 2, "rules": ["flame"]},
+                {"name": "Spray", "short": 6, "medium": 12, "ap": 1, "attacks": 5, "rules": ["flame"]}
+            ]
+        },
+        "vehicle_flamethrower": {
+            "name": "Flamethrower (Vehicle)",
+            "profiles": [
+                {"name": "Stream", "short": 12, "medium": 24, "ap": 3, "attacks": 2, "rules": ["flame"]},
+                {"name": "Spray", "short": 12, "medium": 24, "ap": 1, "attacks": 5, "rules": ["flame"]}
+            ]
+        },
         "vehicle_flamethrower_mg": {
             "name": "Flamethrower (Vehicle)",
             "profiles": [{"name": "Flame", "short": 12, "medium": 24, "ap": 3, "attacks": 5, "rules": ["flame"]}, {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}]
