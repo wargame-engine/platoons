@@ -7,7 +7,7 @@
         "soviet_union": {"name": "Soviet Union", "id": "soviet_union", "url": "soviet_union.json", "color": "#C13E3E", "alliance": "allies"},
         "british": {"name": "British", "id": "british", "url": "british.json", "color": "#927331", "alliance": "allies"},
         "france": {"name": "France", "id": "france", "url": "france.json", "color": "#395A94", "alliance": "allies"},
-        "australia": {"name": "Australia", "id": "australia", "url": "australia.json", "color": "#008373", "alliance": "allies"},
+        "australia": {"name": "Australia", "id": "australia", "url": "australia.json", "color": "#008373", "alliance": "allies"}
     },
     "unfinished_factions": {
         "partisans": {"name": "Partisans", "id": "partisans", "url": "partisans.json", "color": "#014140"},
