@@ -1354,12 +1354,12 @@
             "description": "Use when an Infantry unit with Rifles is firing. Hits rolls of 1 or 2 generate an additional shot.",
             "cost": 1
         },
-        "stiff_upper_lip": {
+        "ANZAC Spirit": {
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
-            "name": "Stiff Upper Lip",
-            "flavor": "British soldiers put up tough resistance in hand-to-hand fighting.",
-            "description": "Use before an Infantry unit uses a fight action. It gains +1 Strength.",
+            "name": "ANZAC Spirit",
+            "flavor": "The Australian-New Zealand Army Corps was a combined force that fought during WWI. While the ANZAC only fought briefly as a combined unit again in WWII, the Australian military continued to demonstrate the same spirit of determination and steadfastness under fire.",
+            "description": "An Infantry unit can use this to automatically remove D3 strain.",
             "cost": 2
         },
         "focus_fire": {
@@ -1455,12 +1455,12 @@
         }
     },
     "relics": {
-        "rg_pine_coffin": {
-            "subfactions": ["none", "airborne_focus"],
-            "name": "Richard Geoffry Pine-Coffin",
+        "tom_derrick": {
+            "subfactions": ["none", "infantry_focus"],
+            "name": "Tom Derrick",
             "rule": "ambush_tactics",
-            "flavor": "Pine-Coffin fought in several battles including D-Day with the British airborne. Often encountering superior forces his men were able to achieve their goals.",
-            "description": "Upgrade one Field Officer model with Ambush Tactics."
+            "flavor": "Tom Derrick recieved the Victoria Cross for singlehandidly eliminating seven enemy machine gun posts, and helping his platoon destroy a further three, in New Guinea in 1943.",
+            "description": "Upgrade one squad NCO model with Mobile Expert."
         },
         "simon_fraser": {
             "subfactions": ["none", "airborne_focus"],
