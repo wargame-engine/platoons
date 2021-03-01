@@ -169,8 +169,12 @@
             ]
         },
         "vehicle_flamethrower_mg": {
-            "name": "Flamethrower (Vehicle)",
-            "profiles": [{"name": "Flame", "short": 12, "medium": 24, "ap": 3, "attacks": 5, "rules": ["flame"]}, {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}]
+            "name": "Flamethrower (Vehicle)/Co-ax MG",
+            "profiles": [
+                {"name": "Stream", "short": 12, "medium": 24, "ap": 3, "attacks": 2, "rules": ["flame"]},
+                {"name": "Spray", "short": 12, "medium": 24, "ap": 1, "attacks": 5, "rules": ["flame"]},
+                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
+            ]
         },
         "at_rifle": {"name": "AT Rifle", "short": 18, "medium": 36, "ap": 3, "attacks": 1, "rules": [{"id": "team", "x": 2}]},
         "light_autocannon": {
@@ -517,6 +521,21 @@
             "name": "Mixed Mines",
             "description": "When an Infantry unit crosses this model, roll 5D10. On any rolls of 5 or less that unit takes a hit with AP4. When a Vehicle unit crosses this model, roll 2D10. On any rolls of 5 or less that unit takes a hit with AP7. The vehicle is treated as being hit in the Rear arc.",
             "points": 50
+        },
+        "wire_cutters": {
+            "name": "Wire Cutters",
+            "description": "This model and its unit gain +3 to all Clear actions when attempting to clear barbed wire obstacles.",
+            "points": 5
+        },
+        "demolition_charges": {
+            "name": "Demolition Charges",
+            "description": "This model and its unit gain +3 to all Clear actions when attempting to barricade and defense obstacles.",
+            "points": 5
+        },
+        "mine_sweepers": {
+            "name": "Mine Sweepers",
+            "description": "This model and its unit gain +3 to all Clear actions when attempting to clear mine fields.",
+            "points": 5
         }
     },
     "units": {
