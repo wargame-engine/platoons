@@ -1496,9 +1496,7 @@
             ]
         }
     },
-    "weapons": {
-        "bazooka": {"name": "Bazooka", "short": 12, "medium": 24, "ap": 6, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}]}
-    },
+    "weapons": {},
     "strategies": {
         "fire_and_move": {
             "phase": "activation",

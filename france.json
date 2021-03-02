@@ -153,20 +153,6 @@
                 {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
-        "at_rifle_team": {
-            "name": "AT Rifle Team",
-            "description": "A team dedicated to hunting lighter tanks.",
-            "min": 1,
-            "max": 1,
-            "category": "support",
-            "subfactions": ["none", "infantry_focus"],
-            "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
-            "models": [
-                {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
-            ]
-        },
         "reserve_infantry_squad": {
             "name": "Reserve Rifle Squad",
             "description": "A group of riflemen.",
@@ -483,6 +469,116 @@
                     "min": 4,
                     "max": 11
                 }
+            ]
+        },
+        "late_rifleman": {
+            "name": "Rifle Squad (Late War)",
+            "description": "A group of us equipped Riflemen.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "infantry_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry", "Late War"],
+            "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3}
+            ],
+            "models": [
+                {
+                    "name": "Rifle NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Rifleman",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 2}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "french_sas_section": {
+            "name": "French SAS Section",
+            "description": "A group of british trained trained french Special Air Service.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "airborne_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "SAS NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "SAS Infantry",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}, {"id": "box_lmg", "name": "Vickers K"}], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 4,
+                    "max": 7
+                }
+            ]
+        },
+        "at_rifle_team": {
+            "name": "AT Rifle Team",
+            "description": "A team dedicated to hunting lighter tanks.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "models": [
+                {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "bazooka_team": {
+            "name": "Bazooka Team",
+            "description": "A team dedicated to hunting heavy tanks.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "keywords": ["Infantry", "Late War"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "models": [
+                {"name": "Bazooka Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["bazooka", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "light_mortar_team": {
