@@ -447,7 +447,8 @@
         "panzerschreck": {"name": "Panzerschreck", "short": 12, "medium": 24, "ap": 7, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}]},
         "bazooka": {"name": "Bazooka", "short": 12, "medium": 24, "ap": 6, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}]},
         "lunge_mine": {"name": "Lunge Mine", "attacks": 1, "short": "Melee", "ap": 8, "damage": 6, "rules": [{"id": "ammo", "x": 1}]},
-        "sword": {"name": "Sword", "attacks": 1, "short": "Melee", "ap": 1, "damage": 6}
+        "sword": {"name": "Sword", "attacks": 1, "short": "Melee", "ap": 1, "damage": 6},
+        "officer_sword": {"name": "Officer's Sword", "attacks": 2, "short": "Melee", "ap": 1, "damage": 6}
     },
     "rules": {
         "terrain": {

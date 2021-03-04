@@ -156,7 +156,7 @@
                     "defense": 4,
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -194,7 +194,7 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -232,7 +232,7 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -273,7 +273,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -314,7 +314,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -355,7 +355,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -396,7 +396,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -438,7 +438,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "sword"}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -454,6 +454,46 @@
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 1}, {"addWeapon": [{"id": "very_light_mortar", "name": "Type 89"}], "modelLimit": 3}],
                     "min": 4,
                     "max": 12
+                }
+            ]
+        },
+        "combat_engineers": {
+            "name": "Combat Engineers",
+            "description": "A squad of japanese combat engineers.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers"]}],
+            "models": [
+                {
+                    "name": "Engineer NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Engineer",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_lmg"], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 10
                 }
             ]
         },
@@ -1030,12 +1070,12 @@
             "models": [
                 {
                     "name": "Type 97 Shi-Ki (Command)",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 10,
-                    "shoot": 5,
-                    "fight": 5,
+                    "shoot": 6,
+                    "fight": 6,
                     "defense": 11,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Turret-Rear"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
                     "min": 1,

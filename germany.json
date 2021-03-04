@@ -1126,8 +1126,33 @@
                 }
             ]
         },
+        "sdkfz_223_command": {
+            "name": "Sdkfz 223 (Command)",
+            "description": "An armored command car with a supporting MG.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "subfactions": ["none", "armored_focus"],
+            "keywords": ["Vehicle", "Armored Car"],
+            "models": [
+                {
+                    "name": "Sdkfz 223 (Command)",
+                    "courage": 6,
+                    "movement": 12,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["mmg"],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "sdkfz_222": {
-            "name": "Sdkfz 222",
+            "name": "Sdkfz 222-223",
             "description": "An armored recon car with a powerful autocannon.",
             "min": 1,
             "max": 1,
@@ -1136,7 +1161,7 @@
             "keywords": ["Vehicle", "Armored Car"],
             "models": [
                 {
-                    "name": "Sdkfz 222",
+                    "name": "Sdkfz 223-223",
                     "courage": 5,
                     "movement": 12,
                     "shoot": 5,
