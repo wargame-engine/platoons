@@ -7,12 +7,12 @@
         "soviet_union": {"name": "Soviet Union", "id": "soviet_union", "url": "soviet_union.json", "color": "#C13E3E", "alliance": "allies", "version": "1.0"},
         "british": {"name": "British", "id": "british", "url": "british.json", "color": "#927331", "alliance": "allies", "version": "1.0"},
         "france": {"name": "France", "id": "france", "url": "france.json", "color": "#395A94", "alliance": "allies", "version": "1.0"},
-        "australia": {"name": "Australia", "id": "australia", "url": "australia.json", "color": "#008373", "alliance": "allies", "version": "0.1"}
+        "australia": {"name": "Australia", "id": "australia", "url": "australia.json", "color": "#008373", "alliance": "allies", "version": "0.1"},
+        "hungary": {"name": "Hungary", "id": "hungary", "url": "hungary.json", "color": "#006354", "alliance": "axis", "version": "0.1"}
     },
     "unfinished_factions": {
         "partisans": {"name": "Partisans", "id": "partisans", "url": "partisans.json", "color": "#014140"},
         "vichy_france": {"name": "Vichy France", "id": "vichy_france", "url": "vichy_france.json", "color": "#203850", "alliance": "axis"},
-        "hungary": {"name": "Hungary", "id": "hungary", "url": "hungary.json", "color": "#006354", "alliance": "axis"},
         "romania": {"name": "Romania", "id": "romania", "url": "romania.json", "color": "#4f2c26", "alliance": "axis"},
         "italy": {"name": "Italy", "id": "italy", "url": "italy.json", "color": "#BD9326", "alliance": "axis"},
         "greece": {"name": "Greece", "id": "greece", "url": "greece.json", "color": "#729263", "alliance": "allies"},
