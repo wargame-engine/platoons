@@ -1304,7 +1304,7 @@
             ]
         },
         "t34": {
-            "name": "T34/76",
+            "name": "T-34/76",
             "description": "A medium tank with an adequate gun.",
             "min": 1,
             "max": 1,
@@ -1313,7 +1313,7 @@
             "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
             "models": [
                 {
-                    "name": "T34/76",
+                    "name": "T-34/76",
                     "courage": 5,
                     "movement": 10,
                     "shoot": 5,
@@ -1329,7 +1329,7 @@
             ]
         },
         "t34_command": {
-            "name": "T34/76 (Command)",
+            "name": "T-34/76 (Command)",
             "description": "A medium tank with an adequate gun.",
             "min": 1,
             "max": 1,
@@ -1338,7 +1338,7 @@
             "subfactions": ["armored_focus"],
             "models": [
                 {
-                    "name": "T34/76 (Command)",
+                    "name": "T-34/76 (Command)",
                     "courage": 6,
                     "movement": 10,
                     "shoot": 6,
@@ -1354,7 +1354,7 @@
             ]
         },
         "t34_85": {
-            "name": "T34/85",
+            "name": "T-34/85",
             "description": "A medium tank with a powerful main gun.",
             "min": 1,
             "max": 1,
@@ -1363,7 +1363,7 @@
             "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
             "models": [
                 {
-                    "name": "T34/85",
+                    "name": "T-34/85",
                     "courage": 5,
                     "movement": 10,
                     "shoot": 5,
