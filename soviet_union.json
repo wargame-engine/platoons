@@ -8,7 +8,7 @@
     },
     "units": {
         "inexperienced_field_officer": {
-            "name": "Inexperienced Field Offier Team",
+            "name": "Inexperienced Field Officer Team",
             "description": "A Field Commander.",
             "min": 1,
             "max": 1,
@@ -18,7 +18,7 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
                 {
-                    "name": "Field Offier",
+                    "name": "Field Officer",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 4,
@@ -36,7 +36,7 @@
             ]
         },
         "field_officer": {
-            "name": "Field Offier Team",
+            "name": "Field Officer Team",
             "description": "A Field Commander.",
             "min": 1,
             "max": 1,
@@ -46,7 +46,7 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
                 {
-                    "name": "Field Offier",
+                    "name": "Field Officer",
                     "courage": 7,
                     "movement": 6,
                     "shoot": 5,
@@ -151,7 +151,7 @@
             "category": "infantry",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers"]}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}],
             "models": [
                 {
                     "name": "Engineer NCO",

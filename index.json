@@ -177,6 +177,13 @@
             ]
         },
         "at_rifle": {"name": "AT Rifle", "short": 18, "medium": 36, "ap": 3, "attacks": 1, "rules": [{"id": "team", "x": 2}]},
+        "at_rifle_mg": {
+            "name": "AT Rifle/Co-ax MG",
+            "profiles": [
+                {"name": "AT Rifle", "short": 18, "medium": 36, "ap": 3, "attacks": 1},
+                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
+            ]
+        },
         "light_autocannon": {
             "name": "Light Autocannon",
             "profiles": [{"name": "AT", "short": 24, "medium": 48, "ap": 3, "attacks": 2}, {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id": "blast", "x": 2}]}]
@@ -299,6 +306,13 @@
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
+        "medium_howitzer_vehicle_medium_at": {
+            "name": "Medium Howitzer (Vehicle)/Medium AT",
+            "profiles": [
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]},
+                {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6}
+            ]
+        },
         "medium_howitzer_vehicle_stabilized": {
             "name": "Medium Howitzer (Vehicle, Stabilized)",
             "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", "assault", {"id": "blast", "x": 7}]}]
@@ -355,7 +369,10 @@
         },
         "medium_at": {
             "name": "Medium AT",
-            "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 5}]}, {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6}]
+            "profiles": [
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 5}]},
+                {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6}
+            ]
         },
         "medium_at_stabilized": {
             "name": "Medium AT (Stabilized)",
@@ -537,6 +554,11 @@
         "mine_sweepers": {
             "name": "Mine Sweepers",
             "description": "This model and its unit gain +3 to all Clear actions when attempting to clear mine fields.",
+            "points": 5
+        },
+        "repair_toolkit": {
+            "name": "Repair Toolkit",
+            "description": "This model and its unit may spend one action to repair one vehicle within 3\" that has suffered critical damage.",
             "points": 5
         }
     },

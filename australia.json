@@ -8,7 +8,7 @@
     },
     "units": {
         "field_officer": {
-            "name": "Field Offier Team",
+            "name": "Field Officer Team",
             "description": "A Field Commander.",
             "min": 1,
             "max": 1,
@@ -18,7 +18,7 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
-                    "name": "Field Offier",
+                    "name": "Field Officer",
                     "courage": 7,
                     "movement": 6,
                     "shoot": 5,
@@ -36,7 +36,7 @@
             ]
         },
         "field_officer_veteran": {
-            "name": "Veteran Field Offier Team",
+            "name": "Veteran Field Officer Team",
             "description": "A Field Commander.",
             "min": 1,
             "max": 1,
@@ -46,7 +46,7 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
-                    "name": "Field Offier (Veteran)",
+                    "name": "Field Officer (Veteran)",
                     "courage": 7,
                     "movement": 6,
                     "shoot": 6,
@@ -404,7 +404,7 @@
             "category": "infantry",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers"]}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}],
             "models": [
                 {
                     "name": "Engineer NCO",

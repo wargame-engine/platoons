@@ -3,7 +3,7 @@
     "name": "China",
     "units": {
         "field_officer": {
-            "name": "Field Offier",
+            "name": "Field Officer",
             "description": "A Field Commander.",
             "min": 1,
             "max": 1,
@@ -15,7 +15,7 @@
             ],
             "models": [
                 {
-                    "name": "Field Offier",
+                    "name": "Field Officer",
                     "courage": 7,
                     "movement": 6,
                     "shoot": 6,
