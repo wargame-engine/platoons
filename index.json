@@ -8,6 +8,7 @@
         "british": {"name": "British", "id": "british", "url": "british.json", "color": "#927331", "alliance": "allies", "version": "1.0"},
         "france": {"name": "France", "id": "france", "url": "france.json", "color": "#395A94", "alliance": "allies", "version": "1.0"},
         "australia": {"name": "Australia", "id": "australia", "url": "australia.json", "color": "#008373", "alliance": "allies", "version": "0.1"},
+        "canada": {"name": "Canada", "id": "canada", "url": "canada.json", "color": "#47576F", "alliance": "allies"},
         "hungary": {"name": "Hungary", "id": "hungary", "url": "hungary.json", "color": "#006354", "alliance": "axis", "version": "0.1"}
     },
     "unfinished_factions": {
@@ -17,7 +18,6 @@
         "italy": {"name": "Italy", "id": "italy", "url": "italy.json", "color": "#BD9326", "alliance": "axis"},
         "greece": {"name": "Greece", "id": "greece", "url": "greece.json", "color": "#729263", "alliance": "allies"},
         "brazil": {"name": "Brazil", "id": "brazil", "url": "brazil.json", "color": "#008A4D", "alliance": "allies"},
-        "canada": {"name": "Canada", "id": "canada", "url": "canada.json", "color": "#47576F", "alliance": "allies"},
         "belgium": {"name": "Belgium", "id": "france", "url": "belgium.json", "color": "#968164", "alliance": "allies"},
         "poland": {"name": "Poland", "id": "poland", "url": "poland.json", "color": "#D83658", "alliance": "allies"},
         "china_nationalist": {"name": "China (Nationalist)", "id": "china_nationalist", "url": "china_nationalist.json", "color": "#0e3391"},
