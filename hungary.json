@@ -1351,7 +1351,7 @@
             "name": "Tough Fighters (Airborne)",
             "flavor": "Some of the toughest units to fight in a close combat brawl are trained Airborne units.",
             "description": "Use before an Infantry unit uses a fight action. Its attacks gain AP1.",
-            "cost": 2
+            "cost": 1
         },
         "stealth_tactics": {
             "phase": "activation",

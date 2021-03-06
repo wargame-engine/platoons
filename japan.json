@@ -1285,7 +1285,7 @@
             "name": "Tough Fighters",
             "flavor": "Some of the toughest units to fight in a close combat.",
             "description": "Use before an Infantry unit uses a fight action. Its attacks gain +1 Strength.",
-            "cost": 2
+            "cost": 1
         },
         "recrew": {
             "phase": "activation",
