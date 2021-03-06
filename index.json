@@ -8,7 +8,7 @@
         "british": {"name": "British", "id": "british", "url": "british.json", "color": "#927331", "alliance": "allies", "version": "1.0"},
         "france": {"name": "France", "id": "france", "url": "france.json", "color": "#395A94", "alliance": "allies", "version": "1.0"},
         "australia": {"name": "Australia", "id": "australia", "url": "australia.json", "color": "#008373", "alliance": "allies", "version": "0.1"},
-        "canada": {"name": "Canada", "id": "canada", "url": "canada.json", "color": "#47576F", "alliance": "allies"},
+        "canada": {"name": "Canada", "id": "canada", "url": "canada.json", "color": "#47576F", "alliance": "allies", "version": "0.1"},
         "hungary": {"name": "Hungary", "id": "hungary", "url": "hungary.json", "color": "#006354", "alliance": "axis", "version": "0.1"}
     },
     "unfinished_factions": {
