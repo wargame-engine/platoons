@@ -1250,6 +1250,60 @@
                     "max": 1
                 }
             ]
+        },
+        "captured_m3_stuart": {
+            "name": "Captured M3 Stuart",
+            "description": "A medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "rules": ["catches_fire"],
+            "models": [
+                {
+                    "name": "Captured M3 Stuart",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle", {"id": "limited", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "captured_m4_sherman": {
+            "name": "Captured M4 Sherman",
+            "description": "A medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Captured M4 Sherman",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [
+                        {"addWeapon": ["mmg_aa", "hmg_aa"]}
+                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "catches_fire", {"id": "limited", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
