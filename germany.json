@@ -122,7 +122,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 19
                 }
@@ -162,7 +162,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 9
                 }
@@ -202,7 +202,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 4
                 }
@@ -242,7 +242,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 8
                 }
@@ -285,7 +285,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 8
                 }
@@ -325,7 +325,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
                     "min": 4,
                     "max": 8
                 }
@@ -374,7 +374,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
                     "min": 4,
                     "max": 8
                 }
@@ -420,7 +420,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
                     "min": 4,
                     "max": 9
                 }
@@ -466,7 +466,50 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "brandenburgers": {
+            "name": "Brandenburgers",
+            "description": "A group of elite german special forces.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "infantry_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg", "assault_rifle"]},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2}
+            ],
+            "models": [
+                {
+                    "name": "Brandenburger NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Brandenburger",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 9
                 }
@@ -506,7 +549,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
                     "min": 4,
                     "max": 10
                 }
@@ -587,7 +630,7 @@
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "at_grenades"],
                     "options": [
-                        {"replaceWeapon": "rifle", "withWeapon": "belt_lmg", "modelLimit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": {"id": "belt_lmg", "name": "MG-34/MG-42"}, "modelLimit": 1},
                         {"addWeapon": "panzerfaust", "modelLimit": 2},
                         {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
                         {"addRule": "scout", "modelLimit": "all"}
