@@ -2,9 +2,9 @@
     "id": "australia",
     "name": "Australia",
     "subfactions": {
-        "infantry_focus": {"name": "Infantry Focus", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
-        "airborne_focus": {"name": "Airborne Focus", "id": "airborne_focus", "background": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
-        "armored_focus": {"name": "Armored Focus", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+        "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
+        "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "background": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
+        "armored_focus": {"name": "Armored", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
     },
     "units": {
         "field_officer": {
@@ -358,7 +358,7 @@
         },
         "commando_section": {
             "name": "Commando Section",
-            "description": "The Australian Independent Commando Brigades played a pivotal role in almost every Australian campaign in the Pacific theater. Focussing on irregular and guerilla warfare, they brought the war deep behind enemy lines.",
+            "description": "The Australian Independent Commando Brigades played a pivotal role in almost every Australian campaign in the Pacific theater.sing on irregular and guerilla warfare, they brought the war deep behind enemy lines.",
             "min": 1,
             "max": 1,
             "subfactions": ["none", "infantry_focus"],

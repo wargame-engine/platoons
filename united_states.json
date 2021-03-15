@@ -2,9 +2,9 @@
     "id": "united_states",
     "name": "United States",
     "subfactions": {
-        "infantry_focus": {"name": "Infantry Focus", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
-        "airborne_focus": {"name": "Airborne Focus", "id": "airborne_focus", "background": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
-        "armored_focus": {"name": "Armored Focus", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+        "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
+        "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "background": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
+        "armored_focus": {"name": "Armored", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
     },
     "units": {
         "field_officer": {

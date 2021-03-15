@@ -2,8 +2,8 @@
     "id": "japan",
     "name": "Japan",
     "subfactions": {
-        "infantry_focus": {"name": "Infantry Focus", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
-        "armored_focus": {"name": "Armored Focus", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+        "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
+        "armored_focus": {"name": "Armored", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
     },
     "units": {
         "field_officer": {

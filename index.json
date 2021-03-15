@@ -66,7 +66,7 @@
         "support_platoon": {
             "name": "Support Platoon (Core)",
             "cost": 3,
-            "description": "A platoon focused on support units and heavy guns.",
+            "description": "A platooned on support units and heavy guns.",
             "categories": {
                 "command": {"min": 1, "max": 2},
                 "infantry": {"min": 2, "max": 3},
