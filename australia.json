@@ -10,8 +10,6 @@
         "field_officer": {
             "name": "Field Officer Team",
             "description": "A Field Commander.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "keywords": ["Infantry", "Officer"],
             "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
@@ -38,8 +36,6 @@
         "field_officer_veteran": {
             "name": "Veteran Field Officer Team",
             "description": "A Field Commander.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "keywords": ["Infantry", "Officer"],
             "subfactions": ["infantry_focus", "airborne_focus"],
@@ -66,8 +62,6 @@
         "forward_artillery_observer": {
             "name": "Forward Observer (Artillery)",
             "description": "An artillery forward observer able to call in a fire mission.",
-            "min": 1,
-            "max": 1,
             "category": "support",
             "keywords": ["Infantry", "Observer"],
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
@@ -93,8 +87,6 @@
         "field_medic": {
             "name": "Field Medic",
             "description": "A field medic.",
-            "min": 1,
-            "max": 1,
             "category": "support",
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
@@ -119,8 +111,6 @@
         "riflemen": {
             "name": "Infantry Section",
             "description": "A group of Australian infantry.",
-            "min": 1,
-            "max": 1,
             "subfactions": ["none", "infantry_focus", "armored_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
@@ -159,8 +149,6 @@
         "veteran_riflemen": {
             "name": "Veteran Infantry Section",
             "description": "An experienced group of Australian veterans.",
-            "min": 1,
-            "max": 1,
             "subfactions": ["infantry_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
@@ -199,8 +187,6 @@
         "motor_riflemen": {
             "name": "Motor Infantry Section",
             "description": "A group of motorized Australian infantry.",
-            "min": 1,
-            "max": 1,
             "subfactions": ["none", "armored_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
@@ -1375,7 +1361,7 @@
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
-        "piat": {"name": "Piat", "short": 6, "medium": 12, "ap": 6, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}, "indirect"]},
+        "piat": {"name": "Piat", "short": 6, "medium": 12, "ap": 6, "attacks": 1,  "rules": [{"id": "team", "x": 2}, "indirect"]},
         "qf_aa": {
             "name": "3.7\" QF AA Gun",
             "profiles": [

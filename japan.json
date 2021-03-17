@@ -1396,7 +1396,7 @@
         }
     },
     "weapons": {
-        "type_4": {"name": "Type 4", "short": 12, "medium": 24, "ap": 6, "attacks": 1, "damage": 6, "rules": [{"id": "team", "x": 2}]},
+        "type_4": {"name": "Type 4", "short": 12, "medium": 24, "ap": 6, "attacks": 1,  "rules": [{"id": "team", "x": 2}]},
         "qf_aa": {
             "name": "3.7\" QF AA Gun",
             "profiles": [
