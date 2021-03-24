@@ -1552,15 +1552,15 @@
             "name": "Scouting Team",
             "flavor": "US Infantry units would often form small scouting teams to scout out the route ahead.",
             "description": "Use instead of your activation. Choose 3 models from an Infantry unit to become a new scouting team unit. That unit immediately activates and is treated as a separate unit for the remainder of the game. This strategy may only be used once per Infantry unit.",
-            "cost": 1
+            "cost": 2
         },
         "look_alive": {
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Look Alive",
             "flavor": "Situational awareness can be key in combat.",
-            "description": "Use when an Infantry unit attemps a reaction test. That unit is treated as having an Initiative of 9.",
-            "cost": 2
+            "description": "Use when an Infantry unit attemps a reaction test. That unit gets Initiative +2 for that reaction.",
+            "cost": 1
         },
         "recrew": {
             "phase": "activation",
@@ -1623,7 +1623,7 @@
             "subfactions": ["airborne_focus"],
             "name": "Tough Fighters (Airborne)",
             "flavor": "Some of the toughest units to fight in a close combat brawl are trained Airborne units.",
-            "description": "Use before an Infantry unit uses a fight action. Its attacks gain AP1.",
+            "description": "Use before an Infantry unit uses a fight action. Its attacks gain AP 1.",
             "cost": 1
         },
         "stealth_tactics": {
