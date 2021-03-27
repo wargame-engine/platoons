@@ -78,6 +78,7 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
+                    "rules": ["support"],
                     "weapons": ["rifle", "unarmed", "smoke_battery"],
                     "options": [{"replaceWeapon": "smoke_battery", "withWeapon": ["light_mortar_battery", "medium_mortar_battery", "heavy_mortar_battery"]}],
                     "min": 1,
@@ -104,7 +105,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "weapons": ["pistol", "unarmed", "smoke_grenades"],
-                    "rules": ["medic"],
+                    "rules": ["medic", "support"],
                     "min": 1,
                     "max": 1
                 },

@@ -54,6 +54,7 @@
                     "defense": 6,
                     "reflexes": 5,
                     "wounds": 1,
+                    "rules": ["support"],
                     "weapons": ["rifle", "unarmed", "smoke_battery"],
                     "options": [{"replaceWeapon": "smoke_battery", "withWeapon": ["light_mortar_battery", "medium_mortar_battery", "heavy_mortar_battery", "nebelwerfer_battery"]}],
                     "min": 1,
@@ -81,7 +82,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["pistol", "unarmed", "smoke_grenades"],
-                    "rules": ["medic"],
+                    "rules": ["medic", "support"],
                     "min": 1,
                     "max": 1
                 },
@@ -380,6 +381,55 @@
                 }
             ]
         },
+        "veteran_fallschirmjager": {
+            "name": "Veteran Fallschirmjager",
+            "description": "A group of tough airborne troops.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "subfactions": ["airborne_focus"],
+            "rules": ["stubborn"],
+            "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 5},
+                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle", "assault_rifle"]},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
+            ],
+            "models": [
+                {
+                    "name": "Veteran Fallschirmjager NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Fallschirmjager",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
+                    "min": 4,
+                    "max": 8
+                }
+            ]
+        },
         "panzergrenadiers": {
             "name": "Panzergrenadiers",
             "description": "A group of mobile Panzergrenadiers.",
@@ -664,6 +714,32 @@
                     "max": 1
                 },
                 {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "veteran_panzershreck_team": {
+            "name": "Veteran Panzerschreck Team",
+            "description": "A team dedicated to hunting heavy tanks.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["infantry_focus", "airborne_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "models": [
+                {
+                    "name": "Veteran Panzerschreck Gunner",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["panzerschreck", "unarmed"],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Veteran Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "mmg_team": {

@@ -109,7 +109,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["pistol", "unarmed", "smoke_grenades"],
-                    "rules": ["medic"],
+                    "rules": ["medic", "support"],
                     "min": 1,
                     "max": 1
                 },

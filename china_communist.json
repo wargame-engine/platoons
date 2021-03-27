@@ -80,6 +80,7 @@
                     "defense": 6,
                     "reflexes": 5,
                     "wounds": 1,
+                    "rules": ["support"],
                     "weapons": ["rifle", "unarmed", "smoke_battery"],
                     "options": [{"replaceWeapon": "smoke_battery", "withWeapon": ["light_mortar_battery", "medium_mortar_battery", "heavy_mortar_battery"]}],
                     "min": 1,
