@@ -230,21 +230,21 @@
         "light_mortar_battery": {
             "name": "Light Mortar (Off-table Battery)",
             "profiles": [
-                {"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
+                {"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 3}]},
                 {"name": "Smoke", "short": 18, "medium": 36, "attacks": 3, "rules": ["indirect", "smoke"]}
             ]
         },
         "medium_mortar_battery": {
             "name": "Medium Mortar (Off-table Battery)",
             "profiles": [
-                {"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 4}]},
+                {"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 4}]},
                 {"name": "Smoke", "short": 18, "medium": 36, "attacks": 3, "rules": ["indirect", "smoke"]}
             ]
         },
         "heavy_mortar_battery": {
             "name": "Heavy Mortar (Off-table Battery)",
             "profiles": [
-                {"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 5}]},
+                {"name": "HE", "short": 18, "medium": 36, "attacks": 2, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 5}]},
                 {"name": "Smoke", "short": 18, "medium": 36, "attacks": 3, "rules": ["indirect", "smoke"]}
             ]
         },
@@ -258,21 +258,21 @@
         "light_mortar": {
             "name": "Light Mortar",
             "profiles": [
-                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
+                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 3}]},
                 {"name": "Smoke", "short": 24, "medium": 48, "attacks": 1, "rules": ["smoke"]}
             ]
         },
         "medium_mortar": {
             "name": "Medium Mortar",
             "profiles": [
-                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 4}]},
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 4}]},
                 {"name": "Smoke", "short": 30, "medium": 60, "attacks": 1, "rules": ["smoke"]}
             ]
         },
         "heavy_mortar": {
             "name": "Heavy Mortar",
             "profiles": [
-                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 5}]},
+                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 5}]},
                 {"name": "Smoke", "short": 36, "medium": 72, "attacks": 1, "rules": ["smoke"]}
             ]
         },
@@ -330,24 +330,24 @@
         "rocket_mortar": {"name": "Rocket Mortar", "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 5, "rules": ["indirect", {"id": "blast", "x": 7}]}]},
         "very_light_at": {
             "name": "Very Light AT",
-            "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 2}]}, {"name": "AT", "short": 18, "medium": 36, "attacks": 1, "ap": 4}]
+            "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "short": 18, "medium": 36, "attacks": 1, "ap": 4}]
         },
         "very_light_at_mg": {
             "name": "Very Light AT/Co-ax MG",
             "profiles": [
-                {"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 2}]},
+                {"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
                 {"name": "AT", "short": 18, "medium": 36, "attacks": 1, "ap": 4},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
         "light_at": {
             "name": "Light AT",
-            "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 5}]
+            "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 4}]}, {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 5}]
         },
         "light_at_lmg": {
             "name": "Light AT/Co-ax LMG",
             "profiles": [
-                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 4}]},
                 {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 5},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 3}
             ]
@@ -355,7 +355,7 @@
         "light_at_mg": {
             "name": "Light AT/Co-ax MG",
             "profiles": [
-                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 4}]},
                 {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 5},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
@@ -363,7 +363,7 @@
         "light_at_stabilized_mg": {
             "name": "Light AT(Stabilized)/Co-ax MG",
             "profiles": [
-                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 1, "rules": ["assault", {"id": "blast", "x": 3}]},
+                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["assault", {"id": "blast", "x": 4}]},
                 {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 5, "rules": ["assault"]},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
@@ -371,21 +371,21 @@
         "medium_at": {
             "name": "Medium AT",
             "profiles": [
-                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 4}]},
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 5}]},
                 {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6}
             ]
         },
         "medium_at_stabilized": {
             "name": "Medium AT (Stabilized)",
             "profiles": [
-                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": ["assault", {"id": "blast", "x": 4}]},
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["assault", {"id": "blast", "x": 5}]},
                 {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6, "rules": ["assault"]}
             ]
         },
         "medium_at_mg": {
             "name": "Medium AT/Co-ax MG",
             "profiles": [
-                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 5}]},
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 5}]},
                 {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
@@ -393,7 +393,7 @@
         "medium_at_stabilized_mg": {
             "name": "Medium AT(Stabilized)/Co-ax MG",
             "profiles": [
-                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": ["assault", {"id": "blast", "x": 4}]},
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["assault", {"id": "blast", "x": 5}]},
                 {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6, "rules": ["assault"]},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
@@ -401,19 +401,19 @@
         "medium_at_light_howitzer": {
             "name": "Medium AT/Light Howitzer",
             "profiles": [
-                {"name": "Indirect", "short": 30, "medium": 60, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 5}, "indirect"]},
-                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 4}]},
+                {"name": "Indirect", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 5}, "indirect"]},
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 5}]},
                 {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6}
             ]
         },
         "heavy_at": {
             "name": "Heavy AT",
-            "profiles": [{"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 5}]}, {"name": "AT", "short": 36, "medium": 72, "attacks": 1, "ap": 7}]
+            "profiles": [{"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": [{"id": "blast", "x": 6}]}, {"name": "AT", "short": 36, "medium": 72, "attacks": 1, "ap": 7}]
         },
         "heavy_at_mg": {
             "name": "Heavy AT/Co-ax MG",
             "profiles": [
-                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 5}]},
+                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": [{"id": "blast", "x": 6}]},
                 {"name": "AT", "short": 36, "medium": 72, "attacks": 1, "ap": 7},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
@@ -421,19 +421,19 @@
         "heavy_at_stabilized_mg": {
             "name": "Heavy AT(Stabilized)/Co-ax MG",
             "profiles": [
-                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 3, "rules": ["assault", {"id": "blast", "x": 5}]},
+                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["assault", {"id": "blast", "x": 6}]},
                 {"name": "AT", "short": 36, "medium": 72, "attacks": 1, "ap": 7, "rules": ["assault"]},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
         "very_heavy_at": {
             "name": "Very Heavy AT",
-            "profiles": [{"name": "HE", "short": 42, "medium": 84, "attacks": 1, "ap": 4, "rules": [{"id": "blast", "x": 6}]}, {"name": "AT", "short": 42, "medium": 84, "attacks": 1, "ap": 8}]
+            "profiles": [{"name": "HE", "short": 42, "medium": 84, "attacks": 1, "ap": 5, "rules": [{"id": "blast", "x": 7}]}, {"name": "AT", "short": 42, "medium": 84, "attacks": 1, "ap": 8}]
         },
         "very_heavy_at_mg": {
             "name": "Very Heavy AT/Co-ax MG",
             "profiles": [
-                {"name": "HE", "short": 42, "medium": 84, "attacks": 1, "ap": 4, "rules": [{"id": "blast", "x": 6}]},
+                {"name": "HE", "short": 42, "medium": 84, "attacks": 1, "ap": 5, "rules": [{"id": "blast", "x": 7}]},
                 {"name": "AT", "short": 42, "medium": 84, "attacks": 1, "ap": 8},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
@@ -441,19 +441,19 @@
         "very_heavy_at_stabilized_mg": {
             "name": "Very Heavy AT(Stabilized)/Co-ax MG",
             "profiles": [
-                {"name": "HE", "short": 42, "medium": 84, "attacks": 1, "ap": 4, "rules": ["assault", {"id": "blast", "x": 6}]},
+                {"name": "HE", "short": 42, "medium": 84, "attacks": 1, "ap": 5, "rules": ["assault", {"id": "blast", "x": 7}]},
                 {"name": "AT", "short": 42, "medium": 84, "attacks": 1, "ap": 8},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
         "super_heavy_at": {
             "name": "Super Heavy AT",
-            "profiles": [{"name": "HE", "short": 48, "medium": 96, "attacks": 1, "ap": 5, "rules": [{"id": "blast", "x": 7}]}, {"name": "AT", "short": 42, "medium": 96, "attacks": 1, "ap": 9}]
+            "profiles": [{"name": "HE", "short": 48, "medium": 96, "attacks": 1, "ap": 6, "rules": [{"id": "blast", "x": 8}]}, {"name": "AT", "short": 42, "medium": 96, "attacks": 1, "ap": 9}]
         },
         "super_heavy_at_mg": {
             "name": "Super Heavy AT/Co-ax MG",
             "profiles": [
-                {"name": "HE", "short": 48, "medium": 96, "attacks": 1, "ap": 5, "rules": [{"id": "blast", "x": 7}]},
+                {"name": "HE", "short": 48, "medium": 96, "attacks": 1, "ap": 6, "rules": [{"id": "blast", "x": 8}]},
                 {"name": "AT", "short": 48, "medium": 96, "attacks": 1, "ap": 9},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
@@ -461,14 +461,15 @@
         "light_bomb": {"name": "Light Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 2, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 4}]}]},
         "medium_bomb": {"name": "Medium Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 3, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 5}]}]},
         "heavy_bomb": {"name": "Heavy Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 4, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 6}]}]},
-        "panzerfaust": {"name": "Panzerfaust", "attacks": 1, "short": 6, "medium": 12, "ap": 7,  "rules": [{"id": "ammo", "x": 1}]},
-        "panzerschreck": {"name": "Panzerschreck", "short": 12, "medium": 24, "ap": 7, "attacks": 1,  "rules": [{"id": "team", "x": 2}]},
-        "bazooka": {"name": "Bazooka", "short": 12, "medium": 24, "ap": 6, "attacks": 1,  "rules": [{"id": "team", "x": 2}]},
+        "panzerfaust": {"name": "Panzerfaust", "attacks": 1, "short": 6, "medium": 12, "ap": 7,  "rules": ["heat", {"id": "ammo", "x": 1}]},
+        "panzerschreck": {"name": "Panzerschreck", "short": 12, "medium": 24, "ap": 7, "attacks": 1,  "rules": ["heat", {"id": "team", "x": 2}]},
+        "bazooka": {"name": "Bazooka", "short": 12, "medium": 24, "ap": 6, "attacks": 1,  "rules": ["heat", {"id": "team", "x": 2}]},
         "lunge_mine": {"name": "Lunge Mine", "attacks": 1, "short": "Melee", "ap": 8,  "rules": [{"id": "ammo", "x": 1}]},
         "sword": {"name": "Sword", "attacks": 1, "short": "Melee", "ap": 1},
         "officer_sword": {"name": "Officer's Sword", "attacks": 2, "short": "Melee", "ap": 1}
     },
     "rules": {
+        "heat": {"name": "HEAT", "description": "Enemy units add 1 to rolls on any Damage Table(X) rules when hit by this weapon at Short range.", "points": ["weapon.attacks", {"multiply": 2.5}]},
         "terrain": {
             "name": "Terrain",
             "description": "This unit may be placed anywhere on the field during deployment, more than 24\" from any enemies units or deployment zones. Once placed, this unit is treated as terrain and may not be controlled or activated by the owning player."
@@ -518,13 +519,13 @@
         "field_orders": {
             "name": "Field Orders",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose X friendly Infantry units within 6\" to receive one of the following bonuses: \n* Re-roll Accuracy rolls of 8+ \n* Re-roll Strength rolls of 8+ \n* +3\" Movement \n\nA unit may only benefit from one Field Order.",
+            "description": "When this unit is activated, choose X friendly Infantry units within 6\" to receive one of the following bonuses: \n* Re-roll Accuracy rolls of 9+ \n* Re-roll Strength rolls of 9+ \n* +3\" Movement \n\nA unit may only benefit from one Field Order.",
             "points": [15, {"multiply": "rule.x"}]
         },
         "field_orders_armored": {
             "name": "Field Orders (Armored)",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose X friendly Tank or Armored Car units within 6\" to receive one of the following bonuses: \n* Re-roll Accuracy rolls of 8+ \n* +3\" Movement. \n\nA unit may only benefit from one Field Order.",
+            "description": "When this unit is activated, choose X friendly Tank or Armored Car units within 6\" to receive one of the following bonuses: \n* Re-roll Accuracy rolls of 9+ \n* +3\" Movement. \n\nA unit may only benefit from one Field Order.",
             "points": [20, {"multiply": "rule.x"}]
         },
         "anti_infantry_mines": {
