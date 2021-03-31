@@ -2810,28 +2810,32 @@
             "name": "Hans von Luck (Infantry)",
             "rule": "move_move_move_infantry",
             "flavor": "Hans von Luck specialized in mobile recon and aggressive tactics.",
-            "description": "Upgrade one Field Officer model with Move Move Move."
+            "description": "Upgrade one Field Officer model with Move Move Move.",
+            "points": 10
         },
         "ernst_barkmann": {
             "subfactions": ["none", "armored_focus"],
             "name": "Ernst Barkmann",
             "rule": "crack_shot",
             "flavor": "Ernst Barkmann was an ace tank commander who served throughout the war.",
-            "description": "Upgrade one Panther (Command) with Crack Shot."
+            "description": "Upgrade one Panther (Command) with Crack Shot.",
+            "points": 30
         },
         "erwin_rommel": {
             "subfactions": ["none", "armored_focus"],
             "name": "Erwin Rommel",
             "rule": "desert_fox",
             "flavor": "Erwin Rommel, was known to expertly outflank and surprise his enemies.",
-            "description": "Upgrade one Tank (Command) with Desert Fox."
+            "description": "Upgrade one Tank (Command) with Desert Fox.",
+            "points": 20
         },
         "michael_wittman": {
             "subfactions": ["none", "armored_focus"],
             "name": "Michael Wittmann",
             "rule": "ambush_master",
             "flavor": "Michael Wittman as an expert in Ambush and surprise often attacking his enemies when they least expect it.",
-            "description": "Upgrade one Tiger (Command) or Panzer IV (Command) with Ambush Master."
+            "description": "Upgrade one Tiger (Command) or Panzer IV (Command) with Ambush Master.",
+            "points": 20
         }
     }
 }

@@ -37,12 +37,13 @@
     },
     "alliances": {"axis": {"name": "Axis Powers"}, "allies": {"name": "Allied Powers"}},
     "relics": {
-        "tank_ace": {"name": "Tank Ace (Core)", "rule": "tank_ace", "flavor": "A tank ace is a fearsome foe to encounter on the battlefield.", "description": "Upgrade one Tank unit with Tank Ace."},
+        "tank_ace": {"name": "Tank Ace (Core)", "rule": "tank_ace", "flavor": "A tank ace is a fearsome foe to encounter on the battlefield.", "description": "Upgrade one Tank unit with Tank Ace.", "points": 20},
         "inspiring_leader": {
             "name": "Inspiring Leader (Core)",
             "rule": "inspiring_leader",
             "flavor": "A leader who can motivate his/her men to keep fighting is a key asset.",
-            "description": "Upgrade one Field Officer model with Inspiring Leader."
+            "description": "Upgrade one Field Officer model with Inspiring Leader.",
+            "points": 10
         }
     },
     "powers": {},
@@ -60,7 +61,7 @@
                 "heavy_vehicles": {"max": 1},
                 "transport": {"max": 2},
                 "aircraft": {"max": 2},
-                "fortifications": {"max": 8}
+                "fortifications": {"max": 4}
             }
         },
         "support_platoon": {
@@ -76,7 +77,7 @@
                 "heavy_vehicles": {"max": 0},
                 "transport": {"max": 3},
                 "aircraft": {"max": 2},
-                "fortifications": {"max": 10}
+                "fortifications": {"max": 6}
             }
         },
         "mechanized_platoon": {
@@ -92,7 +93,7 @@
                 "heavy_vehicles": {"max": 1},
                 "transport": {"min": 2, "max": 5},
                 "aircraft": {"max": 2},
-                "fortifications": {"max": 5}
+                "fortifications": {"max": 2}
             }
         },
         "armored_platoon": {
@@ -108,7 +109,7 @@
                 "heavy_vehicles": {"max": 3},
                 "transport": {"max": 3},
                 "aircraft": {"max": 2},
-                "fortifications": {"max": 5}
+                "fortifications": {"max": 2}
             }
         }
     },
@@ -258,27 +259,27 @@
         "light_mortar": {
             "name": "Light Mortar",
             "profiles": [
-                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 3}]},
+                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 4}]},
                 {"name": "Smoke", "short": 24, "medium": 48, "attacks": 1, "rules": ["smoke"]}
             ]
         },
         "medium_mortar": {
             "name": "Medium Mortar",
             "profiles": [
-                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 4}]},
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 5}]},
                 {"name": "Smoke", "short": 30, "medium": 60, "attacks": 1, "rules": ["smoke"]}
             ]
         },
         "heavy_mortar": {
             "name": "Heavy Mortar",
             "profiles": [
-                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 5}]},
+                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 6}]},
                 {"name": "Smoke", "short": 36, "medium": 72, "attacks": 1, "rules": ["smoke"]}
             ]
         },
         "very_light_howitzer": {"name": "Very Light Howitzer", "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]}]},
         "light_rockets": {"name": "Light Rockets", "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", "salvo", {"id": "blast", "x": 3}]}]},
-        "heavy_rockets": {"name": "Heavy Rockets", "profiles": [{"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["indirect", "salvo", {"id": "blast", "x": 5}]}]},
+        "heavy_rockets": {"name": "Heavy Rockets", "profiles": [{"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["indirect", "salvo", {"id": "blast", "x": 4}]}]},
         "light_howitzer_vehicle": {"name": "Light Howitzer (Vehicle)", "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 4}]}]},
         "light_howitzer_vehicle_mg": {
             "name": "Light Howitzer (Vehicle)/Co-ax MG",
@@ -470,18 +471,7 @@
     },
     "rules": {
         "heat": {"name": "HEAT", "description": "Enemy units add 1 to rolls on any Damage Table(X) rules when hit by this weapon at Short range.", "points": ["weapon.attacks", {"multiply": 2.5}]},
-        "terrain": {
-            "name": "Terrain",
-            "description": "This unit may be placed anywhere on the field during deployment, more than 24\" from any enemies units or deployment zones. Once placed, this unit is treated as terrain and may not be controlled or activated by the owning player."
-        },
-        "impassable": {"name": "Impassable", "inputs": ["x"], "description": "This model may not be crossed by X unit types.", "points": 10},
-        "clearable": {"name": "Clearable(5)", "description": "Infantry units within 3\" of this model may take a Clear action to attempt to clear this obstacle. Roll a D10 and on a roll of 5 or less this obstacle is cleared."},
-        "garrison": {"name": "Garrison", "description": "Up to X models or a gun with X or less Crew may occupy this model in the same way models occupy a building.", "inputs": ["x"]},
-        "soft_cover_x": {"name": "Soft-Cover", "inputs": ["x"], "description": "This model provides soft cover to X models in it.", "points": ["rule.x", {"multiply": 2}]},
-        "soft_cover": {"name": "Soft-Cover", "description": "This model provides soft cover to models behind it.", "points": 10},
-        "hard_cover_x": {"name": "Hard-Cover", "inputs": ["x"], "description": "This model provides soft cover to X models in it.", "points": ["rule.x", {"multiply": 4}]},
-        "hard_cover": {"name": "Hard-Cover", "description": "This model provides hard cover to models behind it.", "points": 20},
-        "tank_ace": {"name": "Tank Ace", "description": "This unit gets +1 Accuracy.", "points": 25},
+        "tank_ace": {"name": "Tank Ace", "description": "This unit gets +1 Accuracy.", "points": 20},
         "inspiring_leader": {"name": "Inspiring Leader", "description": "This unit and friendly Infantry units within 6\" get +1 Courage.", "points": 10},
         "airdrop": {
             "name": "Airdrop",
@@ -515,7 +505,7 @@
         "salvo": {"name": "Salvo", "description": "This weapon always hits at -1 Accuracy. When scattering results from this weapon, it hits the closest unit within 3\" instead of just 1\"."},
         "half_tracked": {"name": "Half-Tracked", "description": "This unit may ignore difficult terrain when moving.", "points": 5},
         "shock": {"name": "Shock", "inputs": ["x"], "description": "This model causes X hits with no AP when it successfully charges an enemy unit.", "points": [2, {"multiply": "rule.x"}]},
-        "team": {"name": "Team", "inputs": ["x"], "description": "This weapon requires X models to operate effectively. It suffers -1 Accuracy for each model under this number."},
+        "team": {"name": "Team", "inputs": ["x"], "description": "This weapon requires X models to operate effectively. It suffers -1 Accuracy for each model under this number.", "points": ["rule.x", {"subtract": 1}, {"multiply": -1}]},
         "field_orders": {
             "name": "Field Orders",
             "inputs": ["x"],

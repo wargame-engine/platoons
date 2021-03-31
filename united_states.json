@@ -193,7 +193,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["semi_auto_rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 1}, {"addWeapon": "bazooka"}],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 1}, {"addWeapon": "bazooka", "modelLimit": 1}],
                     "min": 4,
                     "max": 9
                 }
@@ -421,7 +421,7 @@
             "category": "infantry",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}],
+            "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"replaceWeapon": "carbine_rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}],
             "models": [
                 {
                     "name": "Engineer NCO",
@@ -432,8 +432,8 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "weapons": ["carbine_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": ["smg"]}],
                     "min": 1,
                     "max": 1
                 },
@@ -446,10 +446,10 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["bar"], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
-                    "min": 4,
-                    "max": 10
+                    "weapons": ["carbine_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": ["bar"], "modelLimit": 1}, {"replaceWeapon": "carbine_rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
                 }
             ]
         },
@@ -1648,28 +1648,32 @@
             "name": "Richard Davis Winters",
             "rule": "natural_leader",
             "flavor": "A natural leader and an excellent officer, Richard Winters lead his Parachute unit through D-Day and beyond.",
-            "description": "Upgrade one Field Officer model with Natural Leader."
+            "description": "Upgrade one Field Officer model with Natural Leader.",
+            "points": 15
         },
         "turner_turnbull": {
             "subfactions": ["none", "infantry_focus"],
             "name": "Turner 'Brashears' Turnbull III",
             "rule": "defensive_fire",
             "flavor": "Turner Turnbull organized his men and against all odds held out a German counter-attack at Neuville-au-Plein.",
-            "description": "Upgrade one Field Officer model with Defensive Fire."
+            "description": "Upgrade one Field Officer model with Defensive Fire.",
+            "points": 10
         },
         "dutch_cota": {
             "subfactions": ["none", "infantry_focus"],
             "name": "Norman 'Dutch' Cota",
             "rule": "move_it",
             "flavor": "Cota lead American forces on the beaches of Normandy and inspired his men under severe enemy fire.",
-            "description": "Upgrade one Field Officer model with Move It."
+            "description": "Upgrade one Field Officer model with Move It.",
+            "points": 10
         },
         "lafayette_pool": {
             "subfactions": ["none", "armored_focus"],
             "name": "Lafayette G. Pool",
             "rule": "mobile_expert",
             "flavor": "Lafayette Pool used a mix of suprise and mobile tactics to outwit his armored opponents.",
-            "description": "Upgrade one M4 Sherman or M4A1 Sherman with Mobile Expert."
+            "description": "Upgrade one M4 Sherman or M4A1 Sherman with Mobile Expert.",
+            "points": 20
         }
     }
 }
