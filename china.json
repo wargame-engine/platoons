@@ -9,10 +9,7 @@
             "max": 1,
             "category": "command",
             "keywords": ["Infantry"],
-            "options": [
-                {"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]},
-                {"addWeapon": "at_grenades", "modelLimit": 3}
-            ],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Field Officer",
@@ -24,28 +21,12 @@
                     "reflexes": 7,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
-                    "rules": [
-                        {"id": "field_orders", "x": 1}, "leader"
-                    ],
-                    "options": [
-                        {"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}
-                    ],
+                    "rules": [{"id": "field_orders", "x": 1}, "leader"],
+                    "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}],
                     "min": 1,
                     "max": 1
                 },
-                {
-                    "name": "Assistant",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 7,
-                    "wounds": 1,
-                    "weapons": ["rifle", "unarmed"],
-                    "min": 0,
-                    "max": 2
-                }
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 7, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "conscript_squad": {
@@ -58,27 +39,27 @@
             "models": [
                 {
                     "name": "Rifle NCO",
-                    "courage": 4,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 4,
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["bamboo_spear", "unarmed"],
+                    "weapons": [{"id": "bamboo_spear", "count": 2}],
                     "min": 1,
                     "max": 1
                 },
                 {
                     "name": "Rifleman",
-                    "courage": 4,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 4,
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["bamboo_spear", "unarmed"],
+                    "weapons": [{"id": "bamboo_spear", "count": 2}],
                     "modelLimit": 1,
                     "min": 5,
                     "max": 11
@@ -92,31 +73,31 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
+            "options": [{"addWeapon": "pistol"}],
             "models": [
                 {
                     "name": "Vigilante Militia",
-                    "courage": 4,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["bamboo_spear", "unarmed"],
+                    "weapons": [{"id": "bamboo_spear", "count": 2}],
                     "min": 1,
                     "max": 1
                 },
                 {
                     "name": "Vigilante Militia",
-                    "courage": 4,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["bamboo_spear", "unarmed"],
-                    "options": [{"replaceWeapon": "pistols"}],
+                    "weapons": [{"id": "bamboo_spear", "count": 2}],
                     "min": 5,
                     "max": 11
                 }
@@ -129,6 +110,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
+            "options": [{"addWeapon": "pistol"}],
             "models": [
                 {
                     "name": "Peasant Maoists",
@@ -139,7 +121,7 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["bamboo_spear", "unarmed"],
+                    "weapons": [{"id": "bamboo_spear", "count": 2}],
                     "min": 1,
                     "max": 1
                 },
@@ -152,8 +134,7 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["bamboo_spear", "unarmed"],
-                    "options": [{"replaceWeapon": "pistols"}],
+                    "weapons": [{"id": "bamboo_spear", "count": 2}],
                     "min": 5,
                     "max": 11
                 }
@@ -164,11 +145,9 @@
             "description": "A group of Soviet riflemen.",
             "min": 1,
             "max": 1,
-            "category": "core",
+            "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [
-                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}
-            ],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}],
             "models": [
                 {
                     "name": "Rifle NCO",
@@ -202,45 +181,49 @@
         },
         "mmg_team": {
             "name": "Maxim MG Team",
-            "description": "A group of hardened German Grenadiers.",
+            "description": "A us MMG.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
             "category": "support",
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Medium MG Team",
-                    "courage": 6,
+                    "name": "Maxim MG Team",
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "rules": [{"id": "crew", "x": 3}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
         "hmg_team": {
-            "name": "Dshk MG Team",
-            "description": "A us HMG.",
+            "name": "DShK MG Team",
+            "description": "A soviet HMG.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
             "category": "support",
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Heavy MG Team",
-                    "courage": 6,
+                    "name": "DShK MG Team",
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "hmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "rules": [{"id": "crew", "x": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -253,9 +236,7 @@
             "max": 1,
             "category": "artillery",
             "keywords": ["Infantry"],
-            "rules": [
-                "gun_shield"
-            ],
+            "rules": ["gun_shield"],
             "models": [
                 {
                     "name": "Medium MG Team",
@@ -279,9 +260,7 @@
             "max": 1,
             "category": "artillery",
             "keywords": ["Infantry"],
-            "rules": [
-                "gun_shield"
-            ],
+            "rules": ["gun_shield"],
             "models": [
                 {
                     "name": "Zis-3 Field Gun",
@@ -305,9 +284,7 @@
             "max": 1,
             "category": "artillery",
             "keywords": ["Infantry"],
-            "rules": [
-                "gun_shield"
-            ],
+            "rules": ["gun_shield"],
             "models": [
                 {
                     "name": "BS-3 AT Gun",
@@ -329,7 +306,7 @@
             "description": "A medium tank with an adequate gun.",
             "min": 1,
             "max": 1,
-            "category": "heavy_armor",
+            "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
@@ -342,9 +319,7 @@
                     "reflexes": 6,
                     "wounds": 6,
                     "weapons": ["medium_at_mg", {"id": "vehicle_flamethrower", "mount": ["Front"]}],
-                    "rules": [
-                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}
-                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -355,7 +330,7 @@
             "description": "A medium tank with a heavy gun.",
             "min": 1,
             "max": 1,
-            "category": "heavy_armor",
+            "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
@@ -368,9 +343,7 @@
                     "reflexes": 6,
                     "wounds": 6,
                     "weapons": ["heavy_at_mg", {"id": "vehicle_flamethrower", "mount": ["Front"]}],
-                    "rules": [
-                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}
-                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -381,7 +354,7 @@
             "description": "A medium tank with an adequate gun.",
             "min": 1,
             "max": 1,
-            "category": "heavy_armor",
+            "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
@@ -394,9 +367,7 @@
                     "reflexes": 6,
                     "wounds": 6,
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": [
-                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}
-                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -407,7 +378,7 @@
             "description": "A medium tank with a powerful main gun.",
             "min": 1,
             "max": 1,
-            "category": "heavy_armor",
+            "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
@@ -420,9 +391,7 @@
                     "reflexes": 6,
                     "wounds": 6,
                     "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": [
-                        "tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}
-                    ],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, {"id": "critical", "x": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -439,7 +408,5 @@
     },
     "weapons": {},
     "rules": {},
-    "relics": [
-
-    ]
+    "relics": []
 }
