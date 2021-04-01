@@ -1745,7 +1745,7 @@
     "rules": {
         "soviet_flag": {
             "name": "Soviet Flag",
-            "description": "This unit gets +1 Courage when clearing strain. A model may not use its shooting weapons while carrying a Soviet Flag.",
+            "description": "This unit gets +1 Courage when clearing shock. A model may not use its shooting weapons while carrying a Soviet Flag.",
             "points": 10
         },
         "hero_sniper": {"name": "Hero Sniper", "description": "This model gets +1 Accuracy and all shooting attacks gain +1 AP.", "points": 20},
