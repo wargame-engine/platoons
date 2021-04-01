@@ -1444,7 +1444,7 @@
                     "options": [
                         {"replaceWeapon": "dual_mmg", "withWeapon": "light_autocannon_aa"}
                     ],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 2}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 2}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1469,7 +1469,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["light_at_mg"],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1494,7 +1494,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1519,7 +1519,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["mmg", {"id": "vehicle_flamethrower", "mount": ["Front", "Right"]},{"id": "vehicle_flamethrower", "mount": ["Front", "Left"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1544,7 +1544,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["light_autocannon_mg"],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1569,7 +1569,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1594,7 +1594,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1619,7 +1619,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["vehicle_flamethrower_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1644,7 +1644,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "medium_at", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle", "exposed"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle", "exposed"],
                     "options": [
                         {"replaceWeapon": {"id": "medium_at", "mount": ["Front"]}, "withWeapon": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "heavy_at", "mount": ["Front"]}, {"id": "heavy_howitzer", "mount": ["Front"]}]}
                     ],
@@ -1672,7 +1672,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "light_howitzer", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1697,7 +1697,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": "mmg"}, {"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
@@ -1723,7 +1723,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg"}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1748,7 +1748,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "vehicle_flamethrower", "mount": ["Front"]}, {"id": "mmg"}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1797,7 +1797,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "very_heavy_at_mg", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", "armored_front", {"id": "shock", "x": 3}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", "armored_front", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1822,7 +1822,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 3}, "damage_table_vehicle", "exposed"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle", "exposed"],
                     "options": [
                         {"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": "mmg"}
                     ],
@@ -1850,7 +1850,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", "armored_front", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", "armored_front", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [
                         {"replaceWeapon": {"id": "heavy_at", "mount": ["Front"]}, "withWeapon": {"id": "very_heavy_at", "mount": ["Front"]}}, {"addRule": "side_skirts"}
                     ],
@@ -1878,7 +1878,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "very_heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1903,7 +1903,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "super_heavy_at", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 12}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 12}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1928,7 +1928,7 @@
                     "reflexes": 5,
                     "wounds": 12,
                     "weapons": [{"id": "super_heavy_at_mg", "mount": ["Front"]}, {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 12}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_rear", {"id": "impact", "x": 12}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1953,7 +1953,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["light_howitzer_vehicle", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
@@ -1979,7 +1979,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["light_howitzer_vehicle_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
@@ -2005,7 +2005,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
@@ -2032,7 +2032,7 @@
                     "reflexes": 6,
                     "wounds": 6,
                     "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
@@ -2058,7 +2058,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "armored_front", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "armored_front", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -2084,7 +2084,7 @@
                     "reflexes": 6,
                     "wounds": 6,
                     "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "armored_front", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "armored_front", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -2109,7 +2109,7 @@
                     "reflexes": 5,
                     "wounds": 9,
                     "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_rear", {"id": "impact", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -2135,7 +2135,7 @@
                     "reflexes": 6,
                     "wounds": 9,
                     "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 9}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_rear", {"id": "impact", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -2160,7 +2160,7 @@
                     "reflexes": 5,
                     "wounds": 12,
                     "weapons": ["super_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 12}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_rear", {"id": "impact", "x": 12}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -2289,7 +2289,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "medium_howitzer_vehicle", "mount": ["Front"]}, {"id": "mmg"}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
@@ -2315,7 +2315,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "heavy_howitzer_vehicle", "mount": ["Front"]}, {"id": "mmg"}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
@@ -2341,7 +2341,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "rocket_mortar", "mount": ["Front"]}, {"id": "mmg"}],
-                    "rules": ["tracked", "vulnerable_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
@@ -2367,7 +2367,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
@@ -2393,7 +2393,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["heavy_autocannon_aa"],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "exposed"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "exposed"],
                     "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
@@ -2419,7 +2419,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["heavy_autocannon_aa", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "exposed"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "exposed"],
                     "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
@@ -2445,7 +2445,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "light_autocannon_aa", "count": 4}, {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "exposed"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "exposed"],
                     "options": [{"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1

@@ -504,7 +504,6 @@
         "amphibious": {"name": "Amphibious", "description": "This unit may treat impassable water terrain as difficult terrain.", "points": 5},
         "salvo": {"name": "Salvo", "description": "This weapon always hits at -1 Accuracy. When scattering results from this weapon, it hits the closest unit within 3\" instead of just 1\"."},
         "half_tracked": {"name": "Half-Tracked", "description": "This unit may ignore difficult terrain when moving.", "points": 5},
-        "shock": {"name": "Shock", "inputs": ["x"], "description": "This model causes X hits with no AP when it successfully charges an enemy unit.", "points": [2, {"multiply": "rule.x"}]},
         "team": {"name": "Team", "inputs": ["x"], "description": "This weapon requires X models to operate effectively. It suffers -1 Accuracy for each model under this number.", "points": ["rule.x", {"subtract": 1}, {"multiply": -1}]},
         "field_orders": {
             "name": "Field Orders",

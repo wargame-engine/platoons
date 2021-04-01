@@ -1022,7 +1022,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["light_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1051,7 +1051,7 @@
                         {"addWeapon": ["mmg_aa", "hmg_aa"]},
                         {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": ["heavy_at_stabilized_mg", "medium_howitzer_vehicle_stabilized"]}
                     ],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "catches_fire"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "catches_fire"],
                     "min": 1,
                     "max": 1
                 }
@@ -1080,7 +1080,7 @@
                         {"addWeapon": ["mmg_aa", "hmg_aa"]},
                         {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": "heavy_at_stabilized_mg"}
                     ],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "catches_fire", {"id": "field_orders_armored", "x": 1}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "catches_fire", {"id": "field_orders_armored", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -1109,7 +1109,7 @@
                         {"addWeapon": ["mmg_aa", "hmg_aa"]},
                         {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": ["heavy_at_stabilized_mg", "medium_howitzer_vehicle_stabilized"]}
                     ],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1138,7 +1138,7 @@
                         {"addWeapon": ["mmg_aa", "hmg_aa"]},
                         {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": "heavy_at_stabilized_mg"}
                     ],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -1166,7 +1166,7 @@
                     "options": [
                         {"addWeapon": ["mmg_aa", "hmg_aa"]}
                     ],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1195,7 +1195,7 @@
                         {"addWeapon": ["mmg_aa", "hmg_aa"]},
                         {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": "heavy_at_stabilized_mg"}
                     ],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1223,7 +1223,7 @@
                     "options": [
                         {"addWeapon": ["hmg_aa"]}
                     ],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -1249,7 +1249,7 @@
                     "wounds": 6,
                     "weapons": ["heavy_at"],
                     "options": [{"addWeapon": "hmg_aa"}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "exposed"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "exposed"],
                     "min": 1,
                     "max": 1
                 }
@@ -1275,7 +1275,7 @@
                     "wounds": 6,
                     "weapons": ["heavy_at"],
                     "options": [{"addWeapon": "hmg_aa"}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "exposed"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "exposed"],
                     "min": 1,
                     "max": 1
                 }
@@ -1301,7 +1301,7 @@
                     "wounds": 6,
                     "weapons": ["very_heavy_at"],
                     "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "exposed"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "exposed"],
                     "min": 1,
                     "max": 1
                 }
@@ -1327,7 +1327,7 @@
                     "wounds": 6,
                     "weapons": ["very_heavy_at", {"id": "mmg", "mount": ["Front"]}],
                     "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "shock", "x": 6}, "damage_table_vehicle", "exposed"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "exposed"],
                     "min": 1,
                     "max": 1
                 }
