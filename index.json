@@ -1,15 +1,47 @@
 {
     "factions": {
-        "germany": {"name": "Germany", "id": "germany", "url": "germany.json", "color": "#585C75", "alliance": "axis", "version": "1.0"},
-        "japan": {"name": "Japan", "id": "japan", "url": "japan.json", "color": "#BE8200", "alliance": "axis", "version": "1.0"},
-        "finland": {"name": "Finland", "id": "finland", "url": "finland.json", "color": "#5D8CAA", "alliance": "axis", "version": "1.0"},
-        "united_states": {"name": "United States", "id": "united_states", "url": "united_states.json", "color": "#4A7643", "alliance": "allies", "version": "1.0"},
-        "soviet_union": {"name": "Soviet Union", "id": "soviet_union", "url": "soviet_union.json", "color": "#C13E3E", "alliance": "allies", "version": "1.0"},
-        "british": {"name": "British", "id": "british", "url": "british.json", "color": "#927331", "alliance": "allies", "version": "1.0"},
-        "france": {"name": "France", "id": "france", "url": "france.json", "color": "#395A94", "alliance": "allies", "version": "1.0"},
-        "australia": {"name": "Australia", "id": "australia", "url": "australia.json", "color": "#008373", "alliance": "allies", "version": "0.1"},
-        "canada": {"name": "Canada", "id": "canada", "url": "canada.json", "color": "#47576F", "alliance": "allies", "version": "0.1"},
-        "hungary": {"name": "Hungary", "id": "hungary", "url": "hungary.json", "color": "#006354", "alliance": "axis", "version": "0.1"}
+        "germany": {
+            "name": "Germany",
+            "id": "germany",
+            "url": "germany.json",
+            "color": "#585C75",
+            "alliance": "axis",
+            "version": "1.0",
+            "description": "Well-known as one of the major aggressors of World War Two, Germany revolutionized mobile warfare in a way never seen before. Germany relies on hard infantry and deadly armored vehicles."
+        },
+        "japan": {
+            "name": "Japan",
+            "id": "japan",
+            "url": "japan.json",
+            "color": "#BE8200",
+            "alliance": "axis",
+            "version": "1.0",
+            "description": "Opportunists and expansionists during, the Japanese seized as many valuable resources and as much land as they could early in the war. Japan relies on both veteran trained marine and paratrooper units as well as some light but reliable vehicles."
+        },
+        "finland": {
+            "name": "Finland",
+            "id": "finland",
+            "url": "finland.json",
+            "color": "#5D8CAA",
+            "alliance": "axis",
+            "version": "1.0",
+            "description": "While originally attempting to remain neutral, Finland was introduced to the war when they were invaded by the Soviet Union, a significantly stronger force. The Finnish use encirclement and stealth tactics to outsmart and outflank their foes before they can correctly respond."
+        },
+        "united_states": {
+            "name": "United States",
+            "id": "united_states",
+            "url": "united_states.json",
+            "color": "#4A7643",
+            "alliance": "allies",
+            "version": "1.0",
+            "description": "The United States, while originally attempting to remain neutral, was suddenly attacked by the Japanese at pearl harbor and was forced to substantially ramp up production to begin fighting on both pacific and western fronts. The United States rely on mobile infantry units and weapons along with solid and reliable, yet numerous sherman tanks."
+        },
+        "soviet_union": {"name": "Soviet Union", "id": "soviet_union", "url": "soviet_union.json", "color": "#C13E3E", "alliance": "allies", "version": "1.0", "description": "The Soviet Union, while biding its time before the inevitable German offensive, originally had major command and tactics issues. Later in the war, once they were in full swing, they were a very formidable and numerous force to be reckoned with. The Soviets rely on numerous infantry and heroic bravery to defeat their foes with sheer will."},
+        "british": {"name": "British", "id": "british", "url": "british.json", "color": "#927331", "alliance": "allies", "version": "1.0", "description": "The British, while honoring previous treaties and agreements was forced to intervene in Germany's earliest battles. The British were eventually able to overcome their early defeats at the hands of the German forces with the help of their other allied counterparts. The British use a combination of capable armored vehicles, solid infantry and elite trained commando and SAS forces to defeat their enemies."},
+        "france": {"name": "France", "id": "france", "url": "france.json", "color": "#395A94", "alliance": "allies", "version": "1.0", "description": "France, still focused on their success in the first World War, placed heavy emphasis on static and sparse armored forces which were quickly overwhelmed by new German military tactics. The French continue to use first war trench fighting and artillery tactics to defeat their enemies."},
+        "australia": {"name": "Australia", "id": "australia", "url": "australia.json", "color": "#008373", "alliance": "allies", "version": "0.1", "description": "Australia fought alongside the allies in many important battles, while also attempting to defend their homeland from a possible Japanese invasion. Australia relies on many armaments lent by the British as well as their own inspired troops to achieve victory."},
+        "canada": {"name": "Canada", "id": "canada", "url": "canada.json", "color": "#47576F", "alliance": "allies", "version": "0.1", "description": ""},
+        "hungary": {"name": "Hungary", "id": "hungary", "url": "hungary.json", "color": "#006354", "alliance": "axis", "version": "0.1", "description": ""}
     },
     "unfinished_factions": {
         "partisans": {"name": "Partisans", "id": "partisans", "url": "partisans.json", "color": "#014140"},
@@ -37,7 +69,13 @@
     },
     "alliances": {"axis": {"name": "Axis Powers"}, "allies": {"name": "Allied Powers"}},
     "relics": {
-        "tank_ace": {"name": "Tank Ace (Core)", "rule": "tank_ace", "flavor": "A tank ace is a fearsome foe to encounter on the battlefield.", "description": "Upgrade one Tank unit with Tank Ace.", "points": 20},
+        "tank_ace": {
+            "name": "Tank Ace (Core)",
+            "rule": "tank_ace",
+            "flavor": "A tank ace is a fearsome foe to encounter on the battlefield.",
+            "description": "Upgrade one Tank unit with Tank Ace.",
+            "points": 20
+        },
         "inspiring_leader": {
             "name": "Inspiring Leader (Core)",
             "rule": "inspiring_leader",
@@ -120,7 +158,10 @@
         "at_grenades": {"name": "AT Grenade", "attacks": 1, "short": 6, "ap": 8, "rules": [{"id": "ammo", "x": 1}]},
         "molotov_cocktails": {
             "name": "Molotov Cocktail",
-            "profiles": [{"name": "AT", "attacks": 1, "short": 6, "ap": 5, "rules": [{"id": "ammo", "x": 1}]}, {"name": "Flame", "attacks": 1, "short": 6, "ap": 1, "rules": ["flame", {"id": "blast", "x": 2}, {"id": "ammo", "x": 1}]}]
+            "profiles": [
+                {"name": "AT", "attacks": 1, "short": 6, "ap": 5, "rules": [{"id": "ammo", "x": 1}]},
+                {"name": "Flame", "attacks": 1, "short": 6, "ap": 1, "rules": ["flame", {"id": "blast", "x": 2}, {"id": "ammo", "x": 1}]}
+            ]
         },
         "pistol": {"name": "Pistol", "short": 6, "attacks": 1, "rules": ["pistol"]},
         "smoke_grenades": {"name": "Smokes", "attacks": 1, "short": 6, "rules": ["grenade", "smoke", "indirect"]},
@@ -181,10 +222,7 @@
         "at_rifle": {"name": "AT Rifle", "short": 18, "medium": 36, "ap": 3, "attacks": 1, "rules": [{"id": "team", "x": 2}]},
         "at_rifle_mg": {
             "name": "AT Rifle/Co-ax MG",
-            "profiles": [
-                {"name": "AT Rifle", "short": 18, "medium": 36, "ap": 3, "attacks": 1},
-                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
-            ]
+            "profiles": [{"name": "AT Rifle", "short": 18, "medium": 36, "ap": 3, "attacks": 1}, {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}]
         },
         "light_autocannon": {
             "name": "Light Autocannon",
@@ -371,10 +409,7 @@
         },
         "medium_at": {
             "name": "Medium AT",
-            "profiles": [
-                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 5}]},
-                {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6}
-            ]
+            "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 5}]}, {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6}]
         },
         "medium_at_stabilized": {
             "name": "Medium AT (Stabilized)",
@@ -462,10 +497,10 @@
         "light_bomb": {"name": "Light Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 2, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 4}]}]},
         "medium_bomb": {"name": "Medium Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 3, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 5}]}]},
         "heavy_bomb": {"name": "Heavy Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 4, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 6}]}]},
-        "panzerfaust": {"name": "Panzerfaust", "attacks": 1, "short": 6, "medium": 12, "ap": 7,  "rules": ["heat", {"id": "ammo", "x": 1}]},
-        "panzerschreck": {"name": "Panzerschreck", "short": 12, "medium": 24, "ap": 7, "attacks": 1,  "rules": ["heat", {"id": "team", "x": 2}]},
-        "bazooka": {"name": "Bazooka", "short": 12, "medium": 24, "ap": 6, "attacks": 1,  "rules": ["heat", {"id": "team", "x": 2}]},
-        "lunge_mine": {"name": "Lunge Mine", "attacks": 1, "short": "Melee", "ap": 8,  "rules": [{"id": "ammo", "x": 1}]},
+        "panzerfaust": {"name": "Panzerfaust", "attacks": 1, "short": 6, "medium": 12, "ap": 7, "rules": ["heat", {"id": "ammo", "x": 1}]},
+        "panzerschreck": {"name": "Panzerschreck", "short": 12, "medium": 24, "ap": 7, "attacks": 1, "rules": ["heat", {"id": "team", "x": 2}]},
+        "bazooka": {"name": "Bazooka", "short": 12, "medium": 24, "ap": 6, "attacks": 1, "rules": ["heat", {"id": "team", "x": 2}]},
+        "lunge_mine": {"name": "Lunge Mine", "attacks": 1, "short": "Melee", "ap": 8, "rules": [{"id": "ammo", "x": 1}]},
         "sword": {"name": "Sword", "attacks": 1, "short": "Melee", "ap": 1},
         "officer_sword": {"name": "Officer's Sword", "attacks": 2, "short": "Melee", "ap": 1}
     },
@@ -504,7 +539,12 @@
         "amphibious": {"name": "Amphibious", "description": "This unit may treat impassable water terrain as difficult terrain.", "points": 5},
         "salvo": {"name": "Salvo", "description": "This weapon always hits at -1 Accuracy. When scattering results from this weapon, it hits the closest unit within 3\" instead of just 1\"."},
         "half_tracked": {"name": "Half-Tracked", "description": "This unit may ignore difficult terrain when moving.", "points": 5},
-        "team": {"name": "Team", "inputs": ["x"], "description": "This weapon requires X models to operate effectively. It suffers -1 Accuracy for each model under this number.", "points": ["rule.x", {"subtract": 1}, {"multiply": -1}]},
+        "team": {
+            "name": "Team",
+            "inputs": ["x"],
+            "description": "This weapon requires X models to operate effectively. It suffers -1 Accuracy for each model under this number.",
+            "points": ["rule.x", {"subtract": 1}, {"multiply": -1}]
+        },
         "field_orders": {
             "name": "Field Orders",
             "inputs": ["x"],
@@ -532,26 +572,10 @@
             "description": "When an Infantry unit crosses this model, roll 5D10. On any rolls of 5 or less that unit takes a hit with AP4. When a Vehicle unit crosses this model, roll 2D10. On any rolls of 5 or less that unit takes a hit with AP7. The vehicle is treated as being hit in the Rear arc.",
             "points": 50
         },
-        "wire_cutters": {
-            "name": "Wire Cutters",
-            "description": "This model and its unit gain +3 to all Clear actions when attempting to clear barbed wire obstacles.",
-            "points": 5
-        },
-        "demolition_charges": {
-            "name": "Demolition Charges",
-            "description": "This model and its unit gain +3 to all Clear actions when attempting to barricade and defense obstacles.",
-            "points": 5
-        },
-        "mine_sweepers": {
-            "name": "Mine Sweepers",
-            "description": "This model and its unit gain +3 to all Clear actions when attempting to clear mine fields.",
-            "points": 5
-        },
-        "repair_toolkit": {
-            "name": "Repair Toolkit",
-            "description": "This model and its unit may spend one action to repair one vehicle within 3\" that has suffered critical damage.",
-            "points": 5
-        }
+        "wire_cutters": {"name": "Wire Cutters", "description": "This model and its unit gain +3 to all Clear actions when attempting to clear barbed wire obstacles.", "points": 5},
+        "demolition_charges": {"name": "Demolition Charges", "description": "This model and its unit gain +3 to all Clear actions when attempting to barricade and defense obstacles.", "points": 5},
+        "mine_sweepers": {"name": "Mine Sweepers", "description": "This model and its unit gain +3 to all Clear actions when attempting to clear mine fields.", "points": 5},
+        "repair_toolkit": {"name": "Repair Toolkit", "description": "This model and its unit may spend one action to repair one vehicle within 3\" that has suffered critical damage.", "points": 5}
     },
     "units": {
         "fighting_position_3": {
