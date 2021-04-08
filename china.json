@@ -29,16 +29,69 @@
                 {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 7, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
-        "conscript_squad": {
+        "political_officer": {
+            "name": "Political Officer",
+            "description": "An officer dedicated to keeping officers and higher soldiers in line.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry", "Political Officer"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_pistol"]}],
+            "models": [
+                {
+                    "name": "Commissar",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 4,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
+                    "rules": ["leader"],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 4, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+            ]
+        },
+        "field_medic": {
+            "name": "Field Medic",
+            "description": "A field medic.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Field Medic",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["pistol", "unarmed", "smoke_grenades"],
+                    "rules": ["medic", "support"],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+            ]
+        },
+        "peasant_press_gang": {
             "name": "Peasant Press Gang",
             "description": "Due to massive manpower shortages and the sheer desperation of the struggle against the Japanese, along with the fighting between the various Warlord factions, it was not completely uncommon for groups of peasants to be press-ganged into support roles.",
             "min": 1,
-            "max": 1,
+            "max": 2,
             "category": "infantry",
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Rifle NCO",
+                    "name": "Police Officer",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 4,
@@ -51,18 +104,18 @@
                     "max": 1
                 },
                 {
-                    "name": "Rifleman",
+                    "name": "Peasant",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 4,
-                    "fight": 5,
+                    "fight": 4,
                     "defense": 4,
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": [{"id": "bamboo_spear", "count": 2}],
                     "modelLimit": 1,
                     "min": 5,
-                    "max": 11
+                    "max": 16
                 }
             ]
         },
@@ -70,16 +123,16 @@
             "name": "Vigilante Militia (German/88th Division Support)",
             "description": "In order to protect their villages from the attacks of the warlord factions and armies, peasants organized themselves into militias, secret societies and village associations which served as self-defense groups as well as vigilante groups. As the peasants usually had neither currency for guns nor military training, these secret societies relied on martial arts, homemade weapons such as spear, staffs or swords, as well as the staunch belief in Chi and other traditional beliefs.",
             "min": 1,
-            "max": 1,
+            "max": 2,
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [{"addWeapon": "pistol"}],
             "models": [
                 {
-                    "name": "Vigilante Militia",
+                    "name": "Vigilante Militia NCO",
                     "courage": 5,
                     "movement": 6,
-                    "shoot": 5,
+                    "shoot": 4,
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
@@ -92,31 +145,34 @@
                     "name": "Vigilante Militia",
                     "courage": 5,
                     "movement": 6,
-                    "shoot": 5,
+                    "shoot": 4,
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": [{"id": "bamboo_spear", "count": 2}],
                     "min": 5,
-                    "max": 11
+                    "max": 16
                 }
             ]
         },
         "peasant_maoists": {
-            "name": "Peasant Maoists (Eighth Route Army Support)",
+            "name": "Peasant Maoists (National United Front)",
             "description": "Despite this, many peasants could be reasonably motivated or inspired by political instructors nearby, or they had enough support of Nationalism paired with Communism to behave like ordinary conscripts or even be motivated partisans. Not only that, but, “Many Mosin-Nagant 1891 rifles were supplied during the Sino-Soviet cooperation in the 1920s and to the troops of the pro-Soviet Sheng Shicai. The Soviet Aid Program early in the war also supplied China with 50,000 Mosin-Nagant 1891/30 rifles, which were used by second line and garrison troops due to the caliber difference.",
             "min": 1,
-            "max": 1,
+            "max": 2,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "pistol"}],
+            "options": [
+                {"replaceWeapon": {"id": "bamboo_spear", "count": 2}, "withWeapon": [["rifle", "bayonet"]]},            
+{"addWeapon": ["frag_grenades", "molotov_cocktails"], "modelLimit": 2}]
+            ,
             "models": [
                 {
-                    "name": "Peasant Maoists",
-                    "courage": 4,
+                    "name": "Peasant Maoists Revolutionary",
+                    "courage": 6,
                     "movement": 6,
-                    "shoot": 5,
+                    "shoot": 4,
                     "fight": 4,
                     "defense": 5,
                     "reflexes": 5,
@@ -126,28 +182,28 @@
                     "max": 1
                 },
                 {
-                    "name": "Vigilante Militia",
-                    "courage": 4,
+                    "name": "Peasant Maoists",
+                    "courage": 6,
                     "movement": 6,
-                    "shoot": 5,
+                    "shoot": 4,
                     "fight": 4,
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": [{"id": "bamboo_spear", "count": 2}],
                     "min": 5,
-                    "max": 11
+                    "max": 16
                 }
             ]
         },
         "rifle_squad": {
             "name": "Rifle Squad",
-            "description": "A group of Soviet riflemen.",
+            "description": "A group of NRA riflemen.",
             "min": 1,
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}],
             "models": [
                 {
                     "name": "Rifle NCO",
@@ -159,12 +215,37 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}],
                     "min": 1,
                     "max": 1
                 },
                 {
                     "name": "Rifleman",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "ZB vz. 26"}], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "sichuan_clique": {
+            "name": "Sichuan clique Warriors",
+            "description": "Sichuan province was one of the poorest and most populated areas of China during the Warlord Era, and it had many warlords who struggled to defeat each other in minor skimishes due to their limited resources. During “WW2”, Sichuan Clique was mostly organized and in agreement. During the war, data shows that of all the numbers of dead or injured soldiers 2.24 of the 3.26 million were from Sichuan Clique. Three of the nine NRA generals that died in the war were also from the province. While the men were reported to be very brave, they had limited combat experience and during the Warlord Era they were known for being poorly trained even by Chinese Warlord Era standards. The province also had limited access to factories or machine guns. ",
+            "min": 1,
+            "max": 2,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}],
+            "models": [
+                {
+                    "name": "Warrior NCO",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
@@ -173,7 +254,101 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Warrior",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}, 
+                    {"replaceWeapon": "unarmed", "withWeapon": ["dadao"]}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "german_nra": {
+            "name": "German Supplied NRA Rifle Squad",
+            "description": "A group of NRA riflemen supplied with German equipment and training.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}],
+            "models": [
+                {
+                    "name": "Rifle NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_pistol", "name": "Mauser Pistol"}], "modelLimit": 1}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Rifleman",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "ZB vz. 26"}], "modelLimit": 1}, {"addRule": "blue_and_white_banner", "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "eight_route_unit": {
+            "name": "Eight Route Army Support (National United Front)",
+            "description": "Filler",
+            "min": 1,
+            "max": 2,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": 
+            [{"replaceWeapon": ["rifle", "bayonet"], "withWeapon": 
+                    [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1},            
+{"addWeapon": ["frag_grenades","lunge_mine", "molotov_cocktails"], "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Eight Route Army Support NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "bayonet"],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Eight Route Army Support",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "bayonet"],
                     "min": 5,
                     "max": 11
                 }
@@ -407,6 +582,12 @@
         }
     },
     "weapons": {},
-    "rules": {},
+    "rules": 
+    {"blue_and_white_banner": {
+        "name": "Blue and White Banner",
+        "description": "This unit gets +1 Courage when clearing shock. A model may not use its shooting weapons while carrying a Blue and White Banner.",
+        "points": 10
+    }
+},
     "relics": []
 }

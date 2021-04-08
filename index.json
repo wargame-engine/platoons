@@ -37,7 +37,13 @@
     },
     "alliances": {"axis": {"name": "Axis Powers"}, "allies": {"name": "Allied Powers"}},
     "relics": {
-        "tank_ace": {"name": "Tank Ace (Core)", "rule": "tank_ace", "flavor": "A tank ace is a fearsome foe to encounter on the battlefield.", "description": "Upgrade one Tank unit with Tank Ace.", "points": 20},
+        "tank_ace": {
+            "name": "Tank Ace (Core)",
+            "rule": "tank_ace",
+            "flavor": "A tank ace is a fearsome foe to encounter on the battlefield.",
+            "description": "Upgrade one Tank unit with Tank Ace.",
+            "points": 20
+        },
         "inspiring_leader": {
             "name": "Inspiring Leader (Core)",
             "rule": "inspiring_leader",
@@ -120,9 +126,20 @@
         "at_grenades": {"name": "AT Grenade", "attacks": 1, "short": 6, "ap": 8, "rules": [{"id": "ammo", "x": 1}]},
         "molotov_cocktails": {
             "name": "Molotov Cocktail",
-            "profiles": [{"name": "AT", "attacks": 1, "short": 6, "ap": 5, "rules": [{"id": "ammo", "x": 1}]}, {"name": "Flame", "attacks": 1, "short": 6, "ap": 1, "rules": ["flame", {"id": "blast", "x": 2}, {"id": "ammo", "x": 1}]}]
+            "profiles": [
+                {"name": "AT", "attacks": 1, "short": 6, "ap": 5, "rules": [{"id": "ammo", "x": 1}]},
+                {"name": "Flame", "attacks": 1, "short": 6, "ap": 1, "rules": ["flame", {"id": "blast", "x": 2}, {"id": "ammo", "x": 1}]}
+            ]
+        },
+        "bundle_grenades": {
+            "name": "Stick Grenade Bundle",
+            "profiles": [
+                {"name": "AT", "attacks": 1, "short": 6, "ap": 7, "rules": [{"id": "ammo", "x": 1}]},
+                {"name": "Concussion Blast", "attacks": 1, "short": 6, "ap": 1, "rules": [{"id": "blast", "x": 4}, {"id": "ammo", "x": 1}]}
+            ]
         },
         "pistol": {"name": "Pistol", "short": 6, "attacks": 1, "rules": ["pistol"]},
+        "assault_pistol": {"name": "Assault Pistol", "short": 6, "medium": 9, "attacks": 2, "rules": ["assault"]},
         "smoke_grenades": {"name": "Smokes", "attacks": 1, "short": 6, "rules": ["grenade", "smoke", "indirect"]},
         "rifle": {"name": "Rifle", "short": 12, "medium": 24, "attacks": 1},
         "rifle_grenade": {
@@ -181,10 +198,7 @@
         "at_rifle": {"name": "AT Rifle", "short": 18, "medium": 36, "ap": 3, "attacks": 1, "rules": [{"id": "team", "x": 2}]},
         "at_rifle_mg": {
             "name": "AT Rifle/Co-ax MG",
-            "profiles": [
-                {"name": "AT Rifle", "short": 18, "medium": 36, "ap": 3, "attacks": 1},
-                {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
-            ]
+            "profiles": [{"name": "AT Rifle", "short": 18, "medium": 36, "ap": 3, "attacks": 1}, {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}]
         },
         "light_autocannon": {
             "name": "Light Autocannon",
@@ -371,10 +385,7 @@
         },
         "medium_at": {
             "name": "Medium AT",
-            "profiles": [
-                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 5}]},
-                {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6}
-            ]
+            "profiles": [{"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 5}]}, {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 6}]
         },
         "medium_at_stabilized": {
             "name": "Medium AT (Stabilized)",
@@ -462,12 +473,14 @@
         "light_bomb": {"name": "Light Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 2, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 4}]}]},
         "medium_bomb": {"name": "Medium Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 3, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 5}]}]},
         "heavy_bomb": {"name": "Heavy Bombs", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 4, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 6}]}]},
-        "panzerfaust": {"name": "Panzerfaust", "attacks": 1, "short": 6, "medium": 12, "ap": 7,  "rules": ["heat", {"id": "ammo", "x": 1}]},
-        "panzerschreck": {"name": "Panzerschreck", "short": 12, "medium": 24, "ap": 7, "attacks": 1,  "rules": ["heat", {"id": "team", "x": 2}]},
-        "bazooka": {"name": "Bazooka", "short": 12, "medium": 24, "ap": 6, "attacks": 1,  "rules": ["heat", {"id": "team", "x": 2}]},
-        "lunge_mine": {"name": "Lunge Mine", "attacks": 1, "short": "Melee", "ap": 8,  "rules": [{"id": "ammo", "x": 1}]},
+        "panzerfaust": {"name": "Panzerfaust", "attacks": 1, "short": 6, "medium": 12, "ap": 7, "rules": ["heat", {"id": "ammo", "x": 1}]},
+        "panzerschreck": {"name": "Panzerschreck", "short": 12, "medium": 24, "ap": 7, "attacks": 1, "rules": ["heat", {"id": "team", "x": 2}]},
+        "bazooka": {"name": "Bazooka", "short": 12, "medium": 24, "ap": 6, "attacks": 1, "rules": ["heat", {"id": "team", "x": 2}]},
+        "lunge_mine": {"name": "Lunge Mine", "attacks": 1, "short": "Melee", "ap": 8, "rules": [{"id": "ammo", "x": 1}]},
         "sword": {"name": "Sword", "attacks": 1, "short": "Melee", "ap": 1},
-        "officer_sword": {"name": "Officer's Sword", "attacks": 2, "short": "Melee", "ap": 1}
+        "officer_sword": {"name": "Officer's Sword", "attacks": 2, "short": "Melee", "ap": 1},
+        "bayonet": {"name": "Bayonet", "attacks": 1, "short": "Melee", "ap": 1},
+        "dadao": {"name": "Dadao", "attacks": 1, "short": "Melee", "ap": 1}
     },
     "rules": {
         "heat": {"name": "HEAT", "description": "Enemy units add 1 to rolls on any Damage Table(X) rules when hit by this weapon at Short range.", "points": ["weapon.attacks", {"multiply": 2.5}]},
@@ -504,7 +517,12 @@
         "amphibious": {"name": "Amphibious", "description": "This unit may treat impassable water terrain as difficult terrain.", "points": 5},
         "salvo": {"name": "Salvo", "description": "This weapon always hits at -1 Accuracy. When scattering results from this weapon, it hits the closest unit within 3\" instead of just 1\"."},
         "half_tracked": {"name": "Half-Tracked", "description": "This unit may ignore difficult terrain when moving.", "points": 5},
-        "team": {"name": "Team", "inputs": ["x"], "description": "This weapon requires X models to operate effectively. It suffers -1 Accuracy for each model under this number.", "points": ["rule.x", {"subtract": 1}, {"multiply": -1}]},
+        "team": {
+            "name": "Team",
+            "inputs": ["x"],
+            "description": "This weapon requires X models to operate effectively. It suffers -1 Accuracy for each model under this number.",
+            "points": ["rule.x", {"subtract": 1}, {"multiply": -1}]
+        },
         "field_orders": {
             "name": "Field Orders",
             "inputs": ["x"],
@@ -532,26 +550,10 @@
             "description": "When an Infantry unit crosses this model, roll 5D10. On any rolls of 5 or less that unit takes a hit with AP4. When a Vehicle unit crosses this model, roll 2D10. On any rolls of 5 or less that unit takes a hit with AP7. The vehicle is treated as being hit in the Rear arc.",
             "points": 50
         },
-        "wire_cutters": {
-            "name": "Wire Cutters",
-            "description": "This model and its unit gain +3 to all Clear actions when attempting to clear barbed wire obstacles.",
-            "points": 5
-        },
-        "demolition_charges": {
-            "name": "Demolition Charges",
-            "description": "This model and its unit gain +3 to all Clear actions when attempting to barricade and defense obstacles.",
-            "points": 5
-        },
-        "mine_sweepers": {
-            "name": "Mine Sweepers",
-            "description": "This model and its unit gain +3 to all Clear actions when attempting to clear mine fields.",
-            "points": 5
-        },
-        "repair_toolkit": {
-            "name": "Repair Toolkit",
-            "description": "This model and its unit may spend one action to repair one vehicle within 3\" that has suffered critical damage.",
-            "points": 5
-        }
+        "wire_cutters": {"name": "Wire Cutters", "description": "This model and its unit gain +3 to all Clear actions when attempting to clear barbed wire obstacles.", "points": 5},
+        "demolition_charges": {"name": "Demolition Charges", "description": "This model and its unit gain +3 to all Clear actions when attempting to barricade and defense obstacles.", "points": 5},
+        "mine_sweepers": {"name": "Mine Sweepers", "description": "This model and its unit gain +3 to all Clear actions when attempting to clear mine fields.", "points": 5},
+        "repair_toolkit": {"name": "Repair Toolkit", "description": "This model and its unit may spend one action to repair one vehicle within 3\" that has suffered critical damage.", "points": 5}
     },
     "units": {
         "fighting_position_3": {

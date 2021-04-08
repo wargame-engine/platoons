@@ -63,8 +63,8 @@
                 {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
             ]
         },
-        "comissar": {
-            "name": "Comissar",
+        "commissar": {
+            "name": "Commissar",
             "description": "An officer dedicated to keeping officers and higher soldiers in line.",
             "min": 1,
             "max": 1,
