@@ -427,6 +427,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": [[{"id": "rifle", "name": "Mosin–Nagant"}], "bayonet"],
+                    "options": [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 27"}], "modelLimit": 1}],
                     "min": 5,
                     "max": 11
                 }
