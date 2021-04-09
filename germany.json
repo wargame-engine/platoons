@@ -1040,7 +1040,7 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
@@ -1065,7 +1065,7 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
@@ -1090,7 +1090,7 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery"],
             "rules": ["gun_shield", {"id": "crew", "x": 4}],
             "models": [
@@ -1140,7 +1140,7 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery", "Anti-Air"],
             "rules": ["gun_shield", {"id": "crew", "x": 7}],
             "models": [
@@ -1165,7 +1165,7 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery", "Anti-Air"],
             "rules": [{"id": "crew", "x": 3}],
             "models": [
@@ -1191,7 +1191,7 @@
             "min": 1,
             "max": 1,
             "category": "artillery",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery", "Anti-Air"],
             "rules": [{"id": "crew", "x": 3}],
             "models": [
