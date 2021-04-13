@@ -996,7 +996,7 @@
             "description": "A well-armed and fast armored car.",
             "min": 1,
             "max": 1,
-            "category": "heavy_vehicles",
+            "category": "light_vehicles",
             "subfactions": ["none", "armored_focus", "airborne_focus", "infantry_focus"],
             "keywords": ["Vehicle", "Tank"],
             "models": [
@@ -1021,7 +1021,7 @@
             "description": "A well-armed and fast armored car.",
             "min": 1,
             "max": 1,
-            "category": "heavy_vehicles",
+            "category": "light_vehicles",
             "subfactions": ["none", "armored_focus", "airborne_focus", "infantry_focus"],
             "keywords": ["Vehicle", "Tank"],
             "models": [
