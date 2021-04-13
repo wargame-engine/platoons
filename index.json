@@ -211,7 +211,15 @@
                 {"name": "Flame", "attacks": 1, "short": 6, "ap": 1, "rules": ["flame", {"id": "blast", "x": 2}, {"id": "ammo", "x": 1}]}
             ]
         },
+        "bundle_grenades": {
+            "name": "Stick Grenade Bundle",
+            "profiles": [
+                {"name": "AT", "attacks": 1, "short": 6, "ap": 7, "rules": [{"id": "ammo", "x": 1}]},
+                {"name": "Concussion Blast", "attacks": 1, "short": 6, "ap": 1, "rules": [{"id": "blast", "x": 4}, {"id": "ammo", "x": 1}]}
+            ]
+        },
         "pistol": {"name": "Pistol", "short": 6, "attacks": 1, "rules": ["pistol"]},
+        "assault_pistol": {"name": "Assault Pistol", "short": 6, "medium": 9, "attacks": 2, "rules": ["assault"]},
         "smoke_grenades": {"name": "Smokes", "attacks": 1, "short": 6, "rules": ["grenade", "smoke", "indirect"]},
         "rifle": {"name": "Rifle", "short": 12, "medium": 24, "attacks": 1},
         "rifle_grenade": {
@@ -550,7 +558,9 @@
         "bazooka": {"name": "Bazooka", "short": 12, "medium": 24, "ap": 6, "attacks": 1, "rules": ["heat", {"id": "team", "x": 2}]},
         "lunge_mine": {"name": "Lunge Mine", "attacks": 1, "short": "Melee", "ap": 8, "rules": [{"id": "ammo", "x": 1}]},
         "sword": {"name": "Sword", "attacks": 1, "short": "Melee", "ap": 1},
-        "officer_sword": {"name": "Officer's Sword", "attacks": 2, "short": "Melee", "ap": 1}
+        "officer_sword": {"name": "Officer's Sword", "attacks": 2, "short": "Melee", "ap": 1},
+        "bayonet": {"name": "Bayonet", "attacks": 1, "short": "Melee", "ap": 1},
+        "dadao": {"name": "Dadao", "attacks": 1, "short": "Melee", "ap": 1}
     },
     "rules": {
         "heat": {"name": "HEAT", "description": "Enemy units add 1 to rolls on any Damage Table(X) rules when hit by this weapon at Short range.", "points": ["weapon.attacks", {"multiply": 2.5}]},
