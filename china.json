@@ -433,6 +433,86 @@
                 }
             ]
         },
+        "saco": {
+            "name": "SACO Guerrillas",
+            "description": "SACO (Sino-American Cooperative Organization) was created by a treaty between the United States and China, around the time that the US entered WW2. In the treaty, the two nations agreed to share information and work together to defeat Japan. The organization was mostly coordinated by the Chinese Nationalist secret police and the O.S.S., which became the CIA. American police officers within special camps, would train Chinese guerrillas in the use of radios, spying, identifiying enemy equipment, hand to hand fighting, small arms, explosives, and sabotages. Overall, the Americans were suprised at how fast the Chinese were willing to, and could, learn the material",
+            "min": 1,
+            "max": 3,
+            "category": "infantry",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "pistol", "modelLimit": 4}],
+            "models": [
+                {
+                    "name": "SACO Guerrilla NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["carbine_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": {"id": "smg", "name": "M42"}}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "SACO Guerrilla",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["carbine_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": {"id": "smg", "name": "M42", "modelLimit": 1}}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "vetern_saco": {
+            "name": " SACO Guerrilla Veterans",
+            "description": "Filler",
+            "min": 1,
+            "max": 3,
+            "category": "infantry",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}],
+            "models": [
+                {
+                    "name": "SACO Guerrilla Veteran NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["carbine_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "SACO Guerrilla Veteran",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["carbine_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": ["assault_lmg"], "modelLimit": 1}, {"replaceWeapon": "carbine_rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
         "mmg_team": {
             "name": "Maxim MG Team",
             "description": "A us MMG.",
@@ -653,10 +733,10 @@
         }
     },
     "strategies": {
-        "urah_assault": {
-            "name": "Urah Assault",
-            "flavor": "A swift and deadly end to a fight can come with a furious charge...",
-            "description": "Use when a Soviet Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
+        "kukan": {
+            "name": "Kukan!",
+            "flavor": "A swift and deadly end to a fight can come with a furious charge of spears, bayonets, and swords...",
+            "description": "Use when a Chinese Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
         }
     },
