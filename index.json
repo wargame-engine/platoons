@@ -219,7 +219,7 @@
             ]
         },
         "pistol": {"name": "Pistol", "short": 6, "attacks": 1, "rules": ["pistol"]},
-        "assault_pistol": {"name": "Assault Pistol", "short": 6, "medium": 9, "attacks": 2, "rules": ["assault"]},
+        "assault_pistol": {"name": "Assault Pistol", "short": 6, "attacks": 2, "rules": ["assault", "pistol"]},
         "smoke_grenades": {"name": "Smokes", "attacks": 1, "short": 6, "rules": ["grenade", "smoke", "indirect"]},
         "rifle": {"name": "Rifle", "short": 12, "medium": 24, "attacks": 1},
         "rifle_grenade": {
