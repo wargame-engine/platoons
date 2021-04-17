@@ -258,7 +258,9 @@
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
             "options": [
-                {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
                 {"addRule": ["fanatical"], "modelLimit": "all"}
             ],
             "models": [
@@ -300,7 +302,12 @@
             "category": "infantry",
             "subfactions": ["infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": ["fanatical"], "modelLimit": "all"}],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"addRule": ["fanatical"], "modelLimit": "all"}
+            ],
             "models": [
                 {
                     "name": "Veteran Grenadier NCO",
@@ -530,25 +537,9 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [
-                {"replaceWeapon": "rifle", "withWeapon": ["smg", "assault_rifle"]},
-                {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"addWeapon": "panzerfaust", "modelLimit": 2}
-            ],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "assault_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
-                {
-                    "name": "Brandenburger NCO",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 7,
-                    "wounds": 1,
-                    "weapons": ["rifle", "unarmed"],
-                    "min": 1,
-                    "max": 1
-                },
+                {"name": "Brandenburger NCO", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 7, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1},
                 {
                     "name": "Brandenburger",
                     "courage": 6,
@@ -573,7 +564,13 @@
             "category": "infantry",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": ["fanatical"], "modelLimit": "all"}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"addRule": ["fanatical"], "modelLimit": "all"},
+                {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}
+            ],
             "models": [
                 {
                     "name": "Pionier NCO",
@@ -599,7 +596,10 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}
+                    ],
                     "min": 4,
                     "max": 10
                 }
@@ -610,11 +610,10 @@
             "description": "A professional and specialized team for defeating tanks via throwables, traps, and demolition charges. It consists of a leader and runner, a security team, a smoke team, and a demolition team. These teams each operate somewhat independently of each other, and were adapted or modified according to local conditions.",
             "min": 1,
             "max": 1,
-            "category": "infantry",
+            "category": "support",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "bundle_grenades", "modelLimit": 2}, {"addWeapon": "molotov_cocktails", "modelLimit": 8}, {"addWeapon": "lunge_mine", "modelLimit": 8},
-                 {"addRule": ["fanatical"], "modelLimit": "all"}, {"addRule": ["scout"]}],
+            "options": [{"addWeapon": "bundle_grenades", "modelLimit": 2}],
             "models": [
                 {
                     "name": "Panzer-Zerstörer NCO",
@@ -626,7 +625,9 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed", "smoke_grenades"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "MP-40"}]}],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "smg"}]}
+                    ],
                     "min": 1,
                     "max": 1
                 },
@@ -640,10 +641,12 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "MP-40"}], "modelLimit": 2}],
-                    
-                    "min": 4,
-                    "max": 10
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "smg"}], "modelLimit": 2},
+                        {"replaceWeapon": "rifle", "withWeapon": ["panzerschreck"], "modelLimit": 2}
+                    ],
+                    "min": 5,
+                    "max": 5
                 }
             ]
         },
@@ -1483,9 +1486,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["dual_mmg"],
-                    "options": [
-                        {"replaceWeapon": "dual_mmg", "withWeapon": "light_autocannon_aa"}
-                    ],
+                    "options": [{"replaceWeapon": "dual_mmg", "withWeapon": "light_autocannon_aa"}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 2}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
@@ -1560,7 +1561,7 @@
                     "defense": 11,
                     "reflexes": 5,
                     "wounds": 6,
-                    "weapons": ["mmg", {"id": "vehicle_flamethrower", "mount": ["Front", "Right"]},{"id": "vehicle_flamethrower", "mount": ["Front", "Left"]}],
+                    "weapons": ["mmg", {"id": "vehicle_flamethrower", "mount": ["Front", "Right"]}, {"id": "vehicle_flamethrower", "mount": ["Front", "Left"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
@@ -1688,7 +1689,10 @@
                     "weapons": [{"id": "medium_at", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle", "exposed"],
                     "options": [
-                        {"replaceWeapon": {"id": "medium_at", "mount": ["Front"]}, "withWeapon": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "heavy_at", "mount": ["Front"]}, {"id": "heavy_howitzer", "mount": ["Front"]}]}
+                        {
+                            "replaceWeapon": {"id": "medium_at", "mount": ["Front"]},
+                            "withWeapon": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "heavy_at", "mount": ["Front"]}, {"id": "heavy_howitzer", "mount": ["Front"]}]
+                        }
                     ],
                     "min": 1,
                     "max": 1
@@ -1865,9 +1869,7 @@
                     "wounds": 6,
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle", "exposed"],
-                    "options": [
-                        {"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": "mmg"}
-                    ],
+                    "options": [{"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": "mmg"}],
                     "min": 1,
                     "max": 1
                 }
@@ -1893,9 +1895,7 @@
                     "wounds": 6,
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", "armored_front", {"id": "impact", "x": 6}, "damage_table_vehicle"],
-                    "options": [
-                        {"replaceWeapon": {"id": "heavy_at", "mount": ["Front"]}, "withWeapon": {"id": "very_heavy_at", "mount": ["Front"]}}, {"addRule": "side_skirts"}
-                    ],
+                    "options": [{"replaceWeapon": {"id": "heavy_at", "mount": ["Front"]}, "withWeapon": {"id": "very_heavy_at", "mount": ["Front"]}}, {"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
                 }
@@ -2278,9 +2278,7 @@
                     "wounds": 6,
                     "weapons": [{"id": "light_rockets", "count": 3}],
                     "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", "exposed"],
-                    "options": [
-                        {"addWeapon": "mmg_aa"}
-                    ],
+                    "options": [{"addWeapon": "mmg_aa"}],
                     "min": 1,
                     "max": 1
                 }
@@ -2723,9 +2721,7 @@
                     "wounds": 6,
                     "weapons": [{"id": "20mm_cannon", "count": 2, "mount": ["Front"]}, {"id": "light_bomb", "count": 8}],
                     "rules": ["aircraft", "damage_table_aircraft", "exposed"],
-                    "options": [
-                        {"replaceWeapon": {"id": "light_bomb", "count": 8}, "withWeapon": {"id": "heavy_bomb", "count": 4} }
-                    ],
+                    "options": [{"replaceWeapon": {"id": "light_bomb", "count": 8}, "withWeapon": {"id": "heavy_bomb", "count": 4}}],
                     "min": 1,
                     "max": 1
                 }
@@ -2841,7 +2837,11 @@
         }
     },
     "rules": {
-        "desert_fox": {"name": "Desert Fox", "description": "This unit and one other friendly unit may be set up in Outflanking Reserves. At the beginning of any round after the first, units may be set up within 6\" of a table edge that is not in the enemy deployment zone, and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.", "points": 20},
+        "desert_fox": {
+            "name": "Desert Fox",
+            "description": "This unit and one other friendly unit may be set up in Outflanking Reserves. At the beginning of any round after the first, units may be set up within 6\" of a table edge that is not in the enemy deployment zone, and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
+            "points": 20
+        },
         "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
         "ambush_master": {"name": "Ambush Master", "description": "This unit get +1 Accuracy when using an Ambush reaction.", "points": 20},
         "move_move_move_infantry": {"name": "Move Move Move", "description": "This unit and friendly Infantry units within 6\" add 2\" to their Movement characteristic.", "points": 10}
