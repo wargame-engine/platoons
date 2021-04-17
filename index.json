@@ -576,7 +576,7 @@
             "description": "Whenever this model, or a friendly Infantry model within 6\" fails a save, roll a D10. On a 3 or less that save is not failed. This model may never control or contest objectives.",
             "points": 15
         },
-        "fanatical": {"name": "Fanatical", "description": "This unit is treated as having +2 Courage for all break tests and does not gain shock from close combat.", "points": 3},
+        "fanatical": {"name": "Fanatical", "description": "This unit is treated as having +2 Courage for all break tests and does not gain shock from close combat.", "points": 2},
         "body_armor": {"name": "Body Armor", "description": "This model gains +1 Save.", "points": 2},
         "tank_rider": {"name": "Tank Rider", "description": "This model and its unit may be embarked on Vehicle unit with a save of 11+ as if it had Transport.", "points": 1},
         "mounted_bicycle": {
