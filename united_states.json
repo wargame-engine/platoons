@@ -126,7 +126,8 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [
-                {"addWeapon": "at_grenades", "modelLimit": 3}
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "carbine_rifle", "modelLimit": 4}
             ],
             "models": [
                 {
@@ -167,7 +168,10 @@
             "subfactions": ["none", "armored_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "carbine_rifle", "modelLimit": 4}
+            ],
             "models": [
                 {
                     "name": "Armored Rifle NCO",
@@ -207,7 +211,10 @@
             "subfactions": ["armored_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "carbine_rifle", "modelLimit": 4}
+            ],
             "models": [
                 {
                     "name": "Veteran Armored Rifle NCO",
@@ -247,7 +254,10 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "carbine_rifle", "modelLimit": 4}
+            ],
             "models": [
                 {
                     "name": "Ranger NCO",
@@ -288,7 +298,8 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [
-                {"addWeapon": "at_grenades", "modelLimit": 3}
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "carbine_rifle", "modelLimit": 4}
             ],
             "models": [
                 {
@@ -330,7 +341,8 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [
-                {"addWeapon": "at_grenades", "modelLimit": 3}
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "carbine_rifle", "modelLimit": 4}
             ],
             "models": [
                 {
