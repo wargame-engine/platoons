@@ -354,8 +354,7 @@
                 {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 5},
                 {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle", "assault_rifle"]},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"addWeapon": "panzerfaust", "modelLimit": 2},
-                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
+                {"addWeapon": "panzerfaust", "modelLimit": 2}
             ],
             "models": [
                 {
@@ -403,8 +402,7 @@
                 {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 5},
                 {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle", "assault_rifle"]},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"addWeapon": "panzerfaust", "modelLimit": 2},
-                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
+                {"addWeapon": "panzerfaust", "modelLimit": 2}
             ],
             "models": [
                 {
