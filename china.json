@@ -31,7 +31,7 @@
         },
         "political_officer": {
             "name": "Political Officer",
-            "description": "An officer dedicated to keeping officers and higher soldiers in line.",
+            "description": "An officer dedicated to keeping officers and higher soldiers in line. To the Nationalist Party, to the Motherland, to Communism, or to the local Warlord, it doesn't really matter.",
             "min": 1,
             "max": 1,
             "category": "command",
@@ -94,23 +94,23 @@
                     "name": "Police Officer",
                     "courage": 5,
                     "movement": 6,
-                    "shoot": 4,
+                    "shoot": 5,
                     "fight": 5,
                     "defense": 4,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 1,
-                    "weapons": [{"id": "bamboo_spear", "name": "Qiang (spear)", "count": 2}],
+                    "weapons": ["pistol", "dadao"],
                     "min": 1,
                     "max": 1
                 },
                 {
                     "name": "Peasant",
-                    "courage": 5,
+                    "courage": 4,
                     "movement": 6,
                     "shoot": 4,
                     "fight": 4,
                     "defense": 4,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 1,
                     "weapons": [{"id": "bamboo_spear", "name": "Qiang (spear)", "count": 2}],
                     "modelLimit": 1,
@@ -126,6 +126,7 @@
             "max": 2,
             "category": "infantry",
             "keywords": ["Infantry"],
+            "rules": ["stubborn"],
             "options": [{"addWeapon": "pistol"}],
             "models": [
                 {
@@ -138,6 +139,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": [{"id": "bamboo_spear", "name": "Qiang (spear)", "count": 2}],
+                    "options": [{"replaceWeapon": "bamboo_spear", "withWeapon": "officer_sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -172,7 +174,7 @@
                     "courage": 6,
                     "movement": 6,
                     "shoot": 4,
-                    "fight": 4,
+                    "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
@@ -185,7 +187,7 @@
                     "courage": 6,
                     "movement": 6,
                     "shoot": 4,
-                    "fight": 4,
+                    "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
@@ -202,20 +204,19 @@
             "max": 2,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [            
-{"addWeapon": ["frag_grenades", "molotov_cocktails"], "modelLimit": 2}]
-            ,
+            "rules": ["stealth"],
             "models": [
                 {
                     "name": "8th Route Guerrilla Revolutionary",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 4,
+                    "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": [[{"id": "rifle", "name": "Mosin–Nagant"}], "bayonet"],
+                    "options": [{"addWeapon": ["frag_grenades", "molotov_cocktails"], "modelLimit": 2}],
                     "min": 1,
                     "max": 1
                 },
@@ -234,42 +235,51 @@
                 }
             ]
         },
+        "c3_nra_regular": {
+            "name": "Catagory 3 NRA Regular",
+            "description": "A little over half of the reportedly two million soldiers in the National Revolutionary Army were labeled as 'Category 3' and being considered the last loyal, least equipped, with a strong suspicion of having stronger ties to other leaders than Generalissimo Chiang Kai-shek. While a large number of these 'disloyal' men were part of the Sichuan clique, and were so brave as to provide 2/3rds of the men who died for the Motherland, the remainder weren't recorded as brave. China of the period was incredibly poor and quality of equipment was miserable for half of the NRA, with many men having close to no live firearms practice, barely getting enough to eat, and not even being supplied with boots. Considering some reports of brutal mass conscription, a lack of political motivation for non-nationalist/communist troops, and limited financial support, it's no surprise many men had rock bottom motivation.",
+            "min": 1,
+            "max": 3,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Reluctant NRA Regular",
+                    "courage": 4,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 4,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "unarmed", "withWeapon": ["dadao"]}],
+                    "min": 5,
+                    "max": 12
+                }
+            ]
+        },
         "nra_regular": {
             "name": "NRA Regular",
             "description": "NRA Regular, 'National Revolutionary Army'). Recruits with modest practice and some access to modern weaponry, organized by the Chinese Nationalist Party and the NRA built to preserve the 'Republic of China'. The NRA Regulars are lucky in that unlike many of those fighting for the Motherland, they have a rifle, a steel helmet, and boots. The NRA Regular is often an illiterate peasant fighting to make a little extra money to support his family. NRA was lacking in ammunition or supplies for training, and the most advanced tactics were retained by officers who stayed in the field, meaning most NRA regulars did the bulk of their learning in classrooms and in the field. Despite this, the NRA regular was described as 'fit', 'hardy', 'obedient', and 'asking little in return'. One visiting American military observer noted that the slowest Chinese soldier learned how to operate a weapon in three days, that might easily take an American five days.",
             "min": 1,
-            "max": 1,
+            "max": 3,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}],
             "models": [
                 {
-                    "name": "NRA Regular NCO",
+                    "name": "NRA Regular",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 1,
-                    "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}],
-                    "min": 1,
-                    "max": 1
-                },
-                {
-                    "name": "NRA Regular",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
+                    "defense": 4,
+                    "reflexes": 4,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "ZB vz. 26"}], "modelLimit": 1}],
                     "min": 5,
-                    "max": 11
+                    "max": 12
                 }
             ]
         },
@@ -280,22 +290,9 @@
             "max": 2,
             "category": "infantry",
             "keywords": ["Infantry"],
+            "rules": ["stubborn"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}],
             "models": [
-                {
-                    "name": "Warrior NCO",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 1,
-                    "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}],
-                    "min": 1,
-                    "max": 1
-                },
                 {
                     "name": "Warrior",
                     "courage": 6,
@@ -320,10 +317,10 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2}, {"addWeapon": ["frag_grenades","bundle_grenades"], "modelLimit": 3}, {"rules": ["stubborn"]}], 
             "models": [
                 {
-                    "name": "Rifle NCO",
+                    "name": "Elite Rifle NCO",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 6,
@@ -332,13 +329,14 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_pistol", "name": "Mauser Pistol"}], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_pistol", "name": "Mauser Pistol"}], "modelLimit": 1}, 
+                    {"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],
                     "min": 1,
                     "max": 1
                 },
                 {
-                    "name": "Rifleman",
-                    "courage": 5,
+                    "name": " Elite Rifleman",
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 5,
@@ -346,7 +344,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "ZB vz. 26"}], "modelLimit": 1}, {"addRule": "blue_and_white_banner", "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "ZB vz. 26"}], "modelLimit": 1}, {"addRule": "blue_and_white_banner", "modelLimit": 1}, [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 27"}], "modelLimit": 1}]],
                     "min": 5,
                     "max": 11
                 }
@@ -361,8 +359,8 @@
             "keywords": ["Infantry"],
             "options": 
             [{"replaceWeapon": ["rifle", "bayonet"], "withWeapon": 
-                    [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1},            
-{"addWeapon": ["frag_grenades","bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 3}],
+                    [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1}],            
+
             "models": [
                 {
                     "name": "Eight Route Army Support NCO",
@@ -374,6 +372,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": [[{"id": "rifle", "name": "Mosin Nagant"}], "bayonet"],
+                    "options": [{"addWeapon": ["frag_grenades","bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 1}], 
                     "min": 1,
                     "max": 1
                 },
@@ -386,7 +385,8 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": [[{"id": "rifle", "name": "Mosin–Nagant"}], "bayonet"],
+                    "weapons": [[{"id": "rifle", "name": "Mosin–Nagant"}], "bayonet"],   
+                    "options": [{"addWeapon": ["frag_grenades","bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 2}], 
                     "min": 5,
                     "max": 11
                 }
@@ -402,10 +402,10 @@
             "options": 
             [{"replaceWeapon": ["rifle", "bayonet"], "withWeapon": 
                     [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1},            
-{"addWeapon": ["frag_grenades","bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 3}],
+            {"addWeapon": ["frag_grenades","bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
                 {
-                    "name": "Eight Route Army Support NCO",
+                    "name": "Eight Route Army Support Veteran NCO",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 6,
@@ -413,12 +413,13 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": [[{"id": "rifle", "name": "Mosin Nagant"}], "bayonet"],
+                    "weapons": [[{"id": "rifle", "name": "Mosin Nagant"}], "bayonet", "unarmed"],
+                    "options": [{"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],    
                     "min": 1,
                     "max": 1
                 },
                 {
-                    "name": "Eight Route Army Support",
+                    "name": "Eight Route Army Support Veteran",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
@@ -427,6 +428,175 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": [[{"id": "rifle", "name": "Mosin–Nagant"}], "bayonet"],
+                    "options": [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 27"}], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "saco": {
+            "name": "SACO Guerrillas",
+            "description": "SACO (Sino-American Cooperative Organization) was created by a treaty between the United States and China, around the time that the US entered WW2. In the treaty, the two nations agreed to share information and work together to defeat Japan. The organization was mostly coordinated by the Chinese Nationalist secret police and the O.S.S., which became the CIA. American police officers within special camps, would train Chinese guerrillas in the use of radios, spying, identifiying enemy equipment, hand to hand fighting, small arms, explosives, and sabotages. Overall, the Americans were suprised at how fast the Chinese were willing to, and could, learn the material",
+            "min": 1,
+            "max": 3,
+            "category": "infantry",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "pistol", "modelLimit": 4}],
+            "models": [
+                {
+                    "name": "SACO Guerrilla NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["carbine_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": {"id": "smg", "name": "M42"}}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "SACO Guerrilla",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["carbine_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": {"id": "smg", "name": "M42", "modelLimit": 1}}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "veteran_saco": {
+            "name": " SACO Guerrilla Veterans",
+            "description": "Filler",
+            "min": 1,
+            "max": 3,
+            "category": "infantry",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "smoke_grenades", "modelLimit": 2}],
+            "models": [
+                {
+                    "name": "SACO Guerrilla Veteran NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["carbine_rifle", "unarmed"],
+                    "options": [{"addWeapon": ["bazooka"], "modelLimit": 1}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "SACO Guerrilla Veteran",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["carbine_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": ["assault_lmg"], "modelLimit": 1}, {"replaceWeapon": "carbine_rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
+                },
+                {"name": "SACO Guerrilla Veteran Bazooka Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 1}
+            ]
+        },
+        "yan_x_nra": {
+            "name": " Yan Xishan's Army",
+            "description": "The average soldier of Yan Xishan was in a very specific situation, in regards to being a Chinese soldier. He often wasn't a volunteer, nor was he motivated by the nationalist or communist parties. However, unlike a large number of the people of his country, he could read. While maybe half or less of the soldiers of the NRA had a good uniform, boots, and a rifle; the average soldier in service to Yan Xishan could've had spares. Every single one of these men was born in their province and some of them had lived their whole lives with Yan Xishan in power, hearing people repeat his speeches, and reading his newspapers. They spent the time they didn't spend training, building roads, and helping farmers, which made them very popular with many ordinary people. While it's not clear how well the average soldier of Yan Xishan understood the man's seemingly complex blend of every single modern European and ancient Chinese philosophy, the warlord claimed to practice a philosophy of service, modernity, and equality. At the very least, the average soldier would notice the 'land reforms' and how many of the corrupt elite seemed to despise Yan Xishan.",
+            "min": 1,
+            "max": 5,
+            "category": "infantry",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "rules": ["stubborn"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "Thompson"}], "modelLimit": 1}, {"addWeapon": "at_grenades", "modelLimit": 1}, {"addWeapon": ["frag_grenades"], "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Yan Xishan Rifleman NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "unarmed", "withWeapon": ["assault_pistol"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Yan Xishan Rifleman",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "ZB vz. 26"}], "modelLimit": 1},
+                               {"replaceWeapon": "unarmed", "withWeapon": ["pistol"]},
+                               {"replaceWeapon": "unarmed", "withWeapon": [{"id": "assault_pistol", "name": "Mauser pistol", "modelLimit": 2}]},
+                               [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 27"}], "modelLimit": 1}]],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
+        "yan_x_elite_nra": {
+            "name": " Yan Xishan's Elite Soldiers",
+            "description": "While the communists preferred to 'poke and prod', with their 'hit and run attacks', Yan Xishan had access to men who knew no fear and would fight to the last 10%, which according to all accounts, they did. Even Mao wasn't sure if he wanted to refer to Yan Xishan's thinking as 'suicidal tactics' or praise him for waging complete resistance with no surrender. Yan Xishan's best men were at times better equipped than the Japanese, and were heavily motivated by: better treatment, better living conditions, Yan Xishan's appearance of being a complex and intelligent philosophical leader, seemingly endless automatic weapons, and the fact that Yan Xishan would personally order the execution of commanders he thought were cowardly. According to some reports, for every one of them that died, they took as many as two, three, four, or even five Japanese.",
+            "min": 1,
+            "max": 2,
+            "category": "infantry",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "Thompson"}], "modelLimit": 4}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "fanatic"}, {"addWeapon": ["frag_grenades","bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Yan Xishan Honor Guard NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "unarmed", "withWeapon": ["assault_pistol"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Yan Xishan Honor Guard",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "ZB vz. 26"}], "modelLimit": 1},
+                               {"replaceWeapon": "unarmed", "withWeapon": ["pistol"]},
+                               {"replaceWeapon": "unarmed", "withWeapon": [{"id": "assault_pistol", "name": "Mauser pistol", "modelLimit": 4}]},
+                               [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 27"}], "modelLimit": 1}]],
                     "min": 5,
                     "max": 11
                 }
@@ -434,7 +604,7 @@
         },
         "mmg_team": {
             "name": "Maxim MG Team",
-            "description": "A us MMG.",
+            "description": "An incredibly modified and updated version of the early WW1 German MG 08, the Type 24 had many features and was the most common heavy machine gun used by China. It could be modified or setup to do all kinds of different tasks, but it was pretty heavy.",
             "min": 1,
             "max": 1,
             "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
@@ -450,7 +620,7 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 3,
-                    "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "weapons": [{"id": "mmg", "name": "Type 24 Maxim", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "rules": [{"id": "crew", "x": 3}],
                     "min": 1,
                     "max": 1
@@ -553,109 +723,13 @@
                     "max": 1
                 }
             ]
-        },
-        "ot_34": {
-            "name": "OT-34",
-            "description": "A medium tank with an adequate gun.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy_vehicles",
-            "keywords": ["Vehicle", "Tank"],
-            "models": [
-                {
-                    "name": "OT-34",
-                    "courage": 6,
-                    "movement": 10,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 12,
-                    "reflexes": 6,
-                    "wounds": 6,
-                    "weapons": ["medium_at_mg", {"id": "vehicle_flamethrower", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, {"id": "critical", "x": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "ot_34_85": {
-            "name": "OT-34/85",
-            "description": "A medium tank with a heavy gun.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy_vehicles",
-            "keywords": ["Vehicle", "Tank"],
-            "models": [
-                {
-                    "name": "OT-34/85",
-                    "courage": 6,
-                    "movement": 10,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 12,
-                    "reflexes": 6,
-                    "wounds": 6,
-                    "weapons": ["heavy_at_mg", {"id": "vehicle_flamethrower", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, {"id": "critical", "x": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "t34": {
-            "name": "T34/76",
-            "description": "A medium tank with an adequate gun.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy_vehicles",
-            "keywords": ["Vehicle", "Tank"],
-            "models": [
-                {
-                    "name": "T34/76",
-                    "courage": 6,
-                    "movement": 10,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 12,
-                    "reflexes": 6,
-                    "wounds": 6,
-                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, {"id": "critical", "x": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "t34_85": {
-            "name": "T34/85",
-            "description": "A medium tank with a powerful main gun.",
-            "min": 1,
-            "max": 1,
-            "category": "heavy_vehicles",
-            "keywords": ["Vehicle", "Tank"],
-            "models": [
-                {
-                    "name": "T34/85",
-                    "courage": 6,
-                    "movement": 10,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 12,
-                    "reflexes": 6,
-                    "wounds": 6,
-                    "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, {"id": "critical", "x": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
         }
     },
     "strategies": {
-        "urah_assault": {
-            "name": "Urah Assault",
-            "flavor": "A swift and deadly end to a fight can come with a furious charge...",
-            "description": "Use when a Soviet Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
+        "kukan": {
+            "name": "Kukan!",
+            "flavor": "A swift and deadly end to a fight can come with a furious charge of spears, bayonets, and swords...",
+            "description": "Use when a Chinese Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
         }
     },

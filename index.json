@@ -100,9 +100,9 @@
         "brazil": {"name": "Brazil", "id": "brazil", "url": "brazil.json", "color": "#008A4D", "alliance": "allies"},
         "belgium": {"name": "Belgium", "id": "france", "url": "belgium.json", "color": "#968164", "alliance": "allies"},
         "poland": {"name": "Poland", "id": "poland", "url": "poland.json", "color": "#D83658", "alliance": "allies"},
-        "china_nationalist": {"name": "China (Nationalist)", "id": "china_nationalist", "url": "china_nationalist.json", "color": "#0e3391"},
-        "china_communist": {"name": "China (Communist)", "id": "china_communist", "url": "china_communist.json", "color": "#C13E3E"},
-        "china_warlord": {"name": "China (Warlord)", "id": "china_warlord", "url": "china_warlord.json", "color": "#a38b5c"}
+        "china_western": {"name": "China (Westernized)", "id": "china_western", "url": "china_western.json", "color": "#0e3391"},
+        "china_communist": {"name": "China (United Front)", "id": "china_communist", "url": "china_communist.json", "color": "#C13E3E"},
+        "china_nationalist": {"name": "China (Chiang Kai-shek)", "id": "china_nationalist", "url": "china_nationalist.json", "color": "#a38b5c"}
     },
     "categories": {
         "command": {"name": "Command"},
@@ -219,7 +219,7 @@
             ]
         },
         "pistol": {"name": "Pistol", "short": 6, "attacks": 1, "rules": ["pistol"]},
-        "assault_pistol": {"name": "Assault Pistol", "short": 6, "medium": 9, "attacks": 2, "rules": ["assault"]},
+        "assault_pistol": {"name": "Assault Pistol", "short": 6, "attacks": 2, "rules": ["assault", "pistol"]},
         "smoke_grenades": {"name": "Smokes", "attacks": 1, "short": 6, "rules": ["grenade", "smoke", "indirect"]},
         "rifle": {"name": "Rifle", "short": 12, "medium": 24, "attacks": 1},
         "rifle_grenade": {
