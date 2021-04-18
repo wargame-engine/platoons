@@ -442,6 +442,7 @@
             "category": "infantry",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
+            "rules": ["stealth"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "pistol", "modelLimit": 4}],
             "models": [
                 {
@@ -567,7 +568,7 @@
             "category": "infantry",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "Thompson"}], "modelLimit": 4}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "fanatic"}, {"addWeapon": ["frag_grenades","bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 3}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "Thompson"}], "modelLimit": 4}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "fanatical"}, {"addWeapon": ["frag_grenades","bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
                 {
                     "name": "Yan Xishan Honor Guard NCO",
@@ -599,6 +600,83 @@
                                [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 27"}], "modelLimit": 1}]],
                     "min": 5,
                     "max": 11
+                }
+            ]
+        },
+        "y_force_nra_regular": {
+            "name": "Y Force NRA Regular",
+            "description": "",
+            "min": 1,
+            "max": 3,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Y Force NRA NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"], "modelLimit": 1}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Y Force NRA Regular",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "ZB vz. 26"}], "modelLimit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]}],
+                    "min": 5,
+                    "max": 12
+                }
+            ]
+        },
+        "x_force_nra_regular": {
+            "name": "X Force NRA Regular",
+            "description": "",
+            "min": 1,
+            "max": 3,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "Thompson"}], "modelLimit": 1}, [{"replaceWeapon": "unarmed", "withWeapon": [{"id": "pistol", "name": "Browning Pistol"}], "modelLimit": 4}], {"addWeapon": ["frag_grenades"], "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "X Force NRA NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "X Force NRA Regular",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "8mm Canadian Bren"}], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 12
                 }
             ]
         },
