@@ -177,7 +177,7 @@
             ]
         },
         "puppet_chinese": {
-            "name": "Collaborationist Chinese Army",
+            "name": "Chinese Collaborationists",
             "description": "Close to 600,000 Chinese soldiers served under the banner of the 'Reorganized National Government of the Republic of China' or 'Wang Jingwei regime'. Wang Jingwei was a man who believed he would've become the true leader of the Nationalist Revolutionary Party and thus, China, but Generalissimo Chiang Kai-shek had risen to power faster. The Wang Jingwei regime flew the twin banners of the Nationalist Party and 'Five Races Under One Union' flag, with the hopes people would believe it to be the true, legitimate regime of China. Unfortunately for Wang Jingwei, his regime was and appeared to be subordinate to the will of Japan.",
             "min": 1,
             "max": 5,
@@ -185,7 +185,7 @@
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Puppet Regular",
+                    "name": "Chinese Collaborator",
                     "courage": 4,
                     "movement": 6,
                     "shoot": 5,
@@ -195,8 +195,8 @@
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "unarmed", "withWeapon": ["dadao"]}],
-                    "min": 5,
-                    "max": 12
+                    "min": 10,
+                    "max": 14
                 }
             ]
         },
