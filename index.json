@@ -607,13 +607,13 @@
         "field_orders": {
             "name": "Field Orders",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose X friendly Infantry units within 6\" to receive one of the following bonuses: \n* Re-roll Accuracy rolls of 9+ \n* Re-roll Strength rolls of 9+ \n* +3\" Movement \n\nA unit may only benefit from one Field Order.",
-            "points": [15, {"multiply": "rule.x"}]
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
+            "points": [10, {"multiply": "rule.x"}]
         },
         "field_orders_armored": {
             "name": "Field Orders (Armored)",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose X friendly Tank or Armored Car units within 6\" to receive one of the following bonuses: \n* Re-roll Accuracy rolls of 9+ \n* +3\" Movement. \n\nA unit may only benefit from one Field Order.",
+            "description": "When this unit is activated, choose up to X friendly _Tank_ or _Armored Car_ units within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
             "points": [20, {"multiply": "rule.x"}]
         },
         "anti_infantry_mines": {
