@@ -8,7 +8,12 @@
             "color": "#585C75",
             "alliance": "axis",
             "version": "1.0",
-            "description": "Well-known as one of the major aggressors of World War Two, Germany revolutionized mobile warfare in a way never seen before. Germany relies on hard infantry and deadly armored vehicles."
+            "description": "Well-known as one of the major aggressors of World War Two, Germany revolutionized mobile warfare in a way never seen before. Germany relies on hard infantry and deadly armored vehicles.",
+            "subfactions": {
+                "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
+                "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "description": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
+                "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+            }
         },
         "japan": {
             "name": "Japan",
@@ -17,7 +22,11 @@
             "color": "#BE8200",
             "alliance": "axis",
             "version": "1.0",
-            "description": "Opportunists and expansionists during, the Japanese seized as many valuable resources and as much land as they could early in the war. Japan relies on both veteran trained marine and paratrooper units as well as some light but reliable vehicles."
+            "description": "Opportunists and expansionists during, the Japanese seized as many valuable resources and as much land as they could early in the war. Japan relies on both veteran trained marine and paratrooper units as well as some light but reliable vehicles.",
+            "subfactions": {
+                "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
+                "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+            }
         },
         "finland": {
             "name": "Finland",
@@ -26,7 +35,11 @@
             "color": "#5D8CAA",
             "alliance": "axis",
             "version": "1.0",
-            "description": "While originally attempting to remain neutral, Finland was introduced to the war when they were invaded by the Soviet Union, a significantly stronger force. The Finnish use encirclement and stealth tactics to outsmart and outflank their foes before they can correctly respond."
+            "description": "While originally attempting to remain neutral, Finland was introduced to the war when they were invaded by the Soviet Union, a significantly stronger force. The Finnish use encirclement and stealth tactics to outsmart and outflank their foes before they can correctly respond.",
+            "subfactions": {
+                "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
+                "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+            }
         },
         "united_states": {
             "name": "United States",
@@ -35,7 +48,12 @@
             "color": "#4A7643",
             "alliance": "allies",
             "version": "1.0",
-            "description": "The United States, while originally attempting to remain neutral, was suddenly attacked by the Japanese at pearl harbor and was forced to substantially ramp up production to begin fighting on both pacific and western fronts. The United States rely on mobile infantry units and weapons along with solid and reliable, yet numerous sherman tanks."
+            "description": "The United States, while originally attempting to remain neutral, was suddenly attacked by the Japanese at pearl harbor and was forced to substantially ramp up production to begin fighting on both pacific and western fronts. The United States rely on mobile infantry units and weapons along with solid and reliable, yet numerous sherman tanks.",
+            "subfactions": {
+                "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
+                "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "description": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
+                "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+            }
         },
         "soviet_union": {
             "name": "Soviet Union",
@@ -44,7 +62,12 @@
             "color": "#C13E3E",
             "alliance": "allies",
             "version": "1.0",
-            "description": "The Soviet Union, while biding its time before the inevitable German offensive, originally had major command and tactics issues. Later in the war, once they were in full swing, they were a very formidable and numerous force to be reckoned with. The Soviets rely on numerous infantry and heroic bravery to defeat their foes with sheer will."
+            "description": "The Soviet Union, while biding its time before the inevitable German offensive, originally had major command and tactics issues. Later in the war, once they were in full swing, they were a very formidable and numerous force to be reckoned with. The Soviets rely on numerous infantry and heroic bravery to defeat their foes with sheer will.",
+            "subfactions": {
+                "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
+                "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true},
+                "reserves_focus": {"name": "Reserves", "id": "reserves_focus", "description": "Low-quality reserve troops and equipment.", "restricted": true}
+            }
         },
         "british": {
             "name": "British",
@@ -53,7 +76,12 @@
             "color": "#927331",
             "alliance": "allies",
             "version": "1.0",
-            "description": "The British, while honoring previous treaties and agreements was forced to intervene in Germany's earliest battles. The British were eventually able to overcome their early defeats at the hands of the German forces with the help of their other allied counterparts. The British use a combination of capable armored vehicles, solid infantry and elite trained commando and SAS forces to defeat their enemies."
+            "description": "The British, while honoring previous treaties and agreements was forced to intervene in Germany's earliest battles. The British were eventually able to overcome their early defeats at the hands of the German forces with the help of their other allied counterparts. The British use a combination of capable armored vehicles, solid infantry and elite trained commando and SAS forces to defeat their enemies.",
+            "subfactions": {
+                "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
+                "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "background": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
+                "armored_focus": {"name": "Armored", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+            }
         },
         "france": {
             "name": "France",
@@ -62,7 +90,11 @@
             "color": "#395A94",
             "alliance": "allies",
             "version": "1.0",
-            "description": "France, still focused on their success in the first World War, placed heavy emphasis on static and sparse armored forces which were quickly overwhelmed by new German military tactics. The French continue to use first war trench fighting and artillery tactics to defeat their enemies."
+            "description": "France, still focused on their success in the first World War, placed heavy emphasis on static and sparse armored forces which were quickly overwhelmed by new German military tactics. The French continue to use first war trench fighting and artillery tactics to defeat their enemies.",
+            "subfactions": {
+                "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
+                "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+            }
         },
         "australia": {
             "name": "Australia",
@@ -71,7 +103,12 @@
             "color": "#008373",
             "alliance": "allies",
             "version": "0.1",
-            "description": "Australia fought alongside the allies in many important battles, while also attempting to defend their homeland from a possible Japanese invasion. Australia relies on many armaments lent by the British as well as their own inspired troops to achieve victory."
+            "description": "Australia fought alongside the allies in many important battles, while also attempting to defend their homeland from a possible Japanese invasion. Australia relies on many armaments lent by the British as well as their own inspired troops to achieve victory.",
+            "subfactions": {
+                "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
+                "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "description": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
+                "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+            }
         },
         "canada": {
             "name": "Canada",
@@ -80,7 +117,12 @@
             "color": "#47576F",
             "alliance": "allies",
             "version": "0.1",
-            "description": "Beginning all the way in 1939, Canada supplied troops to the British Expeditionary forces to help the French in the defense of their homeland. Canada would go on to participate in many major offensives in the war such as the invasion of Normandy and the attack on the Rhineland. Canada primarily used British equipment supplemented with some of their own designs."
+            "description": "Beginning all the way in 1939, Canada supplied troops to the British Expeditionary forces to help the French in the defense of their homeland. Canada would go on to participate in many major offensives in the war such as the invasion of Normandy and the attack on the Rhineland. Canada primarily used British equipment supplemented with some of their own designs.",
+            "subfactions": {
+                "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
+                "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "description": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
+                "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+            }
         },
         "hungary": {
             "name": "Hungary",
@@ -89,7 +131,12 @@
             "color": "#006354",
             "alliance": "axis",
             "version": "0.1",
-            "description": "Starting with participation in the invasion of Yugoslavia, Hungary officially joined the Axis powers and later participated in the invasion of the Soviet Union. This would quickly turn to defeat as the Soviet Union later swept through and occupied parts of Hungary. The Hungarians relied on both German equipment and some home-developed arms and equipment such as their own unique tank designs."
+            "description": "Starting with participation in the invasion of Yugoslavia, Hungary officially joined the Axis powers and later participated in the invasion of the Soviet Union. This would quickly turn to defeat as the Soviet Union later swept through and occupied parts of Hungary. The Hungarians relied on both German equipment and some home-developed arms and equipment such as their own unique tank designs.",
+            "subfactions": {
+                "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
+                "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "description": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
+                "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+            }
         }
     },
     "unfinished_factions": {
