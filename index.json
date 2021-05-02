@@ -1,5 +1,6 @@
 {
     "reportUrl": "https://github.com/wargame-engine/platoons/issues",
+    "author": "guitarninja#5707",
     "factions": {
         "germany": {
             "name": "Germany",
