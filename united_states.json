@@ -1577,7 +1577,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Fire and Move",
             "flavor": "With a doctrine of mobile warfare, US Infantry advance and fire with great effect.",
-            "description": "Use when an Infantry unit with any Assault weapons is firing. That unit does not suffer -1 to hit when using the Assault rule.",
+            "description": "Use when an Infantry unit performs a Move action. That unit may perform a free Shoot action at -1 Accuracy.",
             "cost": 1
         },
         "scouting_team": {
