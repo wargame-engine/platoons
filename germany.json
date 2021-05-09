@@ -299,8 +299,7 @@
             "subfactions": ["infantry_focus"],
             "keywords": ["Infantry"],
             "options": [
-                {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6},
-                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"], "modelLimit": 2},
+                {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle", "semi_auto_rifle"], "modelLimit": 6},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addWeapon": "panzerfaust", "modelLimit": 2},
                 {"addRule": ["fanatical"], "modelLimit": "all"}
