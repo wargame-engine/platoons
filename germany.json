@@ -254,6 +254,7 @@
             "keywords": ["Infantry"],
             "options": [
                 {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6},
+                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"], "modelLimit": 2},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addWeapon": "panzerfaust", "modelLimit": 2},
                 {"addRule": ["fanatical"], "modelLimit": "all"}
