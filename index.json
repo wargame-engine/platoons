@@ -402,21 +402,21 @@
         "light_mortar": {
             "name": "Light Mortar",
             "profiles": [
-                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["indirect", "scatter", {"id": "blast", "x": 4}]},
+                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": ["indirect", "scatter", {"id": "blast", "x": 3}]},
                 {"name": "Smoke", "short": 24, "medium": 48, "attacks": 1, "rules": ["smoke", "scatter"]}
             ]
         },
         "medium_mortar": {
             "name": "Medium Mortar",
             "profiles": [
-                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", "scatter", {"id": "blast", "x": 5}]},
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", "scatter", {"id": "blast", "x": 4}]},
                 {"name": "Smoke", "short": 30, "medium": 60, "attacks": 1, "rules": ["smoke", "scatter"]}
             ]
         },
         "heavy_mortar": {
             "name": "Heavy Mortar",
             "profiles": [
-                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["indirect", "scatter", {"id": "blast", "x": 6}]},
+                {"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 4, "rules": ["indirect", "scatter", {"id": "blast", "x": 5}]},
                 {"name": "Smoke", "short": 36, "medium": 72, "attacks": 1, "rules": ["smoke", "scatter"]}
             ]
         },

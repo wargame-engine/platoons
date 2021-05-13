@@ -20,14 +20,14 @@
                     "fight": 4,
                     "defense": 4,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
                     "rules": [{"id": "field_orders", "x": 1}, "leader"],
                     "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 4, "fight": 4, "defense": 4, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 4, "fight": 4, "defense": 4, "reflexes": 5,  "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
             ]
         },
         "field_officer": {
@@ -48,14 +48,14 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
                     "rules": [{"id": "field_orders", "x": 1}, "leader"],
                     "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6,  "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
             ]
         },
         "commissar": {
@@ -76,13 +76,13 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 4,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
                     "rules": ["leader", "no_reatreat"],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 4, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 4,  "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "field_medic": {
@@ -102,13 +102,13 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
+                    
                     "weapons": ["pistol", "unarmed", "smoke_grenades"],
                     "rules": ["medic", "support"],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5,  "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "forward_artillery_observer": {
@@ -129,14 +129,14 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "rules": ["support"],
                     "weapons": ["rifle", "unarmed", "smoke_battery"],
                     "options": [{"replaceWeapon": "smoke_battery", "withWeapon": ["light_mortar_battery", "medium_mortar_battery", "heavy_mortar_battery"]}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5,  "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "combat_engineers": {
@@ -157,7 +157,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -171,7 +171,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["box_lmg"], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
                     "min": 4,
@@ -197,7 +197,7 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -211,7 +211,7 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
                     "min": 5,
@@ -237,7 +237,7 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 4,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -251,7 +251,7 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 4,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
                     "min": 5,
@@ -269,7 +269,7 @@
             "subfactions": ["none", "infantry_focus"],
             "options": [{"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
             "models": [
-                {"name": "SMG NCO", "courage": 5, "movement": 6, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
+                {"name": "SMG NCO", "courage": 5, "movement": 6, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 5,  "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
                 {
                     "name": "SMG Infantry",
                     "courage": 5,
@@ -278,7 +278,7 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["smg", "unarmed"],
                     "options": [{"replaceWeapon": "smg", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
                     "min": 5,
@@ -297,7 +297,7 @@
             "subfactions": ["none", "armored_focus"],
             "options": [{"addRule": "body_armor"}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
-                {"name": "Tank Rider NCO", "courage": 6, "movement": 6, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
+                {"name": "Tank Rider NCO", "courage": 6, "movement": 6, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 6,  "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
                 {
                     "name": "Tank Rider",
                     "courage": 6,
@@ -306,7 +306,7 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
+                    
                     "weapons": ["smg", "unarmed"],
                     "options": [{"replaceWeapon": "smg", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
                     "min": 5,
@@ -325,7 +325,7 @@
             "subfactions": ["armored_focus"],
             "options": [{"addRule": "body_armor"}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
-                {"name": "Veteran Tank Rider NCO", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
+                {"name": "Veteran Tank Rider NCO", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6,  "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
                 {
                     "name": "Veteran Tank Rider",
                     "courage": 6,
@@ -334,7 +334,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
+                    
                     "weapons": ["smg", "unarmed"],
                     "options": [{"replaceWeapon": "smg", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
                     "min": 5,
@@ -360,7 +360,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -374,7 +374,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
                     "min": 5,
@@ -400,7 +400,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -414,7 +414,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
                     "min": 5,
@@ -439,7 +439,7 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -453,7 +453,7 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
                     "min": 5,
@@ -479,7 +479,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -493,7 +493,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 2}, {"addWeapon": "at_rifle", "modelLimit": 1}],
                     "min": 5,
@@ -519,7 +519,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -533,7 +533,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 2}, {"addWeapon": "at_rifle", "modelLimit": 1}],
                     "min": 5,
@@ -560,7 +560,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -574,7 +574,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "rifle", "withWeapon": ["sniper_rifle"], "modelLimit": 1}],
                     "min": 4,
@@ -599,7 +599,7 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "molotov_cocktails"],
                     "options": [{"addWeapon": "panzerfaust", "modelLimit": 2}, {"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "molotov_cocktails", "withWeapon": ["at_grenades"]}, {"addRule": "scout", "modelLimit": "all"}],
                     "min": 3,
@@ -625,12 +625,12 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["flamethrower", "unarmed"],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5,  "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "dog_mine_team": {
@@ -643,7 +643,7 @@
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addWeapon": "dog_mine", "modelLimit": 2}],
             "models": [
-                {"name": "Handler", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": [{"id": "dog_mine", "count": 2}], "min": 2, "max": 3}
+                {"name": "Handler", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5,  "weapons": [{"id": "dog_mine", "count": 2}], "min": 2, "max": 3}
             ]
         },
         "sniper_team": {
@@ -657,8 +657,8 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "rules": ["scout", "stealth"],
             "models": [
-                {"name": "Sniper", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "Sniper", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6,  "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6,  "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "at_rifle_team": {
@@ -671,8 +671,8 @@
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
-                {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6,  "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6,  "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "mmg_team": {
@@ -692,7 +692,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 3,
+                    
                     "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "rules": [{"id": "crew", "x": 3}, "gun_shield"],
                     "options": [{"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": "mmg_aa"}],
@@ -718,7 +718,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 3,
+                    
                     "weapons": [{"id": "hmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "rules": [{"id": "crew", "x": 3}, "gun_shield"],
                     "options": [{"replaceWeapon": {"id": "hmg", "mount": ["Front"]}, "withWeapon": "hmg_aa"}],
@@ -745,7 +745,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 2,
+                    
                     "weapons": [{"id": "light_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 2}],
                     "min": 1,
                     "max": 1
@@ -770,7 +770,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 3,
+                    
                     "weapons": [{"id": "medium_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -795,7 +795,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 4,
+                    
                     "weapons": [{"id": "heavy_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
                     "min": 1,
                     "max": 1
@@ -820,7 +820,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 3,
+                    
                     "weapons": [{"id": "light_howitzer_light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -845,7 +845,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 4,
+                    
                     "weapons": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
                     "min": 1,
                     "max": 1
@@ -870,7 +870,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 4,
+                    
                     "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 5}],
                     "min": 1,
                     "max": 1
@@ -895,7 +895,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 3,
+                    
                     "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -920,7 +920,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 3,
+                    
                     "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -945,7 +945,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 4,
+                    
                     "weapons": [{"id": "medium_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -970,7 +970,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 4,
+                    
                     "weapons": [{"id": "medium_at_light_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -994,7 +994,7 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "catches_fire"],
@@ -1020,7 +1020,7 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
@@ -1046,7 +1046,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 4,
+                    
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
                     "min": 1,
                     "max": 1
@@ -1069,7 +1069,7 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["light_at_lmg", {"id": "box_lmg", "mount": ["Front"]}],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
                     "min": 1,
@@ -1093,7 +1093,7 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["box_lmg"],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
                     "options": [{"replaceWeapon": "box_lmg", "withWeapon": "vehicle_flamethrower"}],
@@ -1118,7 +1118,7 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["box_lmg"],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
                     "options": [{"replaceWeapon": "box_lmg", "withWeapon": "hmg"}, {"addRule": "scout"}],
@@ -1143,7 +1143,7 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["light_at_lmg", {"id": "box_lmg", "mount": ["Front"]}],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
                     "min": 1,
@@ -1168,7 +1168,7 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["medium_at_mg", {"id": "vehicle_flamethrower", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -1193,7 +1193,7 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["heavy_at_mg", {"id": "vehicle_flamethrower", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -1218,7 +1218,7 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["mmg", "mmg"],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
@@ -1243,7 +1243,7 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
@@ -1268,7 +1268,7 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["light_at_mg"],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
@@ -1293,7 +1293,7 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["light_at_mg"],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "options": [{"replaceWeapon": "light_at_mg", "withWeapon": "light_howitzer_vehicle_mg"}],
@@ -1319,7 +1319,7 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["light_howitzer_vehicle_mg", {"id": "mmg", "mount": ["Front", "Left"]}, {"id": "mmg", "mount": ["Front", "Right"]}, {"id": "mmg_aa"}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
@@ -1344,7 +1344,7 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -1369,7 +1369,7 @@
                     "fight": 6,
                     "defense": 12,
                     "reflexes": 6,
-                    "wounds": 6,
+                    
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
                     "min": 1,
@@ -1394,7 +1394,7 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -1419,7 +1419,7 @@
                     "fight": 5,
                     "defense": 13,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["heavy_at_mg", {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
@@ -1444,7 +1444,7 @@
                     "fight": 5,
                     "defense": 13,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["very_heavy_at_mg", {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 9}, "damage_table_vehicle"],
                     "options": [{"addWeapon": "hmg_aa"}],
@@ -1470,7 +1470,7 @@
                     "fight": 6,
                     "defense": 12,
                     "reflexes": 6,
-                    "wounds": 6,
+                    
                     "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
                     "min": 1,
@@ -1495,7 +1495,7 @@
                     "fight": 5,
                     "defense": 13,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["medium_at_mg", {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_rear", {"id": "impact", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
@@ -1520,7 +1520,7 @@
                     "fight": 5,
                     "defense": 13,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["medium_at_mg", {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
@@ -1545,7 +1545,7 @@
                     "fight": 5,
                     "defense": 13,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["heavy_howitzer_vehicle_mg", {"id": "mmg", "mount": ["Turret-Rear"]}, {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_rear", {"id": "impact", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
@@ -1580,7 +1580,7 @@
                     "fight": 5,
                     "defense": 9,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": [{"id": "box_lmg", "mount": ["Front"]}],
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 6}, "vulnerable_side_rear", "tracked", "exposed"],
                     "min": 1,
@@ -1605,7 +1605,7 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 12}],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}],
                     "min": 1,
@@ -1629,7 +1629,7 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "rules": ["damage_table_vehicle"],
                     "weapons": [{"id": "light_rockets", "mount": ["Front"], "count": 3}],
                     "min": 1,
@@ -1653,7 +1653,7 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "rules": ["damage_table_vehicle"],
                     "weapons": [{"id": "heavy_rockets", "mount": ["Front"], "count": 2}],
                     "min": 1,

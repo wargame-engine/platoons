@@ -188,7 +188,7 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 4,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "unarmed", "withWeapon": ["dadao"]}],
                     "min": 10,
@@ -496,7 +496,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -510,7 +510,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_lmg"], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
                     "min": 4,
@@ -620,7 +620,7 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "rules": ["scout", "stealth"],
             "models": [
-                {"name": "Marksman", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1}            ]
+                {"name": "Marksman", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5,  "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1}            ]
         },
         "type_4": {
             "name": "Type 4 AT Team",
@@ -1302,7 +1302,7 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 8}],
                     "options": [{"addWeapon": ["mmg_aa"]}],
                     "min": 1,
@@ -1327,7 +1327,7 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 12}],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}],
                     "min": 1,
@@ -1352,7 +1352,7 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": [],
                     "rules": ["tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 13}, "exposed"],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}],
@@ -1379,7 +1379,7 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle", {"id": "limited", "x": 1}],
                     "min": 1,
@@ -1404,7 +1404,7 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "options": [
                         {"addWeapon": ["mmg_aa", "hmg_aa"]}
