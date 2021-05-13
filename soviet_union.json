@@ -1710,54 +1710,6 @@
             "flavor": "Dying for such an important cause is sometimes necessary to win a battle.",
             "description": "Use when an Infantry or Artilelry unit within 2\" of a Conscript unit is targetted by a Shooting attack. Half the hits (rounded down) from that weapon (after adding any additional hits from effects) are moved to the Conscript squad and half hit the original target.",
             "cost": 1
-        },
-        "recrew": {
-            "phase": "activation",
-            "subfactions": ["infantry_focus"],
-            "name": "Recrew (Infantry)",
-            "flavor": "It's highly important to keep artillery pieces manned and fighting.",
-            "description": "Use at the beginning of a round where an Infantry unit is within 2\" of an Artillery unit. Remove X models from the Infantry unit and add restore X crew to the Artillery unit.",
-            "cost": 1
-        },
-        "target_weak_point": {
-            "phase": "activation",
-            "subfactions": ["infantry_focus"],
-            "name": "Target Weak Point (Infantry)",
-            "flavor": "Exploiting weak points an an enemy's armor is key to taking out hard targets.",
-            "description": "Use before shooting with an Infantry or Artillery unit's weapon with AP 3 or higher. That attack is treated as hitting the target's side.",
-            "cost": 1
-        },
-        "frag_out": {
-            "phase": "activation",
-            "subfactions": ["infantry_focus"],
-            "name": "Frag Out (Infantry)",
-            "flavor": "A volley of hand grenades can be quite effective at dealing with enemies in cover.",
-            "description": "Use before shooting with an Infantry unit that has Grenades (any type). That unit may throw 2 additional grenades.",
-            "cost": 1
-        },
-        "armored_assault": {
-            "phase": "activation",
-            "subfactions": ["armored_focus"],
-            "name": "Armored Assault (Armored)",
-            "flavor": "Occasionally armored units are used to push infantry and other units off a dug in position.",
-            "description": "Use when a Vehicle unit declares a Charge action. It is treated as having Shock(+3) for that action.",
-            "cost": 1
-        },
-        "improvised_tactics": {
-            "phase": "activation",
-            "subfactions": ["armored_focus"],
-            "name": "Improvised Tactics (Armored)",
-            "flavor": "Sometimes it is necessary to improvise in an armored engagement in order to gain the edge.",
-            "description": "Use when a Vehicle unit is attempting a reaction test. It is treated as having Initiative 9 for this test.",
-            "cost": 2
-        },
-        "crew_repairs": {
-            "phase": "activation",
-            "subfactions": ["armored_focus"],
-            "name": "Emergency Repairs (Armored)",
-            "flavor": "In moments of dire circumstance crews may need to repair their vehicle in combat.",
-            "description": "Use when a Vehicle unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
-            "cost": 1
         }
     },
     "weapons": {
