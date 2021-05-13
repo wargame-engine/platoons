@@ -240,7 +240,7 @@
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
                     "min": 4,
-                    "max": 8
+                    "max": 9
                 }
             ]
         },
@@ -286,7 +286,7 @@
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
                     "min": 4,
-                    "max": 8
+                    "max": 9
                 }
             ]
         },
@@ -331,7 +331,7 @@
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
                     "min": 4,
-                    "max": 8
+                    "max": 9
                 }
             ]
         },
@@ -379,7 +379,7 @@
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
                     "min": 4,
-                    "max": 8
+                    "max": 9
                 }
             ]
         },
@@ -427,7 +427,7 @@
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
                     "min": 4,
-                    "max": 8
+                    "max": 9
                 }
             ]
         },
@@ -597,7 +597,7 @@
                         {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}
                     ],
                     "min": 4,
-                    "max": 10
+                    "max": 9
                 }
             ]
         },
