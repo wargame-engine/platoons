@@ -634,7 +634,7 @@
             "points": 2
         },
         "side_skirts": {"name": "Side Skirts", "description": "This model gains +1 to its Save when hit in its side arcs from weapons with AP 4 or less.", "points": 5},
-        "gun_shield": {"name": "Gun Shield", "description": "This model gains +1 to its Save when hit in its front arc.", "points": 5},
+        "gun_shield": {"name": "Gun Shield", "description": "Friendly models gain +1 Save when targeted by attacks which cross this model.", "points": 5},
         "suppressive": {"name": "Suppressive", "description": "This weapon deals 1 additional shock.", "points": 1},
         "stubborn": {"name": "Stubborn", "description": "This model requires 1 additional shock to become broken.", "points": ["model.wounds"]},
         "smoke": {
