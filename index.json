@@ -167,14 +167,14 @@
     "alliances": {"axis": {"name": "Axis Powers"}, "allies": {"name": "Allied Powers"}},
     "relics": {
         "tank_ace": {
-            "name": "Tank Ace (Core)",
+            "name": "Tank Ace",
             "rule": "tank_ace",
             "flavor": "A tank ace is a fearsome foe to encounter on the battlefield.",
             "description": "Upgrade one Tank unit with Tank Ace.",
             "points": 20
         },
         "inspiring_leader": {
-            "name": "Inspiring Leader (Core)",
+            "name": "Inspiring Leader",
             "rule": "inspiring_leader",
             "flavor": "A leader who can motivate his/her men to keep fighting is a key asset.",
             "description": "Upgrade one Field Officer model with Inspiring Leader.",
@@ -184,7 +184,7 @@
     "powers": {},
     "organizations": {
         "infantry_platoon": {
-            "name": "Infantry Platoon (Core)",
+            "name": "Infantry Platoon",
             "cost": 0,
             "description": "A well-rounded force for taking on any opponent.",
             "categories": {
@@ -200,7 +200,7 @@
             }
         },
         "support_platoon": {
-            "name": "Support Platoon (Core)",
+            "name": "Support Platoon",
             "cost": 1,
             "description": "A platoon focused on support units and heavy guns.",
             "categories": {
@@ -216,7 +216,7 @@
             }
         },
         "mechanized_platoon": {
-            "name": "Mechanized/Motorized Platoon (Core)",
+            "name": "Mechanized/Motorized Platoon",
             "cost": 1,
             "description": "A mobile force equipped with mechanized or motorized transports.",
             "categories": {
@@ -232,7 +232,7 @@
             }
         },
         "armored_platoon": {
-            "name": "Armored Platoon (Core)",
+            "name": "Armored Platoon",
             "cost": 1,
             "description": "An armored force with supporting motorized or mechanized Infantry.",
             "categories": {
@@ -659,7 +659,7 @@
             "points": [10, {"multiply": "rule.x"}]
         },
         "field_orders_armored": {
-            "name": "Field Orders (Armored)",
+            "name": "Field Orders",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Tank_ or _Armored Car_ units within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
             "points": [20, {"multiply": "rule.x"}]
@@ -1081,7 +1081,7 @@
         "recrew": {
             "phase": "activation",
             "subfactions": ["infantry_focus"],
-            "name": "Recrew (Infantry)",
+            "name": "Recrew",
             "flavor": "It's highly important to keep artillery pieces manned and fighting.",
             "description": "Use at the beginning of a round where an Infantry unit is within 2\" of an Artillery unit. Remove X models from the Infantry unit and add restore X crew to the Artillery unit.",
             "cost": 1
@@ -1089,7 +1089,7 @@
         "target_weak_point": {
             "phase": "activation",
             "subfactions": ["infantry_focus"],
-            "name": "Target Weak Point (Infantry)",
+            "name": "Target Weak Point",
             "flavor": "Exploiting weak points an an enemy's armor is key to taking out hard targets.",
             "description": "Use before shooting with an Infantry or Artillery unit's weapon with AP 3 or higher. That attack is treated as hitting the target's side.",
             "cost": 1
@@ -1097,7 +1097,7 @@
         "frag_out": {
             "phase": "activation",
             "subfactions": ["infantry_focus"],
-            "name": "Frag Out (Infantry)",
+            "name": "Frag Out",
             "flavor": "A volley of hand grenades can be quite effective at dealing with enemies in cover.",
             "description": "Use before shooting with an Infantry unit that has Grenades (any type). That unit may throw 2 additional grenades.",
             "cost": 1
@@ -1105,7 +1105,7 @@
         "armored_assault": {
             "phase": "activation",
             "subfactions": ["armored_focus"],
-            "name": "Armored Assault (Armored)",
+            "name": "Armored Assault",
             "flavor": "Occasionally armored units are used to push infantry and other units off a dug in position.",
             "description": "Use when a Vehicle unit declares a Charge action. It is treated as having Shock(+3) for that action.",
             "cost": 1
@@ -1113,7 +1113,7 @@
         "improvised_tactics": {
             "phase": "activation",
             "subfactions": ["armored_focus"],
-            "name": "Improvised Tactics (Armored)",
+            "name": "Improvised Tactics",
             "flavor": "Sometimes it is necessary to improvise in an armored engagement in order to gain the edge.",
             "description": "Use when a Vehicle unit is attempting a reaction test. It is treated as having Initiative 9 for this test.",
             "cost": 2
@@ -1121,7 +1121,7 @@
         "crew_repairs": {
             "phase": "activation",
             "subfactions": ["armored_focus"],
-            "name": "Emergency Repairs (Armored)",
+            "name": "Emergency Repairs",
             "flavor": "In moments of dire circumstance crews may need to repair their vehicle in combat.",
             "description": "Use when a Vehicle unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
             "cost": 1
@@ -1129,7 +1129,7 @@
         "combat_drop": {
             "phase": "pre_game",
             "subfactions": ["airborne_focus"],
-            "name": "Combat Drop (Airborne)",
+            "name": "Combat Drop",
             "flavor": "A well-trained paratroop unit can drop as close as posssible to their intended target.",
             "description": "Set one Infantry, Artillery or Airborne Vehicle unit aside in reserves before the match begins. At the beginning of any round after the first you may attempt to place the unit anywhere on the table over 12\" away from enemy units.\n\nTake a Courage test. If failed, use D10 scattering to determine the unit's new landing location. If the new location is off the table, place the unit at table edge as close as possible. If both players have units with Airdrop they must roll-off to see who deploys first, and then alternate in placing them.",
             "cost": 1
@@ -1137,7 +1137,7 @@
         "tough_fighters": {
             "phase": "activation",
             "subfactions": ["airborne_focus"],
-            "name": "Tough Fighters (Airborne)",
+            "name": "Tough Fighters",
             "flavor": "Some of the toughest units to fight in a close combat brawl are trained Airborne units.",
             "description": "Use before an Infantry unit uses a fight action. Its attacks gain AP1.",
             "cost": 1
@@ -1145,7 +1145,7 @@
         "stealth_tactics": {
             "phase": "activation",
             "subfactions": ["airborne_focus"],
-            "name": "Stealth Tactics (Airborne)",
+            "name": "Stealth Tactics",
             "flavor": "Moving quickly and quietly is a key part of Airborne training.",
             "description": "Use when activating an Infantry unit. It may make a free 6\" move action and may not be targetted by reaction fire when doing so.",
             "cost": 2
