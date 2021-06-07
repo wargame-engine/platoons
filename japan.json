@@ -1,10 +1,6 @@
 {
     "id": "japan",
     "name": "Japan",
-    "subfactions": {
-        "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
-        "armored_focus": {"name": "Armored", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
-    },
     "units": {
         "field_officer": {
             "name": "Field Officer Team",
@@ -177,7 +173,7 @@
             ]
         },
         "puppet_chinese": {
-            "name": "Collaborationist Chinese Army",
+            "name": "Chinese Collaborationists",
             "description": "Close to 600,000 Chinese soldiers served under the banner of the 'Reorganized National Government of the Republic of China' or 'Wang Jingwei regime'. Wang Jingwei was a man who believed he would've become the true leader of the Nationalist Revolutionary Party and thus, China, but Generalissimo Chiang Kai-shek had risen to power faster. The Wang Jingwei regime flew the twin banners of the Nationalist Party and 'Five Races Under One Union' flag, with the hopes people would believe it to be the true, legitimate regime of China. Unfortunately for Wang Jingwei, his regime was and appeared to be subordinate to the will of Japan.",
             "min": 1,
             "max": 5,
@@ -185,18 +181,18 @@
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Puppet Regular",
+                    "name": "Chinese Collaborator",
                     "courage": 4,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 4,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "unarmed", "withWeapon": ["dadao"]}],
-                    "min": 5,
-                    "max": 12
+                    "min": 10,
+                    "max": 14
                 }
             ]
         },
@@ -500,7 +496,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -514,7 +510,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
+                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_lmg"], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
                     "min": 4,
@@ -624,7 +620,7 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "rules": ["scout", "stealth"],
             "models": [
-                {"name": "Marksman", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1}            ]
+                {"name": "Marksman", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5,  "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1}            ]
         },
         "type_4": {
             "name": "Type 4 AT Team",
@@ -650,18 +646,19 @@
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Type 92 MMG Team",
-                    "courage": 5,
+                    "name": "Type 92 MMG",
+                    "courage": "-",
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "weapons": [{"id": "mmg", "mount": ["Front"]}],
                     "rules": [{"id": "crew", "x": 3}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "type_93_hmg": {
@@ -674,19 +671,20 @@
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Type 93 AA MG Team",
-                    "courage": 5,
+                    "name": "Type 93 AA MG",
+                    "courage": "-",
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "hmg_aa", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "weapons": [{"id": "hmg_aa", "mount": ["Front"]}],
                     "rules": [{"id": "crew", "x": 3}],
                     "options": [{"replaceWeapon": "hmg_aa", "withWeapon": "twin_hmg_aa"}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 7, "max": 7}
             ]
         },
         "light_mortar_team": {
@@ -697,20 +695,22 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 2}],
+            
             "models": [
                 {
-                    "name": "Light Mortar Team",
-                    "courage": 5,
+                    "name": "Light Mortar",
+                    "courage": "-",
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "light_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 2}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 2}],
+                    "weapons": [{"id": "light_mortar", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 2, "max": 2}
             ]
         },
         "medium_mortar_team": {
@@ -721,20 +721,21 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus", "armored_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
-                    "name": "Medium Mortar Team",
-                    "courage": 5,
+                    "name": "Medium Mortar",
+                    "courage": "-",
                     "movement": 5,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "medium_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}],
+                    "weapons": [{"id": "medium_mortar", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "heavy_mortar_team": {
@@ -745,44 +746,46 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 4}],
             "models": [
                 {
-                    "name": "Heavy Mortar Team",
-                    "courage": 5,
+                    "name": "Heavy Mortar",
+                    "courage": "-",
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "heavy_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 4}],
+                    "weapons": [{"id": "heavy_mortar", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 4, "max": 4}
             ]
         },
         "type_92_70mm": {
             "name": "Type 92 70mm",
-            "description": "A wheeled light howitzer.",
+            "description": "A wheeled very light howitzer.",
             "min": 1,
             "max": 1,
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Type 92 70mm",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "very_light_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 3}],
+                    "weapons": [{"id": "very_light_howitzer", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "type_41_75mm": {
@@ -793,20 +796,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Type 41 75mm Howitzer",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "light_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 3}],
+                    "weapons": [{"id": "light_howitzer", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "type_91_105mm": {
@@ -817,20 +821,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "Type 91 105mm Howitzer",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 3,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 4}],
+                    "weapons": [{"id": "medium_howitzer", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 4, "max": 4}
             ]
         },
         "type_4_howitzer": {
@@ -841,20 +846,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 5}],
             "models": [
                 {
                     "name": "Type 4 Howitzer",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 2,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 5}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 5}],
+                    "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 5, "max": 5}
             ]
         },
         "type_4_rocket": {
@@ -865,20 +871,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Type 4 20 cm Rocket",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 3,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "heavy_rockets", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}],
+                    "weapons": [{"id": "heavy_rockets", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "type_94_type_1": {
@@ -889,20 +896,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Type 94, Type 1 37mm AT Gun",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 3}],
+                    "weapons": [{"id": "light_at", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "type_1_47mm": {
@@ -913,20 +921,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Type 1 47mm AT Gun",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "medium_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 3}],
+                    "weapons": [{"id": "medium_at", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "type_92_tankette": {
@@ -1306,7 +1315,7 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 8}],
                     "options": [{"addWeapon": ["mmg_aa"]}],
                     "min": 1,
@@ -1331,7 +1340,7 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 12}],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}],
                     "min": 1,
@@ -1356,7 +1365,7 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": [],
                     "rules": ["tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 13}, "exposed"],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}],
@@ -1383,7 +1392,7 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle", {"id": "limited", "x": 1}],
                     "min": 1,
@@ -1408,7 +1417,7 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
+                    
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "options": [
                         {"addWeapon": ["mmg_aa", "hmg_aa"]}
@@ -1453,54 +1462,6 @@
             "name": "Tough Fighters",
             "flavor": "Some of the toughest units to fight in a close combat.",
             "description": "Use before an Infantry unit uses a fight action. Its attacks gain +1 Strength.",
-            "cost": 1
-        },
-        "recrew": {
-            "phase": "activation",
-            "subfactions": ["infantry_focus"],
-            "name": "Recrew (Infantry)",
-            "flavor": "It's highly important to keep artillery pieces manned and fighting.",
-            "description": "Use at the beginning of a round where an Infantry unit is within 2\" of an Artillery unit. Remove X models from the Infantry unit and add restore X crew to the Artillery unit.",
-            "cost": 1
-        },
-        "target_weak_point": {
-            "phase": "activation",
-            "subfactions": ["infantry_focus"],
-            "name": "Target Weak Point (Infantry)",
-            "flavor": "Exploiting weak points an an enemy's armor is key to taking out hard targets.",
-            "description": "Use before shooting with an Infantry or Artillery unit's weapon with AP 3 or higher. That attack is treated as hitting the target's side.",
-            "cost": 1
-        },
-        "frag_out": {
-            "phase": "activation",
-            "subfactions": ["infantry_focus"],
-            "name": "Frag Out (Infantry)",
-            "flavor": "A volley of hand grenades can be quite effective at dealing with enemies in cover.",
-            "description": "Use before shooting with an Infantry unit that has Grenades (any type). That unit may throw 2 additional grenades.",
-            "cost": 1
-        },
-        "armored_assault": {
-            "phase": "activation",
-            "subfactions": ["armored_focus"],
-            "name": "Armored Assault (Armored)",
-            "flavor": "Occasionally armored units are used to push infantry and other units off a dug in position.",
-            "description": "Use when a Vehicle unit declares a Charge action. It is treated as having Shock(+3) for that action.",
-            "cost": 1
-        },
-        "improvised_tactics": {
-            "phase": "activation",
-            "subfactions": ["armored_focus"],
-            "name": "Improvised Tactics (Armored)",
-            "flavor": "Sometimes it is necessary to improvise in an armored engagement in order to gain the edge.",
-            "description": "Use when a Vehicle unit is attempting a reaction test. It is treated as having Initiative 9 for this test.",
-            "cost": 2
-        },
-        "crew_repairs": {
-            "phase": "activation",
-            "subfactions": ["armored_focus"],
-            "name": "Emergency Repairs (Armored)",
-            "flavor": "In moments of dire circumstance crews may need to repair their vehicle in combat.",
-            "description": "Use when a Vehicle unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
             "cost": 1
         }
     },

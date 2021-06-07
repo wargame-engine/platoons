@@ -1,12 +1,6 @@
 {
     "id": "germany",
     "name": "Germany",
-    "subfactions": {
-        "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
-        "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "background": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
-        "armored_focus": {"name": "Armored", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true},
-        "reserve_focus": {"name": "Reserve", "id": "reserve_focus", "background": "When needed, quantity has it's own quality.", "restricted": true}
-    },
     "units": {
         "field_officer": {
             "name": "Field Officer Team",
@@ -26,14 +20,13 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
                     "rules": [{"id": "field_orders", "x": 1}, "leader"],
                     "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
             ]
         },
         "forward_artillery_observer": {
@@ -54,14 +47,13 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 1,
                     "rules": ["support"],
                     "weapons": ["rifle", "unarmed", "smoke_battery"],
                     "options": [{"replaceWeapon": "smoke_battery", "withWeapon": ["light_mortar_battery", "medium_mortar_battery", "heavy_mortar_battery", "nebelwerfer_battery"]}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "field_medic": {
@@ -81,13 +73,12 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["pistol", "unarmed", "smoke_grenades"],
                     "rules": ["medic", "support"],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "volkssturm": {
@@ -108,7 +99,6 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -122,7 +112,6 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
                     "min": 4,
@@ -148,7 +137,6 @@
                     "fight": 4,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -162,7 +150,6 @@
                     "fight": 4,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
                     "min": 4,
@@ -188,7 +175,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -202,7 +188,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
                     "min": 4,
@@ -228,7 +213,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -242,11 +226,10 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
                     "min": 4,
-                    "max": 8
+                    "max": 9
                 }
             ]
         },
@@ -299,7 +282,10 @@
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
             "options": [
-                {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6},
+                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"], "modelLimit": 2},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
                 {"addRule": ["fanatical"], "modelLimit": "all"}
             ],
             "models": [
@@ -311,9 +297,8 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}],
                     "min": 1,
                     "max": 1
                 },
@@ -325,11 +310,10 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
                     "min": 4,
-                    "max": 8
+                    "max": 9
                 }
             ]
         },
@@ -341,7 +325,12 @@
             "category": "infantry",
             "subfactions": ["infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": ["fanatical"], "modelLimit": "all"}],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle", "semi_auto_rifle"], "modelLimit": 6},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"addRule": ["fanatical"], "modelLimit": "all"}
+            ],
             "models": [
                 {
                     "name": "Veteran Grenadier NCO",
@@ -351,9 +340,8 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}],
                     "min": 1,
                     "max": 1
                 },
@@ -365,11 +353,10 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
                     "min": 4,
-                    "max": 8
+                    "max": 9
                 }
             ]
         },
@@ -388,8 +375,7 @@
                 {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 5},
                 {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle", "assault_rifle"]},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"addWeapon": "panzerfaust", "modelLimit": 2},
-                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
+                {"addWeapon": "panzerfaust", "modelLimit": 2}
             ],
             "models": [
                 {
@@ -400,7 +386,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -414,11 +399,10 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
                     "min": 4,
-                    "max": 8
+                    "max": 9
                 }
             ]
         },
@@ -437,8 +421,7 @@
                 {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 5},
                 {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle", "assault_rifle"]},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"addWeapon": "panzerfaust", "modelLimit": 2},
-                {"addRule": {"id": "airdrop"}, "modelLimit": "all"}
+                {"addWeapon": "panzerfaust", "modelLimit": 2}
             ],
             "models": [
                 {
@@ -449,7 +432,6 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -463,11 +445,10 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
                     "min": 4,
-                    "max": 8
+                    "max": 9
                 }
             ]
         },
@@ -481,6 +462,7 @@
             "subfactions": ["none", "armored_focus"],
             "options": [
                 {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6},
+                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"], "modelLimit": 2},
                 {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addWeapon": "panzerfaust", "modelLimit": 2},
@@ -495,9 +477,8 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}],
                     "min": 1,
                     "max": 1
                 },
@@ -509,7 +490,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
                     "min": 4,
@@ -527,6 +507,7 @@
             "subfactions": ["armored_focus"],
             "options": [
                 {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 6},
+                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"], "modelLimit": 2},
                 {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addWeapon": "panzerfaust", "modelLimit": 2},
@@ -541,7 +522,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -555,7 +535,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
                     "min": 4,
@@ -572,24 +551,12 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [
-                {"replaceWeapon": "rifle", "withWeapon": ["smg", "assault_rifle"]},
+                {"replaceWeapon": "rifle", "withWeapon": ["smg", "assault_rifle", "semi_auto_rifle"]},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addWeapon": "panzerfaust", "modelLimit": 2}
             ],
             "models": [
-                {
-                    "name": "Brandenburger NCO",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 7,
-                    "wounds": 1,
-                    "weapons": ["rifle", "unarmed"],
-                    "min": 1,
-                    "max": 1
-                },
+                {"name": "Brandenburger NCO", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 7, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1},
                 {
                     "name": "Brandenburger",
                     "courage": 6,
@@ -598,7 +565,6 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 7,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
                     "min": 4,
@@ -614,7 +580,13 @@
             "category": "infantry",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": ["fanatical"], "modelLimit": "all"}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"addRule": ["fanatical"], "modelLimit": "all"},
+                {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}
+            ],
             "models": [
                 {
                     "name": "Pionier NCO",
@@ -624,7 +596,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -638,11 +609,13 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}
+                    ],
                     "min": 4,
-                    "max": 10
+                    "max": 9
                 }
             ]
         },
@@ -651,11 +624,10 @@
             "description": "A professional and specialized team for defeating tanks via throwables, traps, and demolition charges. It consists of a leader and runner, a security team, a smoke team, and a demolition team. These teams each operate somewhat independently of each other, and were adapted or modified according to local conditions.",
             "min": 1,
             "max": 1,
-            "category": "infantry",
+            "category": "support",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "bundle_grenades", "modelLimit": 2}, {"addWeapon": "molotov_cocktails", "modelLimit": 8}, {"addWeapon": "lunge_mine", "modelLimit": 8},
-                 {"addRule": ["fanatical"], "modelLimit": "all"}, {"addRule": ["scout"]}],
+            "options": [{"addWeapon": "bundle_grenades", "modelLimit": 2}],
             "models": [
                 {
                     "name": "Panzer-Zerstörer NCO",
@@ -665,9 +637,8 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed", "smoke_grenades"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "MP-40"}]}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "smg"}]}],
                     "min": 1,
                     "max": 1
                 },
@@ -679,12 +650,10 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "MP-40"}], "modelLimit": 2}],
-                    
-                    "min": 4,
-                    "max": 10
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "smg"}], "modelLimit": 2}, {"replaceWeapon": "rifle", "withWeapon": ["panzerschreck"], "modelLimit": 2}],
+                    "min": 5,
+                    "max": 5
                 }
             ]
         },
@@ -698,20 +667,8 @@
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
-                {
-                    "name": "Flamethrower Gunner",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 1,
-                    "weapons": ["flamethrower", "unarmed"],
-                    "min": 1,
-                    "max": 1
-                },
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "Flamethrower Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["flamethrower", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "sniper_team": {
@@ -725,8 +682,8 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "rules": ["scout", "stealth"],
             "models": [
-                {"name": "Sniper", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "Sniper", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "at_rifle_team": {
@@ -739,8 +696,8 @@
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
-                {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "panzerknacker_team": {
@@ -760,7 +717,6 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "at_grenades"],
                     "options": [
                         {"replaceWeapon": "rifle", "withWeapon": {"id": "belt_lmg", "name": "MG-34/MG-42"}, "modelLimit": 1},
@@ -783,20 +739,8 @@
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
-                {
-                    "name": "Panzerschreck Gunner",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 1,
-                    "weapons": ["panzerschreck", "unarmed"],
-                    "min": 1,
-                    "max": 1
-                },
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "Panzerschreck Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["panzerschreck", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "veteran_panzershreck_team": {
@@ -809,20 +753,8 @@
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
-                {
-                    "name": "Veteran Panzerschreck Gunner",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["panzerschreck", "unarmed"],
-                    "min": 1,
-                    "max": 1
-                },
-                {"name": "Veteran Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "wounds": 1, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "Veteran Panzerschreck Gunner", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["panzerschreck", "unarmed"], "min": 1, "max": 1},
+                {"name": "Veteran Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "mmg_team": {
@@ -833,21 +765,21 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
-                    "name": "Tripod MG-34/MG42 Team",
-                    "courage": 5,
+                    "name": "Tripod MG-34/MG42",
+                    "courage": "-",
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 3,
-                    "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}],
+                    "weapons": [{"id": "mmg", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "light_mortar_team": {
@@ -858,21 +790,22 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 2}],
+            
             "models": [
                 {
-                    "name": "Light Mortar Team",
-                    "courage": 5,
+                    "name": "Light Mortar",
+                    "courage": "-",
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 2,
-                    "weapons": [{"id": "light_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 2}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 2}],
+                    "weapons": [{"id": "light_mortar", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 2, "max": 2}
             ]
         },
         "medium_mortar_team": {
@@ -883,21 +816,21 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus", "armored_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
-                    "name": "Medium Mortar Team",
-                    "courage": 5,
+                    "name": "Medium Mortar",
+                    "courage": "-",
                     "movement": 5,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 3,
-                    "weapons": [{"id": "medium_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}],
+                    "weapons": [{"id": "medium_mortar", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "heavy_mortar_team": {
@@ -908,21 +841,21 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
-            "rules": [{"id": "crew", "x": 4}],
             "models": [
                 {
-                    "name": "Heavy Mortar Team",
-                    "courage": 5,
+                    "name": "Heavy Mortar",
+                    "courage": "-",
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "heavy_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 4}],
+                    "weapons": [{"id": "heavy_mortar", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 4, "max": 4}
             ]
         },
         "75mm_lg40": {
@@ -937,17 +870,17 @@
             "models": [
                 {
                     "name": "75mm LG/40",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 3,
-                    "weapons": [{"id": "light_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "weapons": [{"id": "light_howitzer", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "leig_18": {
@@ -958,21 +891,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Leig.18 Howitzer",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 3,
-                    "weapons": [{"id": "light_howitzer_light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 3}],
+                    "weapons": [{"id": "light_howitzer_light_at", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "lefh_howitzer": {
@@ -983,21 +916,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "LefH Howitzer",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 3,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 4}],
+                    "weapons": [{"id": "medium_howitzer", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 4, "max": 4}
             ]
         },
         "sig33_howitzer": {
@@ -1008,21 +941,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 5}],
             "models": [
                 {
                     "name": "Sig.33 Howitzer",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 2,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 5}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 5}],
+                    "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 5, "max": 5}
             ]
         },
         "schweres_wurfgerats": {
@@ -1033,21 +966,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": [{"id": "crew", "x": 2}],
             "models": [
                 {
                     "name": "Schweres Wurfgerats",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 3,
-                    "weapons": [{"id": "light_rockets", "mount": ["Front"], "count": 2}, {"id": "unarmed", "count": 2}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 2}],
+                    "weapons": [{"id": "light_rockets", "mount": ["Front"], "count": 2}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 2, "max": 2}
             ]
         },
         "150mm_nebelwerfer": {
@@ -1058,21 +991,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "150mm Nebelwerfer 41",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 3,
-                    "weapons": [{"id": "light_rockets", "mount": ["Front"], "count": 3}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}],
+                    "weapons": [{"id": "light_rockets", "mount": ["Front"], "count": 3}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "pak_36": {
@@ -1083,21 +1016,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Pak 36 AT Gun",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 3,
-                    "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 3}],
+                    "weapons": [{"id": "light_at", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "pak_38": {
@@ -1108,21 +1041,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Pak 38 AT Gun",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 3,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "medium_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 3}],
+                    "weapons": [{"id": "medium_at", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "pak_40": {
@@ -1133,21 +1066,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 4}],
             "models": [
                 {
                     "name": "Pak 40 AT Gun",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 2,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 4}],
+                    "weapons": [{"id": "heavy_at", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 4, "max": 4}
             ]
         },
         "pak_43": {
@@ -1158,21 +1091,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 5}],
             "models": [
                 {
                     "name": "Pak 43 AT Gun",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 2,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "very_heavy_at", "mount": ["Front"]}, {"id": "unarmed", "count": 5}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 5}],
+                    "weapons": [{"id": "very_heavy_at", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 5, "max": 5}
             ]
         },
         "88mm_flak": {
@@ -1183,21 +1116,21 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery", "Anti-Air"],
-            "rules": ["gun_shield", {"id": "crew", "x": 7}],
             "models": [
                 {
                     "name": "88mm Flak",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 2,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "88mm_flak"}, {"id": "unarmed", "count": 7}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 7}],
+                    "weapons": [{"id": "88mm_flak"}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 7, "max": 7}
             ]
         },
         "20mm_flak": {
@@ -1208,22 +1141,22 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery", "Anti-Air"],
-            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "20mm Flak",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 4,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "light_autocannon_aa"}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}],
+                    "weapons": [{"id": "light_autocannon_aa"}],
                     "options": [{"addRule": "gun_shield"}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "flakvierling": {
@@ -1234,22 +1167,22 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery", "Anti-Air"],
-            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "Flakvierling 38",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 2,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "light_autocannon_aa", "count": 4}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}],
+                    "weapons": [{"id": "light_autocannon_aa", "count": 4}],
                     "options": [{"addRule": "gun_shield"}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "37mm_flak36": {
@@ -1260,22 +1193,22 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Artillery", "Anti-Air"],
-            "rules": [{"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "37mm Flak 36",
-                    "courage": 5,
+                    "courage": "-",
                     "movement": 2,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 4,
-                    "weapons": [{"id": "heavy_autocannon_aa"}, {"id": "unarmed", "count": 3}],
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}],
+                    "weapons": [{"id": "heavy_autocannon_aa"}],
                     "options": [{"addRule": "gun_shield"}],
                     "min": 1,
                     "max": 1
-                }
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
         "kfz13_adler": {
@@ -1295,7 +1228,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "mmg_aa", "mount": ["Front"]}],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "min": 1,
@@ -1320,7 +1252,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "light_autocannon_mg"}],
                     "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "min": 1,
@@ -1345,7 +1276,6 @@
                     "fight": 6,
                     "defense": 10,
                     "reflexes": 6,
-                    "wounds": 6,
                     "weapons": ["mmg"],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
                     "min": 1,
@@ -1370,7 +1300,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["mmg"],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
                     "options": [{"replaceWeapon": "mmg", "withWeapon": "light_autocannon_mg"}],
@@ -1396,7 +1325,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["light_autocannon_mg"],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "min": 1,
@@ -1421,7 +1349,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["light_autocannon_mg"],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "min": 1,
@@ -1446,7 +1373,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "medium_at_mg"}],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
                     "min": 1,
@@ -1471,7 +1397,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "light_howitzer_vehicle", "mount": ["Front"]}],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "min": 1,
@@ -1496,7 +1421,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "options": [{"replaceWeapon": {"id": "medium_at_mg"}, "withWeapon": [{"id": "heavy_at_mg", "mount": ["Front"]}]}],
@@ -1522,11 +1446,8 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["dual_mmg"],
-                    "options": [
-                        {"replaceWeapon": "dual_mmg", "withWeapon": "light_autocannon_aa"}
-                    ],
+                    "options": [{"replaceWeapon": "dual_mmg", "withWeapon": "light_autocannon_aa"}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 2}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
@@ -1550,7 +1471,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["light_at_mg"],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
@@ -1575,7 +1495,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
@@ -1600,8 +1519,7 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
-                    "weapons": ["mmg", {"id": "vehicle_flamethrower", "mount": ["Front", "Right"]},{"id": "vehicle_flamethrower", "mount": ["Front", "Left"]}],
+                    "weapons": ["mmg", {"id": "vehicle_flamethrower", "mount": ["Front", "Right"]}, {"id": "vehicle_flamethrower", "mount": ["Front", "Left"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
@@ -1625,7 +1543,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["light_autocannon_mg"],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
@@ -1650,7 +1567,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -1675,7 +1591,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -1700,7 +1615,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["vehicle_flamethrower_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -1725,11 +1639,13 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "medium_at", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle", "exposed"],
                     "options": [
-                        {"replaceWeapon": {"id": "medium_at", "mount": ["Front"]}, "withWeapon": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "heavy_at", "mount": ["Front"]}, {"id": "heavy_howitzer", "mount": ["Front"]}]}
+                        {
+                            "replaceWeapon": {"id": "medium_at", "mount": ["Front"]},
+                            "withWeapon": [{"id": "medium_howitzer", "mount": ["Front"]}, {"id": "heavy_at", "mount": ["Front"]}, {"id": "heavy_howitzer", "mount": ["Front"]}]
+                        }
                     ],
                     "min": 1,
                     "max": 1
@@ -1753,7 +1669,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "light_howitzer", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -1778,7 +1693,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": "mmg"}, {"addRule": "side_skirts"}],
@@ -1804,7 +1718,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg"}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -1829,7 +1742,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "vehicle_flamethrower", "mount": ["Front"]}, {"id": "mmg"}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -1853,7 +1765,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "panzerschreck", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "min": 1,
@@ -1878,7 +1789,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "very_heavy_at_mg", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", "armored_front", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
@@ -1903,12 +1813,9 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle", "exposed"],
-                    "options": [
-                        {"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": "mmg"}
-                    ],
+                    "options": [{"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": "mmg"}],
                     "min": 1,
                     "max": 1
                 }
@@ -1931,12 +1838,9 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", "armored_front", {"id": "impact", "x": 6}, "damage_table_vehicle"],
-                    "options": [
-                        {"replaceWeapon": {"id": "heavy_at", "mount": ["Front"]}, "withWeapon": {"id": "very_heavy_at", "mount": ["Front"]}}, {"addRule": "side_skirts"}
-                    ],
+                    "options": [{"replaceWeapon": {"id": "heavy_at", "mount": ["Front"]}, "withWeapon": {"id": "very_heavy_at", "mount": ["Front"]}}, {"addRule": "side_skirts"}],
                     "min": 1,
                     "max": 1
                 }
@@ -1959,7 +1863,6 @@
                     "fight": 5,
                     "defense": 13,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "very_heavy_at", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
@@ -1984,7 +1887,6 @@
                     "fight": 5,
                     "defense": 14,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "super_heavy_at", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 12}, "damage_table_vehicle"],
                     "min": 1,
@@ -2034,7 +1936,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["light_howitzer_vehicle", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
@@ -2060,7 +1961,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["light_howitzer_vehicle_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
@@ -2086,7 +1986,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
@@ -2113,7 +2012,6 @@
                     "fight": 6,
                     "defense": 12,
                     "reflexes": 6,
-                    "wounds": 6,
                     "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
@@ -2139,7 +2037,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "armored_front", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -2165,7 +2062,6 @@
                     "fight": 6,
                     "defense": 12,
                     "reflexes": 6,
-                    "wounds": 6,
                     "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "armored_front", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -2190,7 +2086,6 @@
                     "fight": 5,
                     "defense": 13,
                     "reflexes": 5,
-                    "wounds": 9,
                     "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_rear", {"id": "impact", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
@@ -2216,7 +2111,6 @@
                     "fight": 6,
                     "defense": 13,
                     "reflexes": 6,
-                    "wounds": 9,
                     "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_rear", {"id": "impact", "x": 9}, "damage_table_vehicle"],
                     "min": 1,
@@ -2266,7 +2160,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["medium_howitzer_vehicle_mg"],
                     "rules": ["tracked", "vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "min": 1,
@@ -2291,7 +2184,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["heavy_howitzer_vehicle_mg"],
                     "rules": ["tracked", "vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "min": 1,
@@ -2316,12 +2208,9 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "light_rockets", "count": 3}],
                     "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", "exposed"],
-                    "options": [
-                        {"addWeapon": "mmg_aa"}
-                    ],
+                    "options": [{"addWeapon": "mmg_aa"}],
                     "min": 1,
                     "max": 1
                 }
@@ -2344,7 +2233,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}, {"id": "light_rockets", "count": 3, "mount": ["Front"]}],
                     "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", "exposed"],
                     "options": [{"addWeapon": {"id": "mmg", "mount": ["Rear"]}}],
@@ -2370,7 +2258,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "medium_howitzer_vehicle", "mount": ["Front"]}, {"id": "mmg"}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
@@ -2396,7 +2283,6 @@
                     "fight": 5,
                     "defense": 13,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "heavy_howitzer_vehicle", "mount": ["Front"]}, {"id": "mmg"}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
@@ -2422,7 +2308,6 @@
                     "fight": 5,
                     "defense": 14,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "rocket_mortar", "mount": ["Front"]}, {"id": "mmg"}],
                     "rules": ["tracked", "vulnerable_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
@@ -2448,7 +2333,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "heavy_howitzer", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "options": [{"addRule": "side_skirts"}],
@@ -2474,7 +2358,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["heavy_autocannon_aa"],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "exposed"],
                     "options": [{"addRule": "side_skirts"}],
@@ -2500,7 +2383,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["heavy_autocannon_aa", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "exposed"],
                     "options": [{"addRule": "side_skirts"}],
@@ -2526,7 +2408,6 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "light_autocannon_aa", "count": 4}, {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "exposed"],
                     "options": [{"addRule": "side_skirts"}],
@@ -2562,7 +2443,6 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 6,
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 3}, "half_tracked"],
                     "min": 1,
                     "max": 1
@@ -2586,7 +2466,6 @@
                     "fight": 5,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 6,
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 5}],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}, {"addRule": "amphibious"}],
                     "min": 1,
@@ -2611,7 +2490,6 @@
                     "fight": 5,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 6,
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 7}, "tracked"],
                     "min": 1,
                     "max": 1
@@ -2635,7 +2513,6 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 6,
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 10}, "half_tracked"],
                     "min": 1,
                     "max": 1
@@ -2659,7 +2536,6 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 6,
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 12}],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}],
                     "min": 1,
@@ -2684,7 +2560,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}],
                     "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 6}, "exposed"],
                     "options": [{"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": {"id": "light_at", "mount": ["Front"]}}, {"addWeapon": {"id": "mmg", "mount": ["Rear"]}}],
@@ -2710,7 +2585,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}],
                     "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 12}, "exposed"],
                     "options": [{"replaceWeapon": {"id": "mmg", "mount": ["Front"]}, "withWeapon": {"id": "light_at", "mount": ["Front"]}}, {"addWeapon": {"id": "mmg", "mount": ["Rear"]}}],
@@ -2736,7 +2610,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "mmg_aircraft", "count": 4, "mount": ["Front"]}, {"id": "37mm_cannon", "mount": ["Front"]}, {"id": "light_bomb", "count": 2}],
                     "rules": ["aircraft", "damage_table_aircraft", "exposed"],
                     "min": 1,
@@ -2761,12 +2634,9 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "20mm_cannon", "count": 2, "mount": ["Front"]}, {"id": "light_bomb", "count": 8}],
                     "rules": ["aircraft", "damage_table_aircraft", "exposed"],
-                    "options": [
-                        {"replaceWeapon": {"id": "light_bomb", "count": 8}, "withWeapon": {"id": "heavy_bomb", "count": 4} }
-                    ],
+                    "options": [{"replaceWeapon": {"id": "light_bomb", "count": 8}, "withWeapon": {"id": "heavy_bomb", "count": 4}}],
                     "min": 1,
                     "max": 1
                 }
@@ -2807,82 +2677,14 @@
             "flavor": "A swift and deadly Panzer assault can sometimes route the enemy.",
             "description": "Use when a German Tank unit is activated. It may make a free 6\" Move action.",
             "cost": 1
-        },
-        "recrew": {
-            "phase": "activation",
-            "subfactions": ["infantry_focus"],
-            "name": "Recrew (Infantry)",
-            "flavor": "It's highly important to keep artillery pieces manned and fighting.",
-            "description": "Use at the beginning of a round where an Infantry unit is within 2\" of an Artillery unit. Remove X models from the Infantry unit and add restore X crew to the Artillery unit.",
-            "cost": 1
-        },
-        "target_weak_point": {
-            "phase": "activation",
-            "subfactions": ["infantry_focus"],
-            "name": "Target Weak Point (Infantry)",
-            "flavor": "Exploiting weak points an an enemy's armor is key to taking out hard targets.",
-            "description": "Use before shooting with an Infantry or Artillery unit's weapon with AP 3 or higher. That attack is treated as hitting the target's side.",
-            "cost": 1
-        },
-        "frag_out": {
-            "phase": "activation",
-            "subfactions": ["infantry_focus"],
-            "name": "Frag Out (Infantry)",
-            "flavor": "A volley of hand grenades can be quite effective at dealing with enemies in cover.",
-            "description": "Use before shooting with an Infantry unit that has Grenades (any type). That unit may throw 2 additional grenades.",
-            "cost": 1
-        },
-        "armored_assault": {
-            "phase": "activation",
-            "subfactions": ["armored_focus"],
-            "name": "Armored Assault (Armored)",
-            "flavor": "Occasionally armored units are used to push infantry and other units off a dug in position.",
-            "description": "Use when a Vehicle unit declares a Charge action. It is treated as having Shock(+3) for that action.",
-            "cost": 1
-        },
-        "improvised_tactics": {
-            "phase": "activation",
-            "subfactions": ["armored_focus"],
-            "name": "Improvised Tactics (Armored)",
-            "flavor": "Sometimes it is necessary to improvise in an armored engagement in order to gain the edge.",
-            "description": "Use when a Vehicle unit is attempting a reaction test. It is treated as having Initiative 9 for this test.",
-            "cost": 2
-        },
-        "crew_repairs": {
-            "phase": "activation",
-            "subfactions": ["armored_focus"],
-            "name": "Emergency Repairs (Armored)",
-            "flavor": "In moments of dire circumstance crews may need to repair their vehicle in combat.",
-            "description": "Use when a Vehicle unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
-            "cost": 1
-        },
-        "combat_drop": {
-            "phase": "pre_game",
-            "subfactions": ["airborne_focus"],
-            "name": "Combat Drop (Airborne)",
-            "flavor": "A well-trained paratroop unit can drop as close as posssible to their intended target.",
-            "description": "Set one Infantry, Artillery or Airborne Vehicle unit aside in reserves before the match begins. At the beginning of any round after the first you may attempt to place the unit anywhere on the table over 12\" away from enemy units.\n\nTake a Courage test. If failed, use D10 scattering to determine the unit's new landing location. If the new location is off the table, place the unit at table edge as close as possible. If both players have units with Airdrop they must roll-off to see who deploys first, and then alternate in placing them.",
-            "cost": 1
-        },
-        "tough_fighters": {
-            "phase": "activation",
-            "subfactions": ["airborne_focus"],
-            "name": "Tough Fighters (Airborne)",
-            "flavor": "Some of the toughest units to fight in a close combat brawl are trained Airborne units.",
-            "description": "Use before an Infantry unit uses a fight action. Its attacks gain AP1.",
-            "cost": 1
-        },
-        "stealth_tactics": {
-            "phase": "activation",
-            "subfactions": ["airborne_focus"],
-            "name": "Stealth Tactics (Airborne)",
-            "flavor": "Moving quickly and quietly is a key part of Airborne training.",
-            "description": "Use when activating an Infantry unit. It may make a free 6\" move action and may not be targetted by reaction fire when doing so.",
-            "cost": 2
         }
     },
     "rules": {
-        "desert_fox": {"name": "Desert Fox", "description": "This unit and one other friendly unit may be set up in Outflanking Reserves. At the beginning of any round after the first, units may be set up within 6\" of a table edge that is not in the enemy deployment zone, and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.", "points": 20},
+        "desert_fox": {
+            "name": "Desert Fox",
+            "description": "This unit and one other friendly unit may be set up in Outflanking Reserves. At the beginning of any round after the first, units may be set up within 6\" of a table edge that is not in the enemy deployment zone, and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
+            "points": 20
+        },
         "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
         "ambush_master": {"name": "Ambush Master", "description": "This unit get +1 Accuracy when using an Ambush reaction.", "points": 20},
         "move_move_move_infantry": {"name": "Move Move Move", "description": "This unit and friendly Infantry units within 6\" add 2\" to their Movement characteristic.", "points": 10}
