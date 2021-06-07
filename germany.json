@@ -4,7 +4,8 @@
     "subfactions": {
         "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
         "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "background": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
-        "armored_focus": {"name": "Armored", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+        "armored_focus": {"name": "Armored", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true},
+        "reserve_focus": {"name": "Reserve", "id": "reserve_focus", "background": "When needed, quantity has it's own quality.", "restricted": true}
     },
     "units": {
         "field_officer": {
@@ -95,7 +96,7 @@
             "min": 1,
             "max": 1,
             "category": "infantry",
-            "subfactions": ["none"],
+            "subfactions": ["none", "reserve_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"]}],
             "models": [
@@ -135,7 +136,7 @@
             "min": 1,
             "max": 1,
             "category": "infantry",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "reserve_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
@@ -171,7 +172,7 @@
         },
         "aufklarungs_squad": {
             "name": "Aufklarungs Squad",
-            "description": "A group of aggressive recon troops.",
+            "description": "The Aufklärungsabteilung (Reconnaissance Detachment) was a formation of aggressive recon troops, which provided the 'eyes and ears' of each German Army division..",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -211,11 +212,11 @@
         },
         "osttruppen": {
             "name": "Osttruppen",
-            "description": "A group of reserve infantry.",
+            "description": "The Osttruppen (eastern troops), also known as 'Ostlegionen' (eastern legions), were captured soviet and slavic infantry prisoners of war. While many common terms for these troops, in many languages, translated to 'Volunteer', the terms mainly appeared to sarcastic and/or meant to be insulting. These slavic infantry were viewed as 'sub-human' by the Nazis, and it appeared those who actually volunteered, had done so to escape the horrors of the POW camps. These troops were given some of the worst equipment and positioned into roles of logistics, or 'bandit fighting' (Punishing civilians).",
             "min": 1,
             "max": 1,
             "category": "infantry",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "reserve_focus"],
             "keywords": ["Infantry"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 1}],
             "models": [
@@ -239,6 +240,46 @@
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 8
+                }
+            ]
+        },
+        "strafbataillon": {
+            "name": "Strafbataillon",
+            "description": "Strafbataillon (Penal Battalion) generally refers to a few different terms, for units that were recruited or formed from those who had too much 'indiscipline' or 'rebellious behavior' to serve as traditional conscripts. There are strong indications that as the war progressed and turned for the worse for the Nazi regime, the various populations of those sentenced to death for treason or even perhaps murder, were put under strong supervision and sent out to fight. Most of these units spent the bulk of their time doing hard labor and being part of 'suicide missions', at least in the early part of the war. Generally, there was less then stellar discipline  within these units, and they were rarely equipped well.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "subfactions": ["none", "infantry_focus", "reserve_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "frag_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 1}],
+            "models": [
+                {
+                    "name": "Strafbataillon NCO",
+                    "courage": 4,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Strafbataillon",
+                    "courage": 4,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
