@@ -170,13 +170,12 @@
             "models": [
                 {
                     "name": "Armored Rifle NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["semi_auto_rifle", "unarmed"],
                     "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -184,13 +183,12 @@
                 },
                 {
                     "name": "Armored Rifleman",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["semi_auto_rifle", "unarmed"],
                     "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 1}, {"addWeapon": "bazooka", "modelLimit": 1}],
                     "min": 4,
@@ -215,11 +213,10 @@
                     "name": "Veteran Armored Rifle NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["semi_auto_rifle", "unarmed"],
                     "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -229,11 +226,10 @@
                     "name": "Veteran Armored Rifleman",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["semi_auto_rifle", "unarmed"],
                     "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 1}, {"addWeapon": "bazooka"}],
                     "min": 4,
@@ -256,13 +252,12 @@
             "models": [
                 {
                     "name": "Ranger NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
-                    "shoot": 5,
+                    "shoot": 6,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["semi_auto_rifle", "unarmed"],
                     "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -270,13 +265,12 @@
                 },
                 {
                     "name": "Ranger",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
-                    "shoot": 5,
+                    "shoot": 6,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["semi_auto_rifle", "unarmed"],
                     "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 1}, {"replaceWeapon": "semi_auto_rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1}],
                     "min": 5,
@@ -305,7 +299,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["semi_auto_rifle", "unarmed"],
                     "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -319,7 +312,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["semi_auto_rifle", "unarmed"],
                     "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 2}],
                     "min": 5,
@@ -342,13 +334,12 @@
             "models": [
                 {
                     "name": "Airborne NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["semi_auto_rifle", "unarmed"],
                     "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -356,13 +347,12 @@
                 },
                 {
                     "name": "Airborne",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["semi_auto_rifle", "unarmed"],
                     "options": [
                         {"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 1},
@@ -390,11 +380,10 @@
                     "name": "Veteran Airborne NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["semi_auto_rifle", "unarmed"],
                     "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -404,11 +393,10 @@
                     "name": "Veteran Airborne",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["semi_auto_rifle", "unarmed"],
                     "options": [
                         {"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 1},
@@ -438,7 +426,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["carbine_rifle", "unarmed"],
                     "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -452,7 +439,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["carbine_rifle", "unarmed"],
                     "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": ["bar"], "modelLimit": 1}, {"replaceWeapon": "carbine_rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
                     "min": 5,
