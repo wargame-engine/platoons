@@ -533,21 +533,6 @@
                 {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
-        "marksman_team": {
-            "name": "Marksman Team",
-            "description": "A team equipped to take out important targets from a distance.",
-            "min": 1,
-            "max": 1,
-            "category": "support",
-            "subfactions": ["none", "infantry_focus", "airborne_focus"],
-            "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
-            "rules": ["scout", "stealth"],
-            "models": [
-                {"name": "Sniper", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
-            ]
-        },
         "suicide_anti_tank_team": {
             "name": "Suicide Anti-Tank Team",
             "description": "A team dedicated to hunting tanks with hand-held anti-tank weapons.",
@@ -621,7 +606,7 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "rules": ["scout", "stealth"],
             "models": [
-                {"name": "Marksman", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5,  "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1}            ]
+                {"name": "Marksman", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6,  "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1}            ]
         },
         "type_4": {
             "name": "Type 4 AT Team",
