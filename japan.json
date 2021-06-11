@@ -359,7 +359,7 @@
             ]
         },
         "veteran_paratrooper_squad": {
-            "name": "Veteran Paratrooper Section",
+            "name": "Veteran \"Teshin Shudan\" Paratrooper Squad",
             "description": "A group of veteran japanese Airborne.",
             "min": 1,
             "max": 1,
