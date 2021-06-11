@@ -233,9 +233,9 @@
                 }
             ]
         },
-        "strafbataillon": {
+        "Strafbataillon": {
             "name": "Strafbataillon",
-            "description": "Strafbataillon (Penal Battalion) generally refers to a few different terms, for units that were recruited or formed from those who had too much 'indiscipline' or 'rebellious behavior' to serve as traditional conscripts. There are strong indications that as the war progressed and turned for the worse for the Nazi regime, the various populations of those sentenced to death for treason or even perhaps murder, were put under strong supervision and sent out to fight. Most of these units spent the bulk of their time doing hard labor and being part of 'suicide missions', at least in the early part of the war. Generally, there was less then stellar discipline  within these units, and they were rarely equipped well.",
+            "description": "Strafbatallion (Penal Battalion) generally refers to a few different terms, for units that were recruited or formed from those who had too much 'indiscipline' or 'rebellious behavior' to serve as traditional conscripts. There are strong indications that as the war progressed and turned for the worse for the Nazi regime, the various populations of those sentenced to death for treason or even perhaps murder, were put under strong supervision and sent out to fight. Most of these units spent the bulk of their time doing hard labor and being part of 'suicide missions', at least in the early part of the war. Generally, there was less then stellar discipline  within these units, and they were rarely equipped well.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -336,8 +336,8 @@
                     "name": "Veteran Grenadier NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
@@ -349,8 +349,8 @@
                     "name": "Veteran Grenadier",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
@@ -380,7 +380,7 @@
             "models": [
                 {
                     "name": "Fallschirmjager NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
@@ -393,7 +393,7 @@
                 },
                 {
                     "name": "Fallschirmjager",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
@@ -428,7 +428,7 @@
                     "name": "Veteran Fallschirmjager NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
@@ -441,7 +441,7 @@
                     "name": "Veteran Fallschirmjager",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
@@ -471,7 +471,7 @@
             "models": [
                 {
                     "name": "Panzergrenadier NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
@@ -484,7 +484,7 @@
                 },
                 {
                     "name": "Panzergrenadier",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
@@ -518,9 +518,9 @@
                     "name": "Veteran Panzergrenadier NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
@@ -531,9 +531,9 @@
                     "name": "Veteran Panzergrenadier",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
@@ -753,8 +753,8 @@
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
-                {"name": "Veteran Panzerschreck Gunner", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["panzerschreck", "unarmed"], "min": 1, "max": 1},
-                {"name": "Veteran Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "Veteran Panzerschreck Gunner", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "weapons": ["panzerschreck", "unarmed"], "min": 1, "max": 1},
+                {"name": "Veteran Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "mmg_team": {
