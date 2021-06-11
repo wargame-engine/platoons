@@ -155,8 +155,8 @@
                     "name": "Jalkaväki NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
                     
@@ -169,8 +169,8 @@
                     "name": "Veteran Jalkaväki",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
                     
@@ -215,7 +215,7 @@
                     "shoot": 6,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     
                     "weapons": ["rifle", "unarmed"],
                     "options": [
@@ -242,9 +242,9 @@
                     "courage": 6,
                     "movement": 6,
                     "shoot": 6,
-                    "fight": 6,
+                    "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
@@ -256,9 +256,9 @@
                     "courage": 6,
                     "movement": 6,
                     "shoot": 6,
-                    "fight": 6,
+                    "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     
                     "weapons": ["rifle", "unarmed"],
                     "options": [
