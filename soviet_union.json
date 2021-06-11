@@ -286,6 +286,33 @@
                 }
             ]
         },
+        "veteran_smg_squad": {
+            "name": "Veteran SMG Squad",
+            "description": "A group of Soviet soldiers equipped with SMGs.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "subfactions": ["infantry_focus"],
+            "options": [{"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
+            "models": [
+                {"name": "Veteran SMG NCO", "courage": 6, "movement": 6, "shoot": 5, "fight": 6, "defense": 6, "reflexes": 5,  "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
+                {
+                    "name": "Veteran SMG Infantry",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    
+                    "weapons": ["smg", "unarmed"],
+                    "options": [{"replaceWeapon": "smg", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
         "tank_riders": {
             "name": "Tank Riders",
             "description": "A group of Soviet soldiers equipped with SMGs who ride on armored vehicles.",
@@ -315,7 +342,7 @@
             ]
         },
         "veteran_tank_riders": {
-            "name": "Tank Riders",
+            "name": "Veteran Tank Riders",
             "description": "A group of Soviet soldiers equipped with SMGs who ride on armored vehicles.",
             "min": 1,
             "max": 1,
@@ -325,12 +352,12 @@
             "subfactions": ["armored_focus"],
             "options": [{"addRule": "body_armor"}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
-                {"name": "Veteran Tank Rider NCO", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6,  "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
+                {"name": "Veteran Tank Rider NCO", "courage": 6, "movement": 6, "shoot": 5, "fight": 6, "defense": 6, "reflexes": 6,  "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
                 {
                     "name": "Veteran Tank Rider",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
@@ -389,17 +416,17 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["infantry_focus"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addRule": "soviet_flag", "modelLimit": 1}],
             "models": [
                 {
                     "name": "Veteran Rifle NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
@@ -410,10 +437,10 @@
                     "name": "Veteran Rifleman",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "box_lmg", "name": "DP-28"}], "modelLimit": 1}],
@@ -433,7 +460,7 @@
             "models": [
                 {
                     "name": "Naval Rifle NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
@@ -447,7 +474,7 @@
                 },
                 {
                     "name": "Naval Rifleman",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
@@ -473,7 +500,7 @@
             "models": [
                 {
                     "name": "Motor Rifle NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
@@ -487,7 +514,7 @@
                 },
                 {
                     "name": "Motor Rifleman",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
@@ -515,8 +542,8 @@
                     "name": "Veteran Motor Rifle NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
                     
@@ -529,8 +556,8 @@
                     "name": "Veteran Motor Rifleman",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
                     
@@ -636,14 +663,12 @@
         "dog_mine_team": {
             "name": "Dog Mine Team",
             "description": "A team of handlers to guide mine-dogs into combat.",
-            "min": 1,
-            "max": 1,
             "category": "support",
             "subfactions": ["none", "infantry_focus", "reserves_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addWeapon": "dog_mine", "modelLimit": 2}],
             "models": [
-                {"name": "Handler", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5,  "weapons": [{"id": "dog_mine", "count": 2}], "min": 2, "max": 3}
+                {"name": "Handler", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5,  "weapons": [{"id": "dog_mine", "count": 2}], "min": 2, "max": 3}
             ]
         },
         "sniper_team": {
@@ -1686,30 +1711,6 @@
             "name": "Forward Recon",
             "flavor": "Forward recon elements, when used effectively can provide a huge amount of information on enemy forces.",
             "description": "Use when an Infantry unit enters the field. It may make a free 6\" move action.",
-            "cost": 1
-        },
-        "regroup": {
-            "subfactions": ["reserves_focus"],
-            "phase": "activation",
-            "name": "(Reserves) Regroup",
-            "flavor": "Sometimes it is best to regroup remaining soldiers before making another push.",
-            "description": "Use before activating an Infantry unit within 2\" of another of the same unit. The two units merge and, for the rest of the battle, they are counted as a single unit for all rules purposes. This may not bring a unit above its maximum size.",
-            "cost": 1
-        },
-        "reinforcments": {
-            "subfactions": ["reserves_focus"],
-            "phase": "activation",
-            "name": "(Reserves) Reinforcements",
-            "flavor": "With such a quantity of manpower, many fighting soldiers are  available.",
-            "description": "At the beginning of any round after the first, you may set up a unit of 12 Conscripts with any equipment within 6\" of a table edge that is not in the enemy deployment zone, and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
-            "cost": 3
-        },
-        "for_the_motherland": {
-            "subfactions": ["reserves_focus"],
-            "phase": "activation",
-            "name": "(Reserves) For the Motherland",
-            "flavor": "Dying for such an important cause is sometimes necessary to win a battle.",
-            "description": "Use when an Infantry or Artilelry unit within 2\" of a Conscript unit is targetted by a Shooting attack. Half the hits (rounded down) from that weapon (after adding any additional hits from effects) are moved to the Conscript squad and half hit the original target.",
             "cost": 1
         }
     },

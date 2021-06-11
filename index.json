@@ -1130,7 +1130,7 @@
             "phase": "pre_game",
             "subfactions": ["airborne_focus"],
             "name": "Combat Drop",
-            "flavor": "A well-trained paratroop unit can drop as close as posssible to their intended target.",
+            "flavor": "A well-trained paratroop unit can drop as close as possible to their intended target.",
             "description": "Set one Infantry, Artillery or Airborne Vehicle unit aside in reserves before the match begins. At the beginning of any round after the first you may attempt to place the unit anywhere on the table over 12\" away from enemy units.\n\nTake a Courage test. If failed, use D10 scattering to determine the unit's new landing location. If the new location is off the table, place the unit at table edge as close as possible. If both players have units with Airdrop they must roll-off to see who deploys first, and then alternate in placing them.",
             "cost": 1
         },
@@ -1147,7 +1147,31 @@
             "subfactions": ["airborne_focus"],
             "name": "Stealth Tactics",
             "flavor": "Moving quickly and quietly is a key part of Airborne training.",
-            "description": "Use when activating an Infantry unit. It may make a free 6\" move action and may not be targetted by reaction fire when doing so.",
+            "description": "Use when activating an Infantry unit. It may make a free 6\" move action and may not be targeted by reaction fire when doing so.",
+            "cost": 2
+        },
+        "regroup": {
+            "subfactions": ["reserves_focus"],
+            "phase": "activation",
+            "name": "Regroup",
+            "flavor": "Sometimes it is best to regroup remaining soldiers before making another push.",
+            "description": "Use before activating an Infantry unit within 2\" of another of the same unit. The two units merge and, for the rest of the battle, they are counted as a single unit for all rules purposes. This may not bring a unit above its maximum size.",
+            "cost": 1
+        },
+        "reinforcements": {
+            "subfactions": ["reserves_focus"],
+            "phase": "activation",
+            "name": "Reinforcements",
+            "flavor": "With such a quantity of manpower, many fighting soldiers are available.",
+            "description": "Once per game, at the end of any round, you may remove one _Infantry_ unit from the table and place it back within 6\" of any table edge with all models restored.",
+            "cost": 3
+        },
+        "sacrifice": {
+            "subfactions": ["reserves_focus"],
+            "phase": "activation",
+            "name": "Strategic Sacrifice",
+            "flavor": "Dying for such an important cause is sometimes necessary to win a battle.",
+            "description": "Use when an _Infantry_ or _Artillery_ unit is targeted by a Shooting attack. Half the hits (rounded down) from that weapon (after adding any additional hits from effects) may be moved to another target _Infantry_ unit within 3\".",
             "cost": 2
         }
     }
