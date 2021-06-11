@@ -165,11 +165,10 @@
                     "name": "Veteran Rifle NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
-                    
+                    "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -179,11 +178,10 @@
                     "name": "Veteran Rifleman",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
-                    
+                    "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 1}],
                     "min": 4,
@@ -203,7 +201,7 @@
             "models": [
                 {
                     "name": "Motor Rifle NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
@@ -217,13 +215,12 @@
                 },
                 {
                     "name": "Motor Rifleman",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 1}],
                     "min": 4,
@@ -245,11 +242,10 @@
                     "name": "Veteran Motor Rifle NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -259,11 +255,10 @@
                     "name": "Veteran Motor Rifleman",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 1}],
                     "min": 4,
@@ -283,13 +278,12 @@
             "models": [
                 {
                     "name": "Airborne NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -297,13 +291,12 @@
                 },
                 {
                     "name": "Airborne",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 2}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 4}],
                     "min": 4,
@@ -325,11 +318,10 @@
                     "name": "Veteran Airborne NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -339,11 +331,10 @@
                     "name": "Veteran Airborne",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 2}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 4}],
                     "min": 4,
@@ -475,7 +466,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -489,7 +479,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["mag_lmg"], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
                     "min": 4,
@@ -508,13 +497,13 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers"]}],
             "models": [
                 {
-                    "name": "Engineer NCO",
+                    "name": "Veteran Engineer NCO",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
@@ -522,12 +511,12 @@
                     "max": 1
                 },
                 {
-                    "name": "Engineer",
-                    "courage": 5,
+                    "name": "Veteran Engineer",
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
+                    "defense": 6,
                     "reflexes": 5,
                     
                     "weapons": ["rifle", "unarmed"],
