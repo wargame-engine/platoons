@@ -61,8 +61,6 @@
         "commissar": {
             "name": "Commissar",
             "description": "An officer dedicated to keeping officers and higher soldiers in line.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "keywords": ["Infantry", "Commissar"],
             "subfactions": ["none", "reserves_focus", "infantry_focus"],
@@ -75,21 +73,18 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 4,
-                    
+                    "reflexes": 5,
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
-                    "rules": ["leader", "no_reatreat"],
+                    "rules": ["leader", "no_retreat"],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 4,  "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5,  "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "field_medic": {
             "name": "Field Medic",
             "description": "A field medic.",
-            "min": 1,
-            "max": 1,
             "category": "support",
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
@@ -102,7 +97,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["pistol", "unarmed", "smoke_grenades"],
                     "rules": ["medic", "non_combat", "support"],
                     "min": 1,
@@ -1728,11 +1722,6 @@
         "hero_sniper": {"name": "Hero Sniper", "description": "This model gets +1 Accuracy and all shooting attacks gain +1 AP.", "points": 20},
         "lady_death": {"name": "Lady Death", "description": "This model gets +1 Accuracy and +1 Save.", "points": 15},
         "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
-        "no_reatreat": {
-            "name": "No Retreat",
-            "description": "When a friendly Infantry unit within 6\" fails a Courage test, that unit must remove one model to re-roll the test. This effect may be used once per Infantry unit.",
-            "points": 5
-        },
         "inspiring_tank_commander": {"name": "Inspiring Tank Commander", "description": "This unit and friendly Tank or Armored Car units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
         "battle_hardened": {"name": "Battle Hardened", "description": "This model may subtract one from any rolls on Damage Tables.", "points": 10},
         "medical_assistant": {

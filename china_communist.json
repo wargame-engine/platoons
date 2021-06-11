@@ -54,7 +54,7 @@
                     "reflexes": 4,
                     
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
-                    "rules": ["leader", "no_reatreat"],
+                    "rules": ["leader", "no_retreat"],
                     "min": 1,
                     "max": 1
                 },

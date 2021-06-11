@@ -653,8 +653,13 @@
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
             "points": [10, {"multiply": "rule.x"}]
         },
+        "no_retreat": {
+            "name": "No Retreat",
+            "description": "When a friendly _Infantry_ unit within 6\" fails a Courage test, that unit must remove one model to re-roll the test. This effect may be used once per _Infantry_ unit.",
+            "points": 5
+        },
         "field_orders_armored": {
-            "name": "Field Orders",
+            "name": "Armored Field Orders",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Tank_ or _Armored Car_ units within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
             "points": [20, {"multiply": "rule.x"}]

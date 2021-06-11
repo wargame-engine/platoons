@@ -1366,7 +1366,7 @@
         "tank_jager": {"name": "Tank Jager", "description": "This model gains +7 AP when attacking a tank with melee attacks.", "points": 30},
         "crack_shot": {"name": "Crack Shot", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
         "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly Infantry units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
-        "no_reatreat": {
+        "no_retreat": {
             "name": "No Retreat",
             "description": "When a friendly Infantry unit within 6\" fails a Courage test, that unit may remove one model to re-roll the test. This effect may be used once per Infantry unit.",
             "points": 5
