@@ -275,6 +275,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "mounted_bicycle", "modelLimit": "all"}],
+            "rules": ["stubborn"],
             "models": [
                 {
                     "name": "Airborne NCO",
@@ -313,6 +314,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "mounted_bicycle", "modelLimit": "all"}],
+            "rules": ["stubborn"],
             "models": [
                 {
                     "name": "Veteran Airborne NCO",
