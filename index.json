@@ -79,9 +79,9 @@
             "version": "1.0",
             "description": "The British, while honoring previous treaties and agreements was forced to intervene in Germany's earliest battles. The British were eventually able to overcome their early defeats at the hands of the German forces with the help of their other allied counterparts. The British use a combination of capable armored vehicles, solid infantry and elite trained commando and SAS forces to defeat their enemies.",
             "subfactions": {
-                "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
-                "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "background": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
-                "armored_focus": {"name": "Armored", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+                "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
+                "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "description": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
+                "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
             }
         },
         "france": {
