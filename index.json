@@ -293,7 +293,7 @@
         "belt_lmg": {"name": "Belt-fed LMG", "short": 15, "medium": 30, "attacks": 4, "rules": [{"id": "team", "x": 2}]},
         "box_lmg": {"name": "Box-fed LMG", "short": 15, "medium": 30, "attacks": 3},
         "mag_lmg": {"name": "Magazine-fed LMG", "short": 18, "medium": 36, "attacks": 2},
-        "bar": {"name": "BAR", "short": 15, "medium": 30, "attacks": 2, "rules": ["assault"]},
+        "bar": {"name": "BAR", "short": 18, "medium": 36, "attacks": 2, "rules": ["assault"]},
         "assault_lmg": {"name": "Assault LMG", "short": 15, "medium": 30, "attacks": 2, "rules": ["assault"]},
         "mmg": {"name": "Medium MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1},
         "dual_mmg": {"name": "Dual Medium MG", "short": 18, "medium": 36, "attacks": 8, "ap": 1},
