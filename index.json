@@ -13,7 +13,8 @@
             "subfactions": {
                 "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
                 "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "description": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
-                "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+                "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true},
+                "reserves_focus": {"name": "Reserves", "id": "reserves_focus", "description": "Low-quality reserve troops and equipment.", "restricted": true}
             }
         },
         "japan": {
