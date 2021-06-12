@@ -631,8 +631,6 @@
         },
         "side_skirts": {"name": "Side Skirts", "description": "This model gains +1 to its Save when hit in its side arcs from weapons with AP 4 or less.", "points": 5},
         "gun_shield": {"name": "Gun Shield", "description": "Friendly models gain +1 Save when targeted by attacks which cross this model.", "points": 5},
-        "suppressive": {"name": "Suppressive", "description": "This weapon deals 1 additional shock.", "points": 1},
-        "stubborn": {"name": "Stubborn", "description": "This model requires 1 additional shock to become broken.", "points": ["model.wounds"]},
         "smoke": {
             "name": "Smoke",
             "description": "Choose a location on the battlefield within range of this weapon and if a hit is successful, place a 3\" diameter smoke marker at the target location. If the weapon fires multiple shots and more than one lands on target, place any additional smoke markers in contact with the edge of the first hit. Smoke markers block line of sight and models inside or partially obscured by smoke markers gain the benefit of Soft Cover. At the end of the round, roll a D10 for each smoke marker. On a 5 or less the smoke marker is removed.",

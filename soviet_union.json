@@ -1710,8 +1710,7 @@
     },
     "weapons": {
         "dog_mine": {"name": "Dog-Mine", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["indirect", {"id": "ammo", "x": 1}]},
-        "ampulomet": {"name": "Ampulomet", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["indirect", "suppressive"]},
-        "molotov": {"name": "Molotov Cocktail", "attacks": 1, "short": 6, "ap": 5, "rules": ["suppressive", {"id": "ammo", "x": 1}, {"id": "blast", "x": 3}]}
+        "ampulomet": {"name": "Ampulomet", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["indirect", "flame"]}
     },
     "rules": {
         "soviet_flag": {
