@@ -122,7 +122,7 @@
             "keywords": ["Infantry"],
             "options": [
                 {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "carbine_rifle", "modelLimit": 4}
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 4}
             ],
             "models": [
                 {
@@ -165,7 +165,7 @@
             "keywords": ["Infantry"],
             "options": [
                 {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "carbine_rifle", "modelLimit": 4}
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 4}
             ],
             "models": [
                 {
@@ -206,7 +206,7 @@
             "keywords": ["Infantry"],
             "options": [
                 {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "carbine_rifle", "modelLimit": 4}
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 4}
             ],
             "models": [
                 {
@@ -247,7 +247,7 @@
             "keywords": ["Infantry"],
             "options": [
                 {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "carbine_rifle", "modelLimit": 4}
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 4}
             ],
             "models": [
                 {
@@ -288,7 +288,7 @@
             "keywords": ["Infantry"],
             "options": [
                 {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "carbine_rifle", "modelLimit": 4}
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 4}
             ],
             "models": [
                 {
@@ -329,7 +329,7 @@
             "keywords": ["Infantry"],
             "options": [
                 {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "carbine_rifle", "modelLimit": 4}
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 4}
             ],
             "models": [
                 {
@@ -416,7 +416,7 @@
             "category": "infantry",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"replaceWeapon": "carbine_rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}],
+            "options": [{"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}],
             "models": [
                 {
                     "name": "Engineer NCO",
@@ -426,8 +426,8 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "weapons": ["carbine_rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": ["smg"]}],
+                    "weapons": ["semi_auto_carbine_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["smg"]}],
                     "min": 1,
                     "max": 1
                 },
@@ -439,8 +439,8 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "weapons": ["carbine_rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": ["bar"], "modelLimit": 1}, {"replaceWeapon": "carbine_rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
+                    "weapons": ["semi_auto_carbine_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["bar"], "modelLimit": 1}, {"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
                     "min": 5,
                     "max": 11
                 }
