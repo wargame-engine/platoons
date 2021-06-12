@@ -331,6 +331,7 @@
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 4}
             ],
+            "rules": ["stubborn"],
             "models": [
                 {
                     "name": "Airborne NCO",
@@ -375,6 +376,7 @@
             "options": [
                 {"addWeapon": "at_grenades", "modelLimit": 3}
             ],
+            "rules": ["stubborn"],
             "models": [
                 {
                     "name": "Veteran Airborne NCO",
