@@ -284,7 +284,7 @@
         },
         "motor_riflemen": {
             "name": "Motor Infantry Section",
-            "description": "A group of motorized canadian infantry.",
+            "description": "A group of motorized british infantry.",
             "min": 1,
             "max": 1,
             "subfactions": ["none", "armored_focus"],
@@ -294,7 +294,7 @@
             "models": [
                 {
                     "name": "Motor Rifle NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
@@ -308,13 +308,12 @@
                 },
                 {
                     "name": "Motor Rifleman",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 1}],
                     "min": 4,
@@ -324,7 +323,7 @@
         },
         "veteran_motor_riflemen": {
             "name": "Veteran Motor Infantry Section",
-            "description": "A group of veteran motorized canadian infantry.",
+            "description": "A group of veteran motorized british infantry.",
             "min": 1,
             "max": 1,
             "subfactions": ["armored_focus"],
@@ -336,11 +335,10 @@
                     "name": "Veteran Motor Rifle NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -350,11 +348,10 @@
                     "name": "Veteran Motor Rifleman",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 1}],
                     "min": 4,
@@ -364,23 +361,23 @@
         },
         "airborne_section": {
             "name": "Airborne Section",
-            "description": "A group of trained canadian Airborne.",
+            "description": "A group of trained british Airborne.",
             "min": 1,
             "max": 1,
             "subfactions": ["none", "airborne_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "mounted_bicycle", "modelLimit": "all"}],
+            "rules": ["stubborn"],
             "models": [
                 {
                     "name": "Airborne NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -388,13 +385,12 @@
                 },
                 {
                     "name": "Airborne",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 2}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 4}],
                     "min": 4,
@@ -404,23 +400,23 @@
         },
         "veteran_airborne_section": {
             "name": "Veteran Airborne Section",
-            "description": "A group of veteran canadian Airborne.",
+            "description": "A group of veteran british Airborne.",
             "min": 1,
             "max": 1,
             "subfactions": ["airborne_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "mounted_bicycle", "modelLimit": "all"}],
+            "rules": ["stubborn"],
             "models": [
                 {
                     "name": "Veteran Airborne NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -430,11 +426,10 @@
                     "name": "Veteran Airborne",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 2}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 4}],
                     "min": 4,
@@ -444,7 +439,7 @@
         },
         "commando_section": {
             "name": "Commando Section",
-            "description": "A group of trained canadian Commandos.",
+            "description": "A group of trained british Commandos.",
             "min": 1,
             "max": 1,
             "subfactions": ["none", "infantry_focus"],
@@ -1287,7 +1282,6 @@
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
-        "piat": {"name": "Piat", "short": 6, "medium": 12, "ap": 6, "attacks": 1,  "rules": [{"id": "team", "x": 2}, "indirect"]},
         "qf_aa": {
             "name": "3.7\" QF AA Gun",
             "profiles": [
