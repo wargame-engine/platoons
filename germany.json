@@ -1686,7 +1686,7 @@
             "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
             "models": [
                 {
-                    "name": "Stug III G",
+                    "name": "Stug III F-H/Stug IV",
                     "courage": 5,
                     "movement": 10,
                     "shoot": 5,
@@ -1954,7 +1954,7 @@
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
-                    "name": "Panzer IV J",
+                    "name": "Panzer IV B-F",
                     "courage": 5,
                     "movement": 10,
                     "shoot": 5,
