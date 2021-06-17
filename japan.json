@@ -190,7 +190,7 @@
                     "reflexes": 4,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "unarmed", "withWeapon": ["dadao"]}],
-                    "min": 10,
+                    "min": 5,
                     "max": 14
                 }
             ]
