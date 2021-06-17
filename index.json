@@ -394,6 +394,13 @@
                 {"name": "Smoke", "short": 18, "medium": 36, "attacks": 3, "rules": ["indirect", "scatter", "smoke"]}
             ]
         },
+        "rocket_battery": {
+            "name": "Rocket Salvo (Off-table Battery)",
+            "profiles": [
+                {"name": "HE", "short": 18, "medium": 36, "attacks": 3, "ap": 3, "rules": ["indirect", "scatter", "salvo", {"id": "blast", "x": 4}]},
+                {"name": "Smoke", "short": 18, "medium": 36, "attacks": 3, "rules": ["indirect", "scatter", "smoke"]}
+            ]
+        },
         "nebelwerfer_battery": {
             "name": "Nebelwerfer (Off-table Battery)",
             "profiles": [
