@@ -182,13 +182,12 @@
             "models": [
                 {
                     "name": "Chinese Collaborator",
-                    "courage": 4,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 4,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "unarmed", "withWeapon": ["dadao"]}],
                     "min": 10,
@@ -487,7 +486,11 @@
             "category": "infantry",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}
+            ],
             "models": [
                 {
                     "name": "Engineer NCO",
@@ -497,7 +500,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -511,7 +513,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_lmg"], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
                     "min": 4,
@@ -605,8 +606,7 @@
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "rules": ["scout", "stealth"],
-            "models": [
-                {"name": "Marksman", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6,  "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1}            ]
+            "models": [{"name": "Marksman", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1}]
         },
         "type_4": {
             "name": "Type 4 AT Team",
@@ -681,7 +681,6 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
-            
             "models": [
                 {
                     "name": "Light Mortar",
@@ -1301,7 +1300,6 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 8}],
                     "options": [{"addWeapon": ["mmg_aa"]}],
                     "min": 1,
@@ -1326,7 +1324,6 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 12}],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}],
                     "min": 1,
@@ -1351,7 +1348,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    
                     "weapons": [],
                     "rules": ["tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 13}, "exposed"],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}],
@@ -1378,7 +1374,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle", {"id": "limited", "x": 1}],
                     "min": 1,
@@ -1403,11 +1398,8 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "options": [
-                        {"addWeapon": ["mmg_aa", "hmg_aa"]}
-                    ],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "catches_fire", {"id": "limited", "x": 1}],
                     "min": 1,
                     "max": 1
@@ -1416,7 +1408,7 @@
         }
     },
     "weapons": {
-        "type_4": {"name": "Type 4", "short": 12, "medium": 24, "ap": 6, "attacks": 1,  "rules": [{"id": "team", "x": 2}]},
+        "type_4": {"name": "Type 4", "short": 12, "medium": 24, "ap": 6, "attacks": 1, "rules": [{"id": "team", "x": 2}]},
         "qf_aa": {
             "name": "3.7\" QF AA Gun",
             "profiles": [
