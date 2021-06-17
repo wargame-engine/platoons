@@ -2,33 +2,11 @@
     "id": "china",
     "name": "China",
     "subfactions": {
-        "china_communist": {
-            "name": "China (United Front)",
-            "phase": "activation",
-            "id": "china_communist",
-            "background": ""
-        },
-        "china_nationalist": {
-            "name": "China (China (Chiang Kai-shek)",
-            "phase": "activation",
-            "id": "china_nationalist",
-            "background": ""
-    }
-    ,
-        "china_western": {
-            "name": "China (Westernized)",
-            "phase": "activation",
-            "id": "china_western",
-            "background": ""
-    }
-    ,
-        "china_yan": {
-            "name": "China (Yan Xishan)",
-            "phase": "activation",
-            "id": "china_yan",
-            "background": ""
-    }
-},
+        "china_communist": {"name": "China (United Front)", "phase": "activation", "id": "china_communist", "background": ""},
+        "china_nationalist": {"name": "China (China (Chiang Kai-shek)", "phase": "activation", "id": "china_nationalist", "background": ""},
+        "china_western": {"name": "China (Westernized)", "phase": "activation", "id": "china_western", "background": ""},
+        "china_yan": {"name": "China (Yan Xishan)", "phase": "activation", "id": "china_yan", "background": ""}
+    },
     "units": {
         "platoon_command": {
             "name": "Field Officer",
@@ -47,14 +25,13 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 7,
-                    
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
                     "rules": [{"id": "field_orders", "x": 1}, "leader"],
                     "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 7,  "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 7, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "political_officer": {
@@ -75,13 +52,12 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 4,
-                    
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
                     "rules": ["leader"],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 4,  "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 4, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "field_medic": {
@@ -101,13 +77,12 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["pistol", "unarmed", "smoke_grenades"],
                     "rules": ["medic", "non_combat", "support"],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5,  "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "peasant_press_gang": {
@@ -119,19 +94,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "models": [
-                {
-                    "name": "Police Officer",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 4,
-                    
-                    "weapons": ["pistol", "dadao"],
-                    "min": 1,
-                    "max": 1
-                },
+                {"name": "Police Officer", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 4, "weapons": ["pistol", "dadao"], "min": 1, "max": 1},
                 {
                     "name": "Peasant",
                     "courage": 4,
@@ -140,7 +103,6 @@
                     "fight": 4,
                     "defense": 5,
                     "reflexes": 4,
-                    
                     "weapons": [{"id": "bamboo_spear", "name": "Qiang (spear)", "count": 2}],
                     "modelLimit": 1,
                     "min": 9,
@@ -167,7 +129,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": [{"id": "bamboo_spear", "name": "Qiang (spear)", "count": 2}],
                     "options": [{"replaceWeapon": "bamboo_spear", "withWeapon": "officer_sword"}],
                     "min": 1,
@@ -181,7 +142,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": [{"id": "bamboo_spear", "name": "Qiang (spear)", "count": 2}],
                     "min": 5,
                     "max": 16
@@ -196,9 +156,7 @@
             "max": 2,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [
-                {"replaceWeapon": {"id": "bamboo_spear", "name": "Qiang (spear)",
-                     "count": 2}, "withWeapon": [[{"id": "rifle", "name": "Mosin Nagant"}], "bayonet"]}],
+            "options": [{"replaceWeapon": {"id": "bamboo_spear", "name": "Qiang (spear)", "count": 2}, "withWeapon": [[{"id": "rifle", "name": "Mosin Nagant"}], "bayonet"]}],
             "models": [
                 {
                     "name": "Peasant Maoists Revolutionary",
@@ -208,7 +166,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": [{"id": "bamboo_spear", "name": "Qiang (spear)", "count": 2}],
                     "min": 1,
                     "max": 1
@@ -221,7 +178,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": [{"id": "bamboo_spear", "name": "Qiang (spear)", "count": 2}],
                     "min": 5,
                     "max": 16
@@ -246,7 +202,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": [[{"id": "rifle", "name": "Mosin–Nagant"}], "bayonet"],
                     "options": [{"addWeapon": ["frag_grenades", "molotov_cocktails"], "modelLimit": 2}],
                     "min": 1,
@@ -260,7 +215,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": [[{"id": "rifle", "name": "Mosin–Nagant"}], "bayonet"],
                     "min": 5,
                     "max": 16
@@ -284,7 +238,6 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 4,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "unarmed", "withWeapon": ["dadao"]}],
                     "min": 10,
@@ -309,7 +262,6 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 4,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "ZB vz. 26"}], "modelLimit": 1}],
                     "min": 5,
@@ -336,10 +288,8 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 4,
-                    
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}, 
-                    {"replaceWeapon": "unarmed", "withWeapon": ["dadao"]}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}, {"replaceWeapon": "unarmed", "withWeapon": ["dadao"]}],
                     "min": 5,
                     "max": 11
                 }
@@ -353,7 +303,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2}, {"addWeapon": ["frag_grenades","bundle_grenades"], "modelLimit": 3}, {"rules": ["stubborn"]}], 
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2}, {"addWeapon": ["frag_grenades", "bundle_grenades"], "modelLimit": 3}, {"rules": ["stubborn"]}],
             "models": [
                 {
                     "name": "Elite Rifle NCO",
@@ -363,10 +313,11 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_pistol", "name": "Mauser Pistol"}], "modelLimit": 1}, 
-                    {"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_pistol", "name": "Mauser Pistol"}], "modelLimit": 1},
+                        {"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}
+                    ],
                     "min": 1,
                     "max": 1
                 },
@@ -378,11 +329,13 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "ZB vz. 26"}], "modelLimit": 1}, {"addRule": "blue_and_white_banner", "modelLimit": 1}, [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 27"}], "modelLimit": 1}],
-                    {"replaceWeapon": ["rifle"], "withWeapon":  
-                        [{"id": "box_lmg", "name": "Lewis Gun"}], "modelLimit": 1}],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "ZB vz. 26"}], "modelLimit": 1},
+                        {"addRule": "blue_and_white_banner", "modelLimit": 1},
+                        [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 27"}], "modelLimit": 1}],
+                        {"replaceWeapon": ["rifle"], "withWeapon": [{"id": "box_lmg", "name": "Lewis Gun"}], "modelLimit": 1}
+                    ],
                     "min": 5,
                     "max": 11
                 }
@@ -396,10 +349,7 @@
             "max": 2,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": 
-            [{"replaceWeapon": ["rifle", "bayonet"], "withWeapon": 
-                    [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1}],            
-
+            "options": [{"replaceWeapon": ["rifle", "bayonet"], "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1}],
             "models": [
                 {
                     "name": "Eight Route Army Support NCO",
@@ -409,9 +359,8 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": [[{"id": "rifle", "name": "Mosin Nagant"}], "bayonet"],
-                    "options": [{"addWeapon": ["frag_grenades","bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 1}], 
+                    "options": [{"addWeapon": ["frag_grenades", "bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 1}],
                     "min": 1,
                     "max": 1
                 },
@@ -423,9 +372,8 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    
-                    "weapons": [[{"id": "rifle", "name": "Mosin–Nagant"}], "bayonet"],   
-                    "options": [{"addWeapon": ["frag_grenades","bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 2}], 
+                    "weapons": [[{"id": "rifle", "name": "Mosin–Nagant"}], "bayonet"],
+                    "options": [{"addWeapon": ["frag_grenades", "bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 2}],
                     "min": 5,
                     "max": 11
                 }
@@ -439,12 +387,11 @@
             "max": 2,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": 
-            [{"replaceWeapon": ["rifle", "bayonet"], "withWeapon": 
-                    [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1},   
-                        {"replaceWeapon": ["rifle", "bayonet"], "withWeapon":  
-                        [{"id": "box_lmg", "name": "Degtyaryov DP"}], "modelLimit": 1},            
-            {"addWeapon": ["frag_grenades","bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 3}],
+            "options": [
+                {"replaceWeapon": ["rifle", "bayonet"], "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1},
+                {"replaceWeapon": ["rifle", "bayonet"], "withWeapon": [{"id": "box_lmg", "name": "Degtyaryov DP"}], "modelLimit": 1},
+                {"addWeapon": ["frag_grenades", "bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 3}
+            ],
             "models": [
                 {
                     "name": "Eight Route Army Support Veteran NCO",
@@ -454,9 +401,8 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": [[{"id": "rifle", "name": "Mosin Nagant"}], "bayonet", "unarmed"],
-                    "options": [{"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],    
+                    "options": [{"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],
                     "min": 1,
                     "max": 1
                 },
@@ -468,7 +414,6 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": [[{"id": "rifle", "name": "Mosin–Nagant"}], "bayonet"],
                     "options": [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 27"}], "modelLimit": 1}],
                     "min": 5,
@@ -495,7 +440,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["semi_auto_carbine_rifle", "unarmed"],
                     "options": [{"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": {"id": "smg", "name": "M42"}}],
                     "min": 1,
@@ -509,7 +453,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["semi_auto_carbine_rifle", "unarmed"],
                     "options": [{"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": {"id": "smg", "name": "M42", "modelLimit": 1}}],
                     "min": 5,
@@ -525,7 +468,11 @@
             "max": 3,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "smoke_grenades", "modelLimit": 2}],
+            "options": [
+                {"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["smg"], "modelLimit": 6},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "smoke_grenades", "modelLimit": 2}
+            ],
             "models": [
                 {
                     "name": "SACO Guerrilla Veteran NCO",
@@ -535,7 +482,6 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["semi_auto_carbine_rifle", "unarmed"],
                     "options": [{"addWeapon": ["bazooka"], "modelLimit": 1}],
                     "min": 1,
@@ -549,15 +495,27 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["semi_auto_carbine_rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["assault_lmg"], "modelLimit": 1}, {"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["flamethrower"], "modelLimit": 1},
-                        {"replaceWeapon": ["semi_auto_carbine_rifle"], "withWeapon":  
-                            [{"id": "box_lmg", "name": "Lewis Gun"}], "modelLimit": 1}],
+                    "options": [
+                        {"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["assault_lmg"], "modelLimit": 1},
+                        {"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["flamethrower"], "modelLimit": 1},
+                        {"replaceWeapon": ["semi_auto_carbine_rifle"], "withWeapon": [{"id": "box_lmg", "name": "Lewis Gun"}], "modelLimit": 1}
+                    ],
                     "min": 5,
                     "max": 11
                 },
-                {"name": "SACO Guerrilla Veteran Bazooka Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6,  "weapons": ["rifle", "unarmed"], "min": 0, "max": 1}
+                {
+                    "name": "SACO Guerrilla Veteran Bazooka Assistant",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "min": 0,
+                    "max": 1
+                }
             ]
         },
         "yan_x_nra": {
@@ -569,7 +527,11 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "rules": ["stubborn"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "Thompson"}], "modelLimit": 1}, {"addWeapon": "at_grenades", "modelLimit": 1}, {"addWeapon": ["frag_grenades"], "modelLimit": 3}],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "Thompson"}], "modelLimit": 1},
+                {"addWeapon": "at_grenades", "modelLimit": 1},
+                {"addWeapon": ["frag_grenades"], "modelLimit": 3}
+            ],
             "models": [
                 {
                     "name": "Yan Xishan Rifleman NCO",
@@ -579,7 +541,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "unarmed", "withWeapon": ["assault_pistol"]}],
                     "min": 1,
@@ -593,12 +554,13 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "ZB vz. 26"}], "modelLimit": 1},
-                               {"replaceWeapon": "unarmed", "withWeapon": ["pistol"]},
-                               {"replaceWeapon": "unarmed", "withWeapon": [{"id": "assault_pistol", "name": "Mauser pistol", "modelLimit": 2}]},
-                               [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 27"}], "modelLimit": 1}]],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "ZB vz. 26"}], "modelLimit": 1},
+                        {"replaceWeapon": "unarmed", "withWeapon": ["pistol"]},
+                        {"replaceWeapon": "unarmed", "withWeapon": [{"id": "assault_pistol", "name": "Mauser pistol", "modelLimit": 2}]},
+                        [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 27"}], "modelLimit": 1}]
+                    ],
                     "min": 5,
                     "max": 11
                 }
@@ -612,7 +574,12 @@
             "max": 2,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "Thompson"}], "modelLimit": 4}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "fanatical"}, {"addWeapon": ["frag_grenades","bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 3}],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "Thompson"}], "modelLimit": 4},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addRule": "fanatical"},
+                {"addWeapon": ["frag_grenades", "bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 3}
+            ],
             "models": [
                 {
                     "name": "Yan Xishan Honor Guard NCO",
@@ -622,7 +589,6 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "unarmed", "withWeapon": ["assault_pistol"]}],
                     "min": 1,
@@ -636,12 +602,13 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "ZB vz. 26"}], "modelLimit": 1},
-                               {"replaceWeapon": "unarmed", "withWeapon": ["pistol"]},
-                               {"replaceWeapon": "unarmed", "withWeapon": [{"id": "assault_pistol", "name": "Mauser pistol", "modelLimit": 4}]},
-                               [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 27"}], "modelLimit": 1}]],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "ZB vz. 26"}], "modelLimit": 1},
+                        {"replaceWeapon": "unarmed", "withWeapon": ["pistol"]},
+                        {"replaceWeapon": "unarmed", "withWeapon": [{"id": "assault_pistol", "name": "Mauser pistol", "modelLimit": 4}]},
+                        [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 27"}], "modelLimit": 1}]
+                    ],
                     "min": 5,
                     "max": 11
                 }
@@ -664,7 +631,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_carbine_rifle"], "modelLimit": 1}],
                     "min": 1,
@@ -678,10 +644,11 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "ZB vz. 26"}], "modelLimit": 1},
-                        {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_carbine_rifle"]}],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "ZB vz. 26"}], "modelLimit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_carbine_rifle"]}
+                    ],
                     "min": 5,
                     "max": 12
                 }
@@ -695,21 +662,13 @@
             "max": 3,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "Thompson"}], "modelLimit": 1}, [{"replaceWeapon": "unarmed", "withWeapon": [{"id": "pistol", "name": "Browning Pistol"}], "modelLimit": 4}], {"addWeapon": ["frag_grenades"], "modelLimit": 3}],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "Thompson"}], "modelLimit": 1},
+                [{"replaceWeapon": "unarmed", "withWeapon": [{"id": "pistol", "name": "Browning Pistol"}], "modelLimit": 4}],
+                {"addWeapon": ["frag_grenades"], "modelLimit": 3}
+            ],
             "models": [
-                {
-                    "name": "X Force NRA NCO",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    
-                    "weapons": ["rifle", "unarmed"],
-                    "min": 1,
-                    "max": 1
-                },
+                {"name": "X Force NRA NCO", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1},
                 {
                     "name": "X Force NRA Regular",
                     "courage": 6,
@@ -718,11 +677,11 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "8mm Canadian Bren"}], "modelLimit": 1},
-                    {"replaceWeapon": ["rifle"], "withWeapon":  
-                        [{"id": "box_lmg", "name": "Lewis Gun"}], "modelLimit": 1}],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "8mm Canadian Bren"}], "modelLimit": 1},
+                        {"replaceWeapon": ["rifle"], "withWeapon": [{"id": "box_lmg", "name": "Lewis Gun"}], "modelLimit": 1}
+                    ],
                     "min": 5,
                     "max": 12
                 }
@@ -736,7 +695,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2}, {"addWeapon": ["frag_grenades","bundle_grenades"], "modelLimit": 3}, {"rules": ["stubborn"]}], 
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2}, {"addWeapon": ["frag_grenades", "bundle_grenades"], "modelLimit": 3}, {"rules": ["stubborn"]}],
             "models": [
                 {
                     "name": "Guard Pistol",
@@ -746,10 +705,8 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["pistol", "dadao"],
-                    "options": [{"replaceWeapon": "pistol", "withWeapon": [{"id": "assault_pistol", "name": "Mauser Pistol"}]}, 
-                    {"replaceWeapon": "dadao", "withWeapon": "officer_sword"}],
+                    "options": [{"replaceWeapon": "pistol", "withWeapon": [{"id": "assault_pistol", "name": "Mauser Pistol"}]}, {"replaceWeapon": "dadao", "withWeapon": "officer_sword"}],
                     "min": 3,
                     "max": 6
                 },
@@ -761,11 +718,11 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["rifle", "dadao"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_pistol", "name": "Mauser Pistol"}]},
-                    {"replaceWeapon": ["rifle"], "withWeapon":  
-                        [{"id": "smg", "name": "Thompson"}], "modelLimit": 3}],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_pistol", "name": "Mauser Pistol"}]},
+                        {"replaceWeapon": ["rifle"], "withWeapon": [{"id": "smg", "name": "Thompson"}], "modelLimit": 3}
+                    ],
                     "min": 3,
                     "max": 6
                 }
@@ -788,7 +745,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": [{"id": "mmg", "name": "Type 24 Maxim", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "rules": [{"id": "crew", "x": 3}],
                     "min": 1,
@@ -813,7 +769,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": [{"id": "hmg", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "rules": [{"id": "crew", "x": 3}],
                     "min": 1,
@@ -838,7 +793,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    
                     "weapons": [{"id": "medium_at_light_howitzer", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -863,7 +817,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -888,7 +841,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -913,7 +865,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": [{"id": "light_at", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -937,7 +888,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    
                     "weapons": ["mmg", "mmg"],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "min": 1,
@@ -961,12 +911,9 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    
                     "weapons": ["mmg"],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
-                    "options": [
-                        {"replaceWeapon": "mmg", "withWeapon": "very_light_at"}
-                    ],
+                    "options": [{"replaceWeapon": "mmg", "withWeapon": "very_light_at"}],
                     "min": 1,
                     "max": 1
                 }
@@ -989,12 +936,8 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    
                     "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "options": [
-                        {"addWeapon": ["mmg_aa", "hmg_aa"]},
-                        {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": ["heavy_at_stabilized_mg", "medium_howitzer_vehicle_stabilized"]}
-                    ],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}, {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": ["heavy_at_stabilized_mg", "medium_howitzer_vehicle_stabilized"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "catches_fire"],
                     "min": 1,
                     "max": 1
@@ -1019,7 +962,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    
                     "weapons": ["light_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -1044,11 +986,8 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    
                     "weapons": ["dual_mmg"],
-                    "options": [
-                        {"replaceWeapon": "dual_mmg", "withWeapon": "light_autocannon_aa"}
-                    ],
+                    "options": [{"replaceWeapon": "dual_mmg", "withWeapon": "light_autocannon_aa"}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 2}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
@@ -1073,7 +1012,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": [{"id": "light_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 2}],
                     "min": 1,
                     "max": 1
@@ -1098,7 +1036,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": [{"id": "medium_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -1123,7 +1060,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": [{"id": "heavy_mortar", "mount": ["Front"]}, {"id": "unarmed", "count": 4}],
                     "min": 1,
                     "max": 1
@@ -1140,12 +1076,12 @@
         }
     },
     "weapons": {},
-    "rules": 
-    {"blue_and_white_banner": {
-        "name": "Blue and White Banner",
-        "description": "This unit gets +1 Courage when clearing shock. A model may not use its shooting weapons while carrying a Blue and White Banner.",
-        "points": 10
-    }
-},
+    "rules": {
+        "blue_and_white_banner": {
+            "name": "Blue and White Banner",
+            "description": "This unit gets +1 Courage when clearing shock. A model may not use its shooting weapons while carrying a Blue and White Banner.",
+            "points": 10
+        }
+    },
     "relics": []
 }

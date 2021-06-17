@@ -344,6 +344,50 @@
                 }
             ]
         },
+        "pathfinder_squad": {
+            "name": "Pathfinder Squad",
+            "description": "A group of forward scouting pathfinders.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["airborne_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 4}
+            ],
+            "rules": ["scout", "stubborn"],
+            "models": [
+                {
+                    "name": "Pathfinder NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Pathfinder",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [
+                        {"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"], "modelLimit": 5}
+                    ],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
         "airborne_squad": {
             "name": "Airborne Squad",
             "description": "A group of trained US Airborne.",
