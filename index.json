@@ -259,8 +259,8 @@
                 "artillery": {"max": 2},
                 "light_vehicles": {"max": 1},
                 "heavy_vehicles": {"max": 1},
-                "transport": {"max": 3},
-                "aircraft": {"max": 2},
+                "transport": {"max": 2},
+                "aircraft": {"max": 1},
                 "fortifications": {"max": 3}
             }
         }
