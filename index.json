@@ -191,7 +191,7 @@
             "categories": {
                 "command": {"min": 1, "max": 2},
                 "infantry": {"min": 2, "max": 5},
-                "support": {"max": 4},
+                "support": {"max": 5},
                 "artillery": {"max": 2},
                 "light_vehicles": {"max": 1},
                 "heavy_vehicles": {"max": 1},
@@ -200,8 +200,8 @@
                 "fortifications": {"max": 4}
             }
         },
-        "support_platoon": {
-            "name": "Support Platoon",
+        "artillery_platoon": {
+            "name": "Artillery Platoon",
             "cost": 1,
             "description": "A platoon focused on support units and heavy guns.",
             "categories": {
@@ -239,13 +239,29 @@
             "categories": {
                 "command": {"min": 1, "max": 2},
                 "infantry": {"min": 2, "max": 3},
-                "support": {"max": 2},
+                "support": {"max": 3},
                 "artillery": {"max": 0},
                 "light_vehicles": {"max": 2},
                 "heavy_vehicles": {"max": 3},
                 "transport": {"max": 3},
                 "aircraft": {"max": 2},
                 "fortifications": {"max": 2}
+            }
+        },
+        "support_platoon": {
+            "name": "Supporting Platoon",
+            "cost": 1,
+            "description": "A small supporting platoon.",
+            "categories": {
+                "command": {"max": 1},
+                "infantry": {"max": 2},
+                "support": {"max": 3},
+                "artillery": {"max": 2},
+                "light_vehicles": {"max": 1},
+                "heavy_vehicles": {"max": 1},
+                "transport": {"max": 3},
+                "aircraft": {"max": 2},
+                "fortifications": {"max": 3}
             }
         }
     },
