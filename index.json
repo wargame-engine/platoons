@@ -307,22 +307,22 @@
         "flamethrower": {
             "name": "Flamethrower",
             "profiles": [
-                {"name": "Stream", "short": 6, "medium": 12, "ap": 5, "attacks": 2, "rules": ["flame"]},
-                {"name": "Spray", "short": 6, "medium": 12, "ap": 1, "attacks": 5, "rules": ["flame"]}
+                {"name": "Stream", "short": 6, "medium": 12, "ap": 5, "attacks": 2, "rules": ["flame", {"id": "shocking", "x": 2}]},
+                {"name": "Spray", "short": 6, "medium": 12, "ap": 2, "attacks": 5, "rules": ["flame", {"id": "shocking", "x": 2}]}
             ]
         },
         "vehicle_flamethrower": {
             "name": "Flamethrower (Vehicle)",
             "profiles": [
-                {"name": "Stream", "short": 12, "medium": 24, "ap": 3, "attacks": 2, "rules": ["flame"]},
-                {"name": "Spray", "short": 12, "medium": 24, "ap": 1, "attacks": 5, "rules": ["flame"]}
+                {"name": "Stream", "short": 12, "medium": 24, "ap": 5, "attacks": 2, "rules": ["flame", {"id": "shocking", "x": 2}]},
+                {"name": "Spray", "short": 12, "medium": 24, "ap": 2, "attacks": 5, "rules": ["flame", {"id": "shocking", "x": 2}]}
             ]
         },
         "vehicle_flamethrower_mg": {
             "name": "Flamethrower (Vehicle)/Co-ax MG",
             "profiles": [
-                {"name": "Stream", "short": 12, "medium": 24, "ap": 3, "attacks": 2, "rules": ["flame"]},
-                {"name": "Spray", "short": 12, "medium": 24, "ap": 1, "attacks": 5, "rules": ["flame"]},
+                {"name": "Stream", "short": 12, "medium": 24, "ap": 5, "attacks": 2, "rules": ["flame", {"id": "shocking", "x": 2}]},
+                {"name": "Spray", "short": 12, "medium": 24, "ap": 2, "attacks": 5, "rules": ["flame", {"id": "shocking", "x": 2}]},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
