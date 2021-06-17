@@ -30,7 +30,7 @@
     }
 },
     "units": {
-        "field_officer": {
+        "platoon_command": {
             "name": "Field Officer",
             "description": "A Field Commander.",
             "min": 1,

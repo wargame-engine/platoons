@@ -2,8 +2,33 @@
     "id": "finland",
     "name": "Finland",
     "units": {
-        "field_officer": {
-            "name": "Field Officer Team",
+        "company_command": {
+            "name": "Company Command",
+            "description": "A Field Commander.",
+            "category": "command",
+            "keywords": ["Infantry", "Officer"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Higher Officer",
+                    "courage": 8,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
+                    "rules": [{"id": "field_orders", "x": 2}, "leader"],
+                    "options": [{"replaceRule": {"id": "field_orders", "x": 2}, "withRule": {"id": "field_orders", "x": 3}}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+            ]
+        },
+        "platoon_command": {
+            "name": "Platoon Command",
             "description": "A Field Commander.",
             "min": 1,
             "max": 1,

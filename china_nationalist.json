@@ -7,8 +7,8 @@
         "reserves_focus": {"name": "Reserves", "id": "reserves_focus", "background": "Low-quality reserve troops and equipment.", "restricted": true}
     },
     "units": {
-        "field_officer": {
-            "name": "Field Officer Team",
+        "platoon_command": {
+            "name": "Platoon Command",
             "description": "A Field Commander.",
             "min": 1,
             "max": 1,
