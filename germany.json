@@ -392,7 +392,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "subfactions": ["none", "airborne_focus"],
+            "subfactions": ["airborne_focus"],
             "rules": ["stubborn"],
             "options": [
                 {"addWeapon": "at_grenades", "modelLimit": 3},
