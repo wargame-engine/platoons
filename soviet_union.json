@@ -24,7 +24,7 @@
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "platoon_command_inexperienced": {
@@ -52,7 +52,7 @@
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 4, "fight": 4, "defense": 4, "reflexes": 5,  "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 4, "fight": 4, "defense": 4, "reflexes": 5,  "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "platoon_command": {
