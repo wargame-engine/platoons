@@ -1071,7 +1071,7 @@
         "kukan": {
             "name": "Kukan!",
             "flavor": "A swift and deadly end to a fight can come with a furious charge of spears, bayonets, and swords...",
-            "description": "Use when a Chinese Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
+            "description": "Use when a Chinese _Infantry_ unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
         }
     },

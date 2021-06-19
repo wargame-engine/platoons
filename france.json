@@ -994,15 +994,15 @@
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "name": "Trench Raiders",
             "flavor": "Well-trained in first world war tactics, French infantry can carry out deadly assaults.",
-            "description": "Use when an Infantry fights. It gets +1 Strength for that attack.",
-            "cost": 2
+            "description": "Use when an _Infantry_ unit fights. It gets +1 Strength for that attack.",
+            "cost": 1
         },
         "heavy_barrage": {
             "phase": "activation",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "name": "Heavy Barrage",
             "flavor": "With enough shells, the enemy's morale will surely waver.",
-            "description": "Use when an Artillery unit with the Indirect rule fires. That weapon gains +2 Blast and if the weapon scatters, it hits the closest enemy unit within 3\" instead of 1\".",
+            "description": "Use when an _Artillery_ unit with the Indirect rule fires. That weapon gains +2 Blast and if the weapon scatters, it hits the closest enemy unit within 3\" instead of 1\".",
             "cost": 1
         },
         "defensive_tactics": {
@@ -1010,7 +1010,7 @@
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "name": "Defensive Tactics",
             "flavor": "The Frenched on defensive and well-prepared defenses.",
-            "description": "Use when an Infantry is targetted by an attack. That unit is treated as being in Light Cover, or Hard Cover if already in Light Cover.",
+            "description": "Use when an _Infantry_ unit is targeted by an attack. That unit is treated as being in Light Cover, or Hard Cover if already in Light Cover.",
             "cost": 1
         }
     },

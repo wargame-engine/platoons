@@ -1308,7 +1308,7 @@
             "phase": "activation",
             "name": "Charge! - Rynnäkkön!",
             "flavor": "A swift and deadly end to a fight can come with a furious charge.",
-            "description": "Use when a Finnish Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
+            "description": "Use when a Finnish _Infantry_ unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
         },
         "forward_rush": {
@@ -1324,7 +1324,7 @@
             "phase": "pre_game",
             "name": "Motti Tactics",
             "flavor": "Encirclement tactics, can be highly effective in surprising and destroying enemies.",
-            "description": "Select an Infantry unit to be placed in encirclement reserves instead of deployed on the field. At the beginning of any round after the first, that unit may be set up within 6\" of any table edge and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
+            "description": "Select an _Infantry_ unit to be placed in encirclement reserves instead of deployed on the field. At the beginning of any round after the first, that unit may be set up within 6\" of any table edge and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
             "cost": 1
         }
     },
@@ -1333,13 +1333,13 @@
         "white_death": {"name": "White Death", "description": "This model gets +1 Accuracy and all shooting attacks gain +1 AP.", "points": 20},
         "tank_jager": {"name": "Tank Jager", "description": "This model gains +7 AP when attacking a tank with melee attacks.", "points": 30},
         "crack_shot": {"name": "Crack Shot", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
-        "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly Infantry units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
+        "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly _Infantry_ units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
         "no_retreat": {
             "name": "No Retreat",
-            "description": "When a friendly Infantry unit within 6\" fails a Courage test, that unit may remove one model to re-roll the test. This effect may be used once per Infantry unit.",
+            "description": "When a friendly _Infantry_ unit within 6\" fails a Courage test, that unit may remove one model to re-roll the test. This effect may be used once per _Infantry_ unit.",
             "points": 5
         },
-        "inspiring_tank_commander": {"name": "Inspiring Tank Commander", "description": "This unit and friendly Tank or Armored Car units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
+        "inspiring_tank_commander": {"name": "Inspiring Tank Commander", "description": "This unit and friendly _Tank_ or _Armored Car_ units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
         "battle_hardened": {"name": "Battle Hardened", "description": "This model may subtract one from any rolls on Damage Tables.", "points": 10},
         "medical_assistant": {
             "name": "Medical Assistant",

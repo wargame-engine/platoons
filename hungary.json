@@ -1377,7 +1377,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Suppressive Fire",
             "flavor": "With high rate of fire and a terrifying noise, machineguns can be used to pin down enemy troops with ease.",
-            "description": "Use when a Hungarian Infantry unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
+            "description": "Use when a Hungarian _Infantry_ unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
             "cost": 1
         },
         "huszar_tactics": {
@@ -1385,7 +1385,7 @@
             "phase": "pre_game",
             "name": "Huszar Tactics",
             "flavor": "Aggressive armored pushes, can be highly effective at surrounding and destroying enemies.",
-            "description": "Select a Tank or Armored Car unit to be placed in encirclement reserves instead of deployed on the field. At the beginning of any round after the first, that unit may be set up within 6\" of any table edge and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
+            "description": "Select a _Tank_ or _Armored Car_ unit to be placed in encirclement reserves instead of deployed on the field. At the beginning of any round after the first, that unit may be set up within 6\" of any table edge and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
             "cost": 1
         }
     },

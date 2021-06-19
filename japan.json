@@ -1448,7 +1448,7 @@
             "phase": "activation",
             "name": "Banzai Charge",
             "flavor": "A swift and deadly end to a fight can come with a furious charge...",
-            "description": "Use when a Japanese Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
+            "description": "Use when a Japanese _Infantry_ unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
         },
         "stealth_tactics": {
@@ -1456,7 +1456,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Jungle Experts",
             "flavor": "Moving quickly and quietly, Japanese infantry can outmaneuver their enemies.",
-            "description": "Use when activating an Infantry unit. It may make a free 6\" move action and may not be targetted by reaction fire when doing so.",
+            "description": "Use when activating an _Infantry_ unit. It may make a free Move action and may not be targeted by reaction fire when doing so.",
             "cost": 2
         },
         "tough_fighters": {
@@ -1464,18 +1464,18 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Tough Fighters",
             "flavor": "Some of the toughest units to fight in a close combat.",
-            "description": "Use before an Infantry unit uses a fight action. Its attacks gain +1 Strength.",
+            "description": "Use before an _Infantry_ unit uses a fight action. Its attacks gain +1 Strength.",
             "cost": 1
         }
     },
     "rules": {
-        "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly Infantry units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
-        "defensive_fire": {"name": "Defensive Fire", "description": "This unit and friendly Infantry units within 6\" get +1 Accuracy when using an Ambush reaction.", "points": 10},
-        "move_it": {"name": "Move It", "description": "When this unit is activated, this unit and friendly Infantry units within 6\" may immediately remove one shock.", "points": 10},
+        "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly _Infantry_ units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
+        "defensive_fire": {"name": "Defensive Fire", "description": "This unit and friendly _Infantry_ units within 6\" get +1 Accuracy when using an Ambush reaction.", "points": 10},
+        "move_it": {"name": "Move It", "description": "When this unit is activated, this unit and friendly _Infantry_ units within 6\" may immediately remove one shock.", "points": 10},
         "mobile_expert": {"name": "Mobile Expert", "description": "This unit may move and fire assault weapons without suffering the -1 to hit penalty.", "points": 20},
         "ambush_tactics": {
             "name": "Ambush Tactics",
-            "description": "This unit and one other friendly Infantry unit may be placed in hidden deployment instead of deployed on the field. See the section for hidden units in the core rules for details on how hidden units work.",
+            "description": "This unit and one other friendly _Infantry_ unit may be placed in hidden deployment instead of deployed on the field. See the section for hidden units in the core rules for details on how hidden units work.",
             "points": 20
         }
     },

@@ -50,7 +50,7 @@
             "color": "#4A7643",
             "alliance": "allies",
             "version": "1.0",
-            "description": "The United States, while originally attempting to remain neutral, was suddenly attacked by the Japanese at pearl harbor and was forced to substantially ramp up production to begin fighting on both pacific and western fronts. The United States rely on mobile infantry units and weapons along with solid and reliable, yet numerous sherman tanks.",
+            "description": "The United States, while originally attempting to remain neutral, was suddenly attacked by the Japanese at pearl harbor and was forced to substantially ramp up production to begin fighting on both pacific and western fronts. The United States rely on mobile _Infantry_ units and weapons along with solid and reliable, yet numerous sherman tanks.",
             "subfactions": {
                 "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
                 "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "description": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
@@ -171,7 +171,7 @@
             "name": "Tank Ace",
             "rule": "tank_ace",
             "flavor": "A tank ace is a fearsome foe to encounter on the battlefield.",
-            "description": "Upgrade one Tank unit with Tank Ace.",
+            "description": "Upgrade one _Tank_ unit with Tank Ace.",
             "points": 20
         },
         "inspiring_leader": {
@@ -640,7 +640,7 @@
     "rules": {
         "heat": {"name": "HEAT", "description": "Enemy units add 1 to rolls on any Damage Table(X) rules when hit by this weapon at Short range.", "points": ["weapon.attacks", {"multiply": 2.5}]},
         "tank_ace": {"name": "Tank Ace", "description": "This unit gets +1 Accuracy.", "points": 20},
-        "inspiring_leader": {"name": "Inspiring Leader", "description": "This unit and friendly Infantry units within 6\" get +1 Courage.", "points": 10},
+        "inspiring_leader": {"name": "Inspiring Leader", "description": "This unit and friendly _Infantry_ units within 6\" get +1 Courage.", "points": 10},
         "airdrop": {
             "name": "Airdrop",
             "description": "This unit may be set aside in reserves before the match begins if all models have airdrop. At the beginning of any round after the first you may attempt to place the unit anywhere on the table over 9” away from enemy units.\n\nTake a Courage test. If failed, use D10 scattering to determine the unit's new landing location. If the new location is off the table, place the unit at table edge as close as possible. If both players have units with Airdrop they must roll-off to see who deploys first, and then alternate in placing them.",
@@ -690,7 +690,7 @@
         },
         "anti_infantry_mines": {
             "name": "Anti-Infantry Mines",
-            "description": "When an Infantry unit crosses this model, roll 7D10. On any rolls of 5 or less that unit takes a hit with AP4.",
+            "description": "When an _Infantry_ unit crosses this model, roll 7D10. On any rolls of 5 or less that unit takes a hit with AP4.",
             "points": 50
         },
         "anti_tank_mines": {
@@ -700,7 +700,7 @@
         },
         "mixed_mines": {
             "name": "Mixed Mines",
-            "description": "When an Infantry unit crosses this model, roll 5D10. On any rolls of 5 or less that unit takes a hit with AP4. When a Vehicle unit crosses this model, roll 2D10. On any rolls of 5 or less that unit takes a hit with AP7. The vehicle is treated as being hit in the Rear arc.",
+            "description": "When an _Infantry_ unit crosses this model, roll 5D10. On any rolls of 5 or less that unit takes a hit with AP4. When a Vehicle unit crosses this model, roll 2D10. On any rolls of 5 or less that unit takes a hit with AP7. The vehicle is treated as being hit in the Rear arc.",
             "points": 50
         },
         "wire_cutters": {"name": "Wire Cutters", "description": "This model and its unit gain +3 to all Clear actions when attempting to clear barbed wire obstacles.", "points": 5},
@@ -1090,7 +1090,7 @@
             "subfactions": ["infantry_focus"],
             "name": "Recrew",
             "flavor": "It's highly important to keep artillery pieces manned and fighting.",
-            "description": "Use at the beginning of a round where an Infantry unit is within 2\" of an Artillery unit. Remove X models from the Infantry unit and add restore X crew to the Artillery unit.",
+            "description": "Use at the beginning of a round where an _Infantry_ unit is within 2\" of an _Artillery_ unit. Remove X models from the _Infantry_ unit and add restore X crew to the _Artillery_ unit.",
             "cost": 1
         },
         "target_weak_point": {
@@ -1098,7 +1098,7 @@
             "subfactions": ["infantry_focus"],
             "name": "Target Weak Point",
             "flavor": "Exploiting weak points an an enemy's armor is key to taking out hard targets.",
-            "description": "Use before shooting with an Infantry or Artillery unit's weapon with AP 3 or higher. That attack is treated as hitting the target's side.",
+            "description": "Use before shooting with an Infantry or _Artillery_ unit's weapon with AP 3 or higher. That attack is treated as hitting the target's side.",
             "cost": 1
         },
         "frag_out": {
@@ -1106,7 +1106,7 @@
             "subfactions": ["infantry_focus"],
             "name": "Frag Out",
             "flavor": "A volley of hand grenades can be quite effective at dealing with enemies in cover.",
-            "description": "Use before shooting with an Infantry unit that has Grenades (any type). That unit may throw 2 additional grenades.",
+            "description": "Use before shooting with an _Infantry_ unit that has Grenades (any type). That unit may throw 2 additional grenades.",
             "cost": 1
         },
         "armored_assault": {
@@ -1146,7 +1146,7 @@
             "subfactions": ["airborne_focus"],
             "name": "Tough Fighters",
             "flavor": "Some of the toughest units to fight in a close combat brawl are trained Airborne units.",
-            "description": "Use before an Infantry unit uses a fight action. Its attacks gain AP1.",
+            "description": "Use before an _Infantry_ unit uses a fight action. Its attacks gain AP1.",
             "cost": 1
         },
         "stealth_tactics": {
@@ -1154,7 +1154,7 @@
             "subfactions": ["airborne_focus"],
             "name": "Stealth Tactics",
             "flavor": "Moving quickly and quietly is a key part of Airborne training.",
-            "description": "Use when activating an Infantry unit. It may make a free 6\" move action and may not be targeted by reaction fire when doing so.",
+            "description": "Use when activating an _Infantry_ unit. It may make a free 6\" move action and may not be targeted by reaction fire when doing so.",
             "cost": 2
         },
         "regroup": {
@@ -1162,7 +1162,7 @@
             "phase": "activation",
             "name": "Regroup",
             "flavor": "Sometimes it is best to regroup remaining soldiers before making another push.",
-            "description": "Use before activating an Infantry unit within 2\" of another of the same unit. The two units merge and, for the rest of the battle, they are counted as a single unit for all rules purposes. This may not bring a unit above its maximum size.",
+            "description": "Use before activating an _Infantry_ unit within 2\" of another of the same unit. The two units merge and, for the rest of the battle, they are counted as a single unit for all rules purposes. This may not bring a unit above its maximum size.",
             "cost": 1
         },
         "reinforcements": {

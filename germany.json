@@ -2729,7 +2729,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Sturm Assault",
             "flavor": "A swift and deadly end to a fight can come with a furious charge...",
-            "description": "Use when a German Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
+            "description": "Use when a German _Infantry_ unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
         },
         "suppressive_fire": {
@@ -2737,7 +2737,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Suppressive Fire",
             "flavor": "With high rate of fire and a terrifying noise, machineguns can be used to pin down enemy troops with ease.",
-            "description": "Use when a German Infantry unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
+            "description": "Use when a German _Infantry_ unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
             "cost": 1
         },
         "panzer_blitz": {
@@ -2745,7 +2745,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Panzer Blitz",
             "flavor": "A swift and deadly Panzer assault can sometimes route the enemy.",
-            "description": "Use when a German Tank unit is activated. It may make a free 6\" Move action.",
+            "description": "Use when a German _Tank_ unit is activated. It may make a free 6\" Move action.",
             "cost": 1
         }
     },
@@ -2757,7 +2757,7 @@
         },
         "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
         "ambush_master": {"name": "Ambush Master", "description": "This unit get +1 Accuracy when using an Ambush reaction.", "points": 20},
-        "move_move_move_infantry": {"name": "Move Move Move", "description": "This unit and friendly Infantry units within 6\" add 2\" to their Movement characteristic.", "points": 10}
+        "move_move_move_infantry": {"name": "Move Move Move", "description": "This unit and friendly _Infantry_ units within 6\" add 2\" to their Movement characteristic.", "points": 10}
     },
     "relics": {
         "hans_von_luck_infantry": {

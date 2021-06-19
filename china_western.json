@@ -399,21 +399,21 @@
             "phase": "activation",
             "name": "Urah Assault",
             "flavor": "A swift and deadly end to a fight can come with a furious charge...",
-            "description": "Use when a Soviet Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
+            "description": "Use when a Soviet _Infantry_ unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
         },
         "heavy_barrage": {
             "phase": "activation",
             "name": "Heavy Barrage",
             "flavor": "With enough shells, the enemy's morale will surely waver.",
-            "description": "Use when a Soviet Artillery unit with the Indirect rule fires. That weapon gains +2 Blast and if the weapon scatters, it hits the closest enemy unit within 3\" instead of 1\".",
+            "description": "Use when a Soviet _Artillery_ unit with the Indirect rule fires. That weapon gains +2 Blast and if the weapon scatters, it hits the closest enemy unit within 3\" instead of 1\".",
             "cost": 1
         },
         "forward_recon": {
             "phase": "activation",
             "name": "Forward Recon",
             "flavor": "Forward recon elements, when used effectively can provide a huge amount of information on enemy forces.",
-            "description": "Use when an Infantry unit enters the field. It may make a free 6\" move action.",
+            "description": "Use when an _Infantry_ unit enters the field. It may make a free 6\" move action.",
             "cost": 1
         }
     },

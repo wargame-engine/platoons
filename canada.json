@@ -1322,7 +1322,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Trained Woodsmen",
             "flavor": "Canadian Infantry know how to use the terrain to their advantage.",
-            "description": "Use before the game on a Canadian Infantry unit. That unit may cross difficult ground and low obstacles without penalty.",
+            "description": "Use before the game on a Canadian _Infantry_ unit. That unit may cross difficult ground and low obstacles without penalty.",
             "cost": 1
         },
         "assault_troops": {
@@ -1330,7 +1330,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Assault Troops",
             "flavor": "With additional training, Canadian soldiers can hold their own in hand-to-hand fighting.",
-            "description": "Use before an Infantry unit uses a fight action. It gains +1 Strength.",
+            "description": "Use before an _Infantry_ unit uses a fight action. It gains +1 Strength.",
             "cost": 1
         },
         "focus_fire": {
@@ -1338,18 +1338,18 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Focus Fire",
             "flavor": "With deadly accuracy, bren guns can be used to pin down key units.",
-            "description": "Use when a Canadian Infantry unit that contains a Bren Gun (Mag-LMG) fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
+            "description": "Use when a Canadian _Infantry_ unit that contains a Bren Gun (Mag-LMG) fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
             "cost": 1
         }
     },
     "rules": {
-        "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly Infantry units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
-        "defensive_fire": {"name": "Defensive Fire", "description": "This unit and friendly Infantry units within 6\" get +1 Accuracy when using an Ambush reaction.", "points": 10},
-        "move_it": {"name": "Move It", "description": "When this unit is activated, this unit and friendly Infantry units within 6\" may immediately remove one shock.", "points": 10},
+        "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly _Infantry_ units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
+        "defensive_fire": {"name": "Defensive Fire", "description": "This unit and friendly _Infantry_ units within 6\" get +1 Accuracy when using an Ambush reaction.", "points": 10},
+        "move_it": {"name": "Move It", "description": "When this unit is activated, this unit and friendly _Infantry_ units within 6\" may immediately remove one shock.", "points": 10},
         "mobile_expert": {"name": "Mobile Expert", "description": "This unit may move and fire assault weapons without suffering the -1 to hit penalty.", "points": 20},
         "ambush_tactics": {
             "name": "Ambush Tactics",
-            "description": "This unit and one other friendly Infantry unit may be placed in hidden deployment instead of deployed on the field. See the section for hidden units in the core rules for details on how hidden units work.",
+            "description": "This unit and one other friendly _Infantry_ unit may be placed in hidden deployment instead of deployed on the field. See the section for hidden units in the core rules for details on how hidden units work.",
             "points": 20
         }
     },

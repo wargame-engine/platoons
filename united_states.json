@@ -371,6 +371,44 @@
                 }
             ]
         },
+        "veteran_rangers": {
+            "name": "Veteran Rangers",
+            "description": "A group of trained US Rangers.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["infantry_focus"],
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 4}],
+            "models": [
+                {
+                    "name": "Veteran Ranger NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Ranger",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 1}, {"replaceWeapon": "semi_auto_rifle", "withWeapon": ["belt_lmg"], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 11
+                }
+            ]
+        },
         "glider_rifle_squad": {
             "name": "Glider Rifle Squad",
             "description": "A group of trained US Riflemen dropped in gliders.",
@@ -1618,30 +1656,30 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Fire and Move",
             "flavor": "With a doctrine of mobile warfare, US Infantry advance and fire with great effect.",
-            "description": "Use when an Infantry unit performs a Move action. That unit may perform a free Shoot action at -1 Accuracy.",
+            "description": "Use when an _Infantry_ unit performs a Move action. That unit may perform a free Shoot action at -1 Accuracy.",
             "cost": 1
         },
         "scouting_team": {
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Scouting Team",
-            "flavor": "US Infantry units would often form small scouting teams to scout out the route ahead.",
-            "description": "Use instead of your activation. Choose 3 models from an Infantry unit to become a new scouting team unit. That unit immediately activates and is treated as a separate unit for the remainder of the game. This strategy may only be used once per Infantry unit.",
-            "cost": 2
+            "flavor": "US _Infantry_ units would often form small scouting teams to scout out the route ahead.",
+            "description": "Use instead of your activation. Choose 3 models from an _Infantry_ unit to become a new scouting team unit. That unit immediately activates and is treated as a separate unit for the remainder of the game. This strategy may only be used once per _Infantry_ unit.",
+            "cost": 1
         },
         "look_alive": {
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Look Alive",
             "flavor": "Situational awareness can be key in combat.",
-            "description": "Use when an Infantry unit attemps a reaction test. That unit gets Initiative +2 for that reaction.",
+            "description": "Use when an _Infantry_ unit attemps a reaction test. That unit gets Initiative +2 for that reaction.",
             "cost": 1
         }
     },
     "rules": {
-        "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly Infantry units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
-        "defensive_fire": {"name": "Defensive Fire", "description": "This unit and friendly Infantry units within 6\" get +1 Accuracy when using an Ambush reaction.", "points": 10},
-        "move_it": {"name": "Move It", "description": "When this unit is activated, this unit and friendly Infantry units within 6\" may immediately remove one shock.", "points": 10},
+        "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly _Infantry_ units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
+        "defensive_fire": {"name": "Defensive Fire", "description": "This unit and friendly _Infantry_ units within 6\" get +1 Accuracy when using an Ambush reaction.", "points": 10},
+        "move_it": {"name": "Move It", "description": "When this unit is activated, this unit and friendly _Infantry_ units within 6\" may immediately remove one shock.", "points": 10},
         "mobile_expert": {"name": "Mobile Expert", "description": "This unit may move and fire assault weapons without suffering the -1 to hit penalty.", "points": 20}
     },
     "relics": {
