@@ -1088,9 +1088,9 @@
         "recrew": {
             "phase": "activation",
             "subfactions": ["infantry_focus"],
-            "name": "Recrew",
+            "name": "Re-crew",
             "flavor": "It's highly important to keep artillery pieces manned and fighting.",
-            "description": "Use at the beginning of a round where an _Infantry_ unit is within 2\" of an _Artillery_ unit. Remove X models from the _Infantry_ unit and add restore X crew to the _Artillery_ unit.",
+            "description": "Use when an _Infantry_ unit moves within 3\" of an _Artillery_ unit. Remove any number of models from the _Infantry_ unit and add restore that amount of crew to the _Artillery_ unit. This may not exceed the starting crew size of the artillery unit.",
             "cost": 1
         },
         "target_weak_point": {
@@ -1098,7 +1098,7 @@
             "subfactions": ["infantry_focus"],
             "name": "Target Weak Point",
             "flavor": "Exploiting weak points an an enemy's armor is key to taking out hard targets.",
-            "description": "Use before shooting with an Infantry or _Artillery_ unit's weapon with AP 3 or higher. That attack is treated as hitting the target's side.",
+            "description": "Use before shooting with an _Infantry_ or _Artillery_ unit's weapon with AP 3 or higher. That attack is treated as hitting the target's side.",
             "cost": 1
         },
         "frag_out": {
@@ -1122,23 +1122,23 @@
             "subfactions": ["armored_focus"],
             "name": "Improvised Tactics",
             "flavor": "Sometimes it is necessary to improvise in an armored engagement in order to gain the edge.",
-            "description": "Use when a Vehicle unit is attempting a reaction test. It is treated as having Initiative 9 for this test.",
-            "cost": 2
+            "description": "Use when a Vehicle unit is attempting a reaction test. It gets +2 Initiative for that test.",
+            "cost": 1
         },
         "crew_repairs": {
             "phase": "activation",
             "subfactions": ["armored_focus"],
             "name": "Emergency Repairs",
             "flavor": "In moments of dire circumstance crews may need to repair their vehicle in combat.",
-            "description": "Use when a Vehicle unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
-            "cost": 1
+            "description": "Use when a _Vehicle_ unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
+            "cost": 2
         },
         "combat_drop": {
             "phase": "pre_game",
             "subfactions": ["airborne_focus"],
             "name": "Combat Drop",
             "flavor": "A well-trained paratroop unit can drop as close as possible to their intended target.",
-            "description": "Set one Infantry, Artillery or Airborne Vehicle unit aside in reserves before the match begins. At the beginning of any round after the first you may attempt to place the unit anywhere on the table over 12\" away from enemy units.\n\nTake a Courage test. If failed, use D10 scattering to determine the unit's new landing location. If the new location is off the table, place the unit at table edge as close as possible. If both players have units with Airdrop they must roll-off to see who deploys first, and then alternate in placing them.",
+            "description": "Set one _Infantry_, _Artillery_ or _Airborne Vehicle_ unit aside in reserves before the match begins. At the beginning of any round after the first you may attempt to place the unit anywhere on the table over 12\" away from enemy units.\n\nTake a Courage test. If failed, use D10 scattering to determine the unit's new landing location. If the new location is off the table, place the unit at table edge as close as possible. If both players have units with Airdrop they must roll-off to see who deploys first, and then alternate in placing them.",
             "cost": 1
         },
         "tough_fighters": {
