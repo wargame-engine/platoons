@@ -4,7 +4,7 @@
     "units": {
         "company_command": {
             "name": "Company Command",
-            "description": "A Field Commander.",
+            "description": "A higher-ranking field officer trained to command more units and occasionally direct field operations.",
             "category": "command",
             "keywords": ["Infantry", "Officer"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
@@ -28,7 +28,7 @@
         },
         "platoon_command": {
             "name": "Platoon Command",
-            "description": "A Field Commander.",
+            "description": "A lower-ranking platoon commander to provide support to other field units.",
             "min": 1,
             "max": 1,
             "category": "command",
