@@ -2750,7 +2750,7 @@
     "rules": {
         "desert_fox": {
             "name": "Desert Fox",
-            "description": "This unit and one other friendly unit may be set up in Outflanking Reserves. At the beginning of any round after the first, units may be set up within 6\" of a table edge that is not in the enemy deployment zone, and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
+            "description": "This unit and one other friendly unit may be set up in _outflanking reserves_.",
             "points": 20
         },
         "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},

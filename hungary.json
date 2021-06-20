@@ -1383,7 +1383,7 @@
             "phase": "pre_game",
             "name": "Huszar Tactics",
             "flavor": "Aggressive armored pushes, can be highly effective at surrounding and destroying enemies.",
-            "description": "Select a _Tank_ or _Armored Car_ unit to be placed in encirclement reserves instead of deployed on the field. At the beginning of any round after the first, that unit may be set up within 6\" of any table edge and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
+            "description": "Select a _Tank_ or _Armored Car_ unit to be placed in _outflanking reserves_. That unit may arrive on any table edge including your opponents reinforcement edge.",
             "cost": 1
         }
     },
