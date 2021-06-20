@@ -106,9 +106,8 @@
         },
         "volkssturm": {
             "name": "Volkssturm",
-            "description": "The Volkssturm 'people's storm'), a group of conscripted males between 16-60, who weren't previously in another military unit. This national militia, was not part of the Germany Army, was instead raised, recruited, and armed by the Nazi Party. The Volkssturm was part of the doctrine of 'total war', a heavily ideologically colored endeavor to win the war with sheer force of will.",
-            "min": 1,
-            "max": 1,
+            "description": "Cheap infantry to be used en-masse to take and hold the field.",
+            "background": "The Volkssturm 'people's storm', a group of conscripted males between 16-60, who weren't previously in another military unit. This national militia, was not part of the Germany Army, was instead raised, recruited, and armed by the Nazi Party. The Volkssturm was part of the doctrine of 'total war', a heavily ideologically colored endeavor to win the war with sheer force of will.",
             "category": "infantry",
             "subfactions": ["none", "reserve_focus"],
             "keywords": ["Infantry"],
@@ -144,7 +143,8 @@
         },
         "volksgrenadiers": {
             "name": "Volksgrenadiers",
-            "description": "Volksgrenadiers, 'Peoples Grenadiers'. Due to a shortage of manpower and the abundance of enemies with large populations, the Volksgrenadiers were units that conserved manpower and maximized automatic firepower, along with recent technological advances. They were made up of a mixture of hardened veteran troops, 'jobless' personnel from other branches of the Germany Armed Forces, recently healed soldiers who had been wounded, and younger/older men recently recruited with the widened age range of conscription.",
+            "description": "Cheaper infantry with the ability to take several assault rifles and hit targets reasonably well.",
+            "background": "Volksgrenadiers, 'Peoples Grenadiers'. Due to a shortage of manpower and the abundance of enemies with large populations, the Volksgrenadiers were units that conserved manpower and maximized automatic firepower, along with recent technological advances. They were made up of a mixture of hardened veteran troops, 'jobless' personnel from other branches of the Germany Armed Forces, recently healed soldiers who had been wounded, and younger/older men recently recruited with the widened age range of conscription.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -182,7 +182,8 @@
         },
         "aufklarungs_squad": {
             "name": "Aufklarungs Squad",
-            "description": "The Aufklärungsabteilung (Reconnaissance Detachment) was a formation of aggressive recon troops, which provided the 'eyes and ears' of each German Army division..",
+            "description": "A recon squad with the ability to take some heavier anti-infantry firepower.",
+            "background": "The Aufklärungsabteilung (Reconnaissance Detachment) was a formation of aggressive recon troops, which provided the 'eyes and ears' of each German Army division..",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -220,7 +221,8 @@
         },
         "osttruppen": {
             "name": "Osttruppen",
-            "description": "The Osttruppen (eastern troops), also known as 'Ostlegionen' (eastern legions), were captured soviet and slavic infantry prisoners of war. While many common terms for these troops, in many languages, translated to 'Volunteer', the terms mainly appeared to sarcastic and/or meant to be insulting. These slavic infantry were viewed as 'sub-human' by the Nazis, and it appeared those who actually volunteered, had done so to escape the horrors of the POW camps. These troops were given some of the worst equipment and positioned into roles of logistics, or 'bandit fighting' (Punishing civilians).",
+            "description": "Reasonably well-equipped and trained troops, osttruppen are not eager to fight the enemies of Germany.",
+            "background": "The Osttruppen (eastern troops), also known as 'Ostlegionen' (eastern legions), were captured soviet and slavic infantry prisoners of war. While many common terms for these troops, in many languages, translated to 'Volunteer', the terms mainly appeared to sarcastic and/or meant to be insulting. These slavic infantry were viewed as 'sub-human' by the Nazis, and it appeared those who actually volunteered, had done so to escape the horrors of the POW camps. These troops were given some of the worst equipment and positioned into roles of logistics, or 'bandit fighting' (Punishing civilians).",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -258,9 +260,8 @@
         },
         "Strafbataillon": {
             "name": "Strafbataillon",
-            "description": "Strafbatallion (Penal Battalion) generally refers to a few different terms, for units that were recruited or formed from those who had too much 'indiscipline' or 'rebellious behavior' to serve as traditional conscripts. There are strong indications that as the war progressed and turned for the worse for the Nazi regime, the various populations of those sentenced to death for treason or even perhaps murder, were put under strong supervision and sent out to fight. Most of these units spent the bulk of their time doing hard labor and being part of 'suicide missions', at least in the early part of the war. Generally, there was less then stellar discipline  within these units, and they were rarely equipped well.",
-            "min": 1,
-            "max": 1,
+            "description": "Particularly tough troops who can put up a fight in close combat. Not especially motivated however.",
+            "background": "Strafbatallion (Penal Battalion) generally refers to a few different terms, for units that were recruited or formed from those who had too much 'indiscipline' or 'rebellious behavior' to serve as traditional conscripts. There are strong indications that as the war progressed and turned for the worse for the Nazi regime, the various populations of those sentenced to death for treason or even perhaps murder, were put under strong supervision and sent out to fight. Most of these units spent the bulk of their time doing hard labor and being part of 'suicide missions', at least in the early part of the war. Generally, there was less then stellar discipline  within these units, and they were rarely equipped well.",
             "category": "infantry",
             "subfactions": ["none", "infantry_focus", "reserve_focus"],
             "keywords": ["Infantry"],
@@ -298,7 +299,7 @@
         },
         "grenadiers": {
             "name": "Grenadiers",
-            "description": "A group of hardened German Grenadiers.",
+            "description": "The main versatile infantry unit of the German army. Can be equipped with anti-tank weaponry and deadly belt-fed machine-guns.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -342,7 +343,7 @@
         },
         "veteran_grenadiers": {
             "name": "Veteran Grenadiers",
-            "description": "A group of veteran hardened German Grenadiers.",
+            "description": "The main versatile infantry unit of the German army. Can be equipped with anti-tank weaponry and deadly belt-fed machine-guns. These troops have seen combat and survived while being better motivated.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -385,7 +386,7 @@
         },
         "inexperienced_fallschirmjager": {
             "name": "Inexperienced Fallschirmjager",
-            "description": "A group of tough airborne troops.",
+            "description": "German paratroopers which have been pushed out to the field before being fully trained with little combat experience.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -431,7 +432,7 @@
         },
         "fallschirmjager": {
             "name": "Fallschirmjager",
-            "description": "A group of tough airborne troops.",
+            "description": "Elite German paratroopers with an abundance of either assault rifles or light machine guns.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -477,7 +478,7 @@
         },
         "veteran_fallschirmjager": {
             "name": "Veteran Fallschirmjager",
-            "description": "A group of tough airborne troops.",
+            "description": "Elite German paratroopers with an abundance of either assault rifles or light machine guns. Particularly battle-hardened and more survivable.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -523,7 +524,7 @@
         },
         "panzergrenadiers": {
             "name": "Panzergrenadiers",
-            "description": "A group of mobile Panzergrenadiers.",
+            "description": "Well-trained infantry units who typically operate with mechanized or armored units. Can be equipped with more machine-guns.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -568,7 +569,7 @@
         },
         "veteran_panzergrenadiers": {
             "name": "Veteran Panzergrenadiers",
-            "description": "A group of veteran Panzergrenadiers.",
+            "description": "Well-trained infantry units who typically operate with mechanized or armored units. Can be equipped with more machine-guns. Particularly battle-hardened and more survivable.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -613,7 +614,7 @@
         },
         "brandenburgers": {
             "name": "Brandenburgers",
-            "description": "A group of elite german special forces.",
+            "description": "German special-forces infiltration units with elite training and expert marksmanship.",
             "min": 1,
             "max": 1,
             "subfactions": ["none", "infantry_focus"],
@@ -643,9 +644,7 @@
         },
         "pioniers": {
             "name": "Pioniers",
-            "description": "A squad of german pioniers.",
-            "min": 1,
-            "max": 1,
+            "description": "German engineers which can be equipped to clear battlefield dangers or fight in deadly assaults.",
             "category": "infantry",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
@@ -690,7 +689,8 @@
         },
         "panzer_zerstor_trupp": {
             "name": "Panzer-Zerstörer Trupp",
-            "description": "A professional and specialized team for defeating tanks via throwables, traps, and demolition charges. It consists of a leader and runner, a security team, a smoke team, and a demolition team. These teams each operate somewhat independently of each other, and were adapted or modified according to local conditions.",
+            "description": "A dedicated tank hunting unit which can be equipped with various tank-hunting weapons.",
+            "background": "A professional and specialized team for defeating tanks via throwables, traps, and demolition charges. It consists of a leader and runner, a security team, a smoke team, and a demolition team. These teams each operate somewhat independently of each other, and were adapted or modified according to local conditions.",
             "min": 1,
             "max": 1,
             "category": "support",
@@ -814,7 +814,7 @@
         },
         "veteran_panzershreck_team": {
             "name": "Veteran Panzerschreck Team",
-            "description": "A team dedicated to hunting heavy tanks.",
+            "description": "A team dedicated to hunting heavy tanks. Elite and more accurate.",
             "min": 1,
             "max": 1,
             "category": "support",
@@ -827,8 +827,8 @@
             ]
         },
         "mmg_team": {
-            "name": "Tripod MG-34/MG42 Team",
-            "description": "A medium machinegun on a tripod mount.",
+            "name": "Tripod MG-34/MG-42 Team",
+            "description": "A medium machine-gun on a tripod mount.",
             "min": 1,
             "max": 1,
             "category": "support",
