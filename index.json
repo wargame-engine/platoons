@@ -1183,6 +1183,30 @@
             "description": "Use when an _Infantry_ unit attempts a Reaction test. That unit gets Initiative +2 for that reaction.",
             "cost": 1
         },
+        "infiltrate": {
+            "subfactions": ["special_forces_focus"],
+            "phase": "pre_game",
+            "name": "Infiltrate",
+            "flavor": "Special forces are experts of infiltration.",
+            "description": "Up to half of any force's _Infantry_, _Artillery_ or _Airborne Vehicle_ units, one point for each may be placed in _outflanking reserves_ before the match begins. These units may arrive on any table edge including your opponents reinforcement edge.",
+            "cost": 1
+        },
+        "sabotage": {
+            "subfactions": ["special_forces_focus"],
+            "phase": "activation",
+            "name": "Sabotage",
+            "flavor": "With a carefully placed charge, enemy Vehicles can be dispatched quite quickly.",
+            "description": "Use when a attacking in Melee against a unit with Damage Table(x). That unit suffers 1 hit with AP 8.",
+            "cost": 1
+        },
+        "deadly_struggle": {
+            "subfactions": ["special_forces_focus"],
+            "phase": "activation",
+            "name": "Deadly Struggle",
+            "flavor": "Special forces occasionally must use their fire arms in extremely close quarters situations.",
+            "description": "Use when activating an _Infantry_ unit. For this round, all _Assault_ weapons may be fired even while engaged in Melee.",
+            "cost": 1
+        },
         "regroup": {
             "subfactions": ["reserves_focus"],
             "phase": "activation",
