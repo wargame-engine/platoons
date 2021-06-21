@@ -50,7 +50,7 @@
             "color": "#4A7643",
             "alliance": "allies",
             "version": "1.0",
-            "description": "The United States, while originally attempting to remain neutral, was suddenly attacked by the Japanese at pearl harbor and was forced to substantially ramp up production to begin fighting on both pacific and western fronts. The United States rely on mobile _Infantry_ units and weapons along with solid and reliable, yet numerous sherman tanks.",
+            "description": "The United States, while originally attempting to remain neutral, was suddenly attacked by the Japanese at pearl harbor and was forced to substantially ramp up production to begin fighting on both pacific and western fronts. The United States rely on mobile infantry units and weapons along with solid and reliable, yet numerous sherman tanks.",
             "subfactions": {
                 "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
                 "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "description": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
