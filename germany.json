@@ -2894,9 +2894,10 @@
         }
     },
     "rules": {
-        "desert_fox": {"name": "Desert Fox", "description": "This unit and one other friendly unit may be set up in _outflanking reserves_.", "points": 20},
-        "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
-        "ambush_master": {"name": "Ambush Master", "description": "This unit get +1 Accuracy when using an Ambush reaction.", "points": 20},
+        "kochs_commandos": {"name": "Koch's Commandos", "description": "This unit and one other friendly _Infantry_ unit may be set up in _outflanking reserves_. These units may arrive on any table edge including your opponents reinforcement edge.", "points": 20},
+        "desert_fox": {"name": "Desert Fox", "description": "This unit and one other friendly _Tank_ or _Armored Car_ unit may be set up in _outflanking reserves_. These units may arrive on any table edge including your opponents reinforcement edge.", "points": 20},
+        "crack_shot": {"name": "Crack Shot", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
+        "ambush_master": {"name": "Ambush Master", "description": "This unit get +1 Accuracy when using an Ambush reaction.", "points": 10},
         "move_move_move_infantry": {"name": "Move Move Move", "description": "This unit and friendly _Infantry_ units within 6\" add 2\" to their Movement characteristic.", "points": 10}
     },
     "relics": {
@@ -2916,6 +2917,14 @@
             "description": "Upgrade one Panther (Command) with Crack Shot.",
             "points": 30
         },
+        "walter_koch": {
+            "subfactions": ["none", "airborne_focus"],
+            "name": "Walter Koch",
+            "rule": "kochs_commandos",
+            "flavor": "Walter Koch was a captain of the fallschirmjager following some early success in the war.",
+            "description": "Upgrade one Field Officer or Higher Officer with Koch's Commandos.",
+            "points": 20
+        },
         "erwin_rommel": {
             "subfactions": ["none", "armored_focus"],
             "name": "Erwin Rommel",
@@ -2930,7 +2939,7 @@
             "rule": "ambush_master",
             "flavor": "Michael Wittman as an expert in Ambush and surprise often attacking his enemies when they least expect it.",
             "description": "Upgrade one Tiger (Command) or Panzer IV (Command) with Ambush Master.",
-            "points": 20
+            "points": 10
         }
     }
 }
