@@ -859,7 +859,6 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
-            
             "models": [
                 {
                     "name": "Light Mortar",
@@ -2664,47 +2663,86 @@
             ]
         },
         "me_bf109_g": {
-            "name": "Me Bf109 G",
+            "name": "Messerschmitt BF-109 G-6",
             "description": "A relatively tough general purpose aircraft.",
-            "min": 1,
-            "max": 1,
             "category": "aircraft",
             "keywords": ["Aircraft"],
             "models": [
                 {
-                    "name": "Me Bf109 G",
+                    "name": "Messerschmitt BF-109 G-6",
                     "courage": 5,
                     "movement": 12,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "weapons": [{"id": "mmg_aircraft", "count": 4, "mount": ["Front"]}, {"id": "37mm_cannon", "mount": ["Front"]}, {"id": "light_bomb", "count": 2}],
-                    "rules": ["aircraft", "damage_table_aircraft", "exposed"],
+                    "weapons": [{"id": "mmg_aircraft", "count": 2, "mount": ["Front"]}, {"id": "20mm_cannon", "mount": ["Front"]}, {"id": "light_bomb", "count": 4}],
+                    "options": [{"addWeapon": [{"id": "light_bomb", "count": 4}, "fire_bomb", "medium_bomb", {"id": "20mm_cannon", "count": 2, "mount": ["Front"]}], "limit": 1}, {"replaceWeapon": {"id": "20mm_cannon", "mount": ["Front"]}, "withWeapon": [{"id": "37mm_cannon", "mount": ["Front"]}]}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
         "fw_190_g": {
-            "name": "Fw-190 G",
+            "name": "Focke-Wulf FW 190 A-8",
             "description": "A relatively tough fighter aircraft.",
-            "min": 1,
-            "max": 1,
             "category": "aircraft",
             "keywords": ["Aircraft"],
             "models": [
                 {
-                    "name": "Fw-190 G",
+                    "name": "Focke-Wulf FW 190",
                     "courage": 5,
                     "movement": 12,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "weapons": [{"id": "20mm_cannon", "count": 2, "mount": ["Front"]}, {"id": "light_bomb", "count": 8}],
-                    "rules": ["aircraft", "damage_table_aircraft", "exposed"],
-                    "options": [{"replaceWeapon": {"id": "light_bomb", "count": 8}, "withWeapon": {"id": "heavy_bomb", "count": 4}}],
+                    "weapons": [{"id": "mmg_aircraft", "count": 2, "mount": ["Front"]}, {"id": "20mm_cannon", "count": 4, "mount": ["Front"]}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
+                    "options": [{"addWeapon": [{"id": "medium_bomb"}, {"id": "light_bomb", "count": 4}], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ju_87d": {
+            "name": "Junkers Ju 87 B-1",
+            "description": "A bomber aircraft with several armaments.",
+            "category": "aircraft",
+            "keywords": ["Aircraft"],
+            "models": [
+                {
+                    "name": "Junkers Ju 87 B-1",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "mmg_aircraft", "count": 2, "mount": ["Front"]}, {"id": "mmg_aircraft", "mount": ["Rear"]}, {"id": "medium_bomb"}, {"id": "light_bomb", "count": 4}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ju_87b1": {
+            "name": "Junkers Ju 87 D",
+            "description": "A dive bomber aircraft with defense machine-guns.",
+            "category": "aircraft",
+            "keywords": ["Aircraft"],
+            "models": [
+                {
+                    "name": "Junkers Ju 87 D",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "mmg_aircraft", "count": 2, "mount": ["Front"]}, {"id": "mmg_aircraft", "mount": ["Rear"]}, {"id": "heavy_bomb"}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
                     "min": 1,
                     "max": 1
                 }
@@ -2748,11 +2786,7 @@
         }
     },
     "rules": {
-        "desert_fox": {
-            "name": "Desert Fox",
-            "description": "This unit and one other friendly unit may be set up in _outflanking reserves_.",
-            "points": 20
-        },
+        "desert_fox": {"name": "Desert Fox", "description": "This unit and one other friendly unit may be set up in _outflanking reserves_.", "points": 20},
         "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
         "ambush_master": {"name": "Ambush Master", "description": "This unit get +1 Accuracy when using an Ambush reaction.", "points": 20},
         "move_move_move_infantry": {"name": "Move Move Move", "description": "This unit and friendly _Infantry_ units within 6\" add 2\" to their Movement characteristic.", "points": 10}
