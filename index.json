@@ -316,6 +316,7 @@
         "dual_mmg": {"name": "Dual Medium MG", "short": 18, "medium": 36, "attacks": 8, "ap": 1},
         "mmg_aa": {"name": "Medium MG (AA)", "short": 18, "medium": 36, "attacks": 5, "ap": 1, "rules": ["anti_air"]},
         "mmg_aircraft": {"name": "Aircraft MG", "short": 18, "medium": 36, "attacks": 3, "ap": 1, "rules": ["anti_air"]},
+        "hmg_aircraft": {"name": "Heavy MG (AA)", "short": 18, "medium": 36, "attacks": 3, "ap": 2, "rules": ["anti_air"]},
         "hmg": {"name": "Heavy MG", "short": 18, "medium": 36, "attacks": 5, "ap": 2},
         "hmg_aa": {"name": "Heavy MG (AA)", "short": 18, "medium": 36, "attacks": 5, "ap": 2, "rules": ["anti_air"]},
         "twin_hmg_aa": {"name": "Twin Heavy MG (AA)", "short": 18, "medium": 36, "attacks": 8, "ap": 2, "rules": ["anti_air"]},
@@ -624,6 +625,8 @@
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
+        "light_aircraft_rocket": {"name": "Light Air Rocket", "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 3, "rules": [{"id": "ammo", "x": 1}, {"id": "blast", "x": 3}]}]},
+        "heavy_aircraft_rocket": {"name": "Heavy Air Rocket", "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 4, "rules": [{"id": "ammo", "x": 1}, {"id": "blast", "x": 4}]}]},
         "light_bomb": {"name": "Light Bomb", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 2, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 4}]}]},
         "fire_bomb": {"name": "Fire Bomb", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 2, "rules": ["bomb", "flame", {"id": "ammo", "x": 1}, {"id": "blast", "x": 6}]}]},
         "medium_bomb": {"name": "Medium Bomb", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 3, "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 5}]}]},

@@ -2685,13 +2685,13 @@
             ]
         },
         "fw_190_g": {
-            "name": "Focke-Wulf FW 190 A-8",
+            "name": "FW 190 A-8",
             "description": "A relatively tough fighter aircraft.",
             "category": "aircraft",
             "keywords": ["Aircraft"],
             "models": [
                 {
-                    "name": "Focke-Wulf FW 190",
+                    "name": "FW 190",
                     "courage": 5,
                     "movement": 12,
                     "shoot": 5,
@@ -2707,13 +2707,13 @@
             ]
         },
         "ju_87d": {
-            "name": "Junkers Ju 87 B-1",
+            "name": "Ju 87 B-1",
             "description": "A bomber aircraft with several armaments.",
             "category": "aircraft",
             "keywords": ["Aircraft"],
             "models": [
                 {
-                    "name": "Junkers Ju 87 B-1",
+                    "name": "Ju 87 B-1",
                     "courage": 5,
                     "movement": 12,
                     "shoot": 5,
@@ -2728,13 +2728,13 @@
             ]
         },
         "ju_87b1": {
-            "name": "Junkers Ju 87 D",
+            "name": "Ju 87 D",
             "description": "A dive bomber aircraft with defense machine-guns.",
             "category": "aircraft",
             "keywords": ["Aircraft"],
             "models": [
                 {
-                    "name": "Junkers Ju 87 D",
+                    "name": "Ju 87 D",
                     "courage": 5,
                     "movement": 12,
                     "shoot": 5,

@@ -1645,6 +1645,50 @@
                     "max": 1
                 }
             ]
+        },
+        "p51_mustang": {
+            "name": "P-51 Mustang",
+            "description": "An air to air fighter plane.",
+            "category": "aircraft",
+            "keywords": ["Aircraft"],
+            "models": [
+                {
+                    "name": "P-51 Mustang",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "hmg_aircraft", "count": 6, "mount": ["Front"]}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
+                    "options": [{"addWeapon": [{"id": "light_aircraft_rocket", "count": 6}, {"id": "light_aircraft_rocket", "count": 10}, {"id": "light_bomb", "count": 2}, {"id": "medium_bomb", "count": 2}, {"id": "heavy_bomb", "count": 2}], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "p47_thunderbolt": {
+            "name": "P-47D-40 Thunderbolt",
+            "description": "An air to air fighter plane.",
+            "category": "aircraft",
+            "keywords": ["Aircraft"],
+            "models": [
+                {
+                    "name": "P-47D-40 Thunderbolt",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "hmg_aircraft", "count": 8, "mount": ["Front"]}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
+                    "options": [{"addWeapon": [{"id": "light_aircraft_rocket", "count": 10}, {"id": "medium_bomb", "count": 2}], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {},
