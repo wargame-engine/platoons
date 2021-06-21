@@ -1712,8 +1712,8 @@
         "gyrostabilizers": {
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
-            "name": "Gyrostabilizers",
-            "flavor": "US tanks were often equipped with gyro-stabilizers which allowed them to fire on the move more accurately.",
+            "name": "Mobile Gunners",
+            "flavor": "US tanks were often equipped with gyro-stabilizers and trained to move forward which allowed them to fire on the move more accurately.",
             "description": "Use when a _Tank_ unit performs a Move action. That unit may perform a free Shoot action at -1 Accuracy.",
             "cost": 1
         }
