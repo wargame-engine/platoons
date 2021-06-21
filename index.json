@@ -302,6 +302,7 @@
         "bamboo_spear": {"name": "Bamboo Spear", "short": "Melee", "attacks": 1, "ap": 1},
         "sniper_rifle": {"name": "Sniper Rifle", "short": 18, "medium": 36, "attacks": 1, "ap": 2, "rules": ["sniper", {"id": "team", "x": 2}]},
         "semi_auto_rifle": {"name": "Semi-Auto Rifle", "short": 12, "medium": 24, "attacks": 1, "rules": ["rapid_fire"]},
+        "scoped_semi_auto_rifle": {"name": "Scoped Semi-Auto Rifle", "short": 12, "medium": 24, "attacks": 1, "rules": ["rapid_fire", "scoped"]},
         "carbine_rifle": {"name": "Carbine", "short": 9, "medium": 18, "attacks": 1, "rules": ["assault"]},
         "semi_auto_carbine_rifle": {"name": "Semi-Auto Carbine", "short": 9, "medium": 18, "attacks": 1, "rules": ["assault", "rapid_fire"]},
         "smg": {"name": "SMG", "short": 6, "medium": 12, "attacks": 2, "rules": ["assault"]},
