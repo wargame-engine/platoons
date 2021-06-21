@@ -52,18 +52,18 @@
                 {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
-        "airborne_field_officer": {
-            "name": "Airborne Platoon Command",
+        "veteran_platoon_command": {
+            "name": "Veteran Platoon Command",
             "description": "A lower-ranking platoon commander to provide support to other field units.",
             "min": 1,
             "max": 1,
             "category": "command",
             "keywords": ["Infantry", "Officer"],
-            "subfactions": ["airborne_focus"],
+            "subfactions": ["infantry_focus", "airborne_focus"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
-                    "name": "Airborne Platoon Command",
+                    "name": "Veteran Field Officer",
                     "courage": 7,
                     "movement": 6,
                     "shoot": 6,
