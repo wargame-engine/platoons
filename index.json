@@ -168,6 +168,7 @@
     "alliances": {"axis": {"name": "Axis Powers"}, "allies": {"name": "Allied Powers"}},
     "relics": {
         "improvised_armor": {
+            "type": "equipment",
             "name": "Improvised Armor",
             "rule": "improvised_armor",
             "flavor": "Armored vehicles would sometimes add bits of kit to the outside of tanks for extra protection.",
