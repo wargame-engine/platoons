@@ -1176,6 +1176,30 @@
                 }
             ]
         },
+        "m4_sherman_calliope": {
+            "name": "M4 Sherman Calliope",
+            "description": "A medium tank with a decent all-round AT gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "M4 Sherman Calliope",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "weapons": ["medium_at_mg_rockets", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "catches_fire"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "m4_sherman_command": {
             "name": "M4 Sherman (Command)",
             "description": "A medium tank with a decent all-round AT gun.",
