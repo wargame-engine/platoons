@@ -1142,7 +1142,7 @@
             "subfactions": ["airborne_focus"],
             "name": "Combat Drop",
             "flavor": "A well-trained paratroop unit can drop as close as possible to their intended target.",
-            "description": "Set one _Infantry_, _Artillery_ or _Airborne Vehicle_ unit aside in reserves before the match begins. At the beginning of any round after the first you may attempt to place the unit anywhere on the table over 12\" away from enemy units.\n\nTake a Courage test. If failed, use D10 scattering to determine the unit's new landing location. If the new location is off the table, place the unit at table edge as close as possible. If both players have units with Airdrop they must roll-off to see who deploys first, and then alternate in placing them.",
+            "description": "Set one _Infantry_, _Artillery_ or _Airborne Vehicle_ unit aside in _ambush reserves_ before the match begins.",
             "cost": 1
         },
         "tough_fighters": {
