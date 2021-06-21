@@ -185,7 +185,7 @@
             "name": "Inspiring Leader",
             "rule": "inspiring_leader",
             "flavor": "A leader who can motivate his/her men to keep fighting is a key asset.",
-            "description": "Upgrade one Field Officer model with Inspiring Leader.",
+            "description": "Upgrade one _Leader_ model with Inspiring Leader.",
             "points": 10
         }
     },
