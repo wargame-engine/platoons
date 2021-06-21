@@ -167,6 +167,13 @@
     },
     "alliances": {"axis": {"name": "Axis Powers"}, "allies": {"name": "Allied Powers"}},
     "relics": {
+        "improvised_armor": {
+            "name": "Improvised Armor",
+            "rule": "improvised_armor",
+            "flavor": "Armored vehicles would sometimes add bits of kit to the outside of tanks for extra protection.",
+            "description": "Upgrade one _Vehicle_ unit with Improvised Armor.",
+            "points": 10
+        },
         "tank_ace": {
             "name": "Tank Ace",
             "rule": "tank_ace",
@@ -659,6 +666,7 @@
         "dadao": {"name": "Dadao", "attacks": 1, "short": "Melee", "ap": 1}
     },
     "rules": {
+        "improvised_armor": {"name": "Improvised Armor", "description": "Subtract 1 from all Damage Table(X) rolls for this model.", "points": 10},
         "heat": {"name": "HEAT", "description": "Enemy units add 1 to rolls on any Damage Table(X) rules when hit by this weapon at Short range.", "points": ["weapon.attacks", {"multiply": 2.5}]},
         "tank_ace": {"name": "Tank Ace", "description": "This unit gets +1 Accuracy.", "points": 20},
         "inspiring_leader": {"name": "Inspiring Leader", "description": "This unit and friendly _Infantry_ units within 6\" get +1 Courage.", "points": 10},
