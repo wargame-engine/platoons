@@ -1144,7 +1144,7 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "weapons": ["light_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
@@ -1168,8 +1168,8 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}, {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": ["heavy_at_stabilized_mg", "medium_howitzer_vehicle_stabilized"]}],
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}, {"replaceWeapon": "medium_at_mg", "withWeapon": ["heavy_at_mg", "medium_howitzer_vehicle"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "catches_fire"],
                     "min": 1,
                     "max": 1
@@ -1193,8 +1193,8 @@
                     "fight": 6,
                     "defense": 12,
                     "reflexes": 6,
-                    "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}, {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": "heavy_at_stabilized_mg"}],
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}, {"replaceWeapon": "medium_at_mg", "withWeapon": "heavy_at_mg"}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "catches_fire", {"id": "field_orders_armored", "x": 1}],
                     "min": 1,
                     "max": 1
@@ -1218,8 +1218,8 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}, {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": ["heavy_at_stabilized_mg", "medium_howitzer_vehicle_stabilized"]}],
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}, {"replaceWeapon": "medium_at_mg", "withWeapon": ["heavy_at_mg", "medium_howitzer_vehicle"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
@@ -1243,8 +1243,8 @@
                     "fight": 6,
                     "defense": 12,
                     "reflexes": 6,
-                    "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}, {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": "heavy_at_stabilized_mg"}],
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}, {"replaceWeapon": "medium_at_mg", "withWeapon": "heavy_at_mg"}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", {"id": "field_orders_armored", "x": 1}],
                     "min": 1,
                     "max": 1
@@ -1268,7 +1268,7 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    "weapons": ["heavy_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "weapons": ["heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -1293,8 +1293,8 @@
                     "fight": 5,
                     "defense": 13,
                     "reflexes": 5,
-                    "weapons": ["medium_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}, {"replaceWeapon": "medium_at_stabilized_mg", "withWeapon": "heavy_at_stabilized_mg"}],
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}, {"replaceWeapon": "medium_at_mg", "withWeapon": "heavy_at_mg"}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
                     "max": 1
@@ -1318,7 +1318,7 @@
                     "fight": 5,
                     "defense": 13,
                     "reflexes": 5,
-                    "weapons": ["very_heavy_at_stabilized_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "weapons": ["very_heavy_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "options": [{"addWeapon": ["hmg_aa"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
                     "min": 1,
@@ -1709,12 +1709,12 @@
             "description": "Use instead of your activation. Choose 3 models from an _Infantry_ unit to become a new scouting team unit. That unit immediately activates and is treated as a separate unit for the remainder of the game. This strategy may only be used once per _Infantry_ unit.",
             "cost": 1
         },
-        "look_alive": {
+        "gyrostabilizers": {
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
-            "name": "Look Alive",
-            "flavor": "Situational awareness can be key in combat.",
-            "description": "Use when an _Infantry_ unit attemps a reaction test. That unit gets Initiative +2 for that reaction.",
+            "name": "Gyrostabilizers",
+            "flavor": "US tanks were often equipped with gyro-stabilizers which allowed them to fire on the move more accurately.",
+            "description": "Use when a _Tank_ unit performs a Move action. That unit may perform a free Shoot action at -1 Accuracy.",
             "cost": 1
         }
     },

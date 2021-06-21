@@ -558,7 +558,7 @@
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
-        "medium_at_stabilized_mg": {
+        "medium_at_mg": {
             "name": "Medium AT(Stabilized)/Co-ax MG",
             "profiles": [
                 {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["assault", {"id": "blast", "x": 5}]},
@@ -1154,13 +1154,13 @@
             "description": "Use before an _Infantry_ unit uses a fight action. Its attacks gain AP 1.",
             "cost": 1
         },
-        "stealth_tactics": {
+        "expert_awareness": {
             "phase": "activation",
             "subfactions": ["airborne_focus"],
-            "name": "Stealth Tactics",
-            "flavor": "Moving quickly and quietly is a key part of Airborne training.",
-            "description": "Use when activating an _Infantry_ unit. It may make a free 6\" move action and may not be targeted by reaction fire when doing so.",
-            "cost": 2
+            "name": "Expert Awareness",
+            "flavor": "Situational awareness can be key in combat.",
+            "description": "Use when an _Infantry_ unit attempts a Reaction test. That unit gets Initiative +2 for that reaction.",
+            "cost": 1
         },
         "regroup": {
             "subfactions": ["reserves_focus"],
