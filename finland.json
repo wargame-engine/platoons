@@ -207,7 +207,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "infantry_focus", "armored_focus"],
-            "options": [{"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": "mounted_bicycle", "modelLimit": "all"}],
+            "options": [{"addRule": "tank_rider", "modelLimit": "all"}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}, {"addRule": "mounted_bicycle", "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Jääkäri NCO",
@@ -248,7 +248,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["armored_focus"],
-            "options": [{"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
+            "options": [{"addRule": "tank_rider", "modelLimit": "all"}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
                 {
                     "name": "Veteran Jääkäri NCO",
