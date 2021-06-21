@@ -2663,13 +2663,13 @@
             ]
         },
         "me_bf109_g": {
-            "name": "Messerschmitt BF-109 G-6",
+            "name": "BF-109 G-6",
             "description": "A relatively tough general purpose aircraft.",
             "category": "aircraft",
             "keywords": ["Aircraft"],
             "models": [
                 {
-                    "name": "Messerschmitt BF-109 G-6",
+                    "name": "BF-109 G-6",
                     "courage": 5,
                     "movement": 12,
                     "shoot": 5,
