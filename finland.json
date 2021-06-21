@@ -1363,7 +1363,7 @@
             "phase": "activation",
             "name": "Closing Fire - Syöksyen Eteenpäin",
             "flavor": "With a quick dash and an alert overwatch, Infantry can cover a lot of ground carefully.",
-            "description": "Use after a Finnish Infantry moves. It may take a free Standby action.",
+            "description": "Use after a Finnish _Infantry_ unit moves. It may take a free Standby action.",
             "cost": 1
         },
         "motti_tactics": {

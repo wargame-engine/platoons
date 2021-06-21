@@ -1705,7 +1705,7 @@
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Scouting Team",
-            "flavor": "US _Infantry_ units would often form small scouting teams to scout out the route ahead.",
+            "flavor": "US Infantry would often form small scouting teams to scout out the route ahead.",
             "description": "Use instead of your activation. Choose 3 models from an _Infantry_ unit to become a new scouting team unit. That unit immediately activates and is treated as a separate unit for the remainder of the game. This strategy may only be used once per _Infantry_ unit.",
             "cost": 1
         },
