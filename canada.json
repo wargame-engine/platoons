@@ -1250,7 +1250,7 @@
         }
     },
     "strategies": {
-        "rapid_fire": {
+        "woodsmen": {
             "phase": "pre_game",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Trained Woodsmen",
@@ -1286,20 +1286,5 @@
             "points": 20
         }
     },
-    "relics": {
-        "rg_pine_coffin": {
-            "subfactions": ["none", "airborne_focus"],
-            "name": "Richard Geoffry Pine-Coffin",
-            "rule": "ambush_tactics",
-            "flavor": "Pine-Coffin fought in several battles including D-Day with the canadian airborne. Often encountering superior forces his men were able to achieve their goals.",
-            "description": "Upgrade one Field Officer model with Ambush Tactics."
-        },
-        "simon_fraser": {
-            "subfactions": ["none", "airborne_focus"],
-            "name": "Simon Fraser",
-            "rule": "natural_leader",
-            "flavor": "Fraser lead the 1st SAS brigade and helped relieve troops during the D-Day offensive. He was known to be a particularly inspiring commander.",
-            "description": "Upgrade one Field Officer model with Natural Leader."
-        }
-    }
+    "relics": {}
 }
