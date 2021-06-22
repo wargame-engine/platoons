@@ -1009,7 +1009,7 @@
             "name": "Defensive Tactics",
             "flavor": "The Frenched on defensive and well-prepared defenses.",
             "description": "Use when an _Infantry_ unit is targeted by an attack. That unit is treated as being in Light Cover, or Hard Cover if already in Light Cover.",
-            "cost": 1
+            "cost": 2
         }
     },
     "rules": {},
