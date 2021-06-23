@@ -316,6 +316,7 @@
         "smg": {"name": "SMG", "short": 6, "medium": 12, "attacks": 2, "rules": ["assault"]},
         "shotgun": {"name": "Shotgun", "short": 6, "medium": 12, "ap": 1, "attacks": 1, "rules": ["assault"]},
         "assault_rifle": {"name": "Assault Rifle", "short": 12, "medium": 24, "attacks": 2, "rules": ["assault"]},
+        "scoped_assault_rifle": {"name": "Scoped Assault Rifle", "short": 12, "medium": 24, "attacks": 2, "rules": ["scoped", "assault"]},
         "belt_lmg": {"name": "Belt-fed LMG", "short": 15, "medium": 30, "attacks": 4, "rules": [{"id": "team", "x": 2}]},
         "box_lmg": {"name": "Box-fed LMG", "short": 15, "medium": 30, "attacks": 3},
         "mag_lmg": {"name": "Magazine-fed LMG", "short": 18, "medium": 36, "attacks": 2},
