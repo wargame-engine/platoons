@@ -2771,6 +2771,28 @@
                 }
             ]
         },
+        "dfs_230_glider": {
+            "name": "DFS 230 Glider",
+            "description": "A lightweight glider used to transport troops to the battlefield.",
+            "subfactions": ["airborne_focus", "special_forces_focus"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "DFS 230 Glider",
+                    "movement": "-",
+                    "courage": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "weapons": [],
+                    "rules": [{"id": "transport", "x": 12}, "ambush"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "me_bf109_g": {
             "name": "BF-109 G-6",
             "description": "A relatively tough general purpose aircraft.",
