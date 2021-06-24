@@ -1387,7 +1387,7 @@
         }
     },
     "weapons": {
-        "44m_pancelrem": {"name": "44M Páncélrém", "short": 12, "medium": 24, "ap": 6, "attacks": 1, "rules": ["heat", {"id": "team", "x": 2}]},
+        "44m_pancelrem": {"name": "44M Páncélrém", "short": 12, "medium": 24, "ap": 7, "attacks": 1, "rules": ["heat", {"id": "team", "x": 2}]},
         "44m_buzoganyveto": {"name": "44M Rocket", "profiles": [
             {"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
             {"name": "AT", "short": 18, "medium": 36, "attacks": 1, "ap": 7, "rules": ["heat"]}

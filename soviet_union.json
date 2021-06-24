@@ -1714,8 +1714,8 @@
         }
     },
     "weapons": {
-        "dog_mine": {"name": "Dog-Mine", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["indirect", {"id": "ammo", "x": 1}]},
-        "ampulomet": {"name": "Ampulomet", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["indirect", "flame"]}
+        "dog_mine": {"name": "Dog-Mine", "attacks": 1, "short": 12, "medium": 24, "ap": 7, "rules": ["indirect", {"id": "ammo", "x": 1}]},
+        "ampulomet": {"name": "Ampulomet", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["indirect", "flame"]}
     },
     "rules": {
         "soviet_flag": {"name": "Soviet Flag", "description": "This unit gets +1 Courage when clearing shock. A model may not use its shooting weapons while carrying a Soviet Flag.", "points": 10},
