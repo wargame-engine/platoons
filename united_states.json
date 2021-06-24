@@ -1119,8 +1119,34 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "weapons": [{"id": "hmg_aa"}, {"id": "medium_mortar", "mount": ["Rear"]}],
+                    "weapons": [{"id": "medium_mortar", "mount": ["Rear"]}],
                     "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", "exposed"],
+                    "options": [{"addWeapon": {"id": "hmg_aa"}}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m8_scott": {
+            "name": "M8 Scott",
+            "description": "A light tank with a turret howitzer for light infantry support.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "M8 Scott",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": ["light_howitzer_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle", "exposed"],
+                    "options": [{"addWeapon": "hmg_aa"}],
                     "min": 1,
                     "max": 1
                 }
@@ -1128,13 +1154,12 @@
         },
         "m3_stuart": {
             "name": "M3 Stuart",
-            "description": "A medium tank with a decent all-round AT gun.",
+            "description": "A light tank with a decent AT gun.",
             "min": 1,
             "max": 1,
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
-            "rules": ["catches_fire"],
             "models": [
                 {
                     "name": "M3 Stuart",
@@ -1145,7 +1170,8 @@
                     "defense": 11,
                     "reflexes": 5,
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+                    "options": [{"addRule": "scout"}, {"addWeapon": "mmg_aa"}, {"addWeapon": {"id": "belt_lmg", "count": 2, "mount": ["Front"]}}],
                     "min": 1,
                     "max": 1
                 }
