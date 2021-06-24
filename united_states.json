@@ -1053,33 +1053,9 @@
                 {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
-        "m20_scout_car": {
-            "name": "M20 Scout Car",
-            "description": "An armored recon car with a powerful autocannon.",
-            "min": 1,
-            "max": 1,
-            "category": "light_vehicles",
-            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
-            "keywords": ["Vehicle", "Armored Car"],
-            "models": [
-                {
-                    "name": "M20 Scout Car",
-                    "courage": 5,
-                    "movement": 12,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 10,
-                    "reflexes": 5,
-                    "weapons": ["hmg_aa"],
-                    "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed", "scout"],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
         "m8_greyhound": {
             "name": "M8 Greyhound",
-            "description": "An armored recon car with a powerful autocannon.",
+            "description": "An armored recon car with a light tank killing gun.",
             "min": 1,
             "max": 1,
             "category": "light_vehicles",
@@ -1097,6 +1073,30 @@
                     "weapons": ["light_at_mg"],
                     "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed", "scout"],
                     "options": [{"addWeapon": "hmg_aa"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m20_scout_car": {
+            "name": "M20 Scout Car",
+            "description": "An armored recon car with a heavy MG for infantry support.",
+            "min": 1,
+            "max": 1,
+            "category": "light_vehicles",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Armored Car"],
+            "models": [
+                {
+                    "name": "M20 Scout Car",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": ["hmg_aa"],
+                    "rules": ["vulnerable_side_rear", "damage_table_vehicle", "exposed", "scout"],
                     "min": 1,
                     "max": 1
                 }
@@ -1172,6 +1172,31 @@
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "options": [{"addRule": "scout"}, {"addWeapon": "mmg_aa"}, {"addWeapon": {"id": "belt_lmg", "count": 2, "mount": ["Front"]}}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m24_chaffee": {
+            "name": "M24 Chaffee",
+            "description": "A light tank with a decent AT gun.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "M24 Chaffee",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+                    "options": [{"addRule": "scout"}, {"addWeapon": "mmg_aa"}],
                     "min": 1,
                     "max": 1
                 }
@@ -1756,7 +1781,18 @@
                     "reflexes": 5,
                     "weapons": [{"id": "hmg_aircraft", "count": 6, "mount": ["Front"]}],
                     "rules": ["aircraft", "damage_table_aircraft"],
-                    "options": [{"addWeapon": [{"id": "light_aircraft_rocket", "count": 6}, {"id": "light_aircraft_rocket", "count": 10}, {"id": "light_bomb", "count": 2}, {"id": "medium_bomb", "count": 2}, {"id": "heavy_bomb", "count": 2}], "limit": 1}],
+                    "options": [
+                        {
+                            "addWeapon": [
+                                {"id": "light_aircraft_rocket", "count": 6},
+                                {"id": "light_aircraft_rocket", "count": 10},
+                                {"id": "light_bomb", "count": 2},
+                                {"id": "medium_bomb", "count": 2},
+                                {"id": "heavy_bomb", "count": 2}
+                            ],
+                            "limit": 1
+                        }
+                    ],
                     "min": 1,
                     "max": 1
                 }
