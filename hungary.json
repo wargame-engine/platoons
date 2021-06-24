@@ -1407,7 +1407,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Officer Training",
             "flavor": "A swift and deadly end to a fight can come with a furious charge...",
-            "description": "Use when a Hungarian Infantry Officer unit is activated. That unit gets Field Orders(+1) for this activation.",
+            "description": "Use when a Hungarian Infantry Officer unit is activated. That unit gets Field Orders(+1) for this activation and may activate 1 additional unit.",
             "cost": 1
         },
         "suppressive_fire": {
@@ -1420,10 +1420,10 @@
         },
         "huszar_tactics": {
             "subfactions": ["none", "infantry_focus", "armored_focus"],
-            "phase": "pre_game",
+            "phase": "activation",
             "name": "Huszar Tactics",
             "flavor": "Aggressive armored pushes, can be highly effective at surrounding and destroying enemies.",
-            "description": "Select a _Tank_ or _Armored Car_ unit to be placed in _outflanking reserves_. That unit may arrive on any table edge including your opponents reinforcement edge.",
+            "description": "Use when a _Tank_ or _Armored Car_ unit enters the field. It may make a free Move action.",
             "cost": 1
         }
     },

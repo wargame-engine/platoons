@@ -1709,7 +1709,7 @@
             "phase": "activation",
             "name": "Forward Recon",
             "flavor": "Forward recon elements, when used effectively can provide a huge amount of information on enemy forces.",
-            "description": "Use when an _Infantry_ unit enters the field. It may make a free 6\" move action.",
+            "description": "Use when an _Infantry_ unit enters the field. It may make a free Move action.",
             "cost": 1
         }
     },

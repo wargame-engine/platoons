@@ -2934,7 +2934,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Panzer Blitz",
             "flavor": "A swift and deadly Panzer assault can sometimes route the enemy.",
-            "description": "Use when a German _Tank_ unit is activated. It may make a free 6\" Move action.",
+            "description": "Use when a German _Tank_ unit makes a Move action. Add +3\" to its Move characteristic.",
             "cost": 1
         }
     },
