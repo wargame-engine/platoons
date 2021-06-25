@@ -1382,6 +1382,56 @@
                 }
             ]
         },
+        "su_76": {
+            "name": "SU-76",
+            "description": "A medium tank with an adequate gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
+            "models": [
+                {
+                    "name": "SU-76",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": [{"id": "light_howitzer", "mount": ["Front"]}, {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle", "exposed"],
+                    "options": [{"replaceWeapon": {"id": "light_howitzer", "mount": ["Front"]}, "withWeapon": {"id": "medium_at_light_howitzer", "mount": ["Front"]}}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "su_76i": {
+            "name": "SU-76i",
+            "description": "A medium tank with an adequate gun.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus"],
+            "models": [
+                {
+                    "name": "SU-76i",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": [{"id": "light_howitzer", "mount": ["Front"]}, {"id": "mmg_internal", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+                    "options": [{"replaceWeapon": {"id": "light_howitzer", "mount": ["Front"]}, "withWeapon": {"id": "medium_at_light_howitzer", "mount": ["Front"]}}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "t34": {
             "name": "T-34/76",
             "description": "A medium tank with an adequate gun.",
@@ -1661,11 +1711,8 @@
         "medium_truck": {
             "name": "Medium Truck",
             "description": "A medium truck transport.",
-            "min": 1,
-            "max": 1,
             "category": "transport",
             "keywords": ["Vehicle"],
-            "subfactions": ["none", "reserves_focus", "infantry_focus", "armored_focus", "reserves_focus"],
             "models": [
                 {
                     "name": "Medium Truck",
@@ -1682,11 +1729,52 @@
                 }
             ]
         },
+        "medium_aa_truck": {
+            "name": "AA Medium Truck",
+            "description": "A medium truck transport.",
+            "category": "light_vehicles",
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "AA Medium Truck",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "rules": ["damage_table_vehicle"],
+                    "weapons": [{"id": "mmg_aa", "count": 4}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m17_mgmc": {
+            "name": "M17 MGMC",
+            "description": "An armored halftrack upgraded with several anti-air machine-guns.",
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Half-Track"],
+            "models": [
+                {
+                    "name": "M17 MGMC",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "hmg_aa", "count": 4}],
+                    "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", "exposed"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "katyusha": {
             "name": "Katyusha",
             "description": "A medium truck transport.",
-            "min": 1,
-            "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Artillery"],
             "models": [
@@ -1708,8 +1796,6 @@
         "heavy_katyusha": {
             "name": "BM-31-12 Heavy Katyusha",
             "description": "A medium truck transport.",
-            "min": 1,
-            "max": 1,
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Artillery"],
             "models": [

@@ -673,7 +673,7 @@
         },
         "anti_infantry_mines": {
             "name": "Anti-Infantry Mines",
-            "description": "When an _Infantry_ unit crosses this model, roll 7D10. On any rolls of 5 or less that unit takes a hit with AP4.",
+            "description": "When an _Infantry_ unit crosses this model, roll 8D10. On any rolls of 5 or less that unit takes a hit with AP4.",
             "points": 50
         },
         "anti_tank_mines": {
@@ -683,7 +683,7 @@
         },
         "mixed_mines": {
             "name": "Mixed Mines",
-            "description": "When an _Infantry_ unit crosses this model, roll 5D10. On any rolls of 5 or less that unit takes a hit with AP4. When a Vehicle unit crosses this model, roll 2D10. On any rolls of 5 or less that unit takes a hit with AP7. The vehicle is treated as being hit in the Rear arc.",
+            "description": "When a unit without Damage Table(x) crosses this model, roll 5D10. On any rolls of 5 or less that unit takes a hit with AP4. When a unit with Damage Table(x) crosses this model, roll 1D10. On any rolls of 5 or less that unit takes a hit with AP7. The vehicle is treated as being hit in the Rear arc.",
             "points": 50
         },
         "wire_cutters": {"name": "Wire Cutters", "description": "This model and its unit gain +3 to all Clear actions when attempting to clear barbed wire obstacles.", "points": 5},
@@ -965,7 +965,7 @@
             "keywords": ["Fortification"],
             "models": [
                 {
-                    "name": "Sandbag Walls (8\"x1\" Section)",
+                    "name": "Sandbag Wall (8\"x1\" Section)",
                     "courage": "-",
                     "movement": "-",
                     "shoot": "-",
