@@ -55,8 +55,6 @@
         "veteran_platoon_command": {
             "name": "Veteran Platoon Command",
             "description": "A lower-ranking platoon commander to provide support to other field units.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "keywords": ["Infantry", "Officer"],
             "subfactions": ["infantry_focus", "airborne_focus"],
@@ -81,9 +79,7 @@
         },
         "infantry_squad": {
             "name": "Infantry Squad",
-            "description": "The main infantry unit of the Italian army. Can be increased to somewhat large sizes.",
-            "min": 1,
-            "max": 1,
+            "description": "The main infantry unit of the Italian army. Equipped mostly with rifles, these units could put up a fight.",
             "category": "infantry",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
@@ -289,6 +285,45 @@
                 {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
+        "panzershreck_team": {
+            "name": "Panzerschreck Team",
+            "description": "A team dedicated to hunting heavy tanks.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "models": [
+                {"name": "Panzerschreck Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["panzerschreck", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+            ]
+        },
+        "mmg_team": {
+            "name": "Tripod MG Team",
+            "description": "A medium machine-gun on a tripod mount.",
+            "min": 1,
+            "max": 1,
+            "category": "support",
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Tripod MG",
+                    "courage": "-",
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}],
+                    "weapons": [{"id": "mmg", "mount": ["Front"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
+            ]
+        },
         "light_mortar_team": {
             "name": "Light Mortar Team",
             "description": "A light mortar carried by a small team.",
@@ -442,6 +477,30 @@
     },
     "weapons": {},
     "strategies": {
+        "savoia": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "name": "Savoia!",
+            "flavor": "A swift and deadly end to a fight can come with a furious charge...",
+            "description": "Use when an _Infantry_ unit declares a Charge action. It gets +3\" of Movement for that action.",
+            "cost": 1
+        },
+        "suppressive_fire": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "name": "Suppressive Fire",
+            "flavor": "With high rate of fire and a terrifying noise, machine-guns can be used to pin down enemy troops with ease.",
+            "description": "Use when an _Infantry_ unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
+            "cost": 1
+        },
+        "avanti": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "name": "Avanti!",
+            "flavor": "These troops are highly motivated and ready to fight.",
+            "description": "Use when activating a unit. It may immediately remove 2 Shock.",
+            "cost": 1
+        }
     },
     "rules": {
     },

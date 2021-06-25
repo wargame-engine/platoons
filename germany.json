@@ -2962,7 +2962,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Sturm Assault",
             "flavor": "A swift and deadly end to a fight can come with a furious charge...",
-            "description": "Use when a German _Infantry_ unit declares a Charge action. It gets +3\" of Movement for that action.",
+            "description": "Use when an _Infantry_ unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
         },
         "suppressive_fire": {
@@ -2970,7 +2970,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Suppressive Fire",
             "flavor": "With high rate of fire and a terrifying noise, machineguns can be used to pin down enemy troops with ease.",
-            "description": "Use when a German _Infantry_ unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
+            "description": "Use when an _Infantry_ unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
             "cost": 1
         },
         "panzer_blitz": {
@@ -2978,7 +2978,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Panzer Blitz",
             "flavor": "A swift and deadly Panzer assault can sometimes route the enemy.",
-            "description": "Use when a German _Tank_ unit makes a Move action. Add +3\" to its Move characteristic.",
+            "description": "Use when a _Tank_ unit makes a Move action. Add +3\" to its Move characteristic.",
             "cost": 1
         }
     },
