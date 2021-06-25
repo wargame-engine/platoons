@@ -1703,6 +1703,56 @@
                 }
             ]
         },
+        "m5_halftrack": {
+            "name": "M5 Halftrack",
+            "description": "A lightly armored mechanized transport.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Half-Track"],
+            "models": [
+                {
+                    "name": "M5 Halftrack",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "hmg_aa"}],
+                    "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 12}, "exposed"],
+                    "options": [{"addweapon": "mmg_aa", "mount": ["Left"]}, {"addweapon": "mmg_aa", "mount": ["Left"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m3_white_scout": {
+            "name": "M3 White Scout Car",
+            "description": "A lightly armored scout transport car.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Vehicle", "Half-Track"],
+            "models": [
+                {
+                    "name": "M3 White Scout Car",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "hmg_aa", "mount": ["Front"]}],
+                    "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 8}, "exposed", "scout"],
+                    "options": [{"addweapon": "mmg", "mount": ["Left", "Rear"]}, {"addweapon": "mmg", "mount": ["Right", "Rear"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "po_2_kukuruznik": {
             "name": "Po-2 'Kukuruznik'",
             "description": "A lightweight observer aircraft.",
