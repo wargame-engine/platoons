@@ -1409,7 +1409,7 @@
             "keywords": ["Vehicle", "Half-Track"],
             "models": [
                 {
-                    "name": "M5 Halftrack",
+                    "name": "Bren Carrier",
                     "courage": 5,
                     "movement": 10,
                     "shoot": 5,
