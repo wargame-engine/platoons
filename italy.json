@@ -438,7 +438,7 @@
                 },
                 {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 5, "max": 5}
             ]
-        },
+        }
     },
     "weapons": {},
     "strategies": {
