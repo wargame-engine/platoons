@@ -1781,7 +1781,7 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "weapons": [{"id": "hmg_aircraft", "mount": ["Rear"]}, {"id": "mmg_aircraft", "count": 2, "mount": ["Front"]}, {"id": "light_aircraft_rocket", "count": 2, "mount": ["Front"]}, {"id": "light_bomb", "count": 6}],
+                    "weapons": [{"id": "hmg_aircraft", "mount": ["Rear"]}, {"id": "mmg_aircraft", "count": 2, "mount": ["Front"]}, {"id": "light_bomb", "count": 6}],
                     "options": [{"replaceWeapon": {"id": "light_bomb", "count": 6}, "withWeapon": [{"id": "at_bomb", "count": 4}, {"id": "heavy_aircraft_rocket", "count": 4, "mount": ["Front"]}, {"id": "light_aircraft_rocket", "count": 8, "mount": ["Front"]}]}],
                     "rules": ["aircraft", "damage_table_aircraft"],
                     "min": 1,
