@@ -1542,7 +1542,7 @@
                     "reflexes": 5,
                     "weapons": [{"id": "hmg_aa", "mount": ["Front"]}],
                     "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 12}, "exposed"],
-                    "options": [{"addweapon": "mmg"}],
+                    "options": [{"addWeapon": "mmg"}],
                     "min": 1,
                     "max": 1
                 }
@@ -1567,7 +1567,7 @@
                     "reflexes": 5,
                     "weapons": [{"id": "hmg_aa"}],
                     "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 12}, "exposed"],
-                    "options": [{"addweapon": "mmg_aa", "mount": ["Left"]}, {"addweapon": "mmg_aa", "mount": ["Left"]}, {"addweapon": "mmg_aa", "mount": ["Rear"]}],
+                    "options": [{"addWeapon": "mmg_aa", "mount": ["Left"]}, {"addWeapon": "mmg_aa", "mount": ["Left"]}, {"addWeapon": "mmg_aa", "mount": ["Rear"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -1592,7 +1592,7 @@
                     "reflexes": 5,
                     "weapons": [{"id": "hmg_aa", "mount": ["Front"]}],
                     "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 8}, "exposed", "scout"],
-                    "options": [{"addweapon": "mmg", "mount": ["Left", "Rear"]}, {"addweapon": "mmg", "mount": ["Right", "Rear"]}],
+                    "options": [{"addWeapon": "mmg", "mount": ["Left", "Rear"]}, {"addWeapon": "mmg", "mount": ["Right", "Rear"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -1737,7 +1737,7 @@
                     "reflexes": 5,
                     "weapons": [{"id": "hmg_aa"}],
                     "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 12}, "exposed"],
-                    "options": [{"addweapon": "mmg", "mount": ["Left"]}, {"addweapon": "mmg", "mount": ["Right"]}, {"addweapon": "mmg", "mount": ["Rear"]}],
+                    "options": [{"addWeapon": "mmg", "mount": ["Left"]}, {"addWeapon": "mmg", "mount": ["Right"]}, {"addWeapon": "mmg", "mount": ["Rear"]}],
                     "min": 1,
                     "max": 1
                 }

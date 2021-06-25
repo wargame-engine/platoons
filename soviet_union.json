@@ -1652,7 +1652,7 @@
                     "reflexes": 5,
                     "weapons": [{"id": "mag_lmg", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 5}, "exposed"],
-                    "options": [{"addweapon": "mag_lmg"}, {"replaceWeapon": {"id": "mag_lmg", "mount": ["Front"]}, "withWeapon": {"id": "at_rifle", "mount": ["Front"]}}],
+                    "options": [{"addWeapon": "mag_lmg"}, {"replaceWeapon": {"id": "mag_lmg", "mount": ["Front"]}, "withWeapon": {"id": "at_rifle", "mount": ["Front"]}}],
                     "min": 1,
                     "max": 1
                 }
@@ -1747,7 +1747,7 @@
                     "reflexes": 5,
                     "weapons": [{"id": "hmg_aa"}],
                     "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 12}, "exposed"],
-                    "options": [{"addweapon": "mmg_aa", "mount": ["Left"]}, {"addweapon": "mmg_aa", "mount": ["Left"]}],
+                    "options": [{"addWeapon": "mmg_aa", "mount": ["Left"]}, {"addWeapon": "mmg_aa", "mount": ["Left"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -1772,7 +1772,7 @@
                     "reflexes": 5,
                     "weapons": [{"id": "hmg_aa", "mount": ["Front"]}],
                     "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 8}, "exposed", "scout"],
-                    "options": [{"addweapon": "mmg", "mount": ["Left", "Rear"]}, {"addweapon": "mmg", "mount": ["Right", "Rear"]}],
+                    "options": [{"addWeapon": "mmg", "mount": ["Left", "Rear"]}, {"addWeapon": "mmg", "mount": ["Right", "Rear"]}],
                     "min": 1,
                     "max": 1
                 }

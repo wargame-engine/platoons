@@ -973,7 +973,7 @@
                     "reflexes": 5,
                     "weapons": [{"id": "hmg_aa", "mount": ["Front"]}],
                     "rules": ["half_tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 12}, "exposed"],
-                    "options": [{"addweapon": "mmg"}],
+                    "options": [{"addWeapon": "mmg"}],
                     "min": 1,
                     "max": 1
                 }
