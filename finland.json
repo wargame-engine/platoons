@@ -1438,7 +1438,7 @@
         "assault!": {
             "subfactions": ["none", "infantry_focus", "armored_focus"],
             "phase": "activation",
-            "name": "Charge! - Rynnäkkön!",
+            "name": "Charge!",
             "flavor": "A swift and deadly end to a fight can come with a furious charge.",
             "description": "Use when a Finnish _Infantry_ unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
@@ -1446,7 +1446,7 @@
         "forward_rush": {
             "subfactions": ["none", "infantry_focus", "armored_focus"],
             "phase": "activation",
-            "name": "Closing Fire - Syöksyen Eteenpäin",
+            "name": "Closing Fire",
             "flavor": "With a quick dash and an alert overwatch, Infantry can cover a lot of ground carefully.",
             "description": "Use after a Finnish _Infantry_ unit moves. It may take a free Standby action.",
             "cost": 1
