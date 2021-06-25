@@ -2838,13 +2838,13 @@
             ]
         },
         "fi_156_storch": {
-            "name": "Fi 156 Storch",
+            "name": "Fi 156 Storch OP",
             "description": "A lightweight observer aircraft.",
             "category": "aircraft",
             "keywords": ["Aircraft", "Observer"],
             "models": [
                 {
-                    "name": "Fi 156 Storch",
+                    "name": "Fi 156 Storch OP",
                     "courage": 5,
                     "movement": 10,
                     "shoot": 5,
@@ -2873,7 +2873,7 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "weapons": [{"id": "mmg_aircraft", "count": 2, "mount": ["Front"]}, {"id": "light_autocannon_aa", "mount": ["Front"]}, {"id": "light_bomb", "count": 4}],
+                    "weapons": [{"id": "mmg_aircraft", "count": 2, "mount": ["Front"]}, {"id": "light_autocannon_aa", "mount": ["Front"]}],
                     "options": [{"addWeapon": [{"id": "light_bomb", "count": 4}, "fire_bomb", "medium_bomb", {"id": "light_autocannon_aa", "count": 2, "mount": ["Front"]}], "limit": 1}, {"replaceWeapon": {"id": "light_autocannon_aa", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_autocannon_aa", "mount": ["Front"]}]}],
                     "rules": ["aircraft", "damage_table_aircraft"],
                     "min": 1,

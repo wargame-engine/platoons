@@ -1788,13 +1788,13 @@
             ]
         },
         "o_57_grasshopper": {
-            "name": "O-57 Grasshopper",
+            "name": "O-57 Grasshopper OP",
             "description": "A lightweight observer aircraft.",
             "category": "aircraft",
             "keywords": ["Aircraft", "Observer"],
             "models": [
                 {
-                    "name": "O-57 Grasshopper",
+                    "name": "O-57 Grasshopper OP",
                     "courage": 5,
                     "movement": 10,
                     "shoot": 5,

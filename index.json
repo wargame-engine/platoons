@@ -339,6 +339,7 @@
         "mmg": {"name": "Medium MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1},
         "dual_mmg": {"name": "Dual Medium MG", "short": 18, "medium": 36, "attacks": 8, "ap": 1},
         "mmg_aa": {"name": "Medium MG (AA)", "short": 18, "medium": 36, "attacks": 5, "ap": 1, "rules": ["anti_air"]},
+        "lmg_aircraft": {"name": "Aircraft LMG", "short": 18, "medium": 36, "attacks": 3, "rules": ["anti_air"]},
         "mmg_aircraft": {"name": "Aircraft MG", "short": 18, "medium": 36, "attacks": 3, "ap": 1, "rules": ["anti_air"]},
         "hmg_aircraft": {"name": "Aircraft HMG", "short": 18, "medium": 36, "attacks": 3, "ap": 2, "rules": ["anti_air"]},
         "hmg": {"name": "Heavy MG", "short": 18, "medium": 36, "attacks": 5, "ap": 2},

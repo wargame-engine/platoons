@@ -1889,13 +1889,13 @@
             ]
         },
         "po_2_kukuruznik": {
-            "name": "Po-2 'Kukuruznik'",
+            "name": "Po-2 'Kukuruznik' OP",
             "description": "A lightweight observer aircraft.",
             "category": "aircraft",
             "keywords": ["Aircraft", "Observer"],
             "models": [
                 {
-                    "name": "Po-2 'Kukuruznik'",
+                    "name": "Po-2 'Kukuruznik' OP",
                     "courage": 5,
                     "movement": 10,
                     "shoot": 5,
