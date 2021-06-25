@@ -835,7 +835,6 @@
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
                     "options": [
-                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}
                     ],
                     "min": 2,

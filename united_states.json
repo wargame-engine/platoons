@@ -606,7 +606,6 @@
                     "reflexes": 5,
                     "weapons": ["semi_auto_carbine_rifle", "unarmed"],
                     "options": [
-                        {"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["bar"], "modelLimit": 1},
                         {"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}
                     ],
                     "min": 2,

@@ -423,7 +423,6 @@
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
                     "options": [
-                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}
                     ],
                     "min": 2,
