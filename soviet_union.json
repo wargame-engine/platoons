@@ -155,13 +155,11 @@
         "combat_engineers": {
             "name": "Combat Engineers",
             "description": "A squad of soviet combat engineers.",
-            "min": 1,
-            "max": 1,
-            "category": "infantry",
+            "category": "support",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
             "options": [
-                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6},
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}
             ],
@@ -189,8 +187,49 @@
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["box_lmg"], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
-                    "min": 4,
-                    "max": 11
+                    "min": 2,
+                    "max": 5
+                }
+            ]
+        },
+        "assault_engineers": {
+            "name": "Assault Engineers",
+            "description": "A squad of soviet assault engineers.",
+            "category": "infantry",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addRule": "body_armor", "modelLimit": "all"},
+                {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}
+            ],
+            "models": [
+                {
+                    "name": "Engineer NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Engineer",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["box_lmg"], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 10
                 }
             ]
         },
@@ -331,7 +370,7 @@
             "keywords": ["Infantry"],
             "rules": ["tank_rider"],
             "subfactions": ["none", "armored_focus"],
-            "options": [{"addRule": "body_armor"}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
+            "options": [{"addRule": "body_armor", "modelLimit": "all"}, {"addWeapon": ["at_grenades", "molotov_cocktails"], "modelLimit": 3}],
             "models": [
                 {"name": "Tank Rider NCO", "courage": 6, "movement": 6, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 6, "weapons": ["smg", "unarmed"], "min": 1, "max": 1},
                 {

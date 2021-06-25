@@ -391,9 +391,7 @@
         "combat_engineers": {
             "name": "Combat Engineers",
             "description": "A squad of australian combat engineers.",
-            "min": 1,
-            "max": 1,
-            "category": "infantry",
+            "category": "support",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
             "options": [
@@ -428,8 +426,8 @@
                         {"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "Bren Gun"}], "modelLimit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}
                     ],
-                    "min": 4,
-                    "max": 10
+                    "min": 2,
+                    "max": 5
                 }
             ]
         },

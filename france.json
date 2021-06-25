@@ -449,9 +449,7 @@
         "combat_engineers": {
             "name": "Combat Engineers",
             "description": "A squad of french combat engineers.",
-            "min": 1,
-            "max": 1,
-            "category": "infantry",
+            "category": "support",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
             "options": [
@@ -483,16 +481,14 @@
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["mag_lmg"], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
-                    "min": 4,
-                    "max": 10
+                    "min": 2,
+                    "max": 4
                 }
             ]
         },
         "at_rifle_team": {
             "name": "AT Rifle Team",
             "description": "A team dedicated to hunting lighter tanks.",
-            "min": 1,
-            "max": 1,
             "category": "support",
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
