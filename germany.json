@@ -2970,7 +2970,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Suppressive Fire",
             "flavor": "With high rate of fire and a terrifying noise, machineguns can be used to pin down enemy troops with ease.",
-            "description": "Use when an _Infantry_ unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
+            "description": "Use when an _Infantry_ unit that contains an LMG or Medium MG fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
             "cost": 1
         },
         "panzer_blitz": {

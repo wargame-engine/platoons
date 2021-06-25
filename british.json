@@ -1601,8 +1601,8 @@
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Focus Fire",
-            "flavor": "With deadly accuracy, bren guns can be used to pin down key units.",
-            "description": "Use when a British _Infantry_ unit that contains a Bren Gun (Mag-LMG) fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
+            "flavor": "With deadly accuracy, machine-guns can be used to pin down key units.",
+            "description": "Use when a British _Infantry_ unit that contains an LMG or Medium MG fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
             "cost": 1
         }
     },
