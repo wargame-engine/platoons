@@ -139,6 +139,20 @@
                 "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "description": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
                 "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
             }
+        },
+        "italy": {
+            "name": "Italy",
+            "id": "italy",
+            "url": "italy.json",
+            "color": "#BD9326",
+            "alliance": "axis",
+            "version": "0.1",
+            "description": "Unprepared for a long conflict, Italy began annexing smaller territories before the war broke out. As the war went on, Italy increased its ambitions with some success. Ultimately Italy found itself fighting nearly all of the major allied powers which would prove to be too much to handle. Italy relies on strong infantry and some lighter support tanks along with decent tank destroyers to defeat its enemies.",
+            "subfactions": {
+                "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
+                "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "description": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
+                "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+            }
         }
     },
     "unfinished_factions": {
