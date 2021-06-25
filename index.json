@@ -388,17 +388,6 @@
                 {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id": "blast", "x": 3}, "anti_air"]}
             ]
         },
-        "20mm_cannon": {
-            "name": "20mm Cannon (AA)",
-            "profiles": [
-                {"name": "AT", "short": 18, "medium": 36, "ap": 4, "attacks": 2, "rules": ["anti_air"]},
-                {"name": "HE", "short": 17, "medium": 36, "ap": 1, "attacks": 2, "rules": ["anti_air", {"id": "blast", "x": 2}]}
-            ]
-        },
-        "37mm_cannon": {
-            "name": "37mm Cannon (AA)",
-            "profiles": [{"name": "AT", "short": 24, "medium": 48, "ap": 6, "attacks": 2}, {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id": "blast", "x": 2}]}]
-        },
         "smoke_battery": {"name": "Smoke Barrage (Off-table Battery)", "profiles": [{"name": "Smoke", "short": 18, "medium": 36, "attacks": 3, "rules": ["indirect", "smoke"]}]},
         "light_mortar_battery": {
             "name": "Light Mortar (Off-table Battery)",
@@ -619,6 +608,7 @@
             "name": "Heavy Air Rocket",
             "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 4, "rules": [{"id": "ammo", "x": 1}, {"id": "blast", "x": 4}]}]
         },
+        "at_bomb": {"name": "AT Bomb", "profiles": [{"name": "AT", "short": 6, "attacks": 1, "ap": 6, "rules": ["bomb", "scatter", {"id": "ammo", "x": 1}, {"id": "blast", "x": 4}]}]},
         "light_bomb": {"name": "Light Bomb", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 2, "rules": ["bomb", "scatter", {"id": "ammo", "x": 1}, {"id": "blast", "x": 4}]}]},
         "fire_bomb": {"name": "Fire Bomb", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 2, "rules": ["bomb", "scatter", "flame", {"id": "ammo", "x": 1}, {"id": "blast", "x": 6}]}]},
         "medium_bomb": {"name": "Medium Bomb", "profiles": [{"name": "HE", "short": 6, "attacks": 1, "ap": 3, "rules": ["bomb", "scatter", {"id": "ammo", "x": 1}, {"id": "blast", "x": 5}]}]},

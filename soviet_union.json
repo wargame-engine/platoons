@@ -1724,6 +1724,70 @@
                     "max": 1
                 }
             ]
+        },
+        "yak_9u": {
+            "name": "Yak-9U",
+            "description": "A fighter aircraft with some ground attack capability.",
+            "category": "aircraft",
+            "keywords": ["Aircraft"],
+            "models": [
+                {
+                    "name": "Yak-9U",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "hmg_aircraft", "count": 2, "mount": ["Front"]}, {"id": "light_autocannon_aa", "mount": ["Front"]}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "la_5fn": {
+            "name": "La-5FN",
+            "description": "A fighter aircraft with some light bombs.",
+            "category": "aircraft",
+            "keywords": ["Aircraft"],
+            "models": [
+                {
+                    "name": "La-5FN",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "light_autocannon_aa", "count": 2, "mount": ["Front"]}, {"id": "light_bomb", "count": 2}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "il2_2m3": {
+            "name": "Il-2M3",
+            "description": "A fighter aircraft with some light bombs.",
+            "category": "aircraft",
+            "keywords": ["Aircraft"],
+            "models": [
+                {
+                    "name": "Il-2M3",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "hmg_aircraft", "mount": ["Rear"]}, {"id": "mmg_aircraft", "count": 2, "mount": ["Front"]}, {"id": "light_aircraft_rocket", "count": 2, "mount": ["Front"]}, {"id": "light_bomb", "count": 6}],
+                    "options": [{"replaceWeapon": {"id": "light_bomb", "count": 6}, "withWeapon": [{"id": "at_bomb", "count": 4}, {"id": "heavy_aircraft_rocket", "count": 4, "mount": ["Front"]}, {"id": "light_aircraft_rocket", "count": 8, "mount": ["Front"]}]}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "strategies": {
