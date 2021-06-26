@@ -1468,13 +1468,13 @@
             "description": "Use when a Japanese _Infantry_ unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
         },
-        "stealth_tactics": {
+        "courageous": {
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
-            "name": "Jungle Experts",
-            "flavor": "Moving quickly and quietly, Japanese infantry can outmaneuver their enemies.",
-            "description": "Use when activating an _Infantry_ unit. It may make a free Move action and may not be targeted by reaction fire when doing so.",
-            "cost": 2
+            "name": "Courageous",
+            "flavor": "The Japanese would often call upon their strength of will and spirit to do what may seem impossible.",
+            "description": "Use when activating a unit. It may immediately remove 2 Shock.",
+            "cost": 1
         },
         "tough_fighters": {
             "phase": "activation",
