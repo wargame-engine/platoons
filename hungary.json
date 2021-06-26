@@ -386,45 +386,6 @@
                 }
             ]
         },
-        "scout_squad": {
-            "name": "Scout Squad",
-            "description": "A group of aggressive recon troops.",
-            "min": 1,
-            "max": 1,
-            "category": "infantry",
-            "subfactions": ["none", "infantry_focus"],
-            "keywords": ["Infantry"],
-            "rules": ["scout"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
-            "models": [
-                {
-                    "name": "Scout NCO",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
-                    "min": 1,
-                    "max": 1
-                },
-                {
-                    "name": "Scout Infantry",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg"}, {"id": "belt_lmg"}], "modelLimit": 1}],
-                    "min": 4,
-                    "max": 4
-                }
-            ]
-        },
         "arrow_cross_militia": {
             "name": "Arrow Cross Militia",
             "description": "A group of fanatical fighters.",
@@ -442,12 +403,12 @@
             "models": [
                 {
                     "name": "Arrow Cross NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 4,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -455,16 +416,104 @@
                 },
                 {
                     "name": "Arrow Cross Rifleman",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 4,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg"}], "modelLimit": 2}],
                     "min": 4,
                     "max": 9
+                }
+            ]
+        },
+        "assault_engineers": {
+            "name": "Assault Engineers",
+            "description": "Hungarian engineers which can be equipped to clear battlefield dangers or fight in deadly assaults.",
+            "category": "infantry",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}
+            ],
+            "models": [
+                {
+                    "name": "Assault Engineer NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Assault Engineer",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg"}, {"id": "belt_lmg"}], "modelLimit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}
+                    ],
+                    "min": 4,
+                    "max": 12
+                }
+            ]
+        },
+        "veteran_assault_engineers": {
+            "name": "Assault Engineers",
+            "description": "Hungarian engineers which can be equipped to clear battlefield dangers or fight in deadly assaults.",
+            "category": "infantry",
+            "subfactions": ["armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}
+            ],
+            "models": [
+                {
+                    "name": "Veteran Assault Engineer NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Assault Engineer",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg"}, {"id": "belt_lmg"}], "modelLimit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}
+                    ],
+                    "min": 4,
+                    "max": 12
                 }
             ]
         },
@@ -1005,7 +1054,7 @@
         },
         "turan": {
             "name": "40M Turán",
-            "description": "A medium tank with a powerful main gun.",
+            "description": "A medium tank with a light main gun.",
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
@@ -1030,7 +1079,7 @@
         },
         "turan_ii": {
             "name": "40M Turán II",
-            "description": "A medium tank with a powerful main gun.",
+            "description": "A medium tank with a medium main gun.",
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
@@ -1055,7 +1104,7 @@
         },
         "turan_iii": {
             "name": "40M Turán III",
-            "description": "A medium tank with a powerful main gun.",
+            "description": "A medium tank with a heavy tank hunting main gun.",
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
@@ -1381,6 +1430,28 @@
                     "max": 1
                 }
             ]
+        },
+        "he_46_2un": {
+            "name": "He-46-2Un OP",
+            "description": "A lightweight observer aircraft.",
+            "category": "aircraft",
+            "keywords": ["Aircraft", "Observer"],
+            "models": [
+                {
+                    "name": "He-46-2Un OP",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "weapons": ["smoke_battery"],
+                    "options": [{"replaceWeapon": "smoke_battery", "withWeapon": ["light_mortar_battery", "medium_mortar_battery", "heavy_mortar_battery", "rocket_battery"]}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
@@ -1424,6 +1495,17 @@
             "cost": 1
         }
     },
-    "rules": {},
-    "relics": {}
+    "rules": {
+        "at_all_costs": {"name": "At All Costs", "description": "This unit and friendly units within 6\" automatically pass Break tests.", "points": 10}
+    },
+    "relics": {
+        "gusztav_jany": {
+            "subfactions": ["none", "infantry_focus"],
+            "name": "Gusztáv Jány",
+            "rule": "at_all_costs",
+            "flavor": "Gusztáv Jány assisted in the defense of Stalingrad against overwhelming Soviet forces, taking heavy losses as a result.",
+            "description": "Upgrade one Field Officer model with At All Costs.",
+            "points": 10
+        }
+    }
 }

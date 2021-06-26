@@ -970,8 +970,8 @@
                 {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
             ]
         },
-        "45mm_at": {
-            "name": "45mm AT Gun",
+        "45mm_1937": {
+            "name": "45mm 53-K",
             "description": "A wheeled light at gun.",
             "min": 1,
             "max": 1,
@@ -980,7 +980,7 @@
             "subfactions": ["none", "infantry_focus", "reserves_focus"],
             "models": [
                 {
-                    "name": "45mm AT Gun",
+                    "name": "45mm 53-K",
                     "courage": "-",
                     "movement": 4,
                     "shoot": 5,
@@ -989,6 +989,31 @@
                     "reflexes": "-",
                     "rules": ["gun_shield", {"id": "crew", "x": 3}],
                     "weapons": [{"id": "light_at", "mount": ["Front"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 3, "max": 3}
+            ]
+        },
+        "45mm_1942": {
+            "name": "45mm M-42",
+            "description": "A wheeled light at gun.",
+            "min": 1,
+            "max": 1,
+            "category": "artillery",
+            "keywords": ["Artillery"],
+            "subfactions": ["none", "infantry_focus", "reserves_focus"],
+            "models": [
+                {
+                    "name": "45mm M-42",
+                    "courage": "-",
+                    "movement": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["gun_shield", {"id": "crew", "x": 3}],
+                    "weapons": [{"id": "light_at_improved", "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
                 },

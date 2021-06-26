@@ -2992,7 +2992,7 @@
     "relics": {
         "hans_von_luck_infantry": {
             "subfactions": ["none", "infantry_focus"],
-            "name": "Hans von Luck (Infantry)",
+            "name": "Hans von Luck",
             "rule": "move_move_move_infantry",
             "flavor": "Hans von Luck specialized in mobile recon and aggressive tactics.",
             "description": "Upgrade one Field Officer model with Move Move Move.",
