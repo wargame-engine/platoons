@@ -1002,7 +1002,7 @@
             "phase": "activation",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "name": "Defensive Tactics",
-            "flavor": "The Frenched on defensive and well-prepared defenses.",
+            "flavor": "The French relied on well-prepared and defensive tactics.",
             "description": "Use when an _Infantry_ unit is targeted by an attack. That unit is treated as being in Light Cover, or Hard Cover if already in Light Cover.",
             "cost": 2
         }
