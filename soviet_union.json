@@ -673,7 +673,7 @@
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Tank Hunters",
+                    "name": "Tank Hunter",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
@@ -1997,7 +1997,7 @@
             "phase": "activation",
             "name": "Forward Recon",
             "flavor": "Forward recon elements, when used effectively can provide a huge amount of information on enemy forces.",
-            "description": "Use when an _Infantry_ unit enters the field. It may make a free Move action.",
+            "description": "Use when an _Infantry_ unit enters the field. It may make a free Move action. It may not move within 12\" of enemy units with this action.",
             "cost": 1
         }
     },

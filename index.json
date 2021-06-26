@@ -375,13 +375,13 @@
         },
         "light_autocannon": {
             "name": "Light Autocannon",
-            "profiles": [{"name": "AT", "short": 24, "medium": 48, "ap": 4, "attacks": 2}, {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id": "blast", "x": 2}]}]
+            "profiles": [{"name": "AT", "short": 24, "medium": 48, "ap": 4, "attacks": 2}, {"name": "HE", "short": 24, "medium": 48, "ap": 2, "attacks": 2, "rules": [{"id": "blast", "x": 2}]}]
         },
         "light_autocannon_mg": {
             "name": "Light Autocannon/Co-ax MG",
             "profiles": [
                 {"name": "AT", "short": 24, "medium": 48, "ap": 4, "attacks": 2},
-                {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id": "blast", "x": 2}]},
+                {"name": "HE", "short": 24, "medium": 48, "ap": 2, "attacks": 2, "rules": [{"id": "blast", "x": 2}]},
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
@@ -389,18 +389,18 @@
             "name": "Light Autocannon (AA)",
             "profiles": [
                 {"name": "AT", "short": 24, "medium": 48, "ap": 4, "attacks": 2, "rules": ["anti_air"]},
-                {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": ["anti_air", {"id": "blast", "x": 2}]}
+                {"name": "HE", "short": 24, "medium": 48, "ap": 2, "attacks": 2, "rules": ["anti_air", {"id": "blast", "x": 2}]}
             ]
         },
         "heavy_autocannon": {
             "name": "Heavy Autocannon",
-            "profiles": [{"name": "AT", "short": 24, "medium": 48, "ap": 5, "attacks": 2}, {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id": "blast", "x": 3}]}]
+            "profiles": [{"name": "AT", "short": 24, "medium": 48, "ap": 5, "attacks": 2}, {"name": "HE", "short": 24, "medium": 48, "ap": 3, "attacks": 2, "rules": [{"id": "blast", "x": 3}]}]
         },
         "heavy_autocannon_aa": {
             "name": "Heavy Autocannon (AA)",
             "profiles": [
                 {"name": "AT", "short": 24, "medium": 48, "ap": 5, "attacks": 2, "rules": ["anti_air"]},
-                {"name": "HE", "short": 24, "medium": 48, "ap": 1, "attacks": 2, "rules": [{"id": "blast", "x": 3}, "anti_air"]}
+                {"name": "HE", "short": 24, "medium": 48, "ap": 3, "attacks": 2, "rules": [{"id": "blast", "x": 3}, "anti_air"]}
             ]
         },
         "smoke_battery": {"name": "Smoke Barrage (Off-table Battery)", "profiles": [{"name": "Smoke", "short": 18, "medium": 36, "attacks": 3, "rules": ["indirect", "smoke"]}]},

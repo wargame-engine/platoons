@@ -255,6 +255,7 @@
             "keywords": ["Infantry"],
             "options": [
                 {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"replaceWeapon": "rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 4},
                 {"replaceWeapon": "rifle", "withWeapon": "semi_auto_rifle"},
                 {"replaceWeapon": "rifle", "withWeapon": "shotgun", "modelLimit": 3},
                 {"replaceWeapon": "rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 4}
@@ -284,7 +285,7 @@
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["bar"], "modelLimit": 3}],
                     "min": 6,
-                    "max": 12
+                    "max": 14
                 }
             ]
         },
@@ -299,6 +300,7 @@
             "options": [
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"replaceWeapon": "rifle", "withWeapon": "semi_auto_rifle"},
+                {"replaceWeapon": "rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 4},
                 {"replaceWeapon": "rifle", "withWeapon": "shotgun", "modelLimit": 3},
                 {"replaceWeapon": "rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 4}
             ],
@@ -327,7 +329,7 @@
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["bar"], "modelLimit": 3}],
                     "min": 6,
-                    "max": 12
+                    "max": 14
                 }
             ]
         },

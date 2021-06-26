@@ -1392,7 +1392,7 @@
                 {
                     "name": "Flakvierling 38",
                     "courage": "-",
-                    "movement": 2,
+                    "movement": 3,
                     "shoot": 5,
                     "fight": 5,
                     "defense": "-",
