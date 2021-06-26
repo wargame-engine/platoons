@@ -516,7 +516,7 @@
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
-        "very_heavy_howitzer": {"name": "Very Heavy Howitzer", "profiles": [{"name": "HE", "short": 36, "medium": 72, "attacks": 1, "ap": 6, "rules": ["indirect", "scatter", {"id": "blast", "x": 8}]}]},
+        "very_heavy_howitzer": {"name": "Very Heavy Howitzer", "profiles": [{"name": "HE", "short": 42, "medium": 84, "attacks": 1, "ap": 6, "rules": ["indirect", "scatter", {"id": "blast", "x": 8}]}]},
         "rocket_mortar": {"name": "Rocket Mortar", "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 5, "rules": ["indirect", "scatter", {"id": "blast", "x": 8}]}]},
         "very_light_at": {
             "name": "Very Light AT",
