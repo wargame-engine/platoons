@@ -1068,7 +1068,7 @@
         },
         "zis_3_atgun": {
             "name": "ZiS-3 AT Gun",
-            "description": "A wheeled medium at gun.",
+            "description": "A wheeled medium at gun that can be fired indirectly like a light howitzer.",
             "min": 1,
             "max": 1,
             "category": "artillery",
