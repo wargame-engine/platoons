@@ -578,8 +578,7 @@
         "medium_at_light_howitzer": {
             "name": "Medium AT/Light Howitzer",
             "profiles": [
-                {"name": "Indirect", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["scatter", "indirect", {"id": "blast", "x": 5}]},
-                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": [{"id": "blast", "x": 5}]},
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["scatter", "indirect", {"id": "blast", "x": 5}]},
                 {"name": "AT", "short": 30, "medium": 60, "attacks": 1, "ap": 7}
             ]
         },
