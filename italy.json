@@ -83,9 +83,7 @@
             "category": "infantry",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [
-                {"addWeapon": "at_grenades", "modelLimit": 3}
-            ],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Infantry NCO",
@@ -123,9 +121,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "armored_focus"],
-            "options": [
-                {"addWeapon": "at_grenades", "modelLimit": 3}
-            ],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Bersaglieri NCO",
@@ -161,9 +157,7 @@
             "category": "infantry",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [
-                {"addWeapon": "at_grenades", "modelLimit": 3}
-            ],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Alpini NCO",
@@ -498,6 +492,64 @@
                 },
                 {"name": "Crew", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["unarmed"], "min": 5, "max": 5}
             ]
+        },
+        "fiat_3000": {
+            "name": "Fiat 3000 M21",
+            "description": "A very light tank with dual MGs or a light anti-tank weapon.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "Fiat 3000 M21",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": ["mmg", "mmg"],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+                    "options": [{"replaceWeapon": ["mmg", "mmg"], "withWeapon": "light_at"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "l3": {
+            "name": "L3 Tankette",
+            "description": "A very light infantry support tank.",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "L3 Tankette",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "mmg", "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "mmg", "mount": ["Front"]},
+                            "withWeapon": [
+                                [{"id": "mmg", "mount": ["Front"]}, {"id": "mmg", "mount": ["Front"]}],
+                                {"id": "at_rifle", "mount": ["Front"]},
+                                {"id": "hmg", "mount": ["Front"]},
+                                {"id": "vehicle_flamethrower_mg", "mount": ["Front"]}
+                            ]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {},
@@ -527,8 +579,6 @@
             "cost": 1
         }
     },
-    "rules": {
-    },
-    "relics": {
-    }
+    "rules": {},
+    "relics": {}
 }
