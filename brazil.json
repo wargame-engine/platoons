@@ -1,8 +1,7 @@
 {
     "id": "brazil",
     "name": "Brazil",
-    "subfactions": {
-    },
+    "subfactions": {},
     "units": {
         "company_command": {
             "name": "Company Command",
@@ -141,23 +140,14 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"replaceWeapon": "semi_auto_rifle", "withWeapon": "smg", "modelLimit": 5},
+            "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "smg", "modelLimit": 5},
                 {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine", "modelLimit": 5},
-                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "rifle_grenade", "modelLimit": 4}],
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "rifle_grenade", "modelLimit": 4}
+            ],
             "models": [
-                {
-                    "name": "Rifle NCO",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": ["semi_auto_rifle", "unarmed"],
-                    "options": [],
-                    "min": 1,
-                    "max": 1
-                },
+                {"name": "Rifle NCO", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["semi_auto_rifle", "unarmed"], "options": [], "min": 1, "max": 1},
                 {
                     "name": "Rifleman",
                     "courage": 5,
@@ -181,38 +171,29 @@
             "subfactions": ["none", "infantry_focus"],
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"replaceWeapon": "semi_auto_rifle", "withWeapon": "smg", "modelLimit": 5},
-                    {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine", "modelLimit": 5},
-                    {"replaceWeapon": "semi_auto_rifle", "withWeapon": "rifle_grenade", "modelLimit": 4}],
+            "options": [
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "smg", "modelLimit": 5},
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine", "modelLimit": 5},
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "rifle_grenade", "modelLimit": 4}
+            ],
             "models": [
-                    {
-                        "name": "Rifle NCO",
-                        "courage": 5,
-                        "movement": 6,
-                        "shoot": 5,
-                        "fight": 5,
-                        "defense": 5,
-                        "reflexes": 5,
-                        "weapons": ["semi_auto_rifle", "unarmed"],
-                        "options": [],
-                        "min": 1,
-                        "max": 1
-                    },
-                    {
-                        "name": "Rifleman",
-                        "courage": 5,
-                        "movement": 6,
-                        "shoot": 5,
-                        "fight": 5,
-                        "defense": 5,
-                        "reflexes": 5,
-                        "weapons": ["semi_auto_rifle", "unarmed"],
-                        "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 2}],
-                        "min": 4,
-                        "max": 4
-                    }
-                ]
-            },
+                {"name": "Rifle NCO", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["semi_auto_rifle", "unarmed"], "options": [], "min": 1, "max": 1},
+                {
+                    "name": "Rifleman",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["semi_auto_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "semi_auto_rifle", "withWeapon": ["bar"], "modelLimit": 2}],
+                    "min": 4,
+                    "max": 4
+                }
+            ]
+        },
         "b_pioneers": {
             "name": "Pioneers",
             "description": "",
@@ -250,7 +231,7 @@
                     "weapons": ["semi_auto_carbine_rifle", "unarmed"],
                     "options": [
                         {"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["flamethrower"], "modelLimit": 1},
-                            {"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["bar"], "modelLimit": 1}
+                        {"replaceWeapon": "semi_auto_carbine_rifle", "withWeapon": ["bar"], "modelLimit": 1}
                     ],
                     "min": 2,
                     "max": 5
@@ -814,7 +795,6 @@
                 }
             ]
         },
-        
         "m4_sherman_command": {
             "name": "M4 Sherman (Command)",
             "description": "A medium tank with a decent all-round AT gun.",
@@ -1254,27 +1234,29 @@
                     "options": [{"addWeapon": [{"id": "light_aircraft_rocket", "count": 10}, {"id": "medium_bomb", "count": 2}], "limit": 1}],
                     "min": 1,
                     "max": 1
-        }]}},
+                }
+            ]
+        }
+    },
     "weapons": {},
-    "strategies": {"foxhole poets": {
-        "phase": "activation",
-        "subfactions": ["none", "armored_focus", "infantry_focus"],
-        "name": "Foxhole Poets",
-        "flavor": "The Brazilian Expedition Force spent a lot in foxholes and trenches, to the point that a portion of their newspaper was named 'Foxhole Poets'",
-        "description": "Use when an Infantry is targetted by an attack. That unit is treated as being in Light Cover, or Hard Cover if already in Light Cover.",
-        "cost": 1
+    "strategies": {
+        "foxhole poets": {
+            "phase": "activation",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "name": "Foxhole Poets",
+            "flavor": "The Brazilian Expedition Force spent a lot in foxholes and trenches, to the point that a portion of their newspaper was named 'Foxhole Poets'",
+            "description": "Use when an Infantry is targetted by an attack. That unit is treated as being in Light Cover, or Hard Cover if already in Light Cover.",
+            "cost": 1
+        },
+        "ea_cobra_fumou!": {
+            "phase": "activation",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "name": "E A Cobra Fumou!",
+            "description": "Use when activating a unit. That unit gets +1 Courage.",
+            "flavor": "The men sent by Brazil weren't many, but they were among the best of their best and these men took great pride in the motto, badge, and culture of the 'Smoking Cobra' First Expeditionary Division",
+            "cost": 1
+        }
     },
-    "ea_cobra_fumou!":{
-        "phase": "activation",
-        "subfactions": ["none", "armored_focus", "infantry_focus"],
-        "name": "E A Cobra Fumou!",
-        "description": "Use when activating a unit. That unit gets +1 Courage.",
-        "flavor": "The men sent by Brazil weren't many, but they were among the best of their best and these men took great pride in the motto, badge, and culture of the 'Smoking Cobra' First Expeditionary Division",
-        "cost": 1
-    }
-},
-    "rules": {
-    },
-    "relics": {
-    }
+    "rules": {},
+    "relics": {}
 }
