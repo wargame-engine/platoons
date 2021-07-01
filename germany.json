@@ -2,14 +2,37 @@
     "id": "germany",
     "name": "Germany",
     "units": {
-        "field_officer": {
-            "name": "Field Officer Team",
-            "description": "A Field Commander.",
+        "company_command": {
+            "name": "Company Command",
+            "description": "A higher-ranking field officer trained to command more units and occasionally direct field operations.",
+            "category": "command",
+            "keywords": ["Infantry", "Officer"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
+            "models": [
+                {
+                    "name": "Higher Officer",
+                    "courage": 8,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
+                    "rules": [{"id": "field_orders", "x": 2}, "leader"],
+                    "options": [{"replaceRule": {"id": "field_orders", "x": 2}, "withRule": {"id": "field_orders", "x": 3}}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+            ]
+        },
+        "platoon_command": {
+            "name": "Platoon Command",
+            "description": "A lower-ranking platoon commander to provide support to other field units.",
             "min": 1,
             "max": 1,
             "category": "command",
             "keywords": ["Infantry", "Officer"],
-            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
                 {
@@ -26,11 +49,38 @@
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+            ]
+        },
+        "veteran_platoon_command": {
+            "name": "Veteran Platoon Command",
+            "description": "A lower-ranking platoon commander to provide support to other field units.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "keywords": ["Infantry", "Officer"],
+            "subfactions": ["infantry_focus", "airborne_focus"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Veteran Field Officer",
+                    "courage": 7,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
+                    "rules": [{"id": "field_orders", "x": 1}, "leader"],
+                    "options": [{"replaceRule": {"id": "field_orders", "x": 1}, "withRule": {"id": "field_orders", "x": 2}}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
             ]
         },
         "forward_artillery_observer": {
-            "name": "Forward Observer (Artillery)",
+            "name": "Forward Artillery Observer",
             "description": "An artillery forward observer able to call in a fire mission.",
             "min": 1,
             "max": 1,
@@ -40,29 +90,28 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}],
             "models": [
                 {
-                    "name": "Forward Observer (Artillery)",
+                    "name": "Forward Artillery Observer",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 6,
+                    "defense": 5,
                     "reflexes": 5,
                     "rules": ["support"],
                     "weapons": ["rifle", "unarmed", "smoke_battery"],
-                    "options": [{"replaceWeapon": "smoke_battery", "withWeapon": ["light_mortar_battery", "medium_mortar_battery", "heavy_mortar_battery", "nebelwerfer_battery"]}],
+                    "options": [{"replaceWeapon": "smoke_battery", "withWeapon": ["light_mortar_battery", "medium_mortar_battery", "heavy_mortar_battery", "rocket_battery"]}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "field_medic": {
             "name": "Field Medic",
-            "description": "A field medic.",
+            "description": "A trained field medic used to treat the wounded near the frontline.",
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -74,7 +123,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "weapons": ["pistol", "unarmed", "smoke_grenades"],
-                    "rules": ["medic", "support"],
+                    "rules": ["medic", "non_combat", "support"],
                     "min": 1,
                     "max": 1
                 },
@@ -83,9 +132,8 @@
         },
         "volkssturm": {
             "name": "Volkssturm",
-            "description": "The Volkssturm 'people's storm'), a group of conscripted males between 16-60, who weren't previously in another military unit. This national militia, was not part of the Germany Army, was instead raised, recruited, and armed by the Nazi Party. The Volkssturm was part of the doctrine of 'total war', a heavily ideologically colored endeavor to win the war with sheer force of will.",
-            "min": 1,
-            "max": 1,
+            "description": "Cheap infantry to be used en-masse to take and hold the field.",
+            "background": "The Volkssturm 'people's storm', a group of conscripted males between 16-60, who weren't previously in another military unit. This national militia, was not part of the Germany Army, was instead raised, recruited, and armed by the Nazi Party. The Volkssturm was part of the doctrine of 'total war', a heavily ideologically colored endeavor to win the war with sheer force of will.",
             "category": "infantry",
             "subfactions": ["none", "reserve_focus"],
             "keywords": ["Infantry"],
@@ -113,7 +161,7 @@
                     "defense": 4,
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 19
                 }
@@ -121,7 +169,8 @@
         },
         "volksgrenadiers": {
             "name": "Volksgrenadiers",
-            "description": "Volksgrenadiers, 'Peoples Grenadiers'. Due to a shortage of manpower and the abundance of enemies with large populations, the Volksgrenadiers were units that conserved manpower and maximized automatic firepower, along with recent technological advances. They were made up of a mixture of hardened veteran troops, 'jobless' personnel from other branches of the Germany Armed Forces, recently healed soldiers who had been wounded, and younger/older men recently recruited with the widened age range of conscription.",
+            "description": "Cheaper infantry with the ability to take several assault rifles and hit targets reasonably well.",
+            "background": "Volksgrenadiers, 'Peoples Grenadiers'. Due to a shortage of manpower and the abundance of enemies with large populations, the Volksgrenadiers were units that conserved manpower and maximized automatic firepower, along with recent technological advances. They were made up of a mixture of hardened veteran troops, 'jobless' personnel from other branches of the Germany Armed Forces, recently healed soldiers who had been wounded, and younger/older men recently recruited with the widened age range of conscription.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -151,7 +200,7 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 9
                 }
@@ -159,7 +208,8 @@
         },
         "aufklarungs_squad": {
             "name": "Aufklarungs Squad",
-            "description": "The Aufklärungsabteilung (Reconnaissance Detachment) was a formation of aggressive recon troops, which provided the 'eyes and ears' of each German Army division..",
+            "description": "A recon squad with the ability to take some heavier anti-infantry firepower.",
+            "background": "The Aufklärungsabteilung (Reconnaissance Detachment) was a formation of aggressive recon troops, which provided the 'eyes and ears' of each German Army division..",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -189,7 +239,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 4
                 }
@@ -197,7 +247,8 @@
         },
         "osttruppen": {
             "name": "Osttruppen",
-            "description": "The Osttruppen (eastern troops), also known as 'Ostlegionen' (eastern legions), were captured soviet and slavic infantry prisoners of war. While many common terms for these troops, in many languages, translated to 'Volunteer', the terms mainly appeared to sarcastic and/or meant to be insulting. These slavic infantry were viewed as 'sub-human' by the Nazis, and it appeared those who actually volunteered, had done so to escape the horrors of the POW camps. These troops were given some of the worst equipment and positioned into roles of logistics, or 'bandit fighting' (Punishing civilians).",
+            "description": "Reasonably well-equipped and trained troops, osttruppen are not eager to fight the enemies of Germany.",
+            "background": "The Osttruppen (eastern troops), also known as 'Ostlegionen' (eastern legions), were captured soviet and slavic infantry prisoners of war. While many common terms for these troops, in many languages, translated to 'Volunteer', the terms mainly appeared to sarcastic and/or meant to be insulting. These slavic infantry were viewed as 'sub-human' by the Nazis, and it appeared those who actually volunteered, had done so to escape the horrors of the POW camps. These troops were given some of the worst equipment and positioned into roles of logistics, or 'bandit fighting' (Punishing civilians).",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -227,17 +278,16 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 9
                 }
             ]
         },
-        "strafbataillon": {
+        "Strafbataillon": {
             "name": "Strafbataillon",
-            "description": "Strafbataillon (Penal Battalion) generally refers to a few different terms, for units that were recruited or formed from those who had too much 'indiscipline' or 'rebellious behavior' to serve as traditional conscripts. There are strong indications that as the war progressed and turned for the worse for the Nazi regime, the various populations of those sentenced to death for treason or even perhaps murder, were put under strong supervision and sent out to fight. Most of these units spent the bulk of their time doing hard labor and being part of 'suicide missions', at least in the early part of the war. Generally, there was less then stellar discipline  within these units, and they were rarely equipped well.",
-            "min": 1,
-            "max": 1,
+            "description": "Particularly tough troops who can put up a fight in close combat. Not especially motivated however.",
+            "background": "Strafbatallion (Penal Battalion) generally refers to a few different terms, for units that were recruited or formed from those who had too much 'indiscipline' or 'rebellious behavior' to serve as traditional conscripts. There are strong indications that as the war progressed and turned for the worse for the Nazi regime, the various populations of those sentenced to death for treason or even perhaps murder, were put under strong supervision and sent out to fight. Most of these units spent the bulk of their time doing hard labor and being part of 'suicide missions', at least in the early part of the war. Generally, there was less then stellar discipline  within these units, and they were rarely equipped well.",
             "category": "infantry",
             "subfactions": ["none", "infantry_focus", "reserve_focus"],
             "keywords": ["Infantry"],
@@ -267,7 +317,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 8
                 }
@@ -275,7 +325,7 @@
         },
         "grenadiers": {
             "name": "Grenadiers",
-            "description": "A group of hardened German Grenadiers.",
+            "description": "The main versatile infantry unit of the German army. Can be equipped with anti-tank weaponry and deadly belt-fed machine-guns.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -311,7 +361,7 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 9
                 }
@@ -319,7 +369,7 @@
         },
         "veteran_grenadiers": {
             "name": "Veteran Grenadiers",
-            "description": "A group of veteran hardened German Grenadiers.",
+            "description": "The main versatile infantry unit of the German army. Can be equipped with anti-tank weaponry and deadly belt-fed machine-guns. These troops have seen combat and survived while being better motivated.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -336,8 +386,8 @@
                     "name": "Veteran Grenadier NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
@@ -349,12 +399,141 @@
                     "name": "Veteran Grenadier",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 2}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "jagers": {
+            "name": "Jägers",
+            "description": "Elite troops trained to operate in mountainous areas with expert marksmanship.",
+            "category": "infantry",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"], "modelLimit": 2},
+                {"replaceWeapon": "rifle", "withWeapon": ["scoped_semi_auto_rifle"], "modelLimit": 2},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2}
+            ],
+            "models": [
+                {
+                    "name": "Jäger NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Jäger",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "veteran_jagers": {
+            "name": "Veteran Jägers",
+            "description": "Elite troops trained to operate in mountainous areas with expert marksmanship.",
+            "category": "infantry",
+            "subfactions": ["infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"], "modelLimit": 2},
+                {"replaceWeapon": "rifle", "withWeapon": ["scoped_semi_auto_rifle"], "modelLimit": 2},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2}
+            ],
+            "models": [
+                {
+                    "name": "Veteran Jäger NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Jäger",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "inexperienced_fallschirmjager": {
+            "name": "Inexperienced Fallschirmjager",
+            "description": "German paratroopers which have been pushed out to the field before being fully trained with little combat experience.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "subfactions": ["airborne_focus"],
+            "rules": ["stubborn"],
+            "options": [
+                {"addRule": "tank_rider", "modelLimit": "all"},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 5},
+                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle", "assault_rifle", "scoped_assault_rifle"]},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2}
+            ],
+            "models": [
+                {
+                    "name": "Inexperienced Fallschirmjager NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Inexperienced Fallschirmjager",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 2}],
                     "min": 4,
                     "max": 9
                 }
@@ -362,7 +541,7 @@
         },
         "fallschirmjager": {
             "name": "Fallschirmjager",
-            "description": "A group of tough airborne troops.",
+            "description": "Elite German paratroopers with an abundance of either assault rifles or light machine guns.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -370,17 +549,18 @@
             "subfactions": ["none", "airborne_focus"],
             "rules": ["stubborn"],
             "options": [
+                {"addRule": "tank_rider", "modelLimit": "all"},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addWeapon": "panzerfaust", "modelLimit": 2},
                 {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 5},
-                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle", "assault_rifle"]},
+                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle", "assault_rifle", "scoped_assault_rifle"]},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addWeapon": "panzerfaust", "modelLimit": 2}
             ],
             "models": [
                 {
                     "name": "Fallschirmjager NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
@@ -393,14 +573,14 @@
                 },
                 {
                     "name": "Fallschirmjager",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 2}],
                     "min": 4,
                     "max": 9
                 }
@@ -408,7 +588,7 @@
         },
         "veteran_fallschirmjager": {
             "name": "Veteran Fallschirmjager",
-            "description": "A group of tough airborne troops.",
+            "description": "Elite German paratroopers with an abundance of either assault rifles or light machine guns. Particularly battle-hardened and more survivable.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -416,10 +596,11 @@
             "subfactions": ["airborne_focus"],
             "rules": ["stubborn"],
             "options": [
+                {"addRule": "tank_rider", "modelLimit": "all"},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addWeapon": "panzerfaust", "modelLimit": 2},
                 {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 5},
-                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle", "assault_rifle"]},
+                {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle", "assault_rifle", "scoped_assault_rifle"]},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addWeapon": "panzerfaust", "modelLimit": 2}
             ],
@@ -428,7 +609,7 @@
                     "name": "Veteran Fallschirmjager NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
@@ -441,12 +622,12 @@
                     "name": "Veteran Fallschirmjager",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 2}],
                     "min": 4,
                     "max": 9
                 }
@@ -454,7 +635,7 @@
         },
         "panzergrenadiers": {
             "name": "Panzergrenadiers",
-            "description": "A group of mobile Panzergrenadiers.",
+            "description": "Well-trained infantry units who typically operate with mechanized or armored units. Can be equipped with more machine-guns.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -471,7 +652,7 @@
             "models": [
                 {
                     "name": "Panzergrenadier NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
@@ -484,14 +665,14 @@
                 },
                 {
                     "name": "Panzergrenadier",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 2}],
                     "min": 4,
                     "max": 9
                 }
@@ -499,7 +680,7 @@
         },
         "veteran_panzergrenadiers": {
             "name": "Veteran Panzergrenadiers",
-            "description": "A group of veteran Panzergrenadiers.",
+            "description": "Well-trained infantry units who typically operate with mechanized or armored units. Can be equipped with more machine-guns. Particularly battle-hardened and more survivable.",
             "min": 1,
             "max": 1,
             "category": "infantry",
@@ -518,9 +699,9 @@
                     "name": "Veteran Panzergrenadier NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
@@ -531,12 +712,12 @@
                     "name": "Veteran Panzergrenadier",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 2}],
                     "min": 4,
                     "max": 9
                 }
@@ -544,7 +725,7 @@
         },
         "brandenburgers": {
             "name": "Brandenburgers",
-            "description": "A group of elite german special forces.",
+            "description": "German special-forces infiltration units with elite training and expert marksmanship.",
             "min": 1,
             "max": 1,
             "subfactions": ["none", "infantry_focus"],
@@ -566,7 +747,52 @@
                     "defense": 7,
                     "reflexes": 7,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "sturm_pioniers": {
+            "name": "Sturmpioniere",
+            "description": "German engineers which can be equipped to clear battlefield dangers or fight in deadly assaults.",
+            "category": "infantry",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"addRule": ["fanatical"], "modelLimit": "all"},
+                {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}
+            ],
+            "models": [
+                {
+                    "name": "Sturmpionier NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Sturmpionier",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg"}], "modelLimit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}
+                    ],
                     "min": 4,
                     "max": 9
                 }
@@ -574,14 +800,12 @@
         },
         "pioniers": {
             "name": "Pioniers",
-            "description": "A squad of german pioniers.",
-            "min": 1,
-            "max": 1,
-            "category": "infantry",
+            "description": "German engineers which can be equipped to clear battlefield dangers or fight in deadly assaults.",
+            "category": "support",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
             "options": [
-                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6},
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addWeapon": "panzerfaust", "modelLimit": 2},
                 {"addRule": ["fanatical"], "modelLimit": "all"},
@@ -611,17 +835,17 @@
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
                     "options": [
-                        {"replaceWeapon": "rifle", "withWeapon": [{"id": "belt_lmg", "name": "MG-34/MG-42"}], "modelLimit": 1},
                         {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}
                     ],
-                    "min": 4,
-                    "max": 9
+                    "min": 2,
+                    "max": 5
                 }
             ]
         },
         "panzer_zerstor_trupp": {
             "name": "Panzer-Zerstörer Trupp",
-            "description": "A professional and specialized team for defeating tanks via throwables, traps, and demolition charges. It consists of a leader and runner, a security team, a smoke team, and a demolition team. These teams each operate somewhat independently of each other, and were adapted or modified according to local conditions.",
+            "description": "A dedicated tank hunting unit which can be equipped with various tank-hunting weapons.",
+            "background": "A professional and specialized team for defeating tanks via throwables, traps, and demolition charges. It consists of a leader and runner, a security team, a smoke team, and a demolition team. These teams each operate somewhat independently of each other, and were adapted or modified according to local conditions.",
             "min": 1,
             "max": 1,
             "category": "support",
@@ -663,7 +887,7 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
@@ -677,7 +901,6 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "rules": ["scout", "stealth"],
@@ -692,12 +915,11 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
-                {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "panzerknacker_team": {
@@ -706,7 +928,7 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -719,7 +941,7 @@
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed", "smoke_grenades", "at_grenades"],
                     "options": [
-                        {"replaceWeapon": "rifle", "withWeapon": {"id": "belt_lmg", "name": "MG-34/MG-42"}, "modelLimit": 1},
+                        {"replaceWeapon": "rifle", "withWeapon": {"id": "belt_lmg"}, "modelLimit": 1},
                         {"addWeapon": "panzerfaust", "modelLimit": 2},
                         {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
                         {"addRule": "scout", "modelLimit": "all"}
@@ -745,7 +967,7 @@
         },
         "veteran_panzershreck_team": {
             "name": "Veteran Panzerschreck Team",
-            "description": "A team dedicated to hunting heavy tanks.",
+            "description": "A team dedicated to hunting heavy tanks. Elite and more accurate.",
             "min": 1,
             "max": 1,
             "category": "support",
@@ -753,13 +975,13 @@
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
-                {"name": "Veteran Panzerschreck Gunner", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["panzerschreck", "unarmed"], "min": 1, "max": 1},
-                {"name": "Veteran Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "Veteran Panzerschreck Gunner", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "weapons": ["panzerschreck", "unarmed"], "min": 1, "max": 1},
+                {"name": "Veteran Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "mmg_team": {
-            "name": "Tripod MG-34/MG42 Team",
-            "description": "A medium machinegun on a tripod mount.",
+            "name": "Tripod MG Team",
+            "description": "A medium machine-gun on a tripod mount.",
             "min": 1,
             "max": 1,
             "category": "support",
@@ -767,7 +989,7 @@
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Tripod MG-34/MG42",
+                    "name": "Tripod MG",
                     "courage": "-",
                     "movement": 6,
                     "shoot": 5,
@@ -790,7 +1012,6 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
-            
             "models": [
                 {
                     "name": "Light Mortar",
@@ -866,7 +1087,6 @@
             "category": "artillery",
             "subfactions": ["none", "infantry_focus", "airborne_focus"],
             "keywords": ["Artillery"],
-            "rules": ["gun_shield", {"id": "crew", "x": 3}],
             "models": [
                 {
                     "name": "75mm LG/40",
@@ -877,6 +1097,7 @@
                     "defense": "-",
                     "reflexes": "-",
                     "weapons": [{"id": "light_howitzer", "mount": ["Front"]}],
+                    "rules": ["gun_shield", {"id": "crew", "x": 3}],
                     "min": 1,
                     "max": 1
                 },
@@ -885,7 +1106,7 @@
         },
         "leig_18": {
             "name": "Leig.18 Howitzer",
-            "description": "A wheeled light howitzer.",
+            "description": "A wheeled light howitzer that can be fired with AP shells like a light at gun.",
             "min": 1,
             "max": 1,
             "category": "artillery",
@@ -1171,7 +1392,7 @@
                 {
                     "name": "Flakvierling 38",
                     "courage": "-",
-                    "movement": 2,
+                    "movement": 3,
                     "shoot": 5,
                     "fight": 5,
                     "defense": "-",
@@ -1289,7 +1510,7 @@
             "min": 1,
             "max": 1,
             "category": "light_vehicles",
-            "subfactions": ["none", "armored_focus"],
+            "subfactions": ["none", "armored_focus", "infantry_focus", "airborne_focus"],
             "keywords": ["Vehicle", "Armored Car"],
             "models": [
                 {
@@ -1628,7 +1849,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
-            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
             "models": [
                 {
@@ -1686,7 +1907,7 @@
             "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
             "models": [
                 {
-                    "name": "Stug III G",
+                    "name": "Stug III F-H/Stug IV",
                     "courage": 5,
                     "movement": 10,
                     "shoot": 5,
@@ -1731,7 +1952,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
-            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
+            "subfactions": ["none", "infantry_focus", "armored_focus"],
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
@@ -1754,6 +1975,7 @@
             "description": "A lightly armored car with anti-tank weaponry.",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "infantry_focus"],
             "category": "light_vehicles",
             "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
             "models": [
@@ -1802,7 +2024,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
-            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Vehicle", "Tank", "Tank Destroyer"],
             "models": [
                 {
@@ -1954,7 +2176,7 @@
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
-                    "name": "Panzer IV J",
+                    "name": "Panzer IV B-F",
                     "courage": 5,
                     "movement": 10,
                     "shoot": 5,
@@ -1975,7 +2197,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
-            "subfactions": ["none", "armored_focus"],
+            "subfactions": ["none", "armored_focus", "infantry_focus", "airborne_focus"],
             "keywords": ["Vehicle", "Tank"],
             "models": [
                 {
@@ -2247,7 +2469,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy_vehicles",
-            "subfactions": ["none", "infantry_focus", "armored_focus"],
+            "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Vehicle", "Artillery"],
             "models": [
                 {
@@ -2432,7 +2654,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "subfactions": ["none", "armored_focus", "infantry_focus", "airborne_focus"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -2455,7 +2677,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "subfactions": ["none", "armored_focus", "infantry_focus", "airborne_focus"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -2479,7 +2701,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "subfactions": ["none", "armored_focus", "infantry_focus", "airborne_focus"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -2525,7 +2747,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "subfactions": ["none", "armored_focus", "infantry_focus", "airborne_focus"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -2549,7 +2771,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "subfactions": ["none", "armored_focus", "infantry_focus", "airborne_focus"],
             "keywords": ["Vehicle", "Half-Track"],
             "models": [
                 {
@@ -2574,7 +2796,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "subfactions": ["none", "armored_focus", "infantry_focus", "airborne_focus"],
             "keywords": ["Vehicle", "Half-Track"],
             "models": [
                 {
@@ -2593,50 +2815,131 @@
                 }
             ]
         },
-        "me_bf109_g": {
-            "name": "Me Bf109 G",
-            "description": "A relatively tough general purpose aircraft.",
-            "min": 1,
-            "max": 1,
+        "dfs_230_glider": {
+            "name": "DFS 230 Glider",
+            "description": "A lightweight glider used to transport troops to the battlefield.",
+            "subfactions": ["airborne_focus", "special_forces_focus"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "DFS 230 Glider",
+                    "movement": "-",
+                    "courage": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "weapons": [],
+                    "rules": [{"id": "transport", "x": 12}, "ambush"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "fi_156_storch": {
+            "name": "Fi 156 Storch OP",
+            "description": "A lightweight observer aircraft.",
             "category": "aircraft",
-            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Aircraft", "Observer"],
+            "models": [
+                {
+                    "name": "Fi 156 Storch OP",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "weapons": ["smoke_battery"],
+                    "options": [{"replaceWeapon": "smoke_battery", "withWeapon": ["light_mortar_battery", "medium_mortar_battery", "heavy_mortar_battery", "rocket_battery"]}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "me_bf109_g": {
+            "name": "BF-109 G-6",
+            "description": "A relatively tough general purpose aircraft.",
+            "category": "aircraft",
             "keywords": ["Aircraft"],
             "models": [
                 {
-                    "name": "Me Bf109 G",
+                    "name": "BF-109 G-6",
                     "courage": 5,
                     "movement": 12,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "weapons": [{"id": "mmg_aircraft", "count": 4, "mount": ["Front"]}, {"id": "37mm_cannon", "mount": ["Front"]}, {"id": "light_bomb", "count": 2}],
-                    "rules": ["aircraft", "damage_table_aircraft", "exposed"],
+                    "weapons": [{"id": "mmg_aircraft", "count": 2, "mount": ["Front"]}, {"id": "light_autocannon_aa", "mount": ["Front"]}],
+                    "options": [{"addWeapon": [{"id": "light_bomb", "count": 4}, "fire_bomb", "medium_bomb", {"id": "light_autocannon_aa", "count": 2, "mount": ["Front"]}], "limit": 1}, {"replaceWeapon": {"id": "light_autocannon_aa", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_autocannon_aa", "mount": ["Front"]}]}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
         "fw_190_g": {
-            "name": "Fw-190 G",
-            "description": "A relatively tough general purpose aircraft.",
-            "min": 1,
-            "max": 1,
+            "name": "FW 190 A-8",
+            "description": "A relatively tough fighter aircraft.",
             "category": "aircraft",
-            "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Aircraft"],
             "models": [
                 {
-                    "name": "Fw-190 G",
+                    "name": "FW 190",
                     "courage": 5,
                     "movement": 12,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "weapons": [{"id": "20mm_cannon", "count": 2, "mount": ["Front"]}, {"id": "light_bomb", "count": 8}],
-                    "rules": ["aircraft", "damage_table_aircraft", "exposed"],
-                    "options": [{"replaceWeapon": {"id": "light_bomb", "count": 8}, "withWeapon": {"id": "heavy_bomb", "count": 4}}],
+                    "weapons": [{"id": "mmg_aircraft", "count": 2, "mount": ["Front"]}, {"id": "light_autocannon_aa", "count": 4, "mount": ["Front"]}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
+                    "options": [{"addWeapon": [{"id": "medium_bomb"}, {"id": "light_bomb", "count": 4}], "limit": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ju_87d": {
+            "name": "Ju 87 B-1",
+            "description": "A bomber aircraft with several armaments.",
+            "category": "aircraft",
+            "keywords": ["Aircraft"],
+            "models": [
+                {
+                    "name": "Ju 87 B-1",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "mmg_aircraft", "count": 2, "mount": ["Front"]}, {"id": "mmg_aircraft", "mount": ["Rear"]}, {"id": "medium_bomb"}, {"id": "light_bomb", "count": 4}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "ju_87b1": {
+            "name": "Ju 87 D",
+            "description": "A dive bomber aircraft with defense machine-guns.",
+            "category": "aircraft",
+            "keywords": ["Aircraft"],
+            "models": [
+                {
+                    "name": "Ju 87 D",
+                    "courage": 5,
+                    "movement": 12,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "mmg_aircraft", "count": 2, "mount": ["Front"]}, {"id": "mmg_aircraft", "mount": ["Rear"]}, {"id": "heavy_bomb"}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
                     "min": 1,
                     "max": 1
                 }
@@ -2659,7 +2962,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Sturm Assault",
             "flavor": "A swift and deadly end to a fight can come with a furious charge...",
-            "description": "Use when a German Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
+            "description": "Use when an _Infantry_ unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
         },
         "suppressive_fire": {
@@ -2667,7 +2970,7 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Suppressive Fire",
             "flavor": "With high rate of fire and a terrifying noise, machineguns can be used to pin down enemy troops with ease.",
-            "description": "Use when a German Infantry unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
+            "description": "Use when an _Infantry_ unit that contains an LMG or Medium MG fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
             "cost": 1
         },
         "panzer_blitz": {
@@ -2675,24 +2978,21 @@
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Panzer Blitz",
             "flavor": "A swift and deadly Panzer assault can sometimes route the enemy.",
-            "description": "Use when a German Tank unit is activated. It may make a free 6\" Move action.",
+            "description": "Use when a _Tank_ unit makes a Move action. Add +3\" to its Move characteristic.",
             "cost": 1
         }
     },
     "rules": {
-        "desert_fox": {
-            "name": "Desert Fox",
-            "description": "This unit and one other friendly unit may be set up in Outflanking Reserves. At the beginning of any round after the first, units may be set up within 6\" of a table edge that is not in the enemy deployment zone, and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
-            "points": 20
-        },
-        "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
-        "ambush_master": {"name": "Ambush Master", "description": "This unit get +1 Accuracy when using an Ambush reaction.", "points": 20},
-        "move_move_move_infantry": {"name": "Move Move Move", "description": "This unit and friendly Infantry units within 6\" add 2\" to their Movement characteristic.", "points": 10}
+        "kochs_commandos": {"name": "Koch's Commandos", "description": "This unit and one other friendly _Infantry_ unit may be set up in _outflanking reserves_. These units may arrive on any table edge including your opponents reinforcement edge.", "points": 20},
+        "desert_fox": {"name": "Desert Fox", "description": "This unit and one other friendly _Tank_ or _Armored Car_ unit may be set up in _outflanking reserves_. These units may arrive on any table edge including your opponents reinforcement edge.", "points": 20},
+        "crack_shot": {"name": "Crack Shot", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
+        "ambush_master": {"name": "Ambush Master", "description": "This unit get +1 Accuracy when using an Ambush reaction.", "points": 10},
+        "move_move_move_infantry": {"name": "Move Move Move", "description": "This unit and friendly _Infantry_ units within 6\" add 2\" to their Movement characteristic.", "points": 10}
     },
     "relics": {
         "hans_von_luck_infantry": {
             "subfactions": ["none", "infantry_focus"],
-            "name": "Hans von Luck (Infantry)",
+            "name": "Hans von Luck",
             "rule": "move_move_move_infantry",
             "flavor": "Hans von Luck specialized in mobile recon and aggressive tactics.",
             "description": "Upgrade one Field Officer model with Move Move Move.",
@@ -2705,6 +3005,14 @@
             "flavor": "Ernst Barkmann was an ace tank commander who served throughout the war.",
             "description": "Upgrade one Panther (Command) with Crack Shot.",
             "points": 30
+        },
+        "walter_koch": {
+            "subfactions": ["none", "airborne_focus"],
+            "name": "Walter Koch",
+            "rule": "kochs_commandos",
+            "flavor": "Walter Koch was a captain of the fallschirmjager following some early success in the war.",
+            "description": "Upgrade one Field Officer or Higher Officer with Koch's Commandos.",
+            "points": 20
         },
         "erwin_rommel": {
             "subfactions": ["none", "armored_focus"],
@@ -2720,7 +3028,7 @@
             "rule": "ambush_master",
             "flavor": "Michael Wittman as an expert in Ambush and surprise often attacking his enemies when they least expect it.",
             "description": "Upgrade one Tiger (Command) or Panzer IV (Command) with Ambush Master.",
-            "points": 20
+            "points": 10
         }
     }
 }

@@ -2,14 +2,37 @@
     "id": "japan",
     "name": "Japan",
     "units": {
-        "field_officer": {
-            "name": "Field Officer Team",
-            "description": "A Field Commander.",
+        "company_command": {
+            "name": "Company Command",
+            "description": "A higher-ranking field officer trained to command more units and occasionally direct field operations.",
+            "category": "command",
+            "keywords": ["Infantry", "Officer"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Higher Officer",
+                    "courage": 8,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed", "smoke_grenades", "frag_grenades"],
+                    "rules": [{"id": "field_orders", "x": 2}, "leader"],
+                    "options": [{"replaceRule": {"id": "field_orders", "x": 2}, "withRule": {"id": "field_orders", "x": 3}}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+            ]
+        },
+        "platoon_command": {
+            "name": "Platoon Command",
+            "description": "A lower-ranking platoon commander to provide support to other field units.",
             "min": 1,
             "max": 1,
             "category": "command",
             "keywords": ["Infantry", "Officer"],
-            "subfactions": ["none", "infantry_focus", "airborne_focus", "armored_focus"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
@@ -26,12 +49,12 @@
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
-        "field_officer_veteran": {
-            "name": "Veteran Field Officer Team",
-            "description": "A Field Commander.",
+        "platoon_command_veteran": {
+            "name": "Veteran Platoon Command",
+            "description": "A lower-ranking platoon commander to provide support to other field units.",
             "min": 1,
             "max": 1,
             "category": "command",
@@ -40,7 +63,7 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"addWeapon": "at_grenades", "modelLimit": 3}],
             "models": [
                 {
-                    "name": "Field Officer (Veteran)",
+                    "name": "Veteran Field Officer",
                     "courage": 7,
                     "movement": 6,
                     "shoot": 6,
@@ -53,26 +76,26 @@
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant (Veteran)", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
+                {"name": "Veteran Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
             ]
         },
         "forward_artillery_observer": {
-            "name": "Forward Observer (Artillery)",
+            "name": "Forward Artillery Observer",
             "description": "An artillery forward observer able to call in a fire mission.",
             "min": 1,
             "max": 1,
             "category": "support",
             "keywords": ["Infantry", "Observer"],
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg", "semi_auto_rifle"]}],
             "models": [
                 {
-                    "name": "Forward Observer (Artillery)",
+                    "name": "Forward Artillery Observer",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 6,
+                    "defense": 5,
                     "reflexes": 5,
                     "rules": ["support"],
                     "weapons": ["rifle", "unarmed", "smoke_battery"],
@@ -80,12 +103,12 @@
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 0, "max": 2}
             ]
         },
         "field_medic": {
             "name": "Field Medic",
-            "description": "A field medic.",
+            "description": "A trained field medic used to treat the wounded near the frontline.",
             "min": 1,
             "max": 1,
             "category": "support",
@@ -101,7 +124,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "weapons": ["pistol", "unarmed", "smoke_grenades"],
-                    "rules": ["medic", "support"],
+                    "rules": ["medic", "non_combat", "support"],
                     "min": 1,
                     "max": 1
                 },
@@ -182,16 +205,15 @@
             "models": [
                 {
                     "name": "Chinese Collaborator",
-                    "courage": 4,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 4,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "unarmed", "withWeapon": ["dadao"]}],
-                    "min": 10,
+                    "min": 5,
                     "max": 14
                 }
             ]
@@ -289,10 +311,10 @@
                     "name": "Veteran Rifle NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}, {"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],
                     "min": 1,
@@ -302,10 +324,10 @@
                     "name": "Veteran Rifleman",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
                     "options": [
                         {"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1},
@@ -325,13 +347,14 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "rules": ["stubborn"],
             "models": [
                 {
                     "name": "Paratrooper NCO",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
@@ -341,10 +364,10 @@
                 },
                 {
                     "name": "Paratrooper",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
@@ -358,7 +381,7 @@
             ]
         },
         "veteran_paratrooper_squad": {
-            "name": "Veteran Paratrooper Section",
+            "name": "Veteran \"Teshin Shudan\" Paratrooper Squad",
             "description": "A group of veteran japanese Airborne.",
             "min": 1,
             "max": 1,
@@ -371,7 +394,7 @@
                     "name": "Veteran Paratrooper NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
@@ -384,7 +407,7 @@
                     "name": "Veteran Paratrooper",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
+                    "shoot": 5,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
@@ -481,12 +504,14 @@
         "combat_engineers": {
             "name": "Combat Engineers",
             "description": "A squad of japanese combat engineers.",
-            "min": 1,
-            "max": 1,
-            "category": "infantry",
+            "category": "support",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}
+            ],
             "models": [
                 {
                     "name": "Engineer NCO",
@@ -496,7 +521,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -510,11 +534,10 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_lmg"], "modelLimit": 1}, {"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
-                    "min": 4,
-                    "max": 10
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
+                    "min": 2,
+                    "max": 5
                 }
             ]
         },
@@ -529,21 +552,6 @@
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
                 {"name": "Flamethrower Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["flamethrower", "unarmed"], "min": 1, "max": 1},
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
-            ]
-        },
-        "marksman_team": {
-            "name": "Marksman Team",
-            "description": "A team equipped to take out important targets from a distance.",
-            "min": 1,
-            "max": 1,
-            "category": "support",
-            "subfactions": ["none", "infantry_focus", "airborne_focus"],
-            "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
-            "rules": ["scout", "stealth"],
-            "models": [
-                {"name": "Sniper", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1},
                 {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
@@ -601,12 +609,11 @@
             "min": 1,
             "max": 1,
             "category": "support",
-            "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "models": [
-                {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
-                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
+                {"name": "AT Rifle Gunner", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["at_rifle", "unarmed"], "min": 1, "max": 1},
+                {"name": "Assistant", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["rifle", "unarmed"], "min": 1, "max": 1}
             ]
         },
         "marksman": {
@@ -619,8 +626,7 @@
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
             "rules": ["scout", "stealth"],
-            "models": [
-                {"name": "Marksman", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5,  "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1}            ]
+            "models": [{"name": "Marksman", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6, "weapons": ["sniper_rifle", "unarmed"], "min": 1, "max": 1}]
         },
         "type_4": {
             "name": "Type 4 AT Team",
@@ -695,7 +701,6 @@
             "category": "support",
             "subfactions": ["none", "infantry_focus", "armored_focus", "airborne_focus"],
             "keywords": ["Infantry"],
-            
             "models": [
                 {
                     "name": "Light Mortar",
@@ -1315,7 +1320,6 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 8}],
                     "options": [{"addWeapon": ["mmg_aa"]}],
                     "min": 1,
@@ -1340,7 +1344,6 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    
                     "rules": ["damage_table_vehicle", {"id": "transport", "x": 12}],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}],
                     "min": 1,
@@ -1365,7 +1368,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    
                     "weapons": [],
                     "rules": ["tracked", "vulnerable_side_rear", "damage_table_vehicle", {"id": "transport", "x": 13}, "exposed"],
                     "options": [{"addWeapon": {"id": "mmg_aa", "mount": ["Front"]}}],
@@ -1392,7 +1394,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    
                     "weapons": ["light_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle", {"id": "limited", "x": 1}],
                     "min": 1,
@@ -1417,12 +1418,31 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 5,
-                    
                     "weapons": ["medium_at_mg", {"id": "mmg_internal", "mount": ["Front"]}],
-                    "options": [
-                        {"addWeapon": ["mmg_aa", "hmg_aa"]}
-                    ],
+                    "options": [{"addWeapon": ["mmg_aa", "hmg_aa"]}],
                     "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle", "catches_fire", {"id": "limited", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "kokusai_ki_76": {
+            "name": "Kokusai Ki-76 OP",
+            "description": "A lightweight observer aircraft.",
+            "category": "aircraft",
+            "keywords": ["Aircraft", "Observer"],
+            "models": [
+                {
+                    "name": "Kokusai Ki-76 OP",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "weapons": ["smoke_battery"],
+                    "options": [{"replaceWeapon": "smoke_battery", "withWeapon": ["light_mortar_battery", "medium_mortar_battery", "heavy_mortar_battery"]}],
+                    "rules": ["aircraft", "damage_table_aircraft"],
                     "min": 1,
                     "max": 1
                 }
@@ -1430,7 +1450,7 @@
         }
     },
     "weapons": {
-        "type_4": {"name": "Type 4", "short": 12, "medium": 24, "ap": 6, "attacks": 1,  "rules": [{"id": "team", "x": 2}]},
+        "type_4": {"name": "Type 4", "short": 12, "medium": 24, "ap": 6, "attacks": 1, "rules": [{"id": "team", "x": 2}]},
         "qf_aa": {
             "name": "3.7\" QF AA Gun",
             "profiles": [
@@ -1445,34 +1465,34 @@
             "phase": "activation",
             "name": "Banzai Charge",
             "flavor": "A swift and deadly end to a fight can come with a furious charge...",
-            "description": "Use when a Japanese Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
+            "description": "Use when a Japanese _Infantry_ unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
         },
-        "stealth_tactics": {
+        "courageous": {
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
-            "name": "Jungle Experts",
-            "flavor": "Moving quickly and quietly, Japanese infantry can outmaneuver their enemies.",
-            "description": "Use when activating an Infantry unit. It may make a free 6\" move action and may not be targetted by reaction fire when doing so.",
-            "cost": 2
+            "name": "Courageous",
+            "flavor": "The Japanese would often call upon their strength of will and spirit to do what may seem impossible.",
+            "description": "Use when activating a unit. It may immediately remove 2 Shock.",
+            "cost": 1
         },
         "tough_fighters": {
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
             "name": "Tough Fighters",
             "flavor": "Some of the toughest units to fight in a close combat.",
-            "description": "Use before an Infantry unit uses a fight action. Its attacks gain +1 Strength.",
+            "description": "Use before an _Infantry_ unit uses a fight action. Its attacks gain +1 Strength.",
             "cost": 1
         }
     },
     "rules": {
-        "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly Infantry units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
-        "defensive_fire": {"name": "Defensive Fire", "description": "This unit and friendly Infantry units within 6\" get +1 Accuracy when using an Ambush reaction.", "points": 10},
-        "move_it": {"name": "Move It", "description": "When this unit is activated, this unit and friendly Infantry units within 6\" may immediately remove one shock.", "points": 10},
+        "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly _Infantry_ units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
+        "defensive_fire": {"name": "Defensive Fire", "description": "This unit and friendly _Infantry_ units within 6\" get +1 Accuracy when using an Ambush reaction.", "points": 10},
+        "move_it": {"name": "Move It", "description": "When this unit is activated, this unit and friendly _Infantry_ units within 6\" may immediately remove one shock.", "points": 10},
         "mobile_expert": {"name": "Mobile Expert", "description": "This unit may move and fire assault weapons without suffering the -1 to hit penalty.", "points": 20},
         "ambush_tactics": {
             "name": "Ambush Tactics",
-            "description": "This unit and one other friendly Infantry unit may be placed in hidden deployment instead of deployed on the field. See the section for hidden units in the core rules for details on how hidden units work.",
+            "description": "This unit and one other friendly _Infantry_ unit may be placed in hidden deployment instead of deployed on the field. See the section for hidden units in the core rules for details on how hidden units work.",
             "points": 20
         }
     },
