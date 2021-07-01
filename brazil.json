@@ -1244,7 +1244,7 @@
             "phase": "activation",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "name": "Foxhole Poets",
-            "flavor": "The Brazilian Expedition Force spent a lot in foxholes and trenches, to the point that a portion of their newspaper was named 'Foxhole Poets'",
+            "flavor": "The Brazilian Expedition Force spent a lot of time in foxholes and trenches, to the point that a portion of their newspaper was named 'Foxhole Poets'",
             "description": "Use when an Infantry is targetted by an attack. That unit is treated as being in Light Cover, or Hard Cover if already in Light Cover.",
             "cost": 1
         },
