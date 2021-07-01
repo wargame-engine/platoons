@@ -111,15 +111,16 @@
             ]
         },
         "vigilante_militia": {
-            "name": "Vigilante Militia (German/88th Division Support)",
+            "name": "Vigilante Militia",
             "description": "In order to protect their villages from the attacks of the warlord factions and armies, peasants organized themselves into militias, secret societies and village associations which served as self-defense groups as well as vigilante groups. As the peasants usually had neither currency for guns nor military training, these secret societies relied on martial arts, homemade weapons such as spear, staffs or swords, as well as the staunch belief in Chi and other traditional beliefs.",
             "subfactions": ["china_nationalist", "none"],
             "min": 1,
             "max": 2,
-            "category": "infantry",
+            "catego-ry": "infantry",
             "keywords": ["Infantry"],
             "rules": ["stubborn"],
-            "options": [{"addWeapon": "pistol"}],
+            "options": [{"addWeapon": "pistol"}, {"addRule": "fanatical"}
+            ],
             "models": [
                 {
                     "name": "Vigilante Militia NCO",
@@ -265,7 +266,7 @@
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg", "name": "ZB vz. 26"}], "modelLimit": 1}],
                     "min": 5,
-                    "max": 12
+                    "max": 14
                 }
             ]
         },
@@ -337,7 +338,7 @@
                         {"replaceWeapon": ["rifle"], "withWeapon": [{"id": "box_lmg", "name": "Lewis Gun"}], "modelLimit": 1}
                     ],
                     "min": 5,
-                    "max": 11
+                    "max": 13
                 }
             ]
         },

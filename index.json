@@ -153,6 +153,43 @@
                 "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "description": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
                 "armored_focus": {"name": "Armored", "id": "armored_focus", "description": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
             }
+        },
+        "china": {
+            "name": "China",
+            "id": "china",
+            "url": "china.json",
+            "color": "#0e3391",
+            "alliance": "allies",
+            "version": "0.1",
+            "description": "With Over 250 million people and decades of decay from civil-war and warlords fighting each other, China entered the 'War of Resistance against Japanese Aggression' in a tough spot. China was a nation of extremes, with some of the bravest and most cowardly men in the war, according to written accounts. With so many people scrambling to repell the Japanese, in their own way, with their own backers and supply lines, China could almost be viewed as three or four nations just by itself.",
+            "subfactions": {
+                "china_communist": {
+                    "name": "China (United Front)",
+                    "phase": "activation",
+                    "id": "china_communist",
+                    "description": "With Japan invading with great brutality and superior technological development, a temporary ceasefire was brokered from the most powerful men in the nationalist and communist factions. The foreign threat was too great, for now they would work together. Politics could after the war.",
+                    "restricted": true
+                },
+                "china_nationalist": {
+                    "name": "China (China (Chiang Kai-shek)",
+                    "phase": "activation",
+                    "id": "china_nationalist",
+                    "description": "His Excellency, Generalissimo, Chiang Kai-shek technically on paper was the elected ruler of the nation",
+                    "restricted": true
+                },
+                "china_western": {"name": "China (Westernized)", "phase": "activation", "id": "china_western", "description": "", "restricted": true},
+                "china_yan": {"name": "China (Yan Xishan)", "phase": "activation", "id": "china_yan", "description": "", "restricted": true}
+            }
+        },
+        "brazil": {
+            "name": "Brazil",
+            "id": "brazil",
+            "url": "brazil.json",
+            "color": "#40ad5b",
+            "alliance": "allies",
+            "version": "0.1",
+            "description": "",
+            "subfactions": {"infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true}}
         }
     },
     "unfinished_factions": {
@@ -161,12 +198,8 @@
         "romania": {"name": "Romania", "id": "romania", "url": "romania.json", "color": "#4f2c26", "alliance": "axis"},
         "italy": {"name": "Italy", "id": "italy", "url": "italy.json", "color": "#BD9326", "alliance": "axis"},
         "greece": {"name": "Greece", "id": "greece", "url": "greece.json", "color": "#729263", "alliance": "allies"},
-        "brazil": {"name": "Brazil", "id": "brazil", "url": "brazil.json", "color": "#008A4D", "alliance": "allies"},
         "belgium": {"name": "Belgium", "id": "france", "url": "belgium.json", "color": "#968164", "alliance": "allies"},
-        "poland": {"name": "Poland", "id": "poland", "url": "poland.json", "color": "#D83658", "alliance": "allies"},
-        "china_western": {"name": "China (Westernized)", "id": "china_western", "url": "china_western.json", "color": "#0e3391"},
-        "china_communist": {"name": "China (United Front)", "id": "china_communist", "url": "china_communist.json", "color": "#C13E3E"},
-        "china_nationalist": {"name": "China (Chiang Kai-shek)", "id": "china_nationalist", "url": "china_nationalist.json", "color": "#a38b5c"}
+        "poland": {"name": "Poland", "id": "poland", "url": "poland.json", "color": "#D83658", "alliance": "allies"}
     },
     "categories": {
         "command": {"name": "Command"},
