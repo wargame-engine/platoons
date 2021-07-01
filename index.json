@@ -354,7 +354,7 @@
                 {"name": "Smoke", "short": 18, "medium": 36, "attacks": 1, "rules": ["smoke"]}
             ]
         },
-        "bamboo_spear": {"name": "Bamboo Spear", "short": "Melee", "attacks": 1, "ap": 1},
+        "bamboo_spear": {"name": "Spear", "short": "Melee", "attacks": 1, "ap": 1},
         "sniper_rifle": {"name": "Sniper Rifle", "short": 18, "medium": 36, "attacks": 1, "ap": 2, "rules": ["sniper", {"id": "team", "x": 2}]},
         "semi_auto_rifle": {"name": "Semi-Auto Rifle", "short": 12, "medium": 24, "attacks": 1, "rules": ["rapid_fire"]},
         "scoped_semi_auto_rifle": {"name": "Scoped Semi-Auto Rifle", "short": 12, "medium": 24, "attacks": 1, "rules": ["rapid_fire", "scoped"]},
