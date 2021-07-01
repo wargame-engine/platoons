@@ -185,10 +185,10 @@
             "name": "Brazil",
             "id": "brazil",
             "url": "brazil.json",
-            "color": "#40ad5b",
+            "color": "#45a35c",
             "alliance": "allies",
             "version": "0.1",
-            "description": "",
+            "description": "Starting the war as a neutral power, Brazil began to suppor the allied war effort with air bases in its territory. Eventually war was delcared ont he axis powers and an expeditiary force was set up mostly equipped by the US. Brazil has an interesting mix of USA equipment and unique ways to use it.",
             "subfactions": {"infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true}}
         }
     },
@@ -549,7 +549,10 @@
                 {"name": "MG", "short": 18, "medium": 36, "attacks": 5, "ap": 1}
             ]
         },
-        "very_heavy_howitzer": {"name": "Very Heavy Howitzer", "profiles": [{"name": "HE", "short": 42, "medium": 84, "attacks": 1, "ap": 6, "rules": ["indirect", "scatter", {"id": "blast", "x": 8}]}]},
+        "very_heavy_howitzer": {
+            "name": "Very Heavy Howitzer",
+            "profiles": [{"name": "HE", "short": 42, "medium": 84, "attacks": 1, "ap": 6, "rules": ["indirect", "scatter", {"id": "blast", "x": 8}]}]
+        },
         "rocket_mortar": {"name": "Rocket Mortar", "profiles": [{"name": "HE", "short": 18, "medium": 36, "attacks": 1, "ap": 5, "rules": ["indirect", "scatter", {"id": "blast", "x": 8}]}]},
         "very_light_at": {
             "name": "Very Light AT",
@@ -569,7 +572,10 @@
         },
         "light_at_improved": {
             "name": "Light AT Improved",
-            "profiles": [{"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 4}]}, {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 6, "rules": ["improved"]}]
+            "profiles": [
+                {"name": "HE", "short": 24, "medium": 48, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 4}]},
+                {"name": "AT", "short": 24, "medium": 48, "attacks": 1, "ap": 6, "rules": ["improved"]}
+            ]
         },
         "light_at_lmg": {
             "name": "Light AT/Co-ax LMG",
