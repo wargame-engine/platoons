@@ -143,7 +143,7 @@
             "options": [
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"replaceWeapon": "semi_auto_rifle", "withWeapon": "smg", "modelLimit": 5},
-                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine", "modelLimit": 5},
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 5},
                 {"replaceWeapon": "semi_auto_rifle", "withWeapon": "rifle_grenade", "modelLimit": 4}
             ],
             "models": [
@@ -174,7 +174,7 @@
             "options": [
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"replaceWeapon": "semi_auto_rifle", "withWeapon": "smg", "modelLimit": 5},
-                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine", "modelLimit": 5},
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 5},
                 {"replaceWeapon": "semi_auto_rifle", "withWeapon": "rifle_grenade", "modelLimit": 4}
             ],
             "models": [
@@ -195,7 +195,7 @@
             ]
         },
         "b_pioneers": {
-            "name": "Pioneers",
+            "name": "Combat Engineers",
             "description": "",
             "category": "support",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
