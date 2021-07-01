@@ -203,8 +203,8 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "weapons": [[{"id": "rifle", "name": "Mosin–Nagant"}], "bayonet"],
-                    "options": [{"addWeapon": ["frag_grenades", "molotov_cocktails"], "modelLimit": 2}],
+                    "weapons": [{"id": "rifle"}, "bayonet"],
+                    "options": [{"addWeapon": ["molotov_cocktails"], "modelLimit": 2}],
                     "min": 1,
                     "max": 1
                 },
@@ -216,7 +216,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "weapons": [[{"id": "rifle", "name": "Mosin–Nagant"}], "bayonet"],
+                    "weapons": [{"id": "rifle"}, "bayonet"],
                     "min": 5,
                     "max": 16
                 }
@@ -304,7 +304,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2}, {"addWeapon": ["frag_grenades", "bundle_grenades"], "modelLimit": 3}, {"rules": ["stubborn"]}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2}, {"addWeapon": ["bundle_grenades"], "modelLimit": 3}, {"rules": ["stubborn"]}],
             "models": [
                 {
                     "name": "Elite Rifle NCO",
@@ -323,7 +323,7 @@
                     "max": 1
                 },
                 {
-                    "name": " Elite Rifleman",
+                    "name": "Elite Rifleman",
                     "courage": 6,
                     "movement": 6,
                     "shoot": 6,
@@ -356,12 +356,12 @@
                     "name": "Eight Route Army Support NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": [[{"id": "rifle", "name": "Mosin Nagant"}], "bayonet"],
-                    "options": [{"addWeapon": ["frag_grenades", "bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 1}],
+                    "weapons": [{"id": "rifle"}, "bayonet"],
+                    "options": [{"addWeapon": ["bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 1}],
                     "min": 1,
                     "max": 1
                 },
@@ -373,8 +373,8 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": [[{"id": "rifle", "name": "Mosin–Nagant"}], "bayonet"],
-                    "options": [{"addWeapon": ["frag_grenades", "bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 2}],
+                    "weapons": [{"id": "rifle"}, "bayonet"],
+                    "options": [{"addWeapon": ["bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 2}],
                     "min": 5,
                     "max": 11
                 }
@@ -384,25 +384,23 @@
             "name": "Eight Route Army Support Veteran (National United Front)",
             "description": "Firm believers in communism and the Maoist Revolution, these men are among the best taught Chinese, in the art of guerrilla warfare. As part of the 'Second United Front', these men are loyal to the Chinese Communist Party, but wear nationalist uniforms and fly the 'blue and white banner' of the Republic of China. They also have first pick of captured Japanese weapons and any available homemade, captured, or soviet imported explosive munitions.",
             "subfactions": ["china_communist"],
-            "min": 1,
-            "max": 2,
             "category": "infantry",
             "keywords": ["Infantry"],
             "options": [
                 {"replaceWeapon": ["rifle", "bayonet"], "withWeapon": [{"id": "assault_lmg", "name": "Type 99"}], "modelLimit": 1},
                 {"replaceWeapon": ["rifle", "bayonet"], "withWeapon": [{"id": "box_lmg", "name": "Degtyaryov DP"}], "modelLimit": 1},
-                {"addWeapon": ["frag_grenades", "bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 3}
+                {"addWeapon": ["bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 3}
             ],
             "models": [
                 {
                     "name": "Eight Route Army Support Veteran NCO",
                     "courage": 6,
                     "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": [[{"id": "rifle", "name": "Mosin Nagant"}], "bayonet", "unarmed"],
+                    "weapons": [{"id": "rifle"}, "bayonet", "unarmed"],
                     "options": [{"replaceWeapon": "unarmed", "withWeapon": "officer_sword"}],
                     "min": 1,
                     "max": 1
@@ -415,7 +413,7 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": [[{"id": "rifle", "name": "Mosin–Nagant"}], "bayonet"],
+                    "weapons": [{"id": "rifle"}, "bayonet"],
                     "options": [{"addWeapon": [{"id": "very_light_mortar", "name": "Type 27"}], "modelLimit": 1}],
                     "min": 5,
                     "max": 11
@@ -579,7 +577,7 @@
                 {"replaceWeapon": "rifle", "withWeapon": [{"id": "smg", "name": "Thompson"}], "modelLimit": 4},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addRule": "fanatical"},
-                {"addWeapon": ["frag_grenades", "bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 3}
+                {"addWeapon": ["bundle_grenades", "lunge_mine", "molotov_cocktails"], "modelLimit": 3}
             ],
             "models": [
                 {
@@ -696,7 +694,7 @@
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2}, {"addWeapon": ["frag_grenades", "bundle_grenades"], "modelLimit": 3}, {"rules": ["stubborn"]}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 2}, {"addWeapon": ["bundle_grenades"], "modelLimit": 3}, {"rules": ["stubborn"]}],
             "models": [
                 {
                     "name": "Guard Pistol",
