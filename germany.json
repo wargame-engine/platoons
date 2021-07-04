@@ -137,7 +137,9 @@
             "category": "infantry",
             "subfactions": ["none", "reserve_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"]}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 5},
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 10}
+            ],
             "models": [
                 {
                     "name": "Volkssturm NCO",
@@ -176,7 +178,8 @@
             "category": "infantry",
             "subfactions": ["none", "infantry_focus", "reserve_focus"],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"]}, {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["assault_rifle"], "modelLimit": 5},
+                {"addWeapon": "at_grenades", "modelLimit": 3}, {"addWeapon": "panzerfaust", "modelLimit": 2}],
             "models": [
                 {
                     "name": "Volksgrenadier NCO",

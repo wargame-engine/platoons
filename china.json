@@ -224,7 +224,7 @@
         },
         "c3_nra_regular": {
             "name": "Catagory 3 NRA Regular",
-            "description": "A little over half of the reportedly two million soldiers in the National Revolutionary Army were labeled as 'Category 3' and being considered the last loyal, least equipped, with a strong suspicion of having stronger ties to other leaders than Generalissimo Chiang Kai-shek. While a large number of these 'disloyal' men were part of the Sichuan clique, and were so brave as to provide 2/3rds of the men who died for the Motherland, the remainder weren't recorded as brave. China of the period was incredibly poor and quality of equipment was miserable for half of the NRA, with many men having close to no live firearms practice, barely getting enough to eat, and not even being supplied with boots. Considering some reports of brutal mass conscription, a lack of political motivation for non-nationalist/communist troops, and limited financial support, it's no surprise many men had rock bottom motivation.",
+            "description": "A little over half of the reportedly two million soldiers in the National Revolutionary Army were labeled as 'Category 3' and being considered the least loyal, least equipped, with a strong suspicion of having stronger ties to other leaders than Generalissimo Chiang Kai-shek. While a large number of these 'disloyal' men were part of the Sichuan clique, and were so brave as to provide 2/3rds of the men who died for the Motherland, the remainder weren't recorded as brave. China of the period was incredibly poor and quality of equipment was miserable for half of the NRA, with many men having close to no live firearms practice, barely getting enough to eat, and not even being supplied with boots. Considering some reports of brutal mass conscription, a lack of political motivation for non-nationalist/communist troops, and limited financial support, it's no surprise many men had rock bottom motivation.",
             "subfactions": ["china_nationalist", "none"],
             "min": 1,
             "max": 3,
@@ -279,7 +279,6 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "rules": ["stubborn"],
-            "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}],
             "models": [
                 {
                     "name": "Warrior",
@@ -289,8 +288,8 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 4,
-                    "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["rifle"]}, {"replaceWeapon": "unarmed", "withWeapon": ["dadao"]}],
+                    "weapons": ["old_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "old_rifle", "withWeapon": ["rifle"]}, {"replaceWeapon": "unarmed", "withWeapon": ["dadao"]}],
                     "min": 5,
                     "max": 11
                 }
@@ -1076,7 +1075,8 @@
             "cost": 1
         }
     },
-    "weapons": {},
+    "weapons": {"old_rifle": {"name": "Old Rifle", "short": 12, "medium": 24, "attacks": 1, "rules": ["unreliable"]}
+},
     "rules": {
         "blue_and_white_banner": {
             "name": "Blue and White Banner",
