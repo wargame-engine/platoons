@@ -712,6 +712,7 @@
             "description": "This weapon requires X models to operate effectively. It suffers -1 Accuracy for each model under this number.",
             "points": ["rule.x", {"subtract": 1}, {"multiply": -1}]
         },
+        "riveted": {"name": "Riveted", "description": "This unit adds +1 to any Damage Table(x) rolls.", "points": -5},
         "field_orders": {
             "name": "Field Orders",
             "inputs": ["x"],
