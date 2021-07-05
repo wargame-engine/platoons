@@ -534,7 +534,7 @@
                     "defense": 10,
                     "reflexes": 5,
                     "weapons": [{"id": "mmg", "mount": ["Front"]}],
-                    "rules": ["tracked", "vulnerable_side_rear", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+                    "rules": ["tracked", "vulnerable_side_rear", "riveted", {"id": "impact", "x": 3}, "damage_table_vehicle"],
                     "options": [
                         {
                             "replaceWeapon": {"id": "mmg", "mount": ["Front"]},
@@ -545,6 +545,31 @@
                                 {"id": "vehicle_flamethrower_mg", "mount": ["Front"]}
                             ]
                         }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "m1441": {
+            "name": "M14/41",
+            "description": "A very light infantry support tank.",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+                {
+                    "name": "M14/41",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": [{"id": "light_at_mg"},{"id": "mmg", "count":2, "mount": ["Front"]}],
+                    "rules": ["tracked", "vulnerable_side_rear", "riveted", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+                    "options": [
+                        {"addWeapon":"mmg_aa"}
                     ],
                     "min": 1,
                     "max": 1
