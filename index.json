@@ -691,8 +691,18 @@
         "tank_rider": {"name": "Tank Rider", "description": "This model and its unit may be embarked on Vehicle unit with a save of 11+ as if it had Transport.", "points": 1},
         "improved": {"name": "Improved", "description": "This weapon gains +1 AP when shooting a target at Short Range.", "points": 5},
         "mounted_bicycle": {
-            "name": "Mounted(Bicycles)",
-            "description": "Increase this model's Movement by 2\", but it may not use any weapons while mounted. This unit may spend 1 action to dismount from its Mount. A unit that has dismounted may no longer remount.",
+            "name": "Mounted(Bicycle)",
+            "description": "Increase this model's Movement by 2\", but it may not use any weapons while mounted. This unit may dismount at the end of any Move action. A unit that has dismounted may no longer remount.",
+            "points": 2
+        },
+        "mounted_horse": {
+            "name": "Mounted(Horse)",
+            "description": "Increase this model's Movement by 2\", but it may not use any weapons other than _Carbine_ weapons while mounted. This unit may dismount at the end of any Move action. A unit that has dismounted may no longer remount.",
+            "points": 2
+        },
+        "mounted_motorcycle": {
+            "name": "Mounted(Motorcycle)",
+            "description": "Increase this model's Movement by 2\", but it may not use any weapons while mounted. This unit may dismount at the end of any Move action. A unit that has dismounted may no longer remount.",
             "points": 2
         },
         "side_skirts": {"name": "Side Skirts", "description": "This model gains +1 to its Save when hit in its side arcs from weapons with AP 4 or less.", "points": 5},
