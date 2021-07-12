@@ -303,6 +303,47 @@
                 }
             ]
         },
+        "guastatori": {
+            "name": "Guastatori",
+            "description": "Specially trained combat engineers skilled at assaulting fortified positions.",
+            "category": "infantry",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "flamethrower", "modelLimit": 1},
+                {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}
+            ],
+            "models": [
+                {
+                    "name": "Guastatori NCO",
+                    "courage": 5,
+                    "movement": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Guastatori",
+                    "courage": 5,
+                    "movement": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg"}], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 10
+                }
+            ]
+        },
         "forward_artillery_observer": {
             "name": "Forward Artillery Observer",
             "description": "An artillery forward observer able to call in a fire mission.",
@@ -666,10 +707,37 @@
                     "max": 1
                 }
             ]
+            
         },
+        "p2640": {
+            "name": "P26/40",
+            "description": "A medium tank with a decent main gun",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "category": "heavy_vehicles",
+            "keywords": ["Vehicle", "Tank"],
+            "models": [
+            {
+                "name": "P26/40",
+                "courage": 5,
+                "movement": 10,
+                "shoot": 5,
+                "fight": 5,
+                "defense": 12,
+                "reflexes": 5,
+                "weapons": [{"id": "medium_at_mg"}],
+                "rules": ["tracked", "vulnerable_side_rear", "riveted", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+                "options": [
+                        {"addWeapon":"mmg_aa"}
+                    ],
+                "min": 1,
+                "max": 1
+            }
+        ]
+        
+    },
         "m1441": {
             "name": "M14/41",
-            "description": "A very light infantry support tank.",
+            "description": "A light infantry support tank.",
             "subfactions": ["none", "armored_focus", "infantry_focus"],
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
@@ -720,6 +788,17 @@
             "cost": 1
         }
     },
-    "rules": {},
-    "relics": {}
+    "rules": {
+        "sacrificio": {"name": "Sacrificio Eroico", "description": "This model gains +5 to a single Clear action when attempting to clear any obstacle. When this ability is used, and the test completed remove the model upgraded with this ability. ", "points": 10}
+    },
+    "relics": {
+        "Emilio Caizzio": {
+            "subfactions": ["none", "infantry_focus"],
+            "name": "Emilio Caizzio",
+            "rule": "sacrificio",
+            "flavor": "Emilio Caizzio earned the Medaglia d'Oro al Valor Militaire after seizing an ignited explosive and charging into an allied blockhouse full of troops. In sacrificing himself, he destroyed the fortification along with his enemies inside.",
+            "description": "Upgrade one Guastatori model with Sacrificio Eroico.",
+            "points": 10
+        }
+    }
 }
