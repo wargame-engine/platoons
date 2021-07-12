@@ -336,7 +336,9 @@
                 {"replaceWeapon": "rifle", "withWeapon": ["semi_auto_rifle"], "modelLimit": 2},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addWeapon": "panzerfaust", "modelLimit": 2},
-                {"addRule": ["fanatical"], "modelLimit": "all"}
+                {"addRule": ["fanatical"], "modelLimit": "all"},
+                {"addWeapon": "bundle_grenades", "modelLimit": 3},
+                {"addRule": ["mounted_bicycle"], "modelLimit": "all"}    
             ],
             "models": [
                 {
@@ -379,7 +381,9 @@
                 {"replaceWeapon": "rifle", "withWeapon": ["assault_rifle", "semi_auto_rifle"], "modelLimit": 6},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addWeapon": "panzerfaust", "modelLimit": 2},
-                {"addRule": ["fanatical"], "modelLimit": "all"}
+                {"addRule": ["fanatical"], "modelLimit": "all"},
+                    {"addWeapon": "bundle_grenades", "modelLimit": 3},
+                {"addRule": ["mounted_bicycle"], "modelLimit": "all"}  
             ],
             "models": [
                 {

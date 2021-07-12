@@ -388,17 +388,17 @@
         },
         "arrow_cross_militia": {
             "name": "Arrow Cross Militia",
-            "description": "A group of fanatical fighters.",
+            "description": "A group of fascists and party loyalists taken to arms. Like other fascist paramilitaries, they could range from barely trained and cowardly 'thugs', to fanatics and fascist veterans of street fights, battles, and previous wars.",
             "min": 1,
             "max": 1,
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "infantry_focus"],
-            "rules": ["fanatical"],
             "options": [
                 {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
-                {"addWeapon": "panzerfaust", "modelLimit": 2}
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
+                    {"addRule": ["reluctant", "stubborn", "fanatical"]}
             ],
             "models": [
                 {

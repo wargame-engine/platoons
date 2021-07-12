@@ -77,6 +77,42 @@
                 {"name": "Assistant", "courage": 6, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 6, "weapons": ["rifle", "unarmed"], "min": 1, "max": 2}
             ]
         },
+        "conscript_squad": {
+            "name": "Conscript Squad",
+            "description": "Conscription doesn't just sweep up the men who are devoted to the cause, but not in a huge rush to get shot at. The longer the war went on, the more likely recruits were poorly motivated. Recruiting standards and supplies to properly outfit the men also declined.",
+            "category": "infantry",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "bundle_grenades", "modelLimit": 1}],
+            "models": [
+                {
+                    "name": "Infantry NCO",
+                    "courage": 4,
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Infantry",
+                    "courage": 4,
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg"}], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 10
+                }
+            ]
+        },
         "infantry_squad": {
             "name": "Infantry Squad",
             "description": "The main infantry unit of the Italian army. Equipped mostly with rifles, these units could put up a fight.",
@@ -107,7 +143,86 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
-                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg"}], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg"}], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 10
+                }
+            ]
+        },
+        "blackshirt": {
+            "name": "MVSN Squad",
+            "description": "The MVSN (Voluntary Militia for National Security), was a party loyal paramiltiary group like the German 'SA'. During WW2, it's members were often moved from an internal security paramilitary posting, to the front lines.",
+            "category": "infantry",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"addWeapon": "bundle_grenades", "modelLimit": 1},
+                {"addRule": ["reluctant", "stubborn"]},
+                    {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]}
+                ],
+            "models": [
+                {
+                    "name": "Blackshirt NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Blackshirt",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg"}], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "coloniale": {
+            "name": "Milizia Coloniale Squad",
+            "description": "The Milizia Coloniale were a section of the MVSN recruited from colonies in Africa.",
+            "category": "infantry",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [
+                {"addWeapon": "bundle_grenades", "modelLimit": 1},
+            {"addRule": "mounted_horse"},
+            {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]}
+            ],
+            "models": [
+                {
+                    "name": "Coloniale NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 4,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Coloniale",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 4,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 9
                 }
@@ -121,7 +236,8 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "armored_focus"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addRule": "mounted_motorcycle"}],
             "models": [
                 {
                     "name": "Bersaglieri NCO",
