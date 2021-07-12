@@ -443,6 +443,47 @@
                 }
             ]
         },
+        "home_guard": {
+            "name": "British Home Guard",
+            "description": "",
+            "background": "After the Battle of Dunkirk, the repeated bombing raids, and the constant threats of a naval landing by the Germans; there was a push for Britain to be prepared for a possible land invasion. The standard for men and equipment for the Home Guard wasn't as good as the actual armed forces.",
+            "min": 1,
+            "max": 1,
+            "category": "infantry",
+            "subfactions": ["none", "infantry_focus", "reserve_focus"],
+            "keywords": ["Infantry"],
+            "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3},
+                {"replaceWeapon": "rifle", "withWeapon": ["shotgun"], "modelLimit": 3},
+                {"addWeapon": "molotov_cocktails", "modelLimit": 3}],
+            "models": [
+                {
+                    "name": "Home Guard NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Home Guard",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "bar"}], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
         "flamethrower_team": {
             "name": "Flamethrower Team",
             "description": "A team equipped to clear bunkers and other defensive positions.",

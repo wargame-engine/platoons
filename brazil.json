@@ -144,7 +144,7 @@
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"replaceWeapon": "semi_auto_rifle", "withWeapon": "smg", "modelLimit": 5},
                 {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 5},
-                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "rifle_grenade", "modelLimit": 4}
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "rifle_grenade", "modelLimit": 1}
             ],
             "models": [
                 {"name": "Rifle NCO", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["semi_auto_rifle", "unarmed"], "options": [], "min": 1, "max": 1},
@@ -175,7 +175,7 @@
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"replaceWeapon": "semi_auto_rifle", "withWeapon": "smg", "modelLimit": 5},
                 {"replaceWeapon": "semi_auto_rifle", "withWeapon": "semi_auto_carbine_rifle", "modelLimit": 5},
-                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "rifle_grenade", "modelLimit": 4}
+                {"replaceWeapon": "semi_auto_rifle", "withWeapon": "rifle_grenade", "modelLimit": 1}
             ],
             "models": [
                 {"name": "Rifle NCO", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["semi_auto_rifle", "unarmed"], "options": [], "min": 1, "max": 1},

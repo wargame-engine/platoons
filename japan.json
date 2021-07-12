@@ -501,6 +501,32 @@
                 }
             ]
         },
+        "cavalry": {
+            "name": "Japanese/Allied Cavalry",
+            "description": "Large portions of China were very rural, such as the areas around Mongolia. The Japanese provided their own cavalry, but also had access to collaborationist Chinese and Mongolian irregulars. These units were found to be quite at finding, then shooting or 'running down' enemy guerrillas",
+            "subfactions": ["none", "infantry_focus"],
+            "min": 1,
+            "max": 3,
+            "category": "infantry",
+            "keywords": ["Infantry"],
+            "rules": ["mounted_horse"],
+            "options": [{"replaceWeapon": "unarmed", "withWeapon": ["sword"]}],
+            "models": [
+                {
+                    "name": "Chinese Cavalryman",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 4,
+                    "reflexes": 4,
+                    "weapons": ["carbine_rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "carbine_rifle", "withWeapon": [{"id": "mag_lmg", "name": "ZB vz. 26"}], "modelLimit": 1}],
+                    "min": 5,
+                    "max": 14
+                }
+            ]
+        },
         "combat_engineers": {
             "name": "Combat Engineers",
             "description": "A squad of japanese combat engineers.",
