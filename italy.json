@@ -673,7 +673,7 @@
         }
     },
     "rules": {
-        "sacrificio": {"name": "Sacrificio Eroico", "description": "This model and its unit gain +5 to all Clear actions when attempting to clear any obstacle. This rule may be used only once per game.", "points": 10}
+        "sacrificio": {"name": "Sacrificio Eroico", "description": "This model gains +5 to a single Clear action when attempting to clear any obstacle. When this ability is used, and the test completed remove the model upgraded with this ability. ", "points": 10}
     },
     "relics": {
         "Emilio Caizzio": {
