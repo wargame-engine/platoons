@@ -303,6 +303,88 @@
                 }
             ]
         },
+        "paracadutisti": {
+            "name": "Paracadutisti",
+            "description": "The Italians raised an entire division of paratroopers.",
+            "category": "infantry",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "rules": ["stubborn"],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3},
+                {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]},
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3}
+            ],
+            "models": [
+                {
+                    "name": "Paracadutisti NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Paracadutisti",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg"}], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 10
+                }
+            ]
+        },
+        "arditi": {
+            "name": "Artiti Camionettisti",
+            "description": "The Artiti were reformed during WW2 to serve as 'special forces', rather than the 'shock assault units. Despite the considerable change in assigned role and use from their 'forefathers', these men received strong close quarters training and were given ample supply of grenades, compact weapons, and explosives.",
+            "category": "infantry",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "rules": ["stubborn"],
+            "options": [
+                {"addWeapon": "bundle_grenades", "modelLimit": 3},
+            {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]},
+            {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
+            {"addRule": ["demolition_charges"]}
+            ],
+            "models": [
+                {
+                    "name": "Artiti NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Artiti",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "assault_lmg"}], "modelLimit": 2}],
+                    "min": 4,
+                    "max": 7
+                }
+            ]
+        },
         "guastatori": {
             "name": "Guastatori",
             "description": "Specially trained combat engineers skilled at assaulting fortified positions.",
@@ -311,6 +393,7 @@
             "keywords": ["Infantry"],
             "options": [
                 {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
+                {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]},
                 {"addWeapon": "at_grenades", "modelLimit": 3},
                 {"addWeapon": "flamethrower", "modelLimit": 1},
                 {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}
@@ -336,6 +419,49 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg"}], "modelLimit": 1}],
+                    "min": 4,
+                    "max": 10
+                }
+            ]
+        },
+        "veteran_guastatori": {
+            "name": "Veteran Guastatori",
+            "description": "This unit also includes Artiti Guastatori.",
+            "category": "infantry",
+            "subfactions": ["none", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "rules": ["stubborn"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
+                {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]},
+                {"addWeapon": ["bundle_grenades", "at_grenades"], "modelLimit": 3},
+                {"addWeapon": "flamethrower", "modelLimit": 1},
+                {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}
+            ],
+            "models": [
+                {
+                    "name": "Guastatori NCO",
+                    "courage": 5,
+                    "movement": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Guastatori",
+                    "courage": 5,
+                    "movement": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
                     "reflexes": 6,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg"}], "modelLimit": 1}],
