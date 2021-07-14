@@ -150,15 +150,12 @@
             ]
         },
         "blackshirt": {
-            "name": "MVSN Squad",
+            "name": "MVSN \"Blackshirt\" Squad",
             "description": "The MVSN (Voluntary Militia for National Security), was a party loyal paramiltiary group like the German 'SA'. During WW2, it's members were often moved from an internal security paramilitary posting, to the front lines.",
             "category": "infantry",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [{"addWeapon": "bundle_grenades", "modelLimit": 1},
-                {"addRule": ["reluctant", "stubborn"]},
-                    {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]}
-                ],
+            "options": [{"addWeapon": "bundle_grenades", "modelLimit": 1}, {"addRule": ["reluctant", "stubborn"]}, {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]}],
             "models": [
                 {
                     "name": "Blackshirt NCO",
@@ -194,11 +191,7 @@
             "category": "infantry",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
-            "options": [
-                {"addWeapon": "bundle_grenades", "modelLimit": 1},
-            {"addRule": "mounted_horse"},
-            {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]}
-            ],
+            "options": [{"addWeapon": "bundle_grenades", "modelLimit": 1}, {"addRule": "mounted_horse"}, {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]}],
             "models": [
                 {
                     "name": "Coloniale NCO",
@@ -236,8 +229,7 @@
             "category": "infantry",
             "keywords": ["Infantry"],
             "subfactions": ["none", "armored_focus"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3},
-                {"addRule": "mounted_motorcycle"}],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"addRule": "mounted_motorcycle"}],
             "models": [
                 {
                     "name": "Bersaglieri NCO",
@@ -310,10 +302,7 @@
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
             "rules": ["stubborn"],
-            "options": [{"addWeapon": "at_grenades", "modelLimit": 3},
-                {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]},
-                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3}
-            ],
+            "options": [{"addWeapon": "at_grenades", "modelLimit": 3}, {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]}, {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 3}],
             "models": [
                 {
                     "name": "Paracadutisti NCO",
@@ -344,22 +333,21 @@
             ]
         },
         "arditi": {
-            "name": "Artiti Camionettisti",
+            "name": "Arditi Camionettisti",
             "description": "The Artiti were reformed during WW2 to serve as 'special forces', rather than the 'shock assault units. Despite the considerable change in assigned role and use from their 'forefathers', these men received strong close quarters training and were given ample supply of grenades, compact weapons, and explosives.",
             "category": "infantry",
             "subfactions": ["none", "infantry_focus"],
             "keywords": ["Infantry"],
-            "rules": ["stubborn"],
             "options": [
                 {"addWeapon": "bundle_grenades", "modelLimit": 3},
-            {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]},
-            {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
-            {"addRule": ["demolition_charges"]}
+                {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]},
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
+                {"addRule": ["demolition_charges"]}
             ],
             "models": [
                 {
-                    "name": "Artiti NCO",
-                    "courage": 5,
+                    "name": "Arditi NCO",
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
@@ -371,8 +359,8 @@
                     "max": 1
                 },
                 {
-                    "name": "Artiti",
-                    "courage": 5,
+                    "name": "Arditi",
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
@@ -404,9 +392,9 @@
                     "courage": 5,
                     "movement": 5,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 6,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -417,9 +405,9 @@
                     "courage": 5,
                     "movement": 5,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 6,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg"}], "modelLimit": 1}],
                     "min": 4,
@@ -431,9 +419,8 @@
             "name": "Veteran Guastatori",
             "description": "This unit also includes Artiti Guastatori.",
             "category": "infantry",
-            "subfactions": ["none", "infantry_focus"],
+            "subfactions": ["infantry_focus"],
             "keywords": ["Infantry"],
-            "rules": ["stubborn"],
             "options": [
                 {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
                 {"replaceWeapon": "rifle", "withWeapon": ["carbine_rifle"]},
@@ -449,7 +436,7 @@
                     "shoot": 5,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
                     "min": 1,
@@ -462,11 +449,52 @@
                     "shoot": 5,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "weapons": ["rifle", "unarmed"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": [{"id": "mag_lmg"}], "modelLimit": 1}],
                     "min": 4,
                     "max": 10
+                }
+            ]
+        },
+        "combat_engineers": {
+            "name": "Combat Engineers",
+            "description": "A squad of engineers which can be equipped for basic engineering tasks such as clearing minefields.",
+            "category": "support",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"]},
+                {"addWeapon": "at_grenades", "modelLimit": 3},
+                {"addWeapon": "panzerfaust", "modelLimit": 2},
+                {"addRule": ["wire_cutters", "demolition_charges", "mine_sweepers", "repair_toolkit"]}
+            ],
+            "models": [
+                {
+                    "name": "Engineer NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Engineer",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["rifle", "unarmed"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["flamethrower"], "modelLimit": 1}],
+                    "min": 2,
+                    "max": 5
                 }
             ]
         },
@@ -833,7 +861,6 @@
                     "max": 1
                 }
             ]
-            
         },
         "p2640": {
             "name": "P26/40",
@@ -842,25 +869,22 @@
             "category": "heavy_vehicles",
             "keywords": ["Vehicle", "Tank"],
             "models": [
-            {
-                "name": "P26/40",
-                "courage": 5,
-                "movement": 10,
-                "shoot": 5,
-                "fight": 5,
-                "defense": 12,
-                "reflexes": 5,
-                "weapons": [{"id": "medium_at_mg"}],
-                "rules": ["tracked", "vulnerable_side_rear", "riveted", {"id": "impact", "x": 3}, "damage_table_vehicle"],
-                "options": [
-                        {"addWeapon":"mmg_aa"}
-                    ],
-                "min": 1,
-                "max": 1
-            }
-        ]
-        
-    },
+                {
+                    "name": "P26/40",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "weapons": [{"id": "medium_at_mg"}],
+                    "rules": ["tracked", "vulnerable_side_rear", "riveted", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+                    "options": [{"addWeapon": "mmg_aa"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "m1441": {
             "name": "M14/41",
             "description": "A light infantry support tank.",
@@ -876,11 +900,9 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "weapons": [{"id": "light_at_mg"},{"id": "mmg", "count":2, "mount": ["Front"]}],
+                    "weapons": [{"id": "light_at_mg"}, {"id": "mmg", "count": 2, "mount": ["Front"]}],
                     "rules": ["tracked", "vulnerable_side_rear", "riveted", {"id": "impact", "x": 3}, "damage_table_vehicle"],
-                    "options": [
-                        {"addWeapon":"mmg_aa"}
-                    ],
+                    "options": [{"addWeapon": "mmg_aa"}],
                     "min": 1,
                     "max": 1
                 }
@@ -915,7 +937,11 @@
         }
     },
     "rules": {
-        "sacrificio": {"name": "Sacrificio Eroico", "description": "This model gains +5 to a single Clear action when attempting to clear any obstacle. When this ability is used, and the test completed remove the model upgraded with this ability. ", "points": 10}
+        "sacrificio": {
+            "name": "Sacrificio Eroico",
+            "description": "This model gains +5 to a single Clear action when attempting to clear any obstacle. When this ability is used, and the test completed remove the model upgraded with this ability. ",
+            "points": 10
+        }
     },
     "relics": {
         "Emilio Caizzio": {
