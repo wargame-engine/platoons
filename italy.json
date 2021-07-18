@@ -919,12 +919,12 @@
             "description": "Use when an _Infantry_ unit declares a Charge action. It gets +3\" of Movement for that action.",
             "cost": 1
         },
-        "suppressive_fire": {
+        "rapid_fire": {
             "phase": "activation",
             "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
-            "name": "Suppressive Fire",
+            "name": "Rapid Fire",
             "flavor": "With high rate of fire and a terrifying noise, machine-guns can be used to pin down enemy troops with ease.",
-            "description": "Use when an _Infantry_ unit that contains a LMG or Medium MG fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
+            "description": "Use when an _Infantry_ unit is firing. Hits rolls of 1 or 2 with LMGs generate one additional hit.",
             "cost": 1
         },
         "avanti": {
