@@ -197,7 +197,8 @@
         },
         "puppet_chinese": {
             "name": "Chinese Collaborationists",
-            "description": "Close to 600,000 Chinese soldiers served under the banner of the 'Reorganized National Government of the Republic of China' or 'Wang Jingwei regime'. Wang Jingwei was a man who believed he would've become the true leader of the Nationalist Revolutionary Party and thus, China, but Generalissimo Chiang Kai-shek had risen to power faster. The Wang Jingwei regime flew the twin banners of the Nationalist Party and 'Five Races Under One Union' flag, with the hopes people would believe it to be the true, legitimate regime of China. Unfortunately for Wang Jingwei, his regime was and appeared to be subordinate to the will of Japan.",
+            "description": "Somewhat numerous and less well-trained. Chinese collaborationists can outnumber their foes.",
+            "background": "Close to 600,000 Chinese soldiers served under the banner of the 'Reorganized National Government of the Republic of China' or 'Wang Jingwei regime'. Wang Jingwei was a man who believed he would've become the true leader of the Nationalist Revolutionary Party and thus, China, but Generalissimo Chiang Kai-shek had risen to power faster. The Wang Jingwei regime flew the twin banners of the Nationalist Party and 'Five Races Under One Union' flag, with the hopes people would believe it to be the true, legitimate regime of China. Unfortunately for Wang Jingwei, his regime was and appeared to be subordinate to the will of Japan.",
             "min": 1,
             "max": 5,
             "category": "infantry",
@@ -220,7 +221,7 @@
         },
         "grenadier_squad": {
             "name": "Grenadier Squad",
-            "description": "A group of japanese infantry.",
+            "description": "A Japanese infantry squad with an abunance of small grenade launching mortars.",
             "min": 1,
             "max": 1,
             "subfactions": ["none", "infantry_focus"],
@@ -258,7 +259,7 @@
         },
         "riflemen": {
             "name": "Rifle Squad",
-            "description": "A group of japanese infantry.",
+            "description": "The main infantry unit of the Japanese. Can be increase significantly in numbers and can carry lunge mine anti-tank weapons or assault LMGs for aggressive pushes.",
             "min": 1,
             "max": 1,
             "subfactions": ["none", "infantry_focus", "armored_focus"],
@@ -299,7 +300,7 @@
         },
         "veteran_riflemen": {
             "name": "Veteran Rifle Squad",
-            "description": "A group of japanese infantry.",
+            "description": "The main infantry unit of the Japanese. Can be increase significantly in numbers and can carry lunge mine anti-tank weapons or assault LMGs for aggressive pushes. Battle-hardened and elite.",
             "min": 1,
             "max": 1,
             "subfactions": ["infantry_focus", "armored_focus"],
