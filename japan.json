@@ -1522,6 +1522,5 @@
             "description": "This unit and one other friendly _Infantry_ unit may be placed in hidden deployment instead of deployed on the field. See the section for hidden units in the core rules for details on how hidden units work.",
             "points": 20
         }
-    },
-    "relics": {}
+    }
 }

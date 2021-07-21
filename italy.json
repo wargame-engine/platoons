@@ -950,7 +950,7 @@
             "rule": "sacrificio",
             "flavor": "Emilio Caizzio earned the Medaglia d'Oro al Valor Militaire after seizing an ignited explosive and charging into an allied blockhouse full of troops. In sacrificing himself, he destroyed the fortification along with his enemies inside.",
             "description": "Upgrade one Guastatori model with Sacrificio Eroico.",
-            "points": 10
+            "points": 5
         }
     }
 }

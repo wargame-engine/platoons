@@ -1665,7 +1665,7 @@
             "rule": "ambush_tactics",
             "flavor": "Pine-Coffin fought in several battles including D-Day with the British airborne. Often encountering superior forces his men were able to achieve their goals.",
             "description": "Upgrade one Field Officer model with Ambush Tactics.",
-            "points": 20
+            "points": 10
         },
         "simon_fraser": {
             "subfactions": ["none", "airborne_focus"],
@@ -1673,7 +1673,7 @@
             "rule": "natural_leader",
             "flavor": "Fraser lead the 1st SAS brigade and helped relieve troops during the D-Day offensive. He was known to be a particularly inspiring commander.",
             "description": "Upgrade one Field Officer model with Natural Leader.",
-            "points": 15
+            "points": 10
         }
     }
 }

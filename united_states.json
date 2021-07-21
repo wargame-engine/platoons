@@ -1898,7 +1898,7 @@
         "natural_leader": {"name": "Natural Leader", "description": "This unit and friendly _Infantry_ units within 6\" get +1 Courage and +1 Initiative.", "points": 15},
         "defensive_fire": {"name": "Defensive Fire", "description": "This unit and friendly _Infantry_ units within 6\" get +1 Accuracy when using an Ambush reaction.", "points": 10},
         "move_it": {"name": "Move It", "description": "When this unit is activated, this unit and friendly _Infantry_ units within 6\" may immediately remove one shock.", "points": 10},
-        "mobile_expert": {"name": "Mobile Expert", "description": "This unit may move and fire assault weapons without suffering the -1 to hit penalty.", "points": 20}
+        "mobile_expert": {"name": "Mobile Expert", "description": "After this unit performs a Move action, it may perform a free Shoot action at -1 Accuracy.", "points": 20}
     },
     "relics": {
         "richard_winters": {
@@ -1907,7 +1907,7 @@
             "rule": "natural_leader",
             "flavor": "A natural leader and an excellent officer, Richard Winters lead his Parachute unit through D-Day and beyond.",
             "description": "Upgrade one Field Officer model with Natural Leader.",
-            "points": 15
+            "points": 10
         },
         "turner_turnbull": {
             "subfactions": ["none", "infantry_focus"],
@@ -1915,7 +1915,7 @@
             "rule": "defensive_fire",
             "flavor": "Turner Turnbull organized his men and against all odds held out a German counter-attack at Neuville-au-Plein.",
             "description": "Upgrade one Field Officer model with Defensive Fire.",
-            "points": 10
+            "points": 5
         },
         "dutch_cota": {
             "subfactions": ["none", "infantry_focus"],
@@ -1923,7 +1923,7 @@
             "rule": "move_it",
             "flavor": "Cota lead American forces on the beaches of Normandy and inspired his men under severe enemy fire.",
             "description": "Upgrade one Field Officer model with Move It.",
-            "points": 10
+            "points": 5
         },
         "lafayette_pool": {
             "subfactions": ["none", "armored_focus"],
@@ -1931,7 +1931,7 @@
             "rule": "mobile_expert",
             "flavor": "Lafayette Pool used a mix of suprise and mobile tactics to outwit his armored opponents.",
             "description": "Upgrade one M4 Sherman or M4A1 Sherman with Mobile Expert.",
-            "points": 20
+            "points": 5
         }
     }
 }

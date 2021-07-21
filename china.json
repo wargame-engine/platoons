@@ -1107,6 +1107,5 @@
             "description": "This unit gets +1 Courage when clearing shock. A model may not use its shooting weapons while carrying a Blue and White Banner.",
             "points": 10
         }
-    },
-    "relics": []
+    }
 }
