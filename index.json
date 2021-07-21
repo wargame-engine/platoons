@@ -99,7 +99,7 @@
             }
         },
         "australia": {
-            "version": "0.1",
+            "version": "1.0",
             "name": "Australia",
             "id": "australia",
             "url": "australia.json",
@@ -113,7 +113,7 @@
             }
         },
         "canada": {
-            "version": "0.1",
+            "version": "1.0",
             "name": "Canada",
             "id": "canada",
             "url": "canada.json",
@@ -127,7 +127,7 @@
             }
         },
         "hungary": {
-            "version": "0.1",
+            "version": "1.0",
             "name": "Hungary",
             "id": "hungary",
             "url": "hungary.json",
@@ -141,7 +141,7 @@
             }
         },
         "italy": {
-            "version": "0.1",
+            "version": "1.0",
             "name": "Italy",
             "id": "italy",
             "url": "italy.json",
@@ -155,7 +155,7 @@
             }
         },
         "china": {
-            "version": "0.1",
+            "version": "1.0",
             "name": "China",
             "id": "china",
             "url": "china.json",
@@ -182,7 +182,7 @@
             }
         },
         "brazil": {
-            "version": "0.1",
+            "version": "1.0",
             "name": "Brazil",
             "id": "brazil",
             "url": "brazil.json",
