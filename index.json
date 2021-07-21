@@ -3,12 +3,12 @@
     "author": "guitarninja#5707",
     "factions": {
         "germany": {
+            "version": "1.0",
             "name": "Germany",
             "id": "germany",
             "url": "germany.json",
             "color": "#585C75",
             "alliance": "axis",
-            "version": "1.0",
             "description": "Well-known as one of the major aggressors of World War Two, Germany revolutionized mobile warfare in a way never seen before. Germany relies on hard infantry and deadly armored vehicles.",
             "subfactions": {
                 "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
@@ -18,12 +18,12 @@
             }
         },
         "japan": {
+            "version": "1.0",
             "name": "Japan",
             "id": "japan",
             "url": "japan.json",
             "color": "#BE8200",
             "alliance": "axis",
-            "version": "1.0",
             "description": "Opportunists and expansionists during, the Japanese seized as many valuable resources and as much land as they could early in the war. Japan relies on both veteran trained marine and paratrooper units as well as some light but reliable vehicles.",
             "subfactions": {
                 "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
@@ -31,12 +31,12 @@
             }
         },
         "finland": {
+            "version": "1.0",
             "name": "Finland",
             "id": "finland",
             "url": "finland.json",
             "color": "#5D8CAA",
             "alliance": "axis",
-            "version": "1.0",
             "description": "While originally attempting to remain neutral, Finland was introduced to the war when they were invaded by the Soviet Union, a significantly stronger force. The Finnish use encirclement and stealth tactics to outsmart and outflank their foes before they can correctly respond.",
             "subfactions": {
                 "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
@@ -44,12 +44,12 @@
             }
         },
         "united_states": {
+            "version": "1.0",
             "name": "United States",
             "id": "united_states",
             "url": "united_states.json",
             "color": "#4A7643",
             "alliance": "allies",
-            "version": "1.0",
             "description": "The United States, while originally attempting to remain neutral, was suddenly attacked by the Japanese at pearl harbor and was forced to substantially ramp up production to begin fighting on both pacific and western fronts. The United States rely on mobile infantry units and weapons along with solid and reliable, yet numerous sherman tanks.",
             "subfactions": {
                 "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
@@ -58,12 +58,12 @@
             }
         },
         "soviet_union": {
+            "version": "1.0",
             "name": "Soviet Union",
             "id": "soviet_union",
             "url": "soviet_union.json",
             "color": "#C13E3E",
             "alliance": "allies",
-            "version": "1.0",
             "description": "The Soviet Union, while biding its time before the inevitable German offensive, originally had major command and tactics issues. Later in the war, once they were in full swing, they were a very formidable and numerous force to be reckoned with. The Soviets rely on numerous infantry and heroic bravery to defeat their foes with sheer will.",
             "subfactions": {
                 "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
@@ -72,12 +72,12 @@
             }
         },
         "british": {
+            "version": "1.0",
             "name": "British",
             "id": "british",
             "url": "british.json",
             "color": "#927331",
             "alliance": "allies",
-            "version": "1.0",
             "description": "The British, while honoring previous treaties and agreements was forced to intervene in Germany's earliest battles. The British were eventually able to overcome their early defeats at the hands of the German forces with the help of their other allied counterparts. The British use a combination of capable armored vehicles, solid infantry and elite trained commando and SAS forces to defeat their enemies.",
             "subfactions": {
                 "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
@@ -86,12 +86,12 @@
             }
         },
         "france": {
+            "version": "1.0",
             "name": "France",
             "id": "france",
             "url": "france.json",
             "color": "#395A94",
             "alliance": "allies",
-            "version": "1.0",
             "description": "France, still focused on their success in the first World War, placed heavy emphasis on static and sparse armored forces which were quickly overwhelmed by new German military tactics. The French continue to use first war trench fighting and artillery tactics to defeat their enemies.",
             "subfactions": {
                 "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
@@ -99,12 +99,12 @@
             }
         },
         "australia": {
+            "version": "0.1",
             "name": "Australia",
             "id": "australia",
             "url": "australia.json",
             "color": "#008373",
             "alliance": "allies",
-            "version": "0.1",
             "description": "Australia fought alongside the allies in many important battles, while also attempting to defend their homeland from a possible Japanese invasion. Australia relies on many armaments lent by the British as well as their own inspired troops to achieve victory.",
             "subfactions": {
                 "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
@@ -113,12 +113,12 @@
             }
         },
         "canada": {
+            "version": "0.1",
             "name": "Canada",
             "id": "canada",
             "url": "canada.json",
             "color": "#47576F",
             "alliance": "allies",
-            "version": "0.1",
             "description": "Beginning all the way in 1939, Canada supplied troops to the British Expeditionary forces to help the French in the defense of their homeland. Canada would go on to participate in many major offensives in the war such as the invasion of Normandy and the attack on the Rhineland. Canada primarily used British equipment supplemented with some of their own designs.",
             "subfactions": {
                 "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
@@ -127,12 +127,12 @@
             }
         },
         "hungary": {
+            "version": "0.1",
             "name": "Hungary",
             "id": "hungary",
             "url": "hungary.json",
             "color": "#006354",
             "alliance": "axis",
-            "version": "0.1",
             "description": "Starting with participation in the invasion of Yugoslavia, Hungary officially joined the Axis powers and later participated in the invasion of the Soviet Union. This would quickly turn to defeat as the Soviet Union later swept through and occupied parts of Hungary. The Hungarians relied on both German equipment and some home-developed arms and equipment such as their own unique tank designs.",
             "subfactions": {
                 "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
@@ -141,12 +141,12 @@
             }
         },
         "italy": {
+            "version": "0.1",
             "name": "Italy",
             "id": "italy",
             "url": "italy.json",
             "color": "#BD9326",
             "alliance": "axis",
-            "version": "0.1",
             "description": "Unprepared for a long conflict, Italy began annexing smaller territories before the war broke out. As the war went on, Italy increased its ambitions with some success. Ultimately Italy found itself fighting nearly all of the major allied powers which would prove to be too much to handle. Italy relies on strong infantry and some lighter support tanks along with decent tank destroyers to defeat its enemies.",
             "subfactions": {
                 "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true},
@@ -155,12 +155,12 @@
             }
         },
         "china": {
+            "version": "0.1",
             "name": "China",
             "id": "china",
             "url": "china.json",
             "color": "#0e3391",
             "alliance": "allies",
-            "version": "0.1",
             "description": "With Over 250 million people and decades of decay from civil-war and warlords fighting each other, China entered the 'War of Resistance against Japanese Aggression' in a tough spot. China was a nation of extremes, with some of the bravest and most cowardly men in the war, according to written accounts. With so many people scrambling to repell the Japanese, in their own way, with their own backers and supply lines, China could almost be viewed as three or four nations just by itself.",
             "subfactions": {
                 "china_communist": {
@@ -182,12 +182,12 @@
             }
         },
         "brazil": {
+            "version": "0.1",
             "name": "Brazil",
             "id": "brazil",
             "url": "brazil.json",
             "color": "#45a35c",
             "alliance": "allies",
-            "version": "0.1",
             "description": "Starting the war as a neutral power, Brazil began to suppor the allied war effort with air bases in its territory. Eventually war was delcared ont he axis powers and an expeditiary force was set up mostly equipped by the US. Brazil has an interesting mix of USA equipment and unique ways to use it.",
             "subfactions": {"infantry_focus": {"name": "Infantry", "id": "infantry_focus", "description": "High quality infantry and anti-tank artillery.", "restricted": true}}
         }
